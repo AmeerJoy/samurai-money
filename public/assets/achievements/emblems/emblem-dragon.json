@@ -1,0 +1,20 @@
+{
+  "id": "emblem-dragon",
+  "name": "Celestial Dragon Emblem",
+  "category": "Emblems",
+  "type": "Achievement Emblem",
+  "rarity": "Legendary",
+  "rel_dir": "achievements/emblems",
+  "purpose": "Node badge for dragon conquests and mythical achievements.",
+  "visual": "Roaring dragon head silhouette with glowing red eyes inside red medallion.",
+  "prompt": "Minimalist 2D achievement artwork for a video game. A roaring Japanese dragon head silhouette in pure pitch-black, sharp crimson glowing eye and fangs, perfectly centered inside a solid crimson-red circular medal, high contrast negative space, game achievement icon, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/emblems/emblem-dragon.webp",
+  "public_path": "/assets/achievements/emblems/emblem-dragon.webp",
+  "generated_at": "2026-08-15 00:23:56"
+}

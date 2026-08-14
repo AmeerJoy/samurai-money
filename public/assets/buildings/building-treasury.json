@@ -1,0 +1,20 @@
+{
+  "id": "building-treasury",
+  "name": "Clan Stone Treasury",
+  "category": "Buildings",
+  "type": "Economic Building",
+  "rarity": "Epic",
+  "rel_dir": "buildings",
+  "purpose": "Building tier 4 illustration on economic empire dashboard.",
+  "visual": "Fortified stone treasury storehouse with heavy iron door and red banners.",
+  "prompt": "Minimalist 2D game asset of a heavy Japanese fortified stone storehouse (kura) with black lacquer trim and crimson banners, solid crimson sun disc in background, pitch black canvas, clean vector game icon, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/buildings/building-treasury.webp",
+  "public_path": "/assets/buildings/building-treasury.webp",
+  "generated_at": "2026-08-15 00:25:08"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "emblem-helmet",
+  "name": "Kabuto Helmet Emblem",
+  "category": "Emblems",
+  "type": "Achievement Emblem",
+  "rarity": "Common",
+  "rel_dir": "achievements/emblems",
+  "purpose": "Node badge for armor, defense, and warrior milestones.",
+  "visual": "Horned samurai kabuto helmet in pure black silhouette inside crimson medallion.",
+  "prompt": "Minimalist 2D achievement icon of a horned samurai kabuto helmet silhouette, centered inside a solid crimson-red circular medal, black canvas, clean geometric shapes, high contrast game badge, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/emblems/emblem-helmet.webp",
+  "public_path": "/assets/achievements/emblems/emblem-helmet.webp",
+  "generated_at": "2026-08-15 00:23:34"
+}

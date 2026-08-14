@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Pure Solid Pitch Black Background -->
+  <rect width="512" height="512" fill="#000000" />
+
+  <!-- Solid Flat Red Sun Disc -->
+  <circle cx="256" cy="256" r="170" fill="#FF2035" />
+
+  <!-- Flat Ground Base Cutoff -->
+  <rect x="0" y="416" width="512" height="96" fill="#000000" />
+
+  <!-- Standing Straw Hat Ronin Silhouette (Pure Solid Black with Red Negative Space Lines) -->
+  <g fill="#000000">
+    <!-- Conical Straw Hat (Kasa) -->
+    <path d="M256 126 L306 172 L206 172 Z" />
+    <ellipse cx="256" cy="172" rx="54" ry="12" />
+
+    <!-- Head & Neck -->
+    <rect x="246" y="174" width="20" height="22" rx="4" />
+
+    <!-- Torso & Shoulders -->
+    <path d="M214 200 C234 194 278 194 298 200 L308 266 L204 266 Z" />
+
+    <!-- Arms -->
+    <!-- Left Arm holding Katana Scabbard -->
+    <path d="M214 202 L192 250 L204 262 L228 226 Z" />
+    <!-- Right Arm holding Katana Blade Downward -->
+    <path d="M298 202 L326 266 L312 274 L286 226 Z" />
+
+    <!-- Hakama Robe / Skirt -->
+    <path d="M204 274 L308 274 L320 348 L192 348 Z" />
+
+    <!-- Legs & Boots -->
+    <rect x="220" y="348" width="26" height="68" rx="6" />
+    <rect x="266" y="348" width="26" height="68" rx="6" />
+    <!-- Boots / Feet -->
+    <ellipse cx="230" cy="416" rx="18" ry="8" />
+    <ellipse cx="282" cy="416" rx="18" ry="8" />
+
+    <!-- Katana Blade & Scabbard -->
+    <g transform="rotate(32 256 280)">
+      <rect x="252" y="240" width="8" height="150" rx="3" />
+      <rect x="248" y="234" width="16" height="6" rx="2" fill="#FF2035" />
+      <rect x="253" y="200" width="6" height="34" rx="2" />
+    </g>
+  </g>
+
+  <!-- Red Negative Space Seams & Belt -->
+  <g stroke="#FF2035" stroke-width="3" fill="none" stroke-linecap="round">
+    <!-- Obi Belt -->
+    <line x1="220" y1="270" x2="292" y2="270" />
+    <path d="M228 270 L216 320" />
+    <path d="M234 270 L226 312" />
+    <!-- Kimono Collar Cross -->
+    <line x1="246" y1="198" x2="266" y2="240" />
+    <line x1="266" y1="198" x2="246" y2="236" />
+    <!-- Arm Seam -->
+    <path d="M298 210 L314 260" stroke-width="2" />
+  </g>
+</svg>

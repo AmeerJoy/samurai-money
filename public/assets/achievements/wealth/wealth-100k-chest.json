@@ -1,0 +1,20 @@
+{
+  "id": "wealth-100k-chest",
+  "name": "Ironbound Treasure Chest",
+  "category": "Wealth Achievements",
+  "type": "Milestone Node",
+  "rarity": "Rare",
+  "rel_dir": "achievements/wealth",
+  "purpose": "Represents the $100,000 wealth milestone on achievement graph.",
+  "visual": "Reinforced cedar wood treasure coffer with brass corner brackets and gold coins.",
+  "prompt": "Minimalist 2D game illustration of a traditional dark cedar wood coffer with polished gold corner brackets, open lid spilling flat graphic gold coins, glowing crimson red disc behind, pitch black background, clean hard edges, bold silhouette poster style, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/wealth/wealth-100k-chest.webp",
+  "public_path": "/assets/achievements/wealth/wealth-100k-chest.webp",
+  "generated_at": "2026-08-15 00:23:12"
+}

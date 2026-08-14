@@ -1,0 +1,23 @@
+{
+  "id": "icon-2d-straw-hat-ronin-stance",
+  "name": "App Icon: 2D Straw Hat Ronin Stance",
+  "filename": "icon-2d-straw-hat-ronin-stance.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary 2D App Store Icon \u2014 Wandering Straw-Hat Ronin.",
+  "description": "Pure flat 2D solid black silhouette of a wandering ronin in traditional conical straw kasa hat in combat-ready posture with katana blade, centered before a massive blood-red circular sun.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork minimalist 2D flat vector game icon. (Pure flat solid black silhouette of a ronin samurai warrior wearing a wide conical straw kasa hat:1.3) holding a sharp katana blade in battle stance. (Directly framed inside a giant perfectly smooth solid crimson-red circular sun:1.4). Pure flat 2D vector illustration, solid pitch-black figure (#07080C), deep crimson red (#D20A2E), pristine razor-sharp clean edges, flat graphic shapes, high contrast, no 3D rendering, no soft painting, no gradients, no realistic face, no text, no typography, no pixelation, no noise.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 8.0,
+  "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+}

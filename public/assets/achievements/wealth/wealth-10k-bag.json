@@ -1,0 +1,20 @@
+{
+  "id": "wealth-10k-bag",
+  "name": "Merchant Money Bag",
+  "category": "Wealth Achievements",
+  "type": "Milestone Node",
+  "rarity": "Rare",
+  "rel_dir": "achievements/wealth",
+  "purpose": "Represents the $10,000 wealth milestone on achievement graph.",
+  "visual": "Dark silk money pouch overflowing with gold coins tied with crimson cord.",
+  "prompt": "Minimalist 2D game icon of a traditional dark black silk merchant money bag tied with gold and crimson cord, spilling flat gold coins, solid crimson circular sun background, pitch black canvas, sharp vector lines, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/wealth/wealth-10k-bag.webp",
+  "public_path": "/assets/achievements/wealth/wealth-10k-bag.webp",
+  "generated_at": "2026-08-15 00:23:09"
+}

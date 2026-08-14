@@ -1,0 +1,20 @@
+{
+  "id": "emblem-flaming-sword",
+  "name": "Flaming Spirit Blade Emblem",
+  "category": "Emblems",
+  "type": "Achievement Emblem",
+  "rarity": "Epic",
+  "rel_dir": "achievements/emblems",
+  "purpose": "Node badge for frenzy click power and critical multiplier milestones.",
+  "visual": "Katana blade engulfed in stylized geometric crimson spirit flame aura.",
+  "prompt": "Minimalist 2D achievement icon of a black katana blade surrounded by sharp geometric crimson spirit fire flames, solid crimson circular halo behind, pitch black background, clean game UI emblem, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/emblems/emblem-flaming-sword.webp",
+  "public_path": "/assets/achievements/emblems/emblem-flaming-sword.webp",
+  "generated_at": "2026-08-15 00:23:47"
+}

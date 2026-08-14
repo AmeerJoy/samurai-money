@@ -1,0 +1,23 @@
+{
+  "id": "icon-2d-demon-kabuto-mask",
+  "name": "App Icon: 2D Demon Kabuto Mask",
+  "filename": "icon-2d-demon-kabuto-mask.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary 2D App Store Icon \u2014 Warlord Kabuto Identity.",
+  "description": "Symmetrical pure flat solid black samurai battle helmet (Kabuto) with curved crescent horns and demon Mempo faceplate, glowing crimson eye slits centered in a radiant crimson disc.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork minimalist 2D flat vector game app icon. Symmetrical pure solid black silhouette of a Japanese samurai kabuto helmet with curved golden-crimson crescent horns and a demon mempo face mask with sharp crimson eye slits. (Directly centered in front of a giant perfectly smooth solid crimson-red circular sun:1.4). Pure flat 2D graphic design, solid pitch-black (#07080C), vibrant crimson red (#D20A2E), razor-sharp clean hard vector edges, SVG vector aesthetic, no 3D rendering, no volume, no gradients, no soft shadows, no text, no pixelation, no noise.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 8.0,
+  "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+}

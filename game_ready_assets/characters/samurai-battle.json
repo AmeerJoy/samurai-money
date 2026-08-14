@@ -1,0 +1,20 @@
+{
+  "id": "samurai-battle",
+  "name": "Samurai Battle Strike",
+  "category": "Characters",
+  "type": "Combat Pose",
+  "rarity": "Epic",
+  "rel_dir": "characters",
+  "purpose": "Display during critical strikes and active boss battles.",
+  "visual": "Dynamic mid-air leaping slash forming dramatic cross-silhouette.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A samurai warrior leaping dynamically in mid-strike with dual swords forming an iconic cross silhouette, near-black silhouette with crimson edge highlights. Giant solid crimson-red moon backdrop, flat pitch-black canvas, sharp vector lines, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-battle.webp",
+  "public_path": "/assets/characters/samurai-battle.webp",
+  "generated_at": "2026-08-15 00:22:41"
+}

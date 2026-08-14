@@ -1,0 +1,20 @@
+{
+  "id": "wealth-1qi-golden-palace",
+  "name": "Quintillionaire Golden Palace",
+  "category": "Wealth Achievements",
+  "type": "Milestone Node",
+  "rarity": "Mythic",
+  "rel_dir": "achievements/wealth",
+  "purpose": "Represents the $1 Quintillion wealth milestone on achievement graph.",
+  "visual": "Monumental multi-tier imperial palace of pure gold trim and obsidian towers under blood moon.",
+  "prompt": "A minimalist 2D graphic illustration of a monumental shogun imperial palace silhouette with gold tipped roofs and glowing red lantern balconies, giant solid crimson-red sun backdrop, pitch black sky, clean geometric poster art, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/wealth/wealth-1qi-golden-palace.webp",
+  "public_path": "/assets/achievements/wealth/wealth-1qi-golden-palace.webp",
+  "generated_at": "2026-08-15 00:23:28"
+}

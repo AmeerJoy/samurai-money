@@ -1,0 +1,20 @@
+{
+  "id": "wealth-1k-stack",
+  "name": "Thousand Stack Koban",
+  "category": "Wealth Achievements",
+  "type": "Milestone Node",
+  "rarity": "Common",
+  "rel_dir": "achievements/wealth",
+  "purpose": "Represents the $1,000 wealth milestone on achievement graph.",
+  "visual": "Neat stack of three oval gold koban coins tied in crisp crimson silk ribbon.",
+  "prompt": "Minimalist 2D game currency icon of three stacked oval gold koban coins tied with a crisp crimson silk ribbon. Black samurai emblem embossed on top coin, solid crimson circular aura behind, pure black background, clean flat graphic shapes, sharp vector edges, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/wealth/wealth-1k-stack.webp",
+  "public_path": "/assets/achievements/wealth/wealth-1k-stack.webp",
+  "generated_at": "2026-08-15 00:23:06"
+}

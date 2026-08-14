@@ -1,0 +1,18 @@
+{
+  "id": "wealth-imperial-dragon-vault",
+  "name": "Imperial Dragon Lacquer Vault",
+  "filename": "imperial-dragon-vault.webp",
+  "type": "achievement",
+  "category": "Wealth Milestones",
+  "subfolder": "achievements/wealth",
+  "rarity": "legendary",
+  "purpose": "$1 Billion Wealth Milestone Vault.",
+  "description": "Heavy fortified black lacquer imperial treasury chest with crimson dragon relief carving and iron reinforcement bands.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Minimalist 2D game achievement icon of a massive reinforced Japanese imperial treasure vault chest, black lacquer body with bold crimson-red dragon relief emblem, glowing gold and crimson sen coins overflowing from seam, pure black background, clean geometric silhouette art, no 3D, no text."
+}

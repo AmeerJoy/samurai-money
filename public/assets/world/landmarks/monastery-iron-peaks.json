@@ -1,0 +1,18 @@
+{
+  "id": "landmark-monastery-iron-peaks",
+  "name": "Monastery of the Iron Peaks",
+  "filename": "monastery-iron-peaks.webp",
+  "type": "world",
+  "category": "World Landmarks",
+  "subfolder": "world/landmarks",
+  "rarity": "legendary",
+  "purpose": "World Map Region 5 Dojo Landmark.",
+  "description": "Multi-tiered pagoda temple perched precariously on a razor-sharp mountain precipice, bathed in crimson twilight.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A minimalist 2D graphic illustration of a multi-tiered Japanese pagoda monastery perched on the razor peak of a dark mountain cliff, an enormous solid crimson circular sun rising behind the temple, near-black silhouette architecture with crimson roof eaves, dramatic negative space, clean vector edges, no anime, no 3D rendering, no text."
+}

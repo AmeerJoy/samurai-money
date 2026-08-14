@@ -1,0 +1,20 @@
+{
+  "id": "bg-achievements",
+  "name": "Achievement World Map Canvas",
+  "category": "Backgrounds",
+  "type": "UI Backdrop",
+  "rarity": "Common",
+  "rel_dir": "backgrounds",
+  "purpose": "High-contrast dark canvas for the Achievement Graph nodes and connections.",
+  "visual": "Ultra-dark minimalist background with subtle geometric grid lines and faint red haze.",
+  "prompt": "Minimalist 2D background canvas for an achievement node tree UI. Deep pitch-black canvas with extremely faint dark gray mountain silhouettes at bottom, faint crimson atmospheric glow at top, clean empty negative space for UI overlay, no characters, no text, no 3D.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/backgrounds/bg-achievements.webp",
+  "public_path": "/assets/backgrounds/bg-achievements.webp",
+  "generated_at": "2026-08-15 00:25:39"
+}

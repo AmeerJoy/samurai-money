@@ -1,0 +1,20 @@
+{
+  "id": "bg-main",
+  "name": "Main Dashboard Background",
+  "category": "Backgrounds",
+  "type": "UI Backdrop",
+  "rarity": "Common",
+  "rel_dir": "backgrounds",
+  "purpose": "Full-screen subtle background behind main incremental dashboard.",
+  "visual": "Near-black minimalist landscape with subtle crimson mist and mountain horizon.",
+  "prompt": "Minimalist 2D background wallpaper for a video game UI. Deep near-black night landscape with subtle dark gray mountain silhouettes, subtle dark crimson atmospheric horizon glow, spacious empty negative space in center for game UI readability, clean vector style, no characters, no buildings, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/backgrounds/bg-main.webp",
+  "public_path": "/assets/backgrounds/bg-main.webp",
+  "generated_at": "2026-08-15 00:25:36"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "icon-2d-slashed-koban-coin",
+  "name": "App Icon: 2D Slashed Koban Wealth",
+  "filename": "icon-2d-slashed-koban-coin.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary 2D App Store Icon \u2014 Direct Samurai + Money Theme.",
+  "description": "Traditional Japanese oval gold Koban coin silhouette with crimson seal stamp, cleanly cleaved diagonally by a pure flat black katana blade inside a giant circular crimson solar ring.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork minimalist 2D flat vector game app icon representing samurai wealth. A traditional Japanese oval gold Koban coin silhouette with stamped crimson seals, cleanly sliced diagonally by a pure solid flat black samurai katana blade. (Directly centered inside a giant perfectly smooth solid crimson-red circular sun halo:1.4). Flat 2D vector art, pure flat solid shapes, razor-sharp clean geometric edges, high contrast, solid pitch-black background (#07080C), no 3D shading, no gradients, no photorealism, no text, no typography, no pixelation, no noise.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 8.0,
+  "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+}

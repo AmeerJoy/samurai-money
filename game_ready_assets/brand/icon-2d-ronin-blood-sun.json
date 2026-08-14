@@ -1,0 +1,23 @@
+{
+  "id": "icon-2d-ronin-blood-sun",
+  "name": "App Icon: 2D Ronin Blood Sun",
+  "filename": "icon-2d-ronin-blood-sun.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary 2D App Store Icon \u2014 Flat Silhouette Hero.",
+  "description": "Pure flat 2D solid pitch-black silhouette of a master samurai warrior with topknot holding a drawn katana vertically, framed inside a giant perfectly smooth solid crimson-red circular sun on a pitch-black background.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork minimalist 2D flat vector game app icon. (Pure flat solid pitch-black silhouette of a samurai warrior holding a sleek katana vertically:1.3). (Directly centered inside a giant perfectly smooth solid crimson-red circular sun:1.4). Flat 2D graphic design, pure flat color fills, razor-sharp clean hard vector edges, SVG vector aesthetic, solid pitch-black canvas (#07080C), deep crimson red (#D20A2E), high contrast, bold iconic composition, no gradients, no 3D rendering, no soft lighting, no shading, no digital painting, no realistic face, no text, no typography, no noise, no pixelation.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 8.0,
+  "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "sword-shadow-shuriken",
+  "name": "Shadow Ninja Shuriken",
+  "category": "Items & Equipment",
+  "type": "Weapon Upgrade",
+  "rarity": "Rare",
+  "rel_dir": "items/swords",
+  "purpose": "Speed weapon card in weapons inventory.",
+  "visual": "Sharp 4-point black ninja throwing star with razor crimson beveled edges.",
+  "prompt": "Minimalist 2D game icon of a sharp black ninja shuriken throwing star with razor crimson-red beveled edges, glowing red core, pure flat black background, high contrast, clean vector game badge, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/items/swords/sword-shadow-shuriken.webp",
+  "public_path": "/assets/items/swords/sword-shadow-shuriken.webp",
+  "generated_at": "2026-08-15 00:25:23"
+}

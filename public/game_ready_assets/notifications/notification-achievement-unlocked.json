@@ -1,0 +1,20 @@
+{
+  "id": "notification-achievement-unlocked",
+  "name": "Achievement Unlock Badge",
+  "category": "Notifications",
+  "type": "UI Banner Badge",
+  "rarity": "Common",
+  "rel_dir": "notifications",
+  "purpose": "Emblem displayed on top-center achievement unlock toast notifications.",
+  "visual": "Crimson and gold circular laurel medallion with crossed katana blades.",
+  "prompt": "Minimalist 2D achievement toast notification icon. A solid crimson circular medallion with gold rim and crossed black katana blades in center, solid dark background, clean geometric vector art, high contrast, visually striking at small size, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/notifications/notification-achievement-unlocked.webp",
+  "public_path": "/assets/notifications/notification-achievement-unlocked.webp",
+  "generated_at": "2026-08-15 00:25:45"
+}

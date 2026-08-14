@@ -1,0 +1,20 @@
+{
+  "id": "landmark-torii-portal",
+  "name": "Sacred Torii Gate Portal",
+  "category": "World Landmarks",
+  "type": "Map Landmark Node",
+  "rarity": "Rare",
+  "rel_dir": "world/landmarks",
+  "purpose": "Major landmark gateway connecting World Map regions.",
+  "visual": "Massive torii gate standing in still water reflecting a giant red sun.",
+  "prompt": "A minimalist 2D graphic silhouette artwork of an ancient massive torii gate silhouette standing in still water, perfectly centered before a colossal solid blood-red moon, dark mountain silhouettes in distance, clean geometric lines, high contrast negative space, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/world/landmarks/landmark-torii-portal.webp",
+  "public_path": "/assets/world/landmarks/landmark-torii-portal.webp",
+  "generated_at": "2026-08-15 00:24:52"
+}

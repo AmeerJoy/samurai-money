@@ -1,0 +1,20 @@
+{
+  "id": "samurai-sword",
+  "name": "Samurai Sword Draw",
+  "category": "Characters",
+  "type": "Combat Pose",
+  "rarity": "Rare",
+  "rel_dir": "characters",
+  "purpose": "Display during click combos and active blade upgrades.",
+  "visual": "Drawing razor katana from sheath with crimson blade streak.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A samurai warrior drawing a katana sword from its scabbard, pure near-black silhouette with a razor-sharp glowing crimson-red blade edge. Colossal solid crimson-red sun in background, extreme negative space contrast, bold geometric shapes, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-sword.webp",
+  "public_path": "/assets/characters/samurai-sword.webp",
+  "generated_at": "2026-08-15 00:22:38"
+}

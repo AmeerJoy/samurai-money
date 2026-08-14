@@ -1,0 +1,20 @@
+{
+  "id": "samurai-standing",
+  "name": "Samurai Standing",
+  "category": "Characters",
+  "type": "Character State",
+  "rarity": "Common",
+  "rel_dir": "characters",
+  "purpose": "Active hero portrait on dashboard and profile screens.",
+  "visual": "Poised confident stance with sheathed katana at waist under blazing red sun.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. An honorable samurai standing in a confident poised stance with sheathed katana at side, pure pitch-black silhouette with sharp crimson armor laces. Huge solid crimson-red sun disc backdrop, clean graphic shapes, high contrast, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-standing.webp",
+  "public_path": "/assets/characters/samurai-standing.webp",
+  "generated_at": "2026-08-15 00:22:35"
+}

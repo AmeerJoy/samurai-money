@@ -1,0 +1,20 @@
+{
+  "id": "hero-samurai",
+  "name": "Hero Samurai Poster",
+  "category": "Brand",
+  "type": "Key Visual",
+  "rarity": "Legendary",
+  "rel_dir": "brand",
+  "purpose": "Main visual identity artwork for title screens, hero sections, and promotional material.",
+  "visual": "Lone samurai warrior standing on dark mountain peak in near-black silhouette with sharp crimson highlights, giant solid crimson sun backdrop.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A lone samurai warrior standing dramatically on top of a dark rocky mountain, shown primarily as a near-black silhouette with only a few sharp crimson-red highlights defining the armor, clothing, sword and body contours. A huge perfectly solid crimson-red circular sun behind the warrior creates a strong iconic silhouette. Extremely simple flat shapes, clean hard edges, limited color palette of near-black, deep crimson red and subtle dark gray, dramatic negative space, large bold geometric forms, simplified mountain silhouettes in the background, sharp vector game art style, cinematic poster composition, no anime character style, no 3D rendering, no soft digital painting, no gradients, no photorealism, no text, no typography.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/brand/hero-samurai.webp",
+  "public_path": "/assets/brand/hero-samurai.webp",
+  "generated_at": "2026-08-15 00:22:26"
+}

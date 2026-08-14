@@ -1,0 +1,20 @@
+{
+  "id": "samurai-legendary",
+  "name": "Samurai Mythic Sovereign",
+  "category": "Characters",
+  "type": "Tier 12 Sovereign",
+  "rarity": "Legendary",
+  "rel_dir": "characters",
+  "purpose": "Display on Legendary Shogun tier and prestigious completions.",
+  "visual": "Floating mythic shogun with floating red spirit orbs and solar flare halo.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A legendary mythic shogun silhouette hovering gracefully surrounded by six floating crimson spirit flame orbs and an immense solid crimson solar disc backdrop, pure black vector silhouette with razor sharp crimson outlines, poster composition, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-legendary.webp",
+  "public_path": "/assets/characters/samurai-legendary.webp",
+  "generated_at": "2026-08-15 00:22:57"
+}

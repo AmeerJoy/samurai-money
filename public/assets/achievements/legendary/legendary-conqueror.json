@@ -1,0 +1,20 @@
+{
+  "id": "legendary-conqueror",
+  "name": "Legendary Conqueror",
+  "category": "Legendary Art",
+  "type": "Legendary Art",
+  "rarity": "Legendary",
+  "rel_dir": "achievements/legendary",
+  "purpose": "Full-size achievement artwork for conquering all map territories.",
+  "visual": "Black samurai standing on mountain overlooking vast battlefield under red sun.",
+  "prompt": "A minimalist 2D graphic illustration for a legendary achievement poster. A lone black samurai warrior standing on a sharp mountain precipice overlooking a vast dark battlefield in the mist, huge solid crimson-red sun in the sky, pitch black canvas, clean geometric shapes, dramatic poster art, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/legendary/legendary-conqueror.webp",
+  "public_path": "/assets/achievements/legendary/legendary-conqueror.webp",
+  "generated_at": "2026-08-15 00:24:02"
+}

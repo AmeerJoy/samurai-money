@@ -1,0 +1,20 @@
+{
+  "id": "samurai-rich",
+  "name": "Samurai Daimyo Wealth",
+  "category": "Characters",
+  "type": "Wealth State",
+  "rarity": "Epic",
+  "rel_dir": "characters",
+  "purpose": "Display on high-wealth tiers and treasury management.",
+  "visual": "Daimyo lord seated on ornate lacquer dais holding gold fan with treasure coffer.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. An opulent samurai lord in flowing silk robes seated on an elevated platform holding an open war fan, with open treasure coffers spilling gold kobans, pure pitch-black silhouette with crimson and gold accents. Giant solid crimson sun disc behind, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-rich.webp",
+  "public_path": "/assets/characters/samurai-rich.webp",
+  "generated_at": "2026-08-15 00:22:51"
+}

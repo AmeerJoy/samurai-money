@@ -1,0 +1,20 @@
+{
+  "id": "armor-demon-kabuto",
+  "name": "Demon Horned Kabuto",
+  "category": "Items & Equipment",
+  "type": "Armor Upgrade",
+  "rarity": "Epic",
+  "rel_dir": "items/armor",
+  "purpose": "Defense armor card in equipment inventory.",
+  "visual": "Menacing horned kabuto helmet silhouette with red eye visor.",
+  "prompt": "Minimalist 2D game equipment icon of a legendary horned samurai kabuto helmet with menacing mempo face mask, pure pitch-black silhouette with glowing crimson eyes and red crest accent. Solid crimson-red circular sun backdrop, flat graphic shapes, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/items/armor/armor-demon-kabuto.webp",
+  "public_path": "/assets/items/armor/armor-demon-kabuto.webp",
+  "generated_at": "2026-08-15 00:25:30"
+}

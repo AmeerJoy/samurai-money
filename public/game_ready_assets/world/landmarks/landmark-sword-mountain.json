@@ -1,0 +1,20 @@
+{
+  "id": "landmark-sword-mountain",
+  "name": "Colossal Blade of the Gods",
+  "category": "World Landmarks",
+  "type": "Map Landmark Node",
+  "rarity": "Legendary",
+  "rel_dir": "world/landmarks",
+  "purpose": "Major landmark marking the peak of the Swordsmanship upgrade branch.",
+  "visual": "Giant ancient katana driven into mountain peak cutting across a crimson moon.",
+  "prompt": "A minimalist 2D graphic illustration of a colossal giant katana sword driven into the peak of a dark mountain, the blade silhouette cutting directly through a giant solid crimson-red circular sun, pitch black canvas, clean geometric poster art, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/world/landmarks/landmark-sword-mountain.webp",
+  "public_path": "/assets/world/landmarks/landmark-sword-mountain.webp",
+  "generated_at": "2026-08-15 00:24:55"
+}

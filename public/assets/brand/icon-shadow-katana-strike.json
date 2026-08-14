@@ -1,0 +1,23 @@
+{
+  "id": "icon-shadow-katana-strike",
+  "name": "App Icon: Shadow Katana Strike",
+  "filename": "icon-shadow-katana-strike.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary App Store Icon \u2014 Shadow Fight Aesthetic.",
+  "description": "Dynamic pitch-black silhouette of a shadow samurai drawing a razor-sharp glowing crimson katana blade, cutting across a massive blood-red circular solar halo on an obsidian black canvas.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon, shadow fight aesthetic. A dynamic side-view pure pitch-black silhouette of a fierce samurai ninja warrior with topknot drawing a sleek katana sword with a vibrant glowing crimson-red cutting edge. (Directly framed inside a giant perfectly smooth solid circular crimson-red sun halo:1.4). Pure solid pitch-black background (#07080C), razor-sharp clean hard vector edges, high contrast silhouette art, iconic mobile game icon composition, no human face details, no realistic skin, no 3D rendering, no soft painting, no brushstrokes, no gradients, no text, no typography, no pixelation, no noise.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 7.5,
+  "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+}

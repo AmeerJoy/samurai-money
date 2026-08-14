@@ -1,0 +1,20 @@
+{
+  "id": "sword-dragon-naginata",
+  "name": "Dragon Naginata Spear",
+  "category": "Items & Equipment",
+  "type": "Weapon Upgrade",
+  "rarity": "Epic",
+  "rel_dir": "items/swords",
+  "purpose": "Reach/area weapon card in weapons inventory.",
+  "visual": "Graceful naginata spear silhouette with flowing red silk tassel.",
+  "prompt": "Minimalist 2D game weapon icon of a traditional Japanese naginata spear with flowing crimson silk tassel, diagonal dynamic composition, pitch black silhouette with gold blade collar, solid crimson circular badge background, clean graphic art, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/items/swords/sword-dragon-naginata.webp",
+  "public_path": "/assets/items/swords/sword-dragon-naginata.webp",
+  "generated_at": "2026-08-15 00:25:20"
+}

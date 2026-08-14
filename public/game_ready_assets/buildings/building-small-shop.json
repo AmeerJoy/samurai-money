@@ -1,0 +1,20 @@
+{
+  "id": "building-small-shop",
+  "name": "Bamboo Shop",
+  "category": "Buildings",
+  "type": "Economic Building",
+  "rarity": "Common",
+  "rel_dir": "buildings",
+  "purpose": "Building tier 1 illustration on economic empire dashboard.",
+  "visual": "Humble wooden merchant shop stall with red hanging lantern and sun disc.",
+  "prompt": "Minimalist 2D game asset of a traditional Japanese wooden merchant stall with a hanging red paper lantern, pure black silhouette with crimson accents, solid crimson circular sun background, pitch black canvas, clean vector lines, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/buildings/building-small-shop.webp",
+  "public_path": "/assets/buildings/building-small-shop.webp",
+  "generated_at": "2026-08-15 00:24:58"
+}

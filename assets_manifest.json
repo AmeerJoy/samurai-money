@@ -1,0 +1,1824 @@
+{
+  "version": "2.0.0",
+  "game": "Samurai Money",
+  "artStyle": "2D Minimalist Graphic / Silhouette Poster Art",
+  "colorTokens": {
+    "nearBlack": "#07080C",
+    "crimsonRed": "#D20A2E",
+    "brightVermillion": "#F01835",
+    "antiqueGold": "#F59E0B"
+  },
+  "totalAssets": 90,
+  "assets": [
+    {
+      "id": "item-demon-slayer-kabuto",
+      "name": "Demon Slayer Kabuto Helmet",
+      "filename": "demon-slayer-kabuto.webp",
+      "type": "item",
+      "category": "Armor & Items",
+      "subfolder": "items/armor",
+      "rarity": "epic",
+      "purpose": "Legendary armor upgrade item inspect modal.",
+      "description": "Fierce horned samurai battle helmet with demon faceplate (Mempo) silhouette, framed in crimson geometry.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Minimalist 2D vector game icon of a traditional Japanese samurai kabuto helmet with prominent curved golden-crimson crescent horns and a demon mempo face mask, rendered as a bold near-black silhouette with clean crimson-red edge lines, pure solid black background, crisp vector silhouette poster art, no 3D render, no text, no watermark."
+    },
+    {
+      "id": "bg-achievements",
+      "name": "Achievement World Map Canvas",
+      "category": "Backgrounds",
+      "type": "UI Backdrop",
+      "rarity": "Common",
+      "rel_dir": "backgrounds",
+      "purpose": "High-contrast dark canvas for the Achievement Graph nodes and connections.",
+      "visual": "Ultra-dark minimalist background with subtle geometric grid lines and faint red haze.",
+      "prompt": "Minimalist 2D background canvas for an achievement node tree UI. Deep pitch-black canvas with extremely faint dark gray mountain silhouettes at bottom, faint crimson atmospheric glow at top, clean empty negative space for UI overlay, no characters, no text, no 3D.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/backgrounds/bg-achievements.webp",
+      "public_path": "/assets/backgrounds/bg-achievements.webp",
+      "generated_at": "2026-08-15 00:25:39"
+    },
+    {
+      "id": "bg-main",
+      "name": "Main Dashboard Background",
+      "category": "Backgrounds",
+      "type": "UI Backdrop",
+      "rarity": "Common",
+      "rel_dir": "backgrounds",
+      "purpose": "Full-screen subtle background behind main incremental dashboard.",
+      "visual": "Near-black minimalist landscape with subtle crimson mist and mountain horizon.",
+      "prompt": "Minimalist 2D background wallpaper for a video game UI. Deep near-black night landscape with subtle dark gray mountain silhouettes, subtle dark crimson atmospheric horizon glow, spacious empty negative space in center for game UI readability, clean vector style, no characters, no buildings, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/backgrounds/bg-main.webp",
+      "public_path": "/assets/backgrounds/bg-main.webp",
+      "generated_at": "2026-08-15 00:25:36"
+    },
+    {
+      "id": "icon-2d-crossed-katanas-crest",
+      "name": "App Icon: 2D Crossed Katanas Crest",
+      "filename": "icon-2d-crossed-katanas-crest.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary 2D App Store Icon \u2014 Symmetrical Blade Emblem.",
+      "description": "Two sleek crossed pure solid black katana sword silhouettes forming a sharp X emblem, centered inside a giant solid crimson-red solar circle on an obsidian background.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector game app icon. Two symmetrical crossed pure solid black Japanese samurai katana swords forming a bold X emblem. (Centered inside a giant perfectly smooth solid crimson-red circular sun:1.4). Pure flat 2D graphic art, solid pitch-black silhouette, razor-sharp clean hard vector edges, SVG vector aesthetic, high contrast, solid dark background (#07080C), bold iconic app mark, no gradients, no 3D rendering, no soft shadows, no textures, no text, no watermark, no pixelation.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.0,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-2d-demon-kabuto-mask",
+      "name": "App Icon: 2D Demon Kabuto Mask",
+      "filename": "icon-2d-demon-kabuto-mask.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary 2D App Store Icon \u2014 Warlord Kabuto Identity.",
+      "description": "Symmetrical pure flat solid black samurai battle helmet (Kabuto) with curved crescent horns and demon Mempo faceplate, glowing crimson eye slits centered in a radiant crimson disc.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector game app icon. Symmetrical pure solid black silhouette of a Japanese samurai kabuto helmet with curved golden-crimson crescent horns and a demon mempo face mask with sharp crimson eye slits. (Directly centered in front of a giant perfectly smooth solid crimson-red circular sun:1.4). Pure flat 2D graphic design, solid pitch-black (#07080C), vibrant crimson red (#D20A2E), razor-sharp clean hard vector edges, SVG vector aesthetic, no 3D rendering, no volume, no gradients, no soft shadows, no text, no pixelation, no noise.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.0,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-2d-ronin-blood-sun",
+      "name": "App Icon: 2D Ronin Blood Sun",
+      "filename": "icon-2d-ronin-blood-sun.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary 2D App Store Icon \u2014 Flat Silhouette Hero.",
+      "description": "Pure flat 2D solid pitch-black silhouette of a master samurai warrior with topknot holding a drawn katana vertically, framed inside a giant perfectly smooth solid crimson-red circular sun on a pitch-black background.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector game app icon. (Pure flat solid pitch-black silhouette of a samurai warrior holding a sleek katana vertically:1.3). (Directly centered inside a giant perfectly smooth solid crimson-red circular sun:1.4). Flat 2D graphic design, pure flat color fills, razor-sharp clean hard vector edges, SVG vector aesthetic, solid pitch-black canvas (#07080C), deep crimson red (#D20A2E), high contrast, bold iconic composition, no gradients, no 3D rendering, no soft lighting, no shading, no digital painting, no realistic face, no text, no typography, no noise, no pixelation.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.0,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-2d-coin-kamon-seal",
+      "name": "App Icon: 2D Samurai Coin Kamon Seal",
+      "filename": "icon-2d-coin-kamon-seal.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary 2D App Store Icon \u2014 Traditional Coin Clan Crest.",
+      "description": "Traditional Japanese circular currency coin silhouette with square center hole and crossed black katanas, embedded in a deep crimson sun medallion.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector game app icon. Traditional Japanese circular coin silhouette with a square center cutout, crossed pure solid black samurai katana swords, (centered inside a giant perfectly smooth solid circular crimson-red sun emblem:1.4). Pure flat 2D graphic art, solid pitch-black silhouette (#07080C), deep crimson red (#D20A2E), sharp geometric vector contours, high contrast, clean negative space, no 3D rendering, no gradients, no soft painting, no text, no typography, no pixelation.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.0,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-2d-slashed-koban-coin",
+      "name": "App Icon: 2D Slashed Koban Wealth",
+      "filename": "icon-2d-slashed-koban-coin.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary 2D App Store Icon \u2014 Direct Samurai + Money Theme.",
+      "description": "Traditional Japanese oval gold Koban coin silhouette with crimson seal stamp, cleanly cleaved diagonally by a pure flat black katana blade inside a giant circular crimson solar ring.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector game app icon representing samurai wealth. A traditional Japanese oval gold Koban coin silhouette with stamped crimson seals, cleanly sliced diagonally by a pure solid flat black samurai katana blade. (Directly centered inside a giant perfectly smooth solid crimson-red circular sun halo:1.4). Flat 2D vector art, pure flat solid shapes, razor-sharp clean geometric edges, high contrast, solid pitch-black background (#07080C), no 3D shading, no gradients, no photorealism, no text, no typography, no pixelation, no noise.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.0,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-2d-straw-hat-ronin-stance",
+      "name": "App Icon: 2D Straw Hat Ronin Stance",
+      "filename": "icon-2d-straw-hat-ronin-stance.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary 2D App Store Icon \u2014 Wandering Straw-Hat Ronin.",
+      "description": "Pure flat 2D solid black silhouette of a wandering ronin in traditional conical straw kasa hat in combat-ready posture with katana blade, centered before a massive blood-red circular sun.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector game icon. (Pure flat solid black silhouette of a ronin samurai warrior wearing a wide conical straw kasa hat:1.3) holding a sharp katana blade in battle stance. (Directly framed inside a giant perfectly smooth solid crimson-red circular sun:1.4). Pure flat 2D vector illustration, solid pitch-black figure (#07080C), deep crimson red (#D20A2E), pristine razor-sharp clean edges, flat graphic shapes, high contrast, no 3D rendering, no soft painting, no gradients, no realistic face, no text, no typography, no pixelation, no noise.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.0,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-crimson-flame-katana",
+      "name": "App Icon: Crimson Flame Katana",
+      "filename": "icon-crimson-flame-katana.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Flaming Blade Emblem.",
+      "description": "Vertical pitch-black katana silhouette cleaving upward, wreathed in sharp clean crimson solar flames inside a circular gold and crimson seal.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon. A vertical Japanese samurai katana sword silhouette pointing upward in center, near-black hilt with a razor-sharp glowing crimson-red cutting edge radiating clean geometric crimson flame arcs. (Directly centered inside a perfectly smooth circular crimson-red solar seal with gold rim:1.4). Pitch-black background, pristine vector geometry, razor-sharp clean edges, flat 2D graphic emblem, no 3D, no text, no watermark, no pixelation, no noise.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 7.5,
+      "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+    },
+    {
+      "id": "icon-horned-mempo-warlord",
+      "name": "App Icon: Horned Mempo Warlord",
+      "filename": "icon-horned-mempo-warlord.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Warlord Clan Identity.",
+      "description": "Menacing pitch-black samurai battle helmet (Kabuto) with sweeping golden-crimson crescent horns and a demon Mempo faceplate with glowing crimson eyes, centered on a blazing blood-red solar emblem.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon. Symmetrical pure pitch-black silhouette of a fierce Japanese samurai warlord kabuto helmet with large sharp crescent horns and a demon mempo face mask with glowing crimson-red eye slits. (Directly centered in front of a giant perfectly smooth solid circular crimson-red sun emblem:1.4). Pitch-black background (#07080C), clean hard vector contours, razor-sharp geometric edges, high contrast silhouette poster icon, no human face, no 3D render, no soft painting, no text, no pixelation, no aliasing.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 7.5,
+      "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+    },
+    {
+      "id": "icon-shadow-kasa-master",
+      "name": "App Icon: Shadow Kasa Master",
+      "filename": "icon-shadow-kasa-master.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Wandering Ronin Master.",
+      "description": "Cinematic side-profile silhouette of a wandering master samurai wearing a traditional conical straw kasa hat, resting a glowing crimson-edged katana on shoulders against a giant circular blood moon.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon. Dramatic profile silhouette of a wandering ronin samurai wearing a wide conical straw kasa hat, holding a sleek katana blade with glowing crimson-red accents resting over shoulders. (Framed entirely within a giant perfectly smooth solid circular crimson-red blood sun:1.4). Pure solid pitch-black background (#07080C), high contrast silhouette poster art, razor-sharp clean edges, pristine vector shapes, no face details, no 3D, no painting, no text, no pixelation, no aliasing.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 7.5,
+      "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+    },
+    {
+      "id": "icon-shadow-katana-strike",
+      "name": "App Icon: Shadow Katana Strike",
+      "filename": "icon-shadow-katana-strike.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Shadow Fight Aesthetic.",
+      "description": "Dynamic pitch-black silhouette of a shadow samurai drawing a razor-sharp glowing crimson katana blade, cutting across a massive blood-red circular solar halo on an obsidian black canvas.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon, shadow fight aesthetic. A dynamic side-view pure pitch-black silhouette of a fierce samurai ninja warrior with topknot drawing a sleek katana sword with a vibrant glowing crimson-red cutting edge. (Directly framed inside a giant perfectly smooth solid circular crimson-red sun halo:1.4). Pure solid pitch-black background (#07080C), razor-sharp clean hard vector edges, high contrast silhouette art, iconic mobile game icon composition, no human face details, no realistic skin, no 3D rendering, no soft painting, no brushstrokes, no gradients, no text, no typography, no pixelation, no noise.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 7.5,
+      "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+    },
+    {
+      "id": "icon-warlord-shogun-crest",
+      "name": "App Icon: Shogun Kamon Shield",
+      "filename": "icon-warlord-shogun-crest.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Clan Crest Kamon.",
+      "description": "Minimalist Japanese Shogun warlord clan crest (Kamon) featuring twin crossed curved katanas and imperial dragon horns centered in a radiant crimson disc.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon. Traditional Japanese samurai warlord clan crest (Kamon emblem) featuring two crossed curved katana silhouettes and stylized imperial dragon horns in circular symmetry. (Centered inside a giant perfectly smooth solid circular crimson-red sun emblem:1.4). Pure pitch-black background, sharp clean vector lines, high contrast graphic design, no 3D, no text, no watermark, no pixelation, no noise.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 7.5,
+      "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+    },
+    {
+      "id": "icon-dragon-koban-slashed",
+      "name": "App Icon: Slashed Dragon Koban",
+      "filename": "icon-dragon-koban-slashed.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Core Samurai + Money Theme.",
+      "description": "Traditional Japanese oval gold Koban coin cleanly cleaved diagonally by a glowing crimson katana blade silhouette, centered in a circular crimson eclipse ring.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon symbolizing samurai fortune. An antique Japanese oval gold Koban coin silhouette with crimson stamped engravings, cleanly sliced diagonally by a sleek pitch-black katana blade with a razor-sharp glowing crimson cutting edge. (Framed by a giant perfectly smooth solid circular crimson-red sun halo:1.4). Pure pitch-black background, pristine vector geometry, sharp clean edges, iconic game logo, no 3D rendering, no text, no pixelation, no noise.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 7.5,
+      "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+    },
+    {
+      "id": "game_icon_crossed_katanas_sun",
+      "name": "Game Icon: Crossed Katanas & Blood Sun",
+      "filename": "game-icon-crossed-katanas.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "legendary",
+      "purpose": "Primary App Icon / Store Icon Candidate A.",
+      "description": "Two elegant crossed samurai katana swords with sharp crimson-red cutting edges, centered inside a perfectly circular solid crimson solar disc on an obsidian black badge.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon. Two crossed Japanese samurai katana swords in perfect X composition, rendered as sleek near-black silhouettes with sharp glowing crimson-red blade highlights. (Centered inside a perfectly smooth solid circular crimson-red sun emblem:1.4). Pure solid pitch-black background, rounded square app icon framing, pristine smooth vector geometry, razor-sharp hard edges, high contrast, clean negative space, flat 2D graphic design, SVG vector aesthetic, no 3D rendering, no soft painting, no brushstrokes, no gradients, no photorealism, no text, no typography, no pixelation, no noise."
+    },
+    {
+      "id": "game_icon_demon_kabuto_crest",
+      "name": "Game Icon: Demon Kabuto Warlord",
+      "filename": "game-icon-demon-kabuto.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "legendary",
+      "purpose": "Primary App Icon Candidate C: Menacing Warlord Identity.",
+      "description": "Fierce horned samurai battle helmet (Kabuto) and demon faceplate silhouette centered in a blazing crimson disc.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon. A fierce Japanese samurai kabuto helmet with curved golden-crimson crescent horns and a demon mempo face mask, rendered as a bold solid near-black silhouette with glowing crimson-red eye slits and rim contours. (Directly centered in front of a giant perfectly smooth solid circular crimson-red sun:1.4). Pure solid black background, pristine circular symmetry, clean hard vector edges, vector game icon, no 3D rendering, no soft painting, no gradients, no text, no pixelation, no noise."
+    },
+    {
+      "id": "game_icon_samurai_koban_money",
+      "name": "Game Icon: Dragon Koban & Blade",
+      "filename": "game-icon-samurai-money.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "legendary",
+      "purpose": "Primary App Icon Candidate B: Direct 'Samurai + Money' Theme.",
+      "description": "A traditional oval Japanese gold Koban wealth coin cleaved diagonally by a crimson-edged katana silhouette inside a blood sun ring.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game app icon representing samurai wealth. A traditional Japanese oval gold Koban coin silhouette with stamped crimson seals, cleaved diagonally by a sleek near-black samurai katana sword with a sharp glowing crimson blade. (Framed by a giant perfectly smooth solid crimson circular solar ring:1.4). Pure pitch-black background, pristine vector geometry, razor-sharp clean edges, flat graphic icon, bold symbolism, no 3D, no soft painting, no gradients, no text, no pixelation, no noise."
+    },
+    {
+      "id": "game_icon_ronin_silhouette_halo",
+      "name": "Game Icon: Lone Ronin Solar Halo",
+      "filename": "game-icon-ronin-halo.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "legendary",
+      "purpose": "Primary App Icon Candidate D: Cinematic Character Profile.",
+      "description": "Side profile of a lone samurai with topknot and drawn katana, framed in high contrast against a solid crimson sun.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A masterwork minimalist 2D vector game icon. Dramatic side profile silhouette of a lone samurai warrior with traditional topknot and katana blade raised, depicted as a pure solid pitch-black silhouette with razor-sharp crimson edge contours. (Framed completely within a giant perfectly smooth solid circular crimson-red sun:1.4). Pure black background, minimalist vector poster icon, high contrast, clean geometry, no face details, no 3D, no painting brushstrokes, no gradients, no text, no pixelation, no aliasing."
+    },
+    {
+      "id": "hero-samurai",
+      "name": "Hero Samurai Poster",
+      "category": "Brand",
+      "type": "Key Visual",
+      "rarity": "Legendary",
+      "rel_dir": "brand",
+      "purpose": "Main visual identity artwork for title screens, hero sections, and promotional material.",
+      "visual": "Lone samurai warrior standing on dark mountain peak in near-black silhouette with sharp crimson highlights, giant solid crimson sun backdrop.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A lone samurai warrior standing dramatically on top of a dark rocky mountain, shown primarily as a near-black silhouette with only a few sharp crimson-red highlights defining the armor, clothing, sword and body contours. A huge perfectly solid crimson-red circular sun behind the warrior creates a strong iconic silhouette. Extremely simple flat shapes, clean hard edges, limited color palette of near-black, deep crimson red and subtle dark gray, dramatic negative space, large bold geometric forms, simplified mountain silhouettes in the background, sharp vector game art style, cinematic poster composition, no anime character style, no 3D rendering, no soft digital painting, no gradients, no photorealism, no text, no typography.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/brand/hero-samurai.webp",
+      "public_path": "/assets/brand/hero-samurai.webp",
+      "generated_at": "2026-08-15 00:22:26"
+    },
+    {
+      "id": "social-preview",
+      "name": "Social Preview Banner",
+      "category": "Brand",
+      "type": "Promotional Banner",
+      "rarity": "Epic",
+      "rel_dir": "brand",
+      "purpose": "1200x630 social preview banner and launch hero card.",
+      "visual": "Wide panoramic crimson sunrise landscape with samurai and fortress silhouettes.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. Wide panoramic landscape showing a lone samurai silhouette standing before a massive dark shogun fortress on a mountain ridge under a colossal solid crimson-red sun disc. Pitch black foreground, razor sharp vector edges, cinematic negative space, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/brand/social-preview.webp",
+      "public_path": "/assets/brand/social-preview.webp",
+      "generated_at": "2026-08-15 00:22:29"
+    },
+    {
+      "id": "building-small-shop",
+      "name": "Bamboo Shop",
+      "category": "Buildings",
+      "type": "Economic Building",
+      "rarity": "Common",
+      "rel_dir": "buildings",
+      "purpose": "Building tier 1 illustration on economic empire dashboard.",
+      "visual": "Humble wooden merchant shop stall with red hanging lantern and sun disc.",
+      "prompt": "Minimalist 2D game asset of a traditional Japanese wooden merchant stall with a hanging red paper lantern, pure black silhouette with crimson accents, solid crimson circular sun background, pitch black canvas, clean vector lines, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/buildings/building-small-shop.webp",
+      "public_path": "/assets/buildings/building-small-shop.webp",
+      "generated_at": "2026-08-15 00:24:58"
+    },
+    {
+      "id": "building-treasury",
+      "name": "Clan Stone Treasury",
+      "category": "Buildings",
+      "type": "Economic Building",
+      "rarity": "Epic",
+      "rel_dir": "buildings",
+      "purpose": "Building tier 4 illustration on economic empire dashboard.",
+      "visual": "Fortified stone treasury storehouse with heavy iron door and red banners.",
+      "prompt": "Minimalist 2D game asset of a heavy Japanese fortified stone storehouse (kura) with black lacquer trim and crimson banners, solid crimson sun disc in background, pitch black canvas, clean vector game icon, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/buildings/building-treasury.webp",
+      "public_path": "/assets/buildings/building-treasury.webp",
+      "generated_at": "2026-08-15 00:25:08"
+    },
+    {
+      "id": "building-fortress",
+      "name": "Daimyo Castle Fortress",
+      "category": "Buildings",
+      "type": "Economic Building",
+      "rarity": "Legendary",
+      "rel_dir": "buildings",
+      "purpose": "Building tier 5 illustration on economic empire dashboard.",
+      "visual": "Towering multi-story samurai fortress castle on stone foundation.",
+      "prompt": "Minimalist 2D game asset of a towering multi-story Japanese daimyo castle fortress on a stone base, pure black silhouette with red roof trim, solid crimson circular sun backdrop, pitch black canvas, clean geometric shapes, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/buildings/building-fortress.webp",
+      "public_path": "/assets/buildings/building-fortress.webp",
+      "generated_at": "2026-08-15 00:25:11"
+    },
+    {
+      "id": "building-blacksmith",
+      "name": "Dojo Blacksmith Forge",
+      "category": "Buildings",
+      "type": "Economic Building",
+      "rarity": "Rare",
+      "rel_dir": "buildings",
+      "purpose": "Building tier 2 illustration on economic empire dashboard.",
+      "visual": "Dark sword smithy forge silhouette glowing with crimson embers and an anvil.",
+      "prompt": "Minimalist 2D game asset of a traditional Japanese sword blacksmith workshop silhouette, anvil and forge glowing with crimson fire embers, solid crimson circular halo behind, pitch black background, clean geometric vector art, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/buildings/building-blacksmith.webp",
+      "public_path": "/assets/buildings/building-blacksmith.webp",
+      "generated_at": "2026-08-15 00:25:02"
+    },
+    {
+      "id": "building-mine",
+      "name": "Gold Ore Mine",
+      "category": "Buildings",
+      "type": "Economic Building",
+      "rarity": "Rare",
+      "rel_dir": "buildings",
+      "purpose": "Building tier 3 illustration on economic empire dashboard.",
+      "visual": "Dark mountain mine entrance with wooden timber supports and gold ore carts.",
+      "prompt": "Minimalist 2D game asset of a dark mountain gold mine entrance with timber support beams and minecart spilling gold ore chunks, solid crimson circular sun disc behind, pitch black canvas, clean vector artwork, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/buildings/building-mine.webp",
+      "public_path": "/assets/buildings/building-mine.webp",
+      "generated_at": "2026-08-15 00:25:05"
+    },
+    {
+      "id": "char-armored-shogun-sovereign",
+      "name": "Imperial Armored Shogun",
+      "filename": "armored-shogun-sovereign.webp",
+      "type": "character",
+      "category": "Characters",
+      "subfolder": "characters",
+      "rarity": "legendary",
+      "purpose": "Endgame Shogun ruler portrait & prestige unlock.",
+      "description": "Towering armored Shogun with horned kabuto and massive battle naginata, overlooking his kingdom under the blood sun.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A colossal armored Japanese Shogun warlord in heavy horned kabuto helmet and ornate shoulder armor, holding a towering naginata spear, shown as a powerful near-black silhouette with sharp crimson-red trim highlights. A huge perfectly solid crimson-red circular sun in background, clean hard edges, bold geometric shapes, dramatic negative space, vector game art, no anime, no 3D, no gradients, no text."
+    },
+    {
+      "id": "char-ronin-crimson-storm",
+      "name": "Ronin in Crimson Tempest",
+      "filename": "ronin-crimson-storm.webp",
+      "type": "character",
+      "category": "Characters",
+      "subfolder": "characters",
+      "rarity": "epic",
+      "purpose": "High-tier Ronin evolution display & battle portrait.",
+      "description": "Lone wandering ronin warrior with tattered cloak billowing in the storm, standing poised with katana drawn beneath a colossal perfectly solid crimson sun.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A lone ronin warrior with a long tattered cloak flowing in the wind, standing dramatically on a jagged cliff with katana raised, shown primarily as a near-black silhouette with sharp crimson-red contour highlights defining the blade and armor edges. A huge perfectly solid crimson-red circular sun behind the warrior creates a strong iconic silhouette. Extremely simple flat shapes, clean hard edges, limited color palette of near-black, deep crimson red and dark charcoal, dramatic negative space, large bold geometric forms, sharp vector game art style, cinematic poster composition, no anime character style, no 3D rendering, no soft digital painting, no gradients, no photorealism, no text, no typography."
+    },
+    {
+      "id": "samurai-battle",
+      "name": "Samurai Battle Strike",
+      "category": "Characters",
+      "type": "Combat Pose",
+      "rarity": "Epic",
+      "rel_dir": "characters",
+      "purpose": "Display during critical strikes and active boss battles.",
+      "visual": "Dynamic mid-air leaping slash forming dramatic cross-silhouette.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A samurai warrior leaping dynamically in mid-strike with dual swords forming an iconic cross silhouette, near-black silhouette with crimson edge highlights. Giant solid crimson-red moon backdrop, flat pitch-black canvas, sharp vector lines, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-battle.webp",
+      "public_path": "/assets/characters/samurai-battle.webp",
+      "generated_at": "2026-08-15 00:22:41"
+    },
+    {
+      "id": "samurai-rich",
+      "name": "Samurai Daimyo Wealth",
+      "category": "Characters",
+      "type": "Wealth State",
+      "rarity": "Epic",
+      "rel_dir": "characters",
+      "purpose": "Display on high-wealth tiers and treasury management.",
+      "visual": "Daimyo lord seated on ornate lacquer dais holding gold fan with treasure coffer.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. An opulent samurai lord in flowing silk robes seated on an elevated platform holding an open war fan, with open treasure coffers spilling gold kobans, pure pitch-black silhouette with crimson and gold accents. Giant solid crimson sun disc behind, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-rich.webp",
+      "public_path": "/assets/characters/samurai-rich.webp",
+      "generated_at": "2026-08-15 00:22:51"
+    },
+    {
+      "id": "samurai-idle",
+      "name": "Samurai Idle",
+      "category": "Characters",
+      "type": "Character State",
+      "rarity": "Common",
+      "rel_dir": "characters",
+      "purpose": "Primary resting character illustration on main game screen.",
+      "visual": "Dark near-black samurai silhouette in a relaxed neutral standing stance with restrained crimson sash against solid red sun.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A lone ronin samurai standing in a neutral relaxed idle stance, hands resting near sword hilt, pure near-black silhouette with restrained crimson-red sash ties. Giant perfectly solid crimson-red circular sun behind, pitch black background, clean vector edges, dramatic negative space, no anime, no face, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-idle.webp",
+      "public_path": "/assets/characters/samurai-idle.webp",
+      "generated_at": "2026-08-15 00:22:32"
+    },
+    {
+      "id": "samurai-meditation",
+      "name": "Samurai Meditation",
+      "category": "Characters",
+      "type": "Offline Income State",
+      "rarity": "Rare",
+      "rel_dir": "characters",
+      "purpose": "Display on Dojo offline earnings screen and meditation buffs.",
+      "visual": "Samurai in meditative lotus posture under floating crimson spirit halo.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A serene samurai silhouette seated in meditative lotus position, pure black figure with subtle red highlights, framed by a giant glowing crimson-red circular solar halo. Pitch black background, clean geometric vector art, no anime, no face, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-meditation.webp",
+      "public_path": "/assets/characters/samurai-meditation.webp",
+      "generated_at": "2026-08-15 00:22:47"
+    },
+    {
+      "id": "samurai-legendary",
+      "name": "Samurai Mythic Sovereign",
+      "category": "Characters",
+      "type": "Tier 12 Sovereign",
+      "rarity": "Legendary",
+      "rel_dir": "characters",
+      "purpose": "Display on Legendary Shogun tier and prestigious completions.",
+      "visual": "Floating mythic shogun with floating red spirit orbs and solar flare halo.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A legendary mythic shogun silhouette hovering gracefully surrounded by six floating crimson spirit flame orbs and an immense solid crimson solar disc backdrop, pure black vector silhouette with razor sharp crimson outlines, poster composition, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-legendary.webp",
+      "public_path": "/assets/characters/samurai-legendary.webp",
+      "generated_at": "2026-08-15 00:22:57"
+    },
+    {
+      "id": "samurai-standing",
+      "name": "Samurai Standing",
+      "category": "Characters",
+      "type": "Character State",
+      "rarity": "Common",
+      "rel_dir": "characters",
+      "purpose": "Active hero portrait on dashboard and profile screens.",
+      "visual": "Poised confident stance with sheathed katana at waist under blazing red sun.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. An honorable samurai standing in a confident poised stance with sheathed katana at side, pure pitch-black silhouette with sharp crimson armor laces. Huge solid crimson-red sun disc backdrop, clean graphic shapes, high contrast, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-standing.webp",
+      "public_path": "/assets/characters/samurai-standing.webp",
+      "generated_at": "2026-08-15 00:22:35"
+    },
+    {
+      "id": "samurai-sword",
+      "name": "Samurai Sword Draw",
+      "category": "Characters",
+      "type": "Combat Pose",
+      "rarity": "Rare",
+      "rel_dir": "characters",
+      "purpose": "Display during click combos and active blade upgrades.",
+      "visual": "Drawing razor katana from sheath with crimson blade streak.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A samurai warrior drawing a katana sword from its scabbard, pure near-black silhouette with a razor-sharp glowing crimson-red blade edge. Colossal solid crimson-red sun in background, extreme negative space contrast, bold geometric shapes, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-sword.webp",
+      "public_path": "/assets/characters/samurai-sword.webp",
+      "generated_at": "2026-08-15 00:22:38"
+    },
+    {
+      "id": "samurai-victory",
+      "name": "Samurai Victory",
+      "category": "Characters",
+      "type": "Milestone Pose",
+      "rarity": "Epic",
+      "rel_dir": "characters",
+      "purpose": "Display on boss defeat, rank upgrade, and milestone unlock.",
+      "visual": "Samurai standing victorious atop rock ledge sheathing katana into scabbard.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A victorious samurai standing on a mountain crag sheathing his katana, cape flowing in the wind, pure pitch-black silhouette with crimson highlights. Huge solid crimson-red sun behind, clean graphic poster art, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-victory.webp",
+      "public_path": "/assets/characters/samurai-victory.webp",
+      "generated_at": "2026-08-15 00:22:44"
+    },
+    {
+      "id": "samurai-powerful",
+      "name": "Samurai Warlord Supreme",
+      "category": "Characters",
+      "type": "Boss / Tier 10 State",
+      "rarity": "Legendary",
+      "rel_dir": "characters",
+      "purpose": "Display on Warlord rank progression and heavy weapon upgrades.",
+      "visual": "Demonic horned kabuto warlord holding two-handed nodachi greatsword.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. An imposing supreme samurai warlord in horned demonic kabuto armor and spiked shoulder plates, holding a colossal two-handed nodachi sword planted into the ground. Giant solid crimson sun backdrop, pitch black canvas, sharp vector edges, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-powerful.webp",
+      "public_path": "/assets/characters/samurai-powerful.webp",
+      "generated_at": "2026-08-15 00:22:54"
+    },
+    {
+      "id": "char-shadow-shinobi-poised",
+      "name": "Shadow Shinobi Assassin",
+      "filename": "shadow-shinobi-poised.webp",
+      "type": "character",
+      "category": "Characters",
+      "subfolder": "characters",
+      "rarity": "epic",
+      "purpose": "Stealth assassin character progression node.",
+      "description": "Crouched shinobi assassin in dynamic stalking stance on a rooftop ridge, dual kunai silhouettes framed by a giant crimson lunar disc.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A stealth shinobi assassin crouched dynamically on a Japanese tile roof ridge, dual kunai daggers poised in silence, shown primarily as a near-black silhouette with sharp crimson-red accent highlights on mask and blade edges. A huge solid circular crimson sun behind the assassin, simple flat shapes, clean hard edges, pitch black background, dramatic negative space, sharp vector game art style, no anime, no 3D rendering, no soft painting, no gradients, no text, no typography."
+    },
+    {
+      "id": "samurai-shadow",
+      "name": "Shinobi Shadow Stalker",
+      "category": "Characters",
+      "type": "Stealth / Speed State",
+      "rarity": "Rare",
+      "rel_dir": "characters",
+      "purpose": "Display on auto-clicker ninja upgrades and secret map paths.",
+      "visual": "Agile shinobi crouched on curved pagoda roof under full blood moon.",
+      "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A nimble ninja shadow stalker crouched on the curved roof of a Japanese pagoda holding a kunai dagger, pure pitch-black silhouette against a colossal solid crimson-red full moon, high contrast negative space, clean vector edges, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/characters/samurai-shadow.webp",
+      "public_path": "/assets/characters/samurai-shadow.webp",
+      "generated_at": "2026-08-15 00:23:00"
+    },
+    {
+      "id": "emblem-dragon",
+      "name": "Celestial Dragon Emblem",
+      "category": "Emblems",
+      "type": "Achievement Emblem",
+      "rarity": "Legendary",
+      "rel_dir": "achievements/emblems",
+      "purpose": "Node badge for dragon conquests and mythical achievements.",
+      "visual": "Roaring dragon head silhouette with glowing red eyes inside red medallion.",
+      "prompt": "Minimalist 2D achievement artwork for a video game. A roaring Japanese dragon head silhouette in pure pitch-black, sharp crimson glowing eye and fangs, perfectly centered inside a solid crimson-red circular medal, high contrast negative space, game achievement icon, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/emblems/emblem-dragon.webp",
+      "public_path": "/assets/achievements/emblems/emblem-dragon.webp",
+      "generated_at": "2026-08-15 00:23:56"
+    },
+    {
+      "id": "emblem-battle-flag",
+      "name": "Clan Battle Flag Emblem",
+      "category": "Emblems",
+      "type": "Achievement Emblem",
+      "rarity": "Rare",
+      "rel_dir": "achievements/emblems",
+      "purpose": "Node badge for clan prestige, territory, and passive income.",
+      "visual": "Samurai sashimono battle banner silhouette with rising sun crest.",
+      "prompt": "Minimalist 2D achievement badge of a traditional samurai sashimono battle flag on a bamboo pole, pure black silhouette with a crimson sun emblem on the fabric, solid red circular background, pitch black canvas, clean vector art, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/emblems/emblem-battle-flag.webp",
+      "public_path": "/assets/achievements/emblems/emblem-battle-flag.webp",
+      "generated_at": "2026-08-15 00:23:50"
+    },
+    {
+      "id": "emblem-flaming-sword",
+      "name": "Flaming Spirit Blade Emblem",
+      "category": "Emblems",
+      "type": "Achievement Emblem",
+      "rarity": "Epic",
+      "rel_dir": "achievements/emblems",
+      "purpose": "Node badge for frenzy click power and critical multiplier milestones.",
+      "visual": "Katana blade engulfed in stylized geometric crimson spirit flame aura.",
+      "prompt": "Minimalist 2D achievement icon of a black katana blade surrounded by sharp geometric crimson spirit fire flames, solid crimson circular halo behind, pitch black background, clean game UI emblem, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/emblems/emblem-flaming-sword.webp",
+      "public_path": "/assets/achievements/emblems/emblem-flaming-sword.webp",
+      "generated_at": "2026-08-15 00:23:47"
+    },
+    {
+      "id": "emblem-crown",
+      "name": "Imperial Crown Emblem",
+      "category": "Emblems",
+      "type": "Achievement Emblem",
+      "rarity": "Epic",
+      "rel_dir": "achievements/emblems",
+      "purpose": "Node badge for sovereignty, leaderboards, and Shogun ranks.",
+      "visual": "Ornate gold and obsidian sovereign crown with crimson ruby crest.",
+      "prompt": "Minimalist 2D achievement badge of an ornate imperial samurai crown crest, pure black with polished gold spikes and a glowing crimson center ruby, circular red medal frame, solid dark background, clean geometric vector art, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/emblems/emblem-crown.webp",
+      "public_path": "/assets/achievements/emblems/emblem-crown.webp",
+      "generated_at": "2026-08-15 00:23:53"
+    },
+    {
+      "id": "emblem-helmet",
+      "name": "Kabuto Helmet Emblem",
+      "category": "Emblems",
+      "type": "Achievement Emblem",
+      "rarity": "Common",
+      "rel_dir": "achievements/emblems",
+      "purpose": "Node badge for armor, defense, and warrior milestones.",
+      "visual": "Horned samurai kabuto helmet in pure black silhouette inside crimson medallion.",
+      "prompt": "Minimalist 2D achievement icon of a horned samurai kabuto helmet silhouette, centered inside a solid crimson-red circular medal, black canvas, clean geometric shapes, high contrast game badge, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/emblems/emblem-helmet.webp",
+      "public_path": "/assets/achievements/emblems/emblem-helmet.webp",
+      "generated_at": "2026-08-15 00:23:34"
+    },
+    {
+      "id": "emblem-mask",
+      "name": "Mempo War Mask Emblem",
+      "category": "Emblems",
+      "type": "Achievement Emblem",
+      "rarity": "Common",
+      "rel_dir": "achievements/emblems",
+      "purpose": "Node badge for combat intimidation and battle milestones.",
+      "visual": "Fierce samurai facial mempo mask silhouette with sharp crimson fangs and eyes.",
+      "prompt": "Minimalist 2D achievement icon of a fierce demonic samurai mempo face mask silhouette with glowing crimson eyes, centered in a circular crimson badge, pure black background, clean vector game icon, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/emblems/emblem-mask.webp",
+      "public_path": "/assets/achievements/emblems/emblem-mask.webp",
+      "generated_at": "2026-08-15 00:23:37"
+    },
+    {
+      "id": "emblem-sword",
+      "name": "Single Katana Emblem",
+      "category": "Emblems",
+      "type": "Achievement Emblem",
+      "rarity": "Common",
+      "rel_dir": "achievements/emblems",
+      "purpose": "Node badge for swordsmanship and single-target click power.",
+      "visual": "Vertical curved katana sword silhouette with razor crimson edge in circular sun.",
+      "prompt": "Minimalist 2D achievement icon of a vertical Japanese katana sword silhouette with a razor crimson blade edge, centered inside a solid crimson-red circular medal, solid dark background, clean geometric vector art, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/emblems/emblem-sword.webp",
+      "public_path": "/assets/achievements/emblems/emblem-sword.webp",
+      "generated_at": "2026-08-15 00:23:40"
+    },
+    {
+      "id": "emblem-twin-swords",
+      "name": "Twin Swords Emblem",
+      "category": "Emblems",
+      "type": "Achievement Emblem",
+      "rarity": "Rare",
+      "rel_dir": "achievements/emblems",
+      "purpose": "Node badge for dual-wielding and click multiplier milestones.",
+      "visual": "Two crossed black katanas forming an X-silhouette over solid crimson sun.",
+      "prompt": "Minimalist 2D achievement icon of two crossed black katana swords forming an X silhouette with razor crimson blade edges, centered on a solid crimson circular medallion, pitch black canvas, sharp vector edges, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/emblems/emblem-twin-swords.webp",
+      "public_path": "/assets/achievements/emblems/emblem-twin-swords.webp",
+      "generated_at": "2026-08-15 00:23:44"
+    },
+    {
+      "id": "sword-cursed-muramasa",
+      "name": "Cursed Muramasa Katana",
+      "category": "Items & Equipment",
+      "type": "Weapon Upgrade",
+      "rarity": "Legendary",
+      "rel_dir": "items/swords",
+      "purpose": "Endgame crit blade in weapons inventory.",
+      "visual": "Cursed black katana blade surrounded by crimson soul energy aura.",
+      "prompt": "Minimalist 2D game weapon icon of a legendary cursed katana sword with black blade radiating intense crimson soul flames, solid crimson circular badge background, black background, clean vector game art, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/items/swords/sword-cursed-muramasa.webp",
+      "public_path": "/assets/items/swords/sword-cursed-muramasa.webp",
+      "generated_at": "2026-08-15 00:25:26"
+    },
+    {
+      "id": "armor-demon-kabuto",
+      "name": "Demon Horned Kabuto",
+      "category": "Items & Equipment",
+      "type": "Armor Upgrade",
+      "rarity": "Epic",
+      "rel_dir": "items/armor",
+      "purpose": "Defense armor card in equipment inventory.",
+      "visual": "Menacing horned kabuto helmet silhouette with red eye visor.",
+      "prompt": "Minimalist 2D game equipment icon of a legendary horned samurai kabuto helmet with menacing mempo face mask, pure pitch-black silhouette with glowing crimson eyes and red crest accent. Solid crimson-red circular sun backdrop, flat graphic shapes, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/items/armor/armor-demon-kabuto.webp",
+      "public_path": "/assets/items/armor/armor-demon-kabuto.webp",
+      "generated_at": "2026-08-15 00:25:30"
+    },
+    {
+      "id": "treasure-dragon-vault",
+      "name": "Dragon Lacquer Vault",
+      "category": "Items & Equipment",
+      "type": "Treasure Box",
+      "rarity": "Epic",
+      "rel_dir": "items/treasures",
+      "purpose": "Loot box container reward illustration.",
+      "visual": "Black lacquer chest with red dragon crests overflowing with gold kobans.",
+      "prompt": "Minimalist 2D game reward asset of a heavy black lacquer treasure chest adorned with crimson dragon crests, overflowing with glowing golden koban coins and ruby gems, solid crimson sun aura behind, flat black background, high contrast graphic artwork, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/items/treasures/treasure-dragon-vault.webp",
+      "public_path": "/assets/items/treasures/treasure-dragon-vault.webp",
+      "generated_at": "2026-08-15 00:25:33"
+    },
+    {
+      "id": "sword-dragon-naginata",
+      "name": "Dragon Naginata Spear",
+      "category": "Items & Equipment",
+      "type": "Weapon Upgrade",
+      "rarity": "Epic",
+      "rel_dir": "items/swords",
+      "purpose": "Reach/area weapon card in weapons inventory.",
+      "visual": "Graceful naginata spear silhouette with flowing red silk tassel.",
+      "prompt": "Minimalist 2D game weapon icon of a traditional Japanese naginata spear with flowing crimson silk tassel, diagonal dynamic composition, pitch black silhouette with gold blade collar, solid crimson circular badge background, clean graphic art, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/items/swords/sword-dragon-naginata.webp",
+      "public_path": "/assets/items/swords/sword-dragon-naginata.webp",
+      "generated_at": "2026-08-15 00:25:20"
+    },
+    {
+      "id": "sword-steel-katana",
+      "name": "Forged Steel Katana",
+      "category": "Items & Equipment",
+      "type": "Weapon Upgrade",
+      "rarity": "Common",
+      "rel_dir": "items/swords",
+      "purpose": "Primary weapon card in weapons inventory.",
+      "visual": "Curved katana blade with razor crimson cutting edge over red sun.",
+      "prompt": "Minimalist 2D game weapon icon of a curved Japanese katana sword, pitch-black blade silhouette with an intense glowing crimson cutting edge. Huge solid crimson-red moon in background, black canvas, bold geometric graphic art, clean vector edges, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/items/swords/sword-steel-katana.webp",
+      "public_path": "/assets/items/swords/sword-steel-katana.webp",
+      "generated_at": "2026-08-15 00:25:14"
+    },
+    {
+      "id": "sword-shadow-shuriken",
+      "name": "Shadow Ninja Shuriken",
+      "category": "Items & Equipment",
+      "type": "Weapon Upgrade",
+      "rarity": "Rare",
+      "rel_dir": "items/swords",
+      "purpose": "Speed weapon card in weapons inventory.",
+      "visual": "Sharp 4-point black ninja throwing star with razor crimson beveled edges.",
+      "prompt": "Minimalist 2D game icon of a sharp black ninja shuriken throwing star with razor crimson-red beveled edges, glowing red core, pure flat black background, high contrast, clean vector game badge, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/items/swords/sword-shadow-shuriken.webp",
+      "public_path": "/assets/items/swords/sword-shadow-shuriken.webp",
+      "generated_at": "2026-08-15 00:25:23"
+    },
+    {
+      "id": "sword-twin-tanto",
+      "name": "Twin Tanto Daggers",
+      "category": "Items & Equipment",
+      "type": "Weapon Upgrade",
+      "rarity": "Rare",
+      "rel_dir": "items/swords",
+      "purpose": "Dual-strike weapon card in weapons inventory.",
+      "visual": "Crossed tanto daggers silhouette with crimson cord wrap.",
+      "prompt": "Minimalist 2D game weapon icon of twin Japanese tanto daggers crossed diagonally, pure black blade silhouettes with razor crimson-red edge highlights and red cord wrap. Solid crimson circular badge background, pitch black canvas, sharp vector lines, game UI asset, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/items/swords/sword-twin-tanto.webp",
+      "public_path": "/assets/items/swords/sword-twin-tanto.webp",
+      "generated_at": "2026-08-15 00:25:17"
+    },
+    {
+      "id": "legendary-beyond-fortune",
+      "name": "Beyond Fortune",
+      "category": "Legendary Art",
+      "type": "Legendary Art",
+      "rarity": "Mythic",
+      "rel_dir": "achievements/legendary",
+      "purpose": "Endgame 100% completion artwork for discovering all secrets.",
+      "visual": "Mysterious samurai standing before abstract crimson cosmic portal in total darkness.",
+      "prompt": "A minimalist 2D graphic illustration for an endgame mythic achievement. A lone mysterious samurai silhouette standing before an enormous abstract circular crimson portal, floating in absolute darkness, clean geometric shapes, dramatic negative space, clean vector edges, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/legendary/legendary-beyond-fortune.webp",
+      "public_path": "/assets/achievements/legendary/legendary-beyond-fortune.webp",
+      "generated_at": "2026-08-15 00:24:15"
+    },
+    {
+      "id": "legendary-conqueror",
+      "name": "Legendary Conqueror",
+      "category": "Legendary Art",
+      "type": "Legendary Art",
+      "rarity": "Legendary",
+      "rel_dir": "achievements/legendary",
+      "purpose": "Full-size achievement artwork for conquering all map territories.",
+      "visual": "Black samurai standing on mountain overlooking vast battlefield under red sun.",
+      "prompt": "A minimalist 2D graphic illustration for a legendary achievement poster. A lone black samurai warrior standing on a sharp mountain precipice overlooking a vast dark battlefield in the mist, huge solid crimson-red sun in the sky, pitch black canvas, clean geometric shapes, dramatic poster art, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/legendary/legendary-conqueror.webp",
+      "public_path": "/assets/achievements/legendary/legendary-conqueror.webp",
+      "generated_at": "2026-08-15 00:24:02"
+    },
+    {
+      "id": "legendary-empire",
+      "name": "Legendary Empire",
+      "category": "Legendary Art",
+      "type": "Legendary Art",
+      "rarity": "Mythic",
+      "rel_dir": "achievements/legendary",
+      "purpose": "Full-size achievement artwork for owning all game buildings and businesses.",
+      "visual": "Massive dark fortress sprawling over mountain range with crimson banners and giant red sun.",
+      "prompt": "A minimalist 2D graphic illustration for a legendary achievement poster. A massive sprawling black samurai fortress castle dominating mountain peaks, covered in fluttering crimson banners under a colossal solid crimson-red sun disc, pitch black background, clean vector shapes, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/legendary/legendary-empire.webp",
+      "public_path": "/assets/achievements/legendary/legendary-empire.webp",
+      "generated_at": "2026-08-15 00:24:12"
+    },
+    {
+      "id": "legendary-fortune",
+      "name": "Legendary Fortune",
+      "category": "Legendary Art",
+      "type": "Legendary Art",
+      "rarity": "Legendary",
+      "rel_dir": "achievements/legendary",
+      "purpose": "Full-size achievement artwork for reaching $1 Trillion milestone.",
+      "visual": "Samurai silhouette standing before immense treasure vault spilling crimson light.",
+      "prompt": "A minimalist 2D graphic illustration for a legendary achievement poster. A lone samurai silhouette standing before an enormous open treasure vault, intense crimson and gold light spilling across the dark stone floor, huge red sun disc behind, pitch black background, bold graphic poster composition, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/legendary/legendary-fortune.webp",
+      "public_path": "/assets/achievements/legendary/legendary-fortune.webp",
+      "generated_at": "2026-08-15 00:24:05"
+    },
+    {
+      "id": "legendary-immortal",
+      "name": "Legendary Immortal",
+      "category": "Legendary Art",
+      "type": "Legendary Art",
+      "rarity": "Mythic",
+      "rel_dir": "achievements/legendary",
+      "purpose": "Full-size achievement artwork for prestige rebirth and immortality.",
+      "visual": "Lone samurai standing beneath colossal crimson moon surrounded by dark peaks.",
+      "prompt": "A minimalist 2D graphic illustration for a mythic achievement poster. A lone samurai silhouette standing beneath an immense glowing crimson full moon, surrounded by pitch-black mountain crags, sharp vector lines, high contrast negative space, majestic poster composition, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/legendary/legendary-immortal.webp",
+      "public_path": "/assets/achievements/legendary/legendary-immortal.webp",
+      "generated_at": "2026-08-15 00:24:08"
+    },
+    {
+      "id": "legendary-shogun",
+      "name": "Legendary Shogun",
+      "category": "Legendary Art",
+      "type": "Legendary Art",
+      "rarity": "Legendary",
+      "rel_dir": "achievements/legendary",
+      "purpose": "Full-size achievement artwork for completing the Shogun ascension.",
+      "visual": "Giant black samurai silhouette seated on dark throne under enormous crimson sun.",
+      "prompt": "A minimalist 2D graphic illustration for a legendary achievement poster. A giant black samurai silhouette seated commandingly on a dark stone throne, an enormous solid crimson circular sun behind him, dramatic crimson robe highlights, pitch black background, clean hard vector edges, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/legendary/legendary-shogun.webp",
+      "public_path": "/assets/achievements/legendary/legendary-shogun.webp",
+      "generated_at": "2026-08-15 00:23:59"
+    },
+    {
+      "id": "loading-samurai",
+      "name": "Loading Screen Samurai",
+      "category": "Loading Screen",
+      "type": "Animated Asset",
+      "rarity": "Common",
+      "rel_dir": "loading",
+      "purpose": "Central silhouette on initial game loading screen.",
+      "visual": "Centered pure black silhouette of samurai in stance on dark rock.",
+      "prompt": "Minimalist 2D graphic game asset. A centered pure pitch-black silhouette of a samurai standing poised with katana sword on a flat dark ground, pure solid black silhouette on transparent-ready black background, clean vector contours, no face, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/loading/loading-samurai.webp",
+      "public_path": "/assets/loading/loading-samurai.webp",
+      "generated_at": "2026-08-15 00:25:42"
+    },
+    {
+      "id": "notification-achievement-unlocked",
+      "name": "Achievement Unlock Badge",
+      "category": "Notifications",
+      "type": "UI Banner Badge",
+      "rarity": "Common",
+      "rel_dir": "notifications",
+      "purpose": "Emblem displayed on top-center achievement unlock toast notifications.",
+      "visual": "Crimson and gold circular laurel medallion with crossed katana blades.",
+      "prompt": "Minimalist 2D achievement toast notification icon. A solid crimson circular medallion with gold rim and crossed black katana blades in center, solid dark background, clean geometric vector art, high contrast, visually striking at small size, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/notifications/notification-achievement-unlocked.webp",
+      "public_path": "/assets/notifications/notification-achievement-unlocked.webp",
+      "generated_at": "2026-08-15 00:25:45"
+    },
+    {
+      "id": "secret-forbidden-gate",
+      "name": "Forbidden Sealed Torii Gate",
+      "category": "Secret Achievements",
+      "type": "Secret Artwork",
+      "rarity": "Secret",
+      "rel_dir": "achievements/secret",
+      "purpose": "Hidden achievement art unlocked by discovering the hidden map path.",
+      "visual": "Ancient weathered torii gate wrapped in dark chains under a blood eclipse.",
+      "prompt": "A minimalist 2D graphic illustration of a forbidden mystery. An ancient weathered black torii gate silhouette standing in still water, wrapped in subtle glowing crimson sealing ropes, colossal blood-red eclipse moon behind, pitch black background, clean vector shapes, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/secret/secret-forbidden-gate.webp",
+      "public_path": "/assets/achievements/secret/secret-forbidden-gate.webp",
+      "generated_at": "2026-08-15 00:24:21"
+    },
+    {
+      "id": "secret-mysterious-scroll",
+      "name": "Forbidden Technique Scroll",
+      "category": "Secret Achievements",
+      "type": "Secret Artwork",
+      "rarity": "Secret",
+      "rel_dir": "achievements/secret",
+      "purpose": "Hidden achievement art unlocked by maxing all ancient scroll upgrades.",
+      "visual": "Dark scroll unrolling with floating glowing red abstract runes.",
+      "prompt": "Minimalist 2D game icon of an ancient ornate scroll unrolling in mid-air, pitch black parchment with glowing flat graphic crimson abstract energy lines, floating gold dust sparks, solid dark background, clean geometric vector art, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/secret/secret-mysterious-scroll.webp",
+      "public_path": "/assets/achievements/secret/secret-mysterious-scroll.webp",
+      "generated_at": "2026-08-15 00:24:24"
+    },
+    {
+      "id": "secret-dark-temple",
+      "name": "Hidden Shadow Monastery",
+      "category": "Secret Achievements",
+      "type": "Secret Artwork",
+      "rarity": "Secret",
+      "rel_dir": "achievements/secret",
+      "purpose": "Hidden achievement art unlocked by clearing the secret fog of war node.",
+      "visual": "Cliffside pagoda temple shrouded in deep black fog under dark crimson moon.",
+      "prompt": "A minimalist 2D graphic illustration of a hidden cliffside pagoda monastery silhouette perched on a razor cliff, shrouded in dark mist, glowing crimson lantern light, giant solid crimson moon behind, pitch black background, clean vector lines, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/secret/secret-dark-temple.webp",
+      "public_path": "/assets/achievements/secret/secret-dark-temple.webp",
+      "generated_at": "2026-08-15 00:24:27"
+    },
+    {
+      "id": "secret-mask",
+      "name": "Secret Mask in the Mist",
+      "category": "Secret Achievements",
+      "type": "Secret Artwork",
+      "rarity": "Secret",
+      "rel_dir": "achievements/secret",
+      "purpose": "Hidden achievement art unlocked by clicking the hero's mask 50 times.",
+      "visual": "Dark horned mask silhouette emerging from black mist with glowing crimson eye slit.",
+      "prompt": "A minimalist 2D graphic illustration of a secret mystery. A shadowy horned samurai mask silhouette emerging from deep black darkness, with a single sharp glowing crimson-red eye slit, framed inside a subtle crimson circle, extreme negative space, clean vector art, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/secret/secret-mask.webp",
+      "public_path": "/assets/achievements/secret/secret-mask.webp",
+      "generated_at": "2026-08-15 00:24:18"
+    },
+    {
+      "id": "item-mythic-blood-katana",
+      "name": "Mythic Blood Katana",
+      "filename": "mythic-blood-katana.webp",
+      "type": "item",
+      "category": "Swords & Weapons",
+      "subfolder": "items/swords",
+      "rarity": "legendary",
+      "purpose": "Supreme weapon upgrade item icon & inspect card.",
+      "description": "Floating legendary curved katana blade pointing diagonally upward, sharp crimson cutting edge cleaving the giant solar disc.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Minimalist 2D game item illustration of a legendary Japanese katana sword floating diagonally in pure pitch black space, near-black silhouette hilt and scabbard with a sharp vibrant crimson-red cutting edge glow, framed by a giant minimalist crimson circular sun, clean vector silhouette art, high contrast, flat shapes, no 3D rendering, no soft painting, no text, no watermark."
+    },
+    {
+      "id": "wealth-1b-vault",
+      "name": "Billionaire Obsidian Vault",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Epic",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $1,000,000,000 wealth milestone on achievement graph.",
+      "visual": "Heavy obsidian stone vault door with glowing crimson core and gold coins.",
+      "prompt": "Minimalist 2D game illustration of a heavy obsidian black treasure vault with polished gold corner brackets, open door glowing with an intense crimson interior and flat gold coins spilling out, solid crimson-red disc behind, pitch black background, clean hard edges, bold silhouette poster style, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-1b-vault.webp",
+      "public_path": "/assets/achievements/wealth/wealth-1b-vault.webp",
+      "generated_at": "2026-08-15 00:23:19"
+    },
+    {
+      "id": "wealth-100-coin",
+      "name": "First Dollar Coin",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Common",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $100 wealth milestone on achievement graph.",
+      "visual": "Ancient dark copper/iron sen coin with square hole and crimson ring.",
+      "prompt": "Minimalist 2D game achievement icon of an ancient Japanese dark iron and bronze sen coin with a square center hole. Dragon silhouette engraved along the circular rim, bold crimson-red border, flat solid black background, clean geometric vector medal, high contrast, visually striking at small icon size, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-100-coin.webp",
+      "public_path": "/assets/achievements/wealth/wealth-100-coin.webp",
+      "generated_at": "2026-08-15 00:23:03"
+    },
+    {
+      "id": "wealth-100k-chest",
+      "name": "Ironbound Treasure Chest",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Rare",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $100,000 wealth milestone on achievement graph.",
+      "visual": "Reinforced cedar wood treasure coffer with brass corner brackets and gold coins.",
+      "prompt": "Minimalist 2D game illustration of a traditional dark cedar wood coffer with polished gold corner brackets, open lid spilling flat graphic gold coins, glowing crimson red disc behind, pitch black background, clean hard edges, bold silhouette poster style, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-100k-chest.webp",
+      "public_path": "/assets/achievements/wealth/wealth-100k-chest.webp",
+      "generated_at": "2026-08-15 00:23:12"
+    },
+    {
+      "id": "wealth-10k-bag",
+      "name": "Merchant Money Bag",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Rare",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $10,000 wealth milestone on achievement graph.",
+      "visual": "Dark silk money pouch overflowing with gold coins tied with crimson cord.",
+      "prompt": "Minimalist 2D game icon of a traditional dark black silk merchant money bag tied with gold and crimson cord, spilling flat gold coins, solid crimson circular sun background, pitch black canvas, sharp vector lines, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-10k-bag.webp",
+      "public_path": "/assets/achievements/wealth/wealth-10k-bag.webp",
+      "generated_at": "2026-08-15 00:23:09"
+    },
+    {
+      "id": "wealth-1m-golden-chest",
+      "name": "Millionaire Golden Chest",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Epic",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $1,000,000 wealth milestone on achievement graph.",
+      "visual": "Solid gold and black lacquer treasure chest overflowing with ruby talismans and kobans.",
+      "prompt": "Minimalist 2D game reward asset of a heavy black lacquer and gold treasure chest adorned with crimson dragon crests, overflowing with glowing golden koban coins and ruby gems, solid crimson sun aura behind, flat black background, high contrast graphic artwork, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-1m-golden-chest.webp",
+      "public_path": "/assets/achievements/wealth/wealth-1m-golden-chest.webp",
+      "generated_at": "2026-08-15 00:23:16"
+    },
+    {
+      "id": "wealth-1qa-treasure-mountain",
+      "name": "Quadrillionaire Treasure Mountain",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Legendary",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $1 Quadrillion wealth milestone on achievement graph.",
+      "visual": "Towering mountain peak composed entirely of gold kobans reaching a crimson sun.",
+      "prompt": "Minimalist 2D graphic illustration of a towering mountain peak made of endless gold coins and treasure reaching into a colossal crimson-red sun disc, pitch-black mountain silhouette around it, bold high-contrast game artwork, clean vector lines, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-1qa-treasure-mountain.webp",
+      "public_path": "/assets/achievements/wealth/wealth-1qa-treasure-mountain.webp",
+      "generated_at": "2026-08-15 00:23:25"
+    },
+    {
+      "id": "wealth-1qi-golden-palace",
+      "name": "Quintillionaire Golden Palace",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Mythic",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $1 Quintillion wealth milestone on achievement graph.",
+      "visual": "Monumental multi-tier imperial palace of pure gold trim and obsidian towers under blood moon.",
+      "prompt": "A minimalist 2D graphic illustration of a monumental shogun imperial palace silhouette with gold tipped roofs and glowing red lantern balconies, giant solid crimson-red sun backdrop, pitch black sky, clean geometric poster art, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-1qi-golden-palace.webp",
+      "public_path": "/assets/achievements/wealth/wealth-1qi-golden-palace.webp",
+      "generated_at": "2026-08-15 00:23:28"
+    },
+    {
+      "id": "wealth-1sx-fortune-throne",
+      "name": "Sextillionaire Fortune Throne",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Mythic",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $1 Sextillion+ endgame wealth milestone on achievement graph.",
+      "visual": "Astral obsidian and ruby throne surrounded by orbiting gold medallions in cosmic red sun.",
+      "prompt": "A minimalist 2D graphic illustration of an imperial obsidian and gold throne floating in space surrounded by orbiting golden coins, crowned with a giant solid crimson solar halo, pitch-black background, majestic negative space, sharp geometric poster art, no anime, no face, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-1sx-fortune-throne.webp",
+      "public_path": "/assets/achievements/wealth/wealth-1sx-fortune-throne.webp",
+      "generated_at": "2026-08-15 00:23:31"
+    },
+    {
+      "id": "wealth-1k-stack",
+      "name": "Thousand Stack Koban",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Common",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $1,000 wealth milestone on achievement graph.",
+      "visual": "Neat stack of three oval gold koban coins tied in crisp crimson silk ribbon.",
+      "prompt": "Minimalist 2D game currency icon of three stacked oval gold koban coins tied with a crisp crimson silk ribbon. Black samurai emblem embossed on top coin, solid crimson circular aura behind, pure black background, clean flat graphic shapes, sharp vector edges, no 3D render, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-1k-stack.webp",
+      "public_path": "/assets/achievements/wealth/wealth-1k-stack.webp",
+      "generated_at": "2026-08-15 00:23:06"
+    },
+    {
+      "id": "wealth-1t-giant-vault",
+      "name": "Trillionaire Clan Vault",
+      "category": "Wealth Achievements",
+      "type": "Milestone Node",
+      "rarity": "Legendary",
+      "rel_dir": "achievements/wealth",
+      "purpose": "Represents the $1,000,000,000,000 wealth milestone on achievement graph.",
+      "visual": "Colossal fortress vault gate with massive dragon padlock under crimson eclipse.",
+      "prompt": "Minimalist 2D game artwork of a colossal ancient samurai fortress treasury gate secured by a giant golden dragon lock, massive crimson solar disc behind, pure black background, majestic graphic poster art, sharp clean edges, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/achievements/wealth/wealth-1t-giant-vault.webp",
+      "public_path": "/assets/achievements/wealth/wealth-1t-giant-vault.webp",
+      "generated_at": "2026-08-15 00:23:22"
+    },
+    {
+      "id": "wealth-celestial-koban-stack",
+      "name": "Celestial Koban Wealth Pile",
+      "filename": "celestial-koban-stack.webp",
+      "type": "achievement",
+      "category": "Wealth Milestones",
+      "subfolder": "achievements/wealth",
+      "rarity": "epic",
+      "purpose": "$100 Million Wealth Milestone Node.",
+      "description": "Gleaming stack of traditional oval Japanese gold Koban coins with deep crimson stamp engravings, resting on a lacquer plinth.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Minimalist 2D game achievement icon of stacked traditional Japanese oval gold Koban coins, deep crimson stamped seals, near-black base silhouette, high contrast, clean graphic shapes, pitch black background, minimalist vector poster style, no 3D rendering, no text."
+    },
+    {
+      "id": "wealth-imperial-dragon-vault",
+      "name": "Imperial Dragon Lacquer Vault",
+      "filename": "imperial-dragon-vault.webp",
+      "type": "achievement",
+      "category": "Wealth Milestones",
+      "subfolder": "achievements/wealth",
+      "rarity": "legendary",
+      "purpose": "$1 Billion Wealth Milestone Vault.",
+      "description": "Heavy fortified black lacquer imperial treasury chest with crimson dragon relief carving and iron reinforcement bands.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "Minimalist 2D game achievement icon of a massive reinforced Japanese imperial treasure vault chest, black lacquer body with bold crimson-red dragon relief emblem, glowing gold and crimson sen coins overflowing from seam, pure black background, clean geometric silhouette art, no 3D, no text."
+    },
+    {
+      "id": "landmark-sword-mountain",
+      "name": "Colossal Blade of the Gods",
+      "category": "World Landmarks",
+      "type": "Map Landmark Node",
+      "rarity": "Legendary",
+      "rel_dir": "world/landmarks",
+      "purpose": "Major landmark marking the peak of the Swordsmanship upgrade branch.",
+      "visual": "Giant ancient katana driven into mountain peak cutting across a crimson moon.",
+      "prompt": "A minimalist 2D graphic illustration of a colossal giant katana sword driven into the peak of a dark mountain, the blade silhouette cutting directly through a giant solid crimson-red circular sun, pitch black canvas, clean geometric poster art, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/landmarks/landmark-sword-mountain.webp",
+      "public_path": "/assets/world/landmarks/landmark-sword-mountain.webp",
+      "generated_at": "2026-08-15 00:24:55"
+    },
+    {
+      "id": "landmark-floating-torii-archipelago",
+      "name": "Floating Torii Sanctuary",
+      "filename": "floating-torii-archipelago.webp",
+      "type": "world",
+      "category": "World Landmarks",
+      "subfolder": "world/landmarks",
+      "rarity": "epic",
+      "purpose": "World Map Region 3 Gateway.",
+      "description": "Colossal traditional Japanese Torii gate rising gracefully above dark calm waters, centered perfectly inside a giant crimson solar disc.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A minimalist 2D graphic illustration for a landmark achievement poster. A colossal traditional Japanese Torii gate standing serenely in calm reflective black water, centered perfectly in front of a giant solid circular crimson-red sun, clean silhouette silhouettes of dark distant islands, high contrast, dramatic negative space, vector game poster style, no anime, no 3D, no text."
+    },
+    {
+      "id": "landmark-monastery-iron-peaks",
+      "name": "Monastery of the Iron Peaks",
+      "filename": "monastery-iron-peaks.webp",
+      "type": "world",
+      "category": "World Landmarks",
+      "subfolder": "world/landmarks",
+      "rarity": "legendary",
+      "purpose": "World Map Region 5 Dojo Landmark.",
+      "description": "Multi-tiered pagoda temple perched precariously on a razor-sharp mountain precipice, bathed in crimson twilight.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "prompt": "A minimalist 2D graphic illustration of a multi-tiered Japanese pagoda monastery perched on the razor peak of a dark mountain cliff, an enormous solid crimson circular sun rising behind the temple, near-black silhouette architecture with crimson roof eaves, dramatic negative space, clean vector edges, no anime, no 3D rendering, no text."
+    },
+    {
+      "id": "landmark-fuji-sun",
+      "name": "Mount Fuji Blood Sun",
+      "category": "World Landmarks",
+      "type": "Map Landmark Node",
+      "rarity": "Epic",
+      "rel_dir": "world/landmarks",
+      "purpose": "Major landmark on Achievement World Map visible from distant zoom levels.",
+      "visual": "Iconic snow-capped Mount Fuji silhouette centered in giant solid crimson sun.",
+      "prompt": "A minimalist 2D graphic silhouette illustration for a landmark achievement. A majestic Mount Fuji mountain silhouette in pure near-black standing before a colossal perfectly solid crimson-red sun, red bonsai tree island in foreground, pitch black background, clean vector lines, bold graphic poster composition, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/landmarks/landmark-fuji-sun.webp",
+      "public_path": "/assets/world/landmarks/landmark-fuji-sun.webp",
+      "generated_at": "2026-08-15 00:24:49"
+    },
+    {
+      "id": "landmark-torii-portal",
+      "name": "Sacred Torii Gate Portal",
+      "category": "World Landmarks",
+      "type": "Map Landmark Node",
+      "rarity": "Rare",
+      "rel_dir": "world/landmarks",
+      "purpose": "Major landmark gateway connecting World Map regions.",
+      "visual": "Massive torii gate standing in still water reflecting a giant red sun.",
+      "prompt": "A minimalist 2D graphic silhouette artwork of an ancient massive torii gate silhouette standing in still water, perfectly centered before a colossal solid blood-red moon, dark mountain silhouettes in distance, clean geometric lines, high contrast negative space, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/landmarks/landmark-torii-portal.webp",
+      "public_path": "/assets/world/landmarks/landmark-torii-portal.webp",
+      "generated_at": "2026-08-15 00:24:52"
+    },
+    {
+      "id": "region-beginning",
+      "name": "Region 1: The Mountain Path",
+      "category": "World Regions",
+      "type": "Region Backdrop",
+      "rarity": "Common",
+      "rel_dir": "world/regions",
+      "purpose": "Background artwork for Region 1 of the Achievement World Map.",
+      "visual": "Dark mountainous landscape with lone crimson sun and small samurai silhouette.",
+      "prompt": "A minimalist 2D graphic illustration of a world map region. A dark mountainous landscape with a small lone samurai silhouette walking on a mountain trail toward a colossal solid crimson-red sun disc, pitch black foreground, clean hard vector edges, majestic poster composition, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/regions/region-beginning.webp",
+      "public_path": "/assets/world/regions/region-beginning.webp",
+      "generated_at": "2026-08-15 00:24:30"
+    },
+    {
+      "id": "region-dojo",
+      "name": "Region 2: Sacred Sword Dojo",
+      "category": "World Regions",
+      "type": "Region Backdrop",
+      "rarity": "Common",
+      "rel_dir": "world/regions",
+      "purpose": "Background artwork for Region 2 of the Achievement World Map.",
+      "visual": "Traditional martial dojo pavilion with training courtyards and crimson banners.",
+      "prompt": "A minimalist 2D graphic illustration of a world map region. A majestic traditional Japanese dojo pavilion silhouette with hanging crimson lanterns and fluttering banners, surrounded by dark pine trees and a massive solid crimson sun, pitch black canvas, clean vector art, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/regions/region-dojo.webp",
+      "public_path": "/assets/world/regions/region-dojo.webp",
+      "generated_at": "2026-08-15 00:24:33"
+    },
+    {
+      "id": "region-village",
+      "name": "Region 3: Merchant Village",
+      "category": "World Regions",
+      "type": "Region Backdrop",
+      "rarity": "Rare",
+      "rel_dir": "world/regions",
+      "purpose": "Background artwork for Region 3 of the Achievement World Map.",
+      "visual": "Stylized dark merchant village rooftops with small red lights and mountain backdrop.",
+      "prompt": "A minimalist 2D graphic illustration of a world map region. Stylized silhouettes of traditional Japanese village houses and merchant shops, glowing red paper lanterns along a stone street, dark mountain ridges and giant crimson sun in background, clean vector poster art, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/regions/region-village.webp",
+      "public_path": "/assets/world/regions/region-village.webp",
+      "generated_at": "2026-08-15 00:24:37"
+    },
+    {
+      "id": "region-fortress",
+      "name": "Region 4: Shogun Fortress",
+      "category": "World Regions",
+      "type": "Region Backdrop",
+      "rarity": "Epic",
+      "rel_dir": "world/regions",
+      "purpose": "Background artwork for Region 4 of the Achievement World Map.",
+      "visual": "Massive multi-tiered fortress on mountain peak with crimson war banners.",
+      "prompt": "A minimalist 2D graphic illustration of a world map region. A massive multi-tiered black samurai castle fortress on a jagged mountain peak, red war banners along the battlements, giant solid crimson-red sun backdrop, pitch black sky, clean vector edges, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/regions/region-fortress.webp",
+      "public_path": "/assets/world/regions/region-fortress.webp",
+      "generated_at": "2026-08-15 00:24:40"
+    },
+    {
+      "id": "region-golden-empire",
+      "name": "Region 5: The Golden Empire",
+      "category": "World Regions",
+      "type": "Region Backdrop",
+      "rarity": "Legendary",
+      "rel_dir": "world/regions",
+      "purpose": "Background artwork for Region 5 of the Achievement World Map.",
+      "visual": "Enormous palace spires with gold roof trims under a colossal blazing red sun.",
+      "prompt": "A minimalist 2D graphic illustration of a world map region. Enormous dark imperial palace spires adorned with subtle polished gold roof trim, floating gold coin particles, colossal solid crimson sun disc behind, pitch black background, clean vector shapes, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/regions/region-golden-empire.webp",
+      "public_path": "/assets/world/regions/region-golden-empire.webp",
+      "generated_at": "2026-08-15 00:24:43"
+    },
+    {
+      "id": "region-forbidden",
+      "name": "Region 6: The Forbidden Domain",
+      "category": "World Regions",
+      "type": "Region Backdrop",
+      "rarity": "Mythic",
+      "rel_dir": "world/regions",
+      "purpose": "Background artwork for Region 6 of the Achievement World Map.",
+      "visual": "Mysterious floating landmasses with ancient torii gates under a giant crimson eclipse moon.",
+      "prompt": "A minimalist 2D graphic illustration of an endgame world map region. Vast dark mysterious landscape with floating black stone islands, ancient torii gate silhouettes, enormous crimson eclipse moon in a pitch-black sky, dramatic negative space, clean vector edges, no anime, no 3D, no text.",
+      "palette": [
+        "#07080C",
+        "#D20A2E",
+        "#F01835",
+        "#F59E0B"
+      ],
+      "file_webp": "assets/world/regions/region-forbidden.webp",
+      "public_path": "/assets/world/regions/region-forbidden.webp",
+      "generated_at": "2026-08-15 00:24:46"
+    }
+  ]
+}

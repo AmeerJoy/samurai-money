@@ -1,0 +1,20 @@
+{
+  "id": "legendary-shogun",
+  "name": "Legendary Shogun",
+  "category": "Legendary Art",
+  "type": "Legendary Art",
+  "rarity": "Legendary",
+  "rel_dir": "achievements/legendary",
+  "purpose": "Full-size achievement artwork for completing the Shogun ascension.",
+  "visual": "Giant black samurai silhouette seated on dark throne under enormous crimson sun.",
+  "prompt": "A minimalist 2D graphic illustration for a legendary achievement poster. A giant black samurai silhouette seated commandingly on a dark stone throne, an enormous solid crimson circular sun behind him, dramatic crimson robe highlights, pitch black background, clean hard vector edges, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/legendary/legendary-shogun.webp",
+  "public_path": "/assets/achievements/legendary/legendary-shogun.webp",
+  "generated_at": "2026-08-15 00:23:59"
+}

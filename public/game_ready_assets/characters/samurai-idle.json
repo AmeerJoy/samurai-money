@@ -1,0 +1,20 @@
+{
+  "id": "samurai-idle",
+  "name": "Samurai Idle",
+  "category": "Characters",
+  "type": "Character State",
+  "rarity": "Common",
+  "rel_dir": "characters",
+  "purpose": "Primary resting character illustration on main game screen.",
+  "visual": "Dark near-black samurai silhouette in a relaxed neutral standing stance with restrained crimson sash against solid red sun.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A lone ronin samurai standing in a neutral relaxed idle stance, hands resting near sword hilt, pure near-black silhouette with restrained crimson-red sash ties. Giant perfectly solid crimson-red circular sun behind, pitch black background, clean vector edges, dramatic negative space, no anime, no face, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-idle.webp",
+  "public_path": "/assets/characters/samurai-idle.webp",
+  "generated_at": "2026-08-15 00:22:32"
+}

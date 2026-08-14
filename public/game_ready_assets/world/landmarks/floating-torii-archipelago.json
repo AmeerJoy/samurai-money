@@ -1,0 +1,18 @@
+{
+  "id": "landmark-floating-torii-archipelago",
+  "name": "Floating Torii Sanctuary",
+  "filename": "floating-torii-archipelago.webp",
+  "type": "world",
+  "category": "World Landmarks",
+  "subfolder": "world/landmarks",
+  "rarity": "epic",
+  "purpose": "World Map Region 3 Gateway.",
+  "description": "Colossal traditional Japanese Torii gate rising gracefully above dark calm waters, centered perfectly inside a giant crimson solar disc.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A minimalist 2D graphic illustration for a landmark achievement poster. A colossal traditional Japanese Torii gate standing serenely in calm reflective black water, centered perfectly in front of a giant solid circular crimson-red sun, clean silhouette silhouettes of dark distant islands, high contrast, dramatic negative space, vector game poster style, no anime, no 3D, no text."
+}

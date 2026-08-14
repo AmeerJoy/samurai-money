@@ -1,0 +1,20 @@
+{
+  "id": "samurai-meditation",
+  "name": "Samurai Meditation",
+  "category": "Characters",
+  "type": "Offline Income State",
+  "rarity": "Rare",
+  "rel_dir": "characters",
+  "purpose": "Display on Dojo offline earnings screen and meditation buffs.",
+  "visual": "Samurai in meditative lotus posture under floating crimson spirit halo.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A serene samurai silhouette seated in meditative lotus position, pure black figure with subtle red highlights, framed by a giant glowing crimson-red circular solar halo. Pitch black background, clean geometric vector art, no anime, no face, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-meditation.webp",
+  "public_path": "/assets/characters/samurai-meditation.webp",
+  "generated_at": "2026-08-15 00:22:47"
+}

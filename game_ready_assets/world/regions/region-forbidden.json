@@ -1,0 +1,20 @@
+{
+  "id": "region-forbidden",
+  "name": "Region 6: The Forbidden Domain",
+  "category": "World Regions",
+  "type": "Region Backdrop",
+  "rarity": "Mythic",
+  "rel_dir": "world/regions",
+  "purpose": "Background artwork for Region 6 of the Achievement World Map.",
+  "visual": "Mysterious floating landmasses with ancient torii gates under a giant crimson eclipse moon.",
+  "prompt": "A minimalist 2D graphic illustration of an endgame world map region. Vast dark mysterious landscape with floating black stone islands, ancient torii gate silhouettes, enormous crimson eclipse moon in a pitch-black sky, dramatic negative space, clean vector edges, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/world/regions/region-forbidden.webp",
+  "public_path": "/assets/world/regions/region-forbidden.webp",
+  "generated_at": "2026-08-15 00:24:46"
+}

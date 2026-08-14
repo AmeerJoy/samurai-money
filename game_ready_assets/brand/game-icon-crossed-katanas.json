@@ -1,0 +1,18 @@
+{
+  "id": "game_icon_crossed_katanas_sun",
+  "name": "Game Icon: Crossed Katanas & Blood Sun",
+  "filename": "game-icon-crossed-katanas.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "legendary",
+  "purpose": "Primary App Icon / Store Icon Candidate A.",
+  "description": "Two elegant crossed samurai katana swords with sharp crimson-red cutting edges, centered inside a perfectly circular solid crimson solar disc on an obsidian black badge.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon. Two crossed Japanese samurai katana swords in perfect X composition, rendered as sleek near-black silhouettes with sharp glowing crimson-red blade highlights. (Centered inside a perfectly smooth solid circular crimson-red sun emblem:1.4). Pure solid pitch-black background, rounded square app icon framing, pristine smooth vector geometry, razor-sharp hard edges, high contrast, clean negative space, flat 2D graphic design, SVG vector aesthetic, no 3D rendering, no soft painting, no brushstrokes, no gradients, no photorealism, no text, no typography, no pixelation, no noise."
+}

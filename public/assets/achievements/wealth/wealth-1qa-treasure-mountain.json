@@ -1,0 +1,20 @@
+{
+  "id": "wealth-1qa-treasure-mountain",
+  "name": "Quadrillionaire Treasure Mountain",
+  "category": "Wealth Achievements",
+  "type": "Milestone Node",
+  "rarity": "Legendary",
+  "rel_dir": "achievements/wealth",
+  "purpose": "Represents the $1 Quadrillion wealth milestone on achievement graph.",
+  "visual": "Towering mountain peak composed entirely of gold kobans reaching a crimson sun.",
+  "prompt": "Minimalist 2D graphic illustration of a towering mountain peak made of endless gold coins and treasure reaching into a colossal crimson-red sun disc, pitch-black mountain silhouette around it, bold high-contrast game artwork, clean vector lines, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/wealth/wealth-1qa-treasure-mountain.webp",
+  "public_path": "/assets/achievements/wealth/wealth-1qa-treasure-mountain.webp",
+  "generated_at": "2026-08-15 00:23:25"
+}

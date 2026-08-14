@@ -1,0 +1,23 @@
+{
+  "id": "icon-2d-crossed-katanas-crest",
+  "name": "App Icon: 2D Crossed Katanas Crest",
+  "filename": "icon-2d-crossed-katanas-crest.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary 2D App Store Icon \u2014 Symmetrical Blade Emblem.",
+  "description": "Two sleek crossed pure solid black katana sword silhouettes forming a sharp X emblem, centered inside a giant solid crimson-red solar circle on an obsidian background.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork minimalist 2D flat vector game app icon. Two symmetrical crossed pure solid black Japanese samurai katana swords forming a bold X emblem. (Centered inside a giant perfectly smooth solid crimson-red circular sun:1.4). Pure flat 2D graphic art, solid pitch-black silhouette, razor-sharp clean hard vector edges, SVG vector aesthetic, high contrast, solid dark background (#07080C), bold iconic app mark, no gradients, no 3D rendering, no soft shadows, no textures, no text, no watermark, no pixelation.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 8.0,
+  "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+}

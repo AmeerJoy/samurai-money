@@ -1,0 +1,20 @@
+{
+  "id": "sword-cursed-muramasa",
+  "name": "Cursed Muramasa Katana",
+  "category": "Items & Equipment",
+  "type": "Weapon Upgrade",
+  "rarity": "Legendary",
+  "rel_dir": "items/swords",
+  "purpose": "Endgame crit blade in weapons inventory.",
+  "visual": "Cursed black katana blade surrounded by crimson soul energy aura.",
+  "prompt": "Minimalist 2D game weapon icon of a legendary cursed katana sword with black blade radiating intense crimson soul flames, solid crimson circular badge background, black background, clean vector game art, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/items/swords/sword-cursed-muramasa.webp",
+  "public_path": "/assets/items/swords/sword-cursed-muramasa.webp",
+  "generated_at": "2026-08-15 00:25:26"
+}

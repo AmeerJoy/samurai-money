@@ -1,0 +1,20 @@
+{
+  "id": "region-beginning",
+  "name": "Region 1: The Mountain Path",
+  "category": "World Regions",
+  "type": "Region Backdrop",
+  "rarity": "Common",
+  "rel_dir": "world/regions",
+  "purpose": "Background artwork for Region 1 of the Achievement World Map.",
+  "visual": "Dark mountainous landscape with lone crimson sun and small samurai silhouette.",
+  "prompt": "A minimalist 2D graphic illustration of a world map region. A dark mountainous landscape with a small lone samurai silhouette walking on a mountain trail toward a colossal solid crimson-red sun disc, pitch black foreground, clean hard vector edges, majestic poster composition, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/world/regions/region-beginning.webp",
+  "public_path": "/assets/world/regions/region-beginning.webp",
+  "generated_at": "2026-08-15 00:24:30"
+}

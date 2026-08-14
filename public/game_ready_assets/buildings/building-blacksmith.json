@@ -1,0 +1,20 @@
+{
+  "id": "building-blacksmith",
+  "name": "Dojo Blacksmith Forge",
+  "category": "Buildings",
+  "type": "Economic Building",
+  "rarity": "Rare",
+  "rel_dir": "buildings",
+  "purpose": "Building tier 2 illustration on economic empire dashboard.",
+  "visual": "Dark sword smithy forge silhouette glowing with crimson embers and an anvil.",
+  "prompt": "Minimalist 2D game asset of a traditional Japanese sword blacksmith workshop silhouette, anvil and forge glowing with crimson fire embers, solid crimson circular halo behind, pitch black background, clean geometric vector art, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/buildings/building-blacksmith.webp",
+  "public_path": "/assets/buildings/building-blacksmith.webp",
+  "generated_at": "2026-08-15 00:25:02"
+}

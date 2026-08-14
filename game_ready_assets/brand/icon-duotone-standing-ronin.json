@@ -1,0 +1,22 @@
+{
+  "id": "icon-duotone-standing-ronin",
+  "name": "App Icon: Duotone Standing Straw-Hat Ronin",
+  "filename": "icon-duotone-standing-ronin.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary App Store Icon \u2014 Reference Style Standing Ronin.",
+  "description": "Pure solid black standing silhouette of a samurai warrior in conical straw hat with katana in hand, centered inside a solid flat bright red circular sun on a pitch-black background with thin red interior accent lines.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "Masterwork minimalist 2D flat vector logo icon. (Full-body solid pitch-black silhouette of a samurai warrior standing firmly:1.3) wearing a traditional conical straw hat (kasa) and holding a sleek katana sword at his side with thin red accent line on belt. (Directly centered inside a single solid flat bright red circular sun disc:1.4). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only (#FF2035). Flat 2D vector stencil logo design, razor-sharp clean geometric edges, no white color, no human face, no skin, no 3D rendering, no soft lighting, no shading, no gradients, no textures, no noise, no rays, no text, no watermark.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 8.5,
+  "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+}

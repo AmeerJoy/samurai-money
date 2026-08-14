@@ -1,0 +1,18 @@
+{
+  "id": "item-demon-slayer-kabuto",
+  "name": "Demon Slayer Kabuto Helmet",
+  "filename": "demon-slayer-kabuto.webp",
+  "type": "item",
+  "category": "Armor & Items",
+  "subfolder": "items/armor",
+  "rarity": "epic",
+  "purpose": "Legendary armor upgrade item inspect modal.",
+  "description": "Fierce horned samurai battle helmet with demon faceplate (Mempo) silhouette, framed in crimson geometry.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Minimalist 2D vector game icon of a traditional Japanese samurai kabuto helmet with prominent curved golden-crimson crescent horns and a demon mempo face mask, rendered as a bold near-black silhouette with clean crimson-red edge lines, pure solid black background, crisp vector silhouette poster art, no 3D render, no text, no watermark."
+}

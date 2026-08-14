@@ -1,0 +1,18 @@
+{
+  "id": "char-armored-shogun-sovereign",
+  "name": "Imperial Armored Shogun",
+  "filename": "armored-shogun-sovereign.webp",
+  "type": "character",
+  "category": "Characters",
+  "subfolder": "characters",
+  "rarity": "legendary",
+  "purpose": "Endgame Shogun ruler portrait & prestige unlock.",
+  "description": "Towering armored Shogun with horned kabuto and massive battle naginata, overlooking his kingdom under the blood sun.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A colossal armored Japanese Shogun warlord in heavy horned kabuto helmet and ornate shoulder armor, holding a towering naginata spear, shown as a powerful near-black silhouette with sharp crimson-red trim highlights. A huge perfectly solid crimson-red circular sun in background, clean hard edges, bold geometric shapes, dramatic negative space, vector game art, no anime, no 3D, no gradients, no text."
+}

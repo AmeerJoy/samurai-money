@@ -1,0 +1,20 @@
+{
+  "id": "emblem-crown",
+  "name": "Imperial Crown Emblem",
+  "category": "Emblems",
+  "type": "Achievement Emblem",
+  "rarity": "Epic",
+  "rel_dir": "achievements/emblems",
+  "purpose": "Node badge for sovereignty, leaderboards, and Shogun ranks.",
+  "visual": "Ornate gold and obsidian sovereign crown with crimson ruby crest.",
+  "prompt": "Minimalist 2D achievement badge of an ornate imperial samurai crown crest, pure black with polished gold spikes and a glowing crimson center ruby, circular red medal frame, solid dark background, clean geometric vector art, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/emblems/emblem-crown.webp",
+  "public_path": "/assets/achievements/emblems/emblem-crown.webp",
+  "generated_at": "2026-08-15 00:23:53"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "samurai-shadow",
+  "name": "Shinobi Shadow Stalker",
+  "category": "Characters",
+  "type": "Stealth / Speed State",
+  "rarity": "Rare",
+  "rel_dir": "characters",
+  "purpose": "Display on auto-clicker ninja upgrades and secret map paths.",
+  "visual": "Agile shinobi crouched on curved pagoda roof under full blood moon.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A nimble ninja shadow stalker crouched on the curved roof of a Japanese pagoda holding a kunai dagger, pure pitch-black silhouette against a colossal solid crimson-red full moon, high contrast negative space, clean vector edges, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-shadow.webp",
+  "public_path": "/assets/characters/samurai-shadow.webp",
+  "generated_at": "2026-08-15 00:23:00"
+}

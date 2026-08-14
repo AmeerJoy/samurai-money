@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  <defs>
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF1E42"/>
+      <stop offset="100%" stop-color="#9E001B"/>
+    </linearGradient>
+    <filter id="crimsonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="transparent"/>
+  <!-- Sun Emblem -->
+  <circle cx="60" cy="60" r="42" fill="#D20A2E" filter="url(#crimsonGlow)" opacity="0.3"/>
+  <circle cx="60" cy="60" r="38" fill="url(#crimsonGrad)"/>
+  <!-- Samurai Katana Cross Silhouette in Emblem -->
+  <path d="M40 78 L80 38 M80 42 L40 82" stroke="#07080C" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="60" cy="60" r="16" fill="#07080C"/>
+  <polygon points="60,48 64,58 74,60 64,62 60,72 56,62 46,60 56,58" fill="#D20A2E"/>
+
+  <!-- Typography -->
+  <text x="120" y="58" font-family="'Cinzel', 'Trajan Pro', 'Georgia', serif" font-size="34" font-weight="900" letter-spacing="4" fill="#FFFFFF">SAMURAI</text>
+  <text x="122" y="94" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="22" font-weight="800" letter-spacing="8" fill="#F01835">MONEY</text>
+</svg>

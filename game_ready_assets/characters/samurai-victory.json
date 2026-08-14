@@ -1,0 +1,20 @@
+{
+  "id": "samurai-victory",
+  "name": "Samurai Victory",
+  "category": "Characters",
+  "type": "Milestone Pose",
+  "rarity": "Epic",
+  "rel_dir": "characters",
+  "purpose": "Display on boss defeat, rank upgrade, and milestone unlock.",
+  "visual": "Samurai standing victorious atop rock ledge sheathing katana into scabbard.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A victorious samurai standing on a mountain crag sheathing his katana, cape flowing in the wind, pure pitch-black silhouette with crimson highlights. Huge solid crimson-red sun behind, clean graphic poster art, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-victory.webp",
+  "public_path": "/assets/characters/samurai-victory.webp",
+  "generated_at": "2026-08-15 00:22:44"
+}

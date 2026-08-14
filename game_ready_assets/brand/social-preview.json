@@ -1,0 +1,20 @@
+{
+  "id": "social-preview",
+  "name": "Social Preview Banner",
+  "category": "Brand",
+  "type": "Promotional Banner",
+  "rarity": "Epic",
+  "rel_dir": "brand",
+  "purpose": "1200x630 social preview banner and launch hero card.",
+  "visual": "Wide panoramic crimson sunrise landscape with samurai and fortress silhouettes.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. Wide panoramic landscape showing a lone samurai silhouette standing before a massive dark shogun fortress on a mountain ridge under a colossal solid crimson-red sun disc. Pitch black foreground, razor sharp vector edges, cinematic negative space, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/brand/social-preview.webp",
+  "public_path": "/assets/brand/social-preview.webp",
+  "generated_at": "2026-08-15 00:22:29"
+}

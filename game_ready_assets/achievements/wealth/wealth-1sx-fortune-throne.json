@@ -1,0 +1,20 @@
+{
+  "id": "wealth-1sx-fortune-throne",
+  "name": "Sextillionaire Fortune Throne",
+  "category": "Wealth Achievements",
+  "type": "Milestone Node",
+  "rarity": "Mythic",
+  "rel_dir": "achievements/wealth",
+  "purpose": "Represents the $1 Sextillion+ endgame wealth milestone on achievement graph.",
+  "visual": "Astral obsidian and ruby throne surrounded by orbiting gold medallions in cosmic red sun.",
+  "prompt": "A minimalist 2D graphic illustration of an imperial obsidian and gold throne floating in space surrounded by orbiting golden coins, crowned with a giant solid crimson solar halo, pitch-black background, majestic negative space, sharp geometric poster art, no anime, no face, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/wealth/wealth-1sx-fortune-throne.webp",
+  "public_path": "/assets/achievements/wealth/wealth-1sx-fortune-throne.webp",
+  "generated_at": "2026-08-15 00:23:31"
+}

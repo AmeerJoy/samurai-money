@@ -1,0 +1,23 @@
+{
+  "id": "icon-horned-mempo-warlord",
+  "name": "App Icon: Horned Mempo Warlord",
+  "filename": "icon-horned-mempo-warlord.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary App Store Icon \u2014 Warlord Clan Identity.",
+  "description": "Menacing pitch-black samurai battle helmet (Kabuto) with sweeping golden-crimson crescent horns and a demon Mempo faceplate with glowing crimson eyes, centered on a blazing blood-red solar emblem.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon. Symmetrical pure pitch-black silhouette of a fierce Japanese samurai warlord kabuto helmet with large sharp crescent horns and a demon mempo face mask with glowing crimson-red eye slits. (Directly centered in front of a giant perfectly smooth solid circular crimson-red sun emblem:1.4). Pitch-black background (#07080C), clean hard vector contours, razor-sharp geometric edges, high contrast silhouette poster icon, no human face, no 3D render, no soft painting, no text, no pixelation, no aliasing.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 7.5,
+  "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "building-mine",
+  "name": "Gold Ore Mine",
+  "category": "Buildings",
+  "type": "Economic Building",
+  "rarity": "Rare",
+  "rel_dir": "buildings",
+  "purpose": "Building tier 3 illustration on economic empire dashboard.",
+  "visual": "Dark mountain mine entrance with wooden timber supports and gold ore carts.",
+  "prompt": "Minimalist 2D game asset of a dark mountain gold mine entrance with timber support beams and minecart spilling gold ore chunks, solid crimson circular sun disc behind, pitch black canvas, clean vector artwork, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/buildings/building-mine.webp",
+  "public_path": "/assets/buildings/building-mine.webp",
+  "generated_at": "2026-08-15 00:25:05"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "landmark-fuji-sun",
+  "name": "Mount Fuji Blood Sun",
+  "category": "World Landmarks",
+  "type": "Map Landmark Node",
+  "rarity": "Epic",
+  "rel_dir": "world/landmarks",
+  "purpose": "Major landmark on Achievement World Map visible from distant zoom levels.",
+  "visual": "Iconic snow-capped Mount Fuji silhouette centered in giant solid crimson sun.",
+  "prompt": "A minimalist 2D graphic silhouette illustration for a landmark achievement. A majestic Mount Fuji mountain silhouette in pure near-black standing before a colossal perfectly solid crimson-red sun, red bonsai tree island in foreground, pitch black background, clean vector lines, bold graphic poster composition, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/world/landmarks/landmark-fuji-sun.webp",
+  "public_path": "/assets/world/landmarks/landmark-fuji-sun.webp",
+  "generated_at": "2026-08-15 00:24:49"
+}

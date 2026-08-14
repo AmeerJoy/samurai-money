@@ -1,0 +1,20 @@
+{
+  "id": "samurai-powerful",
+  "name": "Samurai Warlord Supreme",
+  "category": "Characters",
+  "type": "Boss / Tier 10 State",
+  "rarity": "Legendary",
+  "rel_dir": "characters",
+  "purpose": "Display on Warlord rank progression and heavy weapon upgrades.",
+  "visual": "Demonic horned kabuto warlord holding two-handed nodachi greatsword.",
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. An imposing supreme samurai warlord in horned demonic kabuto armor and spiked shoulder plates, holding a colossal two-handed nodachi sword planted into the ground. Giant solid crimson sun backdrop, pitch black canvas, sharp vector edges, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/characters/samurai-powerful.webp",
+  "public_path": "/assets/characters/samurai-powerful.webp",
+  "generated_at": "2026-08-15 00:22:54"
+}

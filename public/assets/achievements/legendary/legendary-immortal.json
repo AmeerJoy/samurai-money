@@ -1,0 +1,20 @@
+{
+  "id": "legendary-immortal",
+  "name": "Legendary Immortal",
+  "category": "Legendary Art",
+  "type": "Legendary Art",
+  "rarity": "Mythic",
+  "rel_dir": "achievements/legendary",
+  "purpose": "Full-size achievement artwork for prestige rebirth and immortality.",
+  "visual": "Lone samurai standing beneath colossal crimson moon surrounded by dark peaks.",
+  "prompt": "A minimalist 2D graphic illustration for a mythic achievement poster. A lone samurai silhouette standing beneath an immense glowing crimson full moon, surrounded by pitch-black mountain crags, sharp vector lines, high contrast negative space, majestic poster composition, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/legendary/legendary-immortal.webp",
+  "public_path": "/assets/achievements/legendary/legendary-immortal.webp",
+  "generated_at": "2026-08-15 00:24:08"
+}

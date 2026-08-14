@@ -1,0 +1,18 @@
+{
+  "id": "wealth-celestial-koban-stack",
+  "name": "Celestial Koban Wealth Pile",
+  "filename": "celestial-koban-stack.webp",
+  "type": "achievement",
+  "category": "Wealth Milestones",
+  "subfolder": "achievements/wealth",
+  "rarity": "epic",
+  "purpose": "$100 Million Wealth Milestone Node.",
+  "description": "Gleaming stack of traditional oval Japanese gold Koban coins with deep crimson stamp engravings, resting on a lacquer plinth.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Minimalist 2D game achievement icon of stacked traditional Japanese oval gold Koban coins, deep crimson stamped seals, near-black base silhouette, high contrast, clean graphic shapes, pitch black background, minimalist vector poster style, no 3D rendering, no text."
+}

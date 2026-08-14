@@ -1,0 +1,20 @@
+{
+  "id": "legendary-empire",
+  "name": "Legendary Empire",
+  "category": "Legendary Art",
+  "type": "Legendary Art",
+  "rarity": "Mythic",
+  "rel_dir": "achievements/legendary",
+  "purpose": "Full-size achievement artwork for owning all game buildings and businesses.",
+  "visual": "Massive dark fortress sprawling over mountain range with crimson banners and giant red sun.",
+  "prompt": "A minimalist 2D graphic illustration for a legendary achievement poster. A massive sprawling black samurai fortress castle dominating mountain peaks, covered in fluttering crimson banners under a colossal solid crimson-red sun disc, pitch black background, clean vector shapes, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/legendary/legendary-empire.webp",
+  "public_path": "/assets/achievements/legendary/legendary-empire.webp",
+  "generated_at": "2026-08-15 00:24:12"
+}

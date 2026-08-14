@@ -1,0 +1,20 @@
+{
+  "id": "legendary-fortune",
+  "name": "Legendary Fortune",
+  "category": "Legendary Art",
+  "type": "Legendary Art",
+  "rarity": "Legendary",
+  "rel_dir": "achievements/legendary",
+  "purpose": "Full-size achievement artwork for reaching $1 Trillion milestone.",
+  "visual": "Samurai silhouette standing before immense treasure vault spilling crimson light.",
+  "prompt": "A minimalist 2D graphic illustration for a legendary achievement poster. A lone samurai silhouette standing before an enormous open treasure vault, intense crimson and gold light spilling across the dark stone floor, huge red sun disc behind, pitch black background, bold graphic poster composition, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/legendary/legendary-fortune.webp",
+  "public_path": "/assets/achievements/legendary/legendary-fortune.webp",
+  "generated_at": "2026-08-15 00:24:05"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "treasure-dragon-vault",
+  "name": "Dragon Lacquer Vault",
+  "category": "Items & Equipment",
+  "type": "Treasure Box",
+  "rarity": "Epic",
+  "rel_dir": "items/treasures",
+  "purpose": "Loot box container reward illustration.",
+  "visual": "Black lacquer chest with red dragon crests overflowing with gold kobans.",
+  "prompt": "Minimalist 2D game reward asset of a heavy black lacquer treasure chest adorned with crimson dragon crests, overflowing with glowing golden koban coins and ruby gems, solid crimson sun aura behind, flat black background, high contrast graphic artwork, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/items/treasures/treasure-dragon-vault.webp",
+  "public_path": "/assets/items/treasures/treasure-dragon-vault.webp",
+  "generated_at": "2026-08-15 00:25:33"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "game_icon_samurai_koban_money",
+  "name": "Game Icon: Dragon Koban & Blade",
+  "filename": "game-icon-samurai-money.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "legendary",
+  "purpose": "Primary App Icon Candidate B: Direct 'Samurai + Money' Theme.",
+  "description": "A traditional oval Japanese gold Koban wealth coin cleaved diagonally by a crimson-edged katana silhouette inside a blood sun ring.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon representing samurai wealth. A traditional Japanese oval gold Koban coin silhouette with stamped crimson seals, cleaved diagonally by a sleek near-black samurai katana sword with a sharp glowing crimson blade. (Framed by a giant perfectly smooth solid crimson circular solar ring:1.4). Pure pitch-black background, pristine vector geometry, razor-sharp clean edges, flat graphic icon, bold symbolism, no 3D, no soft painting, no gradients, no text, no pixelation, no noise."
+}

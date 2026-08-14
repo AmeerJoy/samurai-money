@@ -1,0 +1,20 @@
+{
+  "id": "emblem-sword",
+  "name": "Single Katana Emblem",
+  "category": "Emblems",
+  "type": "Achievement Emblem",
+  "rarity": "Common",
+  "rel_dir": "achievements/emblems",
+  "purpose": "Node badge for swordsmanship and single-target click power.",
+  "visual": "Vertical curved katana sword silhouette with razor crimson edge in circular sun.",
+  "prompt": "Minimalist 2D achievement icon of a vertical Japanese katana sword silhouette with a razor crimson blade edge, centered inside a solid crimson-red circular medal, solid dark background, clean geometric vector art, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/emblems/emblem-sword.webp",
+  "public_path": "/assets/achievements/emblems/emblem-sword.webp",
+  "generated_at": "2026-08-15 00:23:40"
+}

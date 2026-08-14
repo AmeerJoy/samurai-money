@@ -1,0 +1,23 @@
+{
+  "id": "icon-2d-coin-kamon-seal",
+  "name": "App Icon: 2D Samurai Coin Kamon Seal",
+  "filename": "icon-2d-coin-kamon-seal.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary 2D App Store Icon \u2014 Traditional Coin Clan Crest.",
+  "description": "Traditional Japanese circular currency coin silhouette with square center hole and crossed black katanas, embedded in a deep crimson sun medallion.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork minimalist 2D flat vector game app icon. Traditional Japanese circular coin silhouette with a square center cutout, crossed pure solid black samurai katana swords, (centered inside a giant perfectly smooth solid circular crimson-red sun emblem:1.4). Pure flat 2D graphic art, solid pitch-black silhouette (#07080C), deep crimson red (#D20A2E), sharp geometric vector contours, high contrast, clean negative space, no 3D rendering, no gradients, no soft painting, no text, no typography, no pixelation.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 8.0,
+  "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+}

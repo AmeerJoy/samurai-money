@@ -1,0 +1,20 @@
+{
+  "id": "wealth-1t-giant-vault",
+  "name": "Trillionaire Clan Vault",
+  "category": "Wealth Achievements",
+  "type": "Milestone Node",
+  "rarity": "Legendary",
+  "rel_dir": "achievements/wealth",
+  "purpose": "Represents the $1,000,000,000,000 wealth milestone on achievement graph.",
+  "visual": "Colossal fortress vault gate with massive dragon padlock under crimson eclipse.",
+  "prompt": "Minimalist 2D game artwork of a colossal ancient samurai fortress treasury gate secured by a giant golden dragon lock, massive crimson solar disc behind, pure black background, majestic graphic poster art, sharp clean edges, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/wealth/wealth-1t-giant-vault.webp",
+  "public_path": "/assets/achievements/wealth/wealth-1t-giant-vault.webp",
+  "generated_at": "2026-08-15 00:23:22"
+}

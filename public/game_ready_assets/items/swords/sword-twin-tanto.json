@@ -1,0 +1,20 @@
+{
+  "id": "sword-twin-tanto",
+  "name": "Twin Tanto Daggers",
+  "category": "Items & Equipment",
+  "type": "Weapon Upgrade",
+  "rarity": "Rare",
+  "rel_dir": "items/swords",
+  "purpose": "Dual-strike weapon card in weapons inventory.",
+  "visual": "Crossed tanto daggers silhouette with crimson cord wrap.",
+  "prompt": "Minimalist 2D game weapon icon of twin Japanese tanto daggers crossed diagonally, pure black blade silhouettes with razor crimson-red edge highlights and red cord wrap. Solid crimson circular badge background, pitch black canvas, sharp vector lines, game UI asset, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/items/swords/sword-twin-tanto.webp",
+  "public_path": "/assets/items/swords/sword-twin-tanto.webp",
+  "generated_at": "2026-08-15 00:25:17"
+}

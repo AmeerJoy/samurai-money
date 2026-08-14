@@ -1,0 +1,20 @@
+{
+  "id": "emblem-battle-flag",
+  "name": "Clan Battle Flag Emblem",
+  "category": "Emblems",
+  "type": "Achievement Emblem",
+  "rarity": "Rare",
+  "rel_dir": "achievements/emblems",
+  "purpose": "Node badge for clan prestige, territory, and passive income.",
+  "visual": "Samurai sashimono battle banner silhouette with rising sun crest.",
+  "prompt": "Minimalist 2D achievement badge of a traditional samurai sashimono battle flag on a bamboo pole, pure black silhouette with a crimson sun emblem on the fabric, solid red circular background, pitch black canvas, clean vector art, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/emblems/emblem-battle-flag.webp",
+  "public_path": "/assets/achievements/emblems/emblem-battle-flag.webp",
+  "generated_at": "2026-08-15 00:23:50"
+}

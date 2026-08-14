@@ -1,0 +1,20 @@
+{
+  "id": "loading-samurai",
+  "name": "Loading Screen Samurai",
+  "category": "Loading Screen",
+  "type": "Animated Asset",
+  "rarity": "Common",
+  "rel_dir": "loading",
+  "purpose": "Central silhouette on initial game loading screen.",
+  "visual": "Centered pure black silhouette of samurai in stance on dark rock.",
+  "prompt": "Minimalist 2D graphic game asset. A centered pure pitch-black silhouette of a samurai standing poised with katana sword on a flat dark ground, pure solid black silhouette on transparent-ready black background, clean vector contours, no face, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/loading/loading-samurai.webp",
+  "public_path": "/assets/loading/loading-samurai.webp",
+  "generated_at": "2026-08-15 00:25:42"
+}

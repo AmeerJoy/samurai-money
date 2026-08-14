@@ -1,0 +1,20 @@
+{
+  "id": "region-village",
+  "name": "Region 3: Merchant Village",
+  "category": "World Regions",
+  "type": "Region Backdrop",
+  "rarity": "Rare",
+  "rel_dir": "world/regions",
+  "purpose": "Background artwork for Region 3 of the Achievement World Map.",
+  "visual": "Stylized dark merchant village rooftops with small red lights and mountain backdrop.",
+  "prompt": "A minimalist 2D graphic illustration of a world map region. Stylized silhouettes of traditional Japanese village houses and merchant shops, glowing red paper lanterns along a stone street, dark mountain ridges and giant crimson sun in background, clean vector poster art, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/world/regions/region-village.webp",
+  "public_path": "/assets/world/regions/region-village.webp",
+  "generated_at": "2026-08-15 00:24:37"
+}

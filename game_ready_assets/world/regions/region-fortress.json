@@ -1,0 +1,20 @@
+{
+  "id": "region-fortress",
+  "name": "Region 4: Shogun Fortress",
+  "category": "World Regions",
+  "type": "Region Backdrop",
+  "rarity": "Epic",
+  "rel_dir": "world/regions",
+  "purpose": "Background artwork for Region 4 of the Achievement World Map.",
+  "visual": "Massive multi-tiered fortress on mountain peak with crimson war banners.",
+  "prompt": "A minimalist 2D graphic illustration of a world map region. A massive multi-tiered black samurai castle fortress on a jagged mountain peak, red war banners along the battlements, giant solid crimson-red sun backdrop, pitch black sky, clean vector edges, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/world/regions/region-fortress.webp",
+  "public_path": "/assets/world/regions/region-fortress.webp",
+  "generated_at": "2026-08-15 00:24:40"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "legendary-beyond-fortune",
+  "name": "Beyond Fortune",
+  "category": "Legendary Art",
+  "type": "Legendary Art",
+  "rarity": "Mythic",
+  "rel_dir": "achievements/legendary",
+  "purpose": "Endgame 100% completion artwork for discovering all secrets.",
+  "visual": "Mysterious samurai standing before abstract crimson cosmic portal in total darkness.",
+  "prompt": "A minimalist 2D graphic illustration for an endgame mythic achievement. A lone mysterious samurai silhouette standing before an enormous abstract circular crimson portal, floating in absolute darkness, clean geometric shapes, dramatic negative space, clean vector edges, no anime, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/legendary/legendary-beyond-fortune.webp",
+  "public_path": "/assets/achievements/legendary/legendary-beyond-fortune.webp",
+  "generated_at": "2026-08-15 00:24:15"
+}

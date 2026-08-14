@@ -1,0 +1,20 @@
+{
+  "id": "sword-steel-katana",
+  "name": "Forged Steel Katana",
+  "category": "Items & Equipment",
+  "type": "Weapon Upgrade",
+  "rarity": "Common",
+  "rel_dir": "items/swords",
+  "purpose": "Primary weapon card in weapons inventory.",
+  "visual": "Curved katana blade with razor crimson cutting edge over red sun.",
+  "prompt": "Minimalist 2D game weapon icon of a curved Japanese katana sword, pitch-black blade silhouette with an intense glowing crimson cutting edge. Huge solid crimson-red moon in background, black canvas, bold geometric graphic art, clean vector edges, no 3D, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/items/swords/sword-steel-katana.webp",
+  "public_path": "/assets/items/swords/sword-steel-katana.webp",
+  "generated_at": "2026-08-15 00:25:14"
+}

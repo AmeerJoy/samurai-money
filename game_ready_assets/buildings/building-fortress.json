@@ -1,0 +1,20 @@
+{
+  "id": "building-fortress",
+  "name": "Daimyo Castle Fortress",
+  "category": "Buildings",
+  "type": "Economic Building",
+  "rarity": "Legendary",
+  "rel_dir": "buildings",
+  "purpose": "Building tier 5 illustration on economic empire dashboard.",
+  "visual": "Towering multi-story samurai fortress castle on stone foundation.",
+  "prompt": "Minimalist 2D game asset of a towering multi-story Japanese daimyo castle fortress on a stone base, pure black silhouette with red roof trim, solid crimson circular sun backdrop, pitch black canvas, clean geometric shapes, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/buildings/building-fortress.webp",
+  "public_path": "/assets/buildings/building-fortress.webp",
+  "generated_at": "2026-08-15 00:25:11"
+}

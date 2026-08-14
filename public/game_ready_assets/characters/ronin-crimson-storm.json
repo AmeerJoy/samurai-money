@@ -1,0 +1,18 @@
+{
+  "id": "char-ronin-crimson-storm",
+  "name": "Ronin in Crimson Tempest",
+  "filename": "ronin-crimson-storm.webp",
+  "type": "character",
+  "category": "Characters",
+  "subfolder": "characters",
+  "rarity": "epic",
+  "purpose": "High-tier Ronin evolution display & battle portrait.",
+  "description": "Lone wandering ronin warrior with tattered cloak billowing in the storm, standing poised with katana drawn beneath a colossal perfectly solid crimson sun.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A minimalist 2D graphic illustration for a premium video game, inspired by bold cinematic silhouette poster art. A lone ronin warrior with a long tattered cloak flowing in the wind, standing dramatically on a jagged cliff with katana raised, shown primarily as a near-black silhouette with sharp crimson-red contour highlights defining the blade and armor edges. A huge perfectly solid crimson-red circular sun behind the warrior creates a strong iconic silhouette. Extremely simple flat shapes, clean hard edges, limited color palette of near-black, deep crimson red and dark charcoal, dramatic negative space, large bold geometric forms, sharp vector game art style, cinematic poster composition, no anime character style, no 3D rendering, no soft digital painting, no gradients, no photorealism, no text, no typography."
+}

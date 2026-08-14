@@ -1,0 +1,20 @@
+{
+  "id": "emblem-twin-swords",
+  "name": "Twin Swords Emblem",
+  "category": "Emblems",
+  "type": "Achievement Emblem",
+  "rarity": "Rare",
+  "rel_dir": "achievements/emblems",
+  "purpose": "Node badge for dual-wielding and click multiplier milestones.",
+  "visual": "Two crossed black katanas forming an X-silhouette over solid crimson sun.",
+  "prompt": "Minimalist 2D achievement icon of two crossed black katana swords forming an X silhouette with razor crimson blade edges, centered on a solid crimson circular medallion, pitch black canvas, sharp vector edges, no 3D render, no text.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "file_webp": "assets/achievements/emblems/emblem-twin-swords.webp",
+  "public_path": "/assets/achievements/emblems/emblem-twin-swords.webp",
+  "generated_at": "2026-08-15 00:23:44"
+}

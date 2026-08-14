@@ -1,0 +1,18 @@
+{
+  "id": "item-mythic-blood-katana",
+  "name": "Mythic Blood Katana",
+  "filename": "mythic-blood-katana.webp",
+  "type": "item",
+  "category": "Swords & Weapons",
+  "subfolder": "items/swords",
+  "rarity": "legendary",
+  "purpose": "Supreme weapon upgrade item icon & inspect card.",
+  "description": "Floating legendary curved katana blade pointing diagonally upward, sharp crimson cutting edge cleaving the giant solar disc.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "Minimalist 2D game item illustration of a legendary Japanese katana sword floating diagonally in pure pitch black space, near-black silhouette hilt and scabbard with a sharp vibrant crimson-red cutting edge glow, framed by a giant minimalist crimson circular sun, clean vector silhouette art, high contrast, flat shapes, no 3D rendering, no soft painting, no text, no watermark."
+}

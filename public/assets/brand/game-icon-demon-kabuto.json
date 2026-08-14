@@ -1,0 +1,18 @@
+{
+  "id": "game_icon_demon_kabuto_crest",
+  "name": "Game Icon: Demon Kabuto Warlord",
+  "filename": "game-icon-demon-kabuto.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "legendary",
+  "purpose": "Primary App Icon Candidate C: Menacing Warlord Identity.",
+  "description": "Fierce horned samurai battle helmet (Kabuto) and demon faceplate silhouette centered in a blazing crimson disc.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon. A fierce Japanese samurai kabuto helmet with curved golden-crimson crescent horns and a demon mempo face mask, rendered as a bold solid near-black silhouette with glowing crimson-red eye slits and rim contours. (Directly centered in front of a giant perfectly smooth solid circular crimson-red sun:1.4). Pure solid black background, pristine circular symmetry, clean hard vector edges, vector game icon, no 3D rendering, no soft painting, no gradients, no text, no pixelation, no noise."
+}

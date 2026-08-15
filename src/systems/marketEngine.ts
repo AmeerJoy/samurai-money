@@ -110,29 +110,44 @@ export function generateHistoryForTimeframe(
   now: number = Date.now()
 ): PricePoint[] {
   const durationMs = TIMEFRAME_MS[timeRange];
-  const numPoints = timeRange === '1H' ? 24 : timeRange === '6H' ? 30 : 36;
+  const numPoints = 80; // High resolution point density for silky smooth curves
   const stepMs = durationMs / (numPoints - 1);
   const cycleSpeed = (2 * Math.PI) / (asset.cycleLengthSeconds * 1000);
 
-  const points: PricePoint[] = [];
+  const rawPoints: number[] = [];
+  const timestamps: number[] = [];
 
   for (let i = 0; i < numPoints - 1; i++) {
     const timestamp = now - durationMs + i * stepMs;
     const timeDeltaMs = now - timestamp;
     const pastPhase = currentCycle - timeDeltaMs * cycleSpeed;
     
-    // Controlled deterministic noise using hash
-    const noise = (seededRandom(asset.startingPrice + timestamp * 0.001) - 0.5) * asset.volatility * 0.25;
+    // Smooth harmonic noise
+    const noise = Math.sin(pastPhase * 3.7 + i * 0.4) * (asset.volatility * 0.08)
+                + (seededRandom(asset.startingPrice + Math.floor(timestamp / 30000)) - 0.5) * (asset.volatility * 0.06);
+    
     const multiplier = getPersonalityMultiplier(asset.personality, pastPhase);
     
     let rawPrice = asset.startingPrice * multiplier * (1 + noise);
     rawPrice = Math.max(asset.minimumPrice, Math.min(asset.maximumPrice, rawPrice));
 
-    points.push({
-      timestamp,
-      price: Math.round(rawPrice * 100) / 100
-    });
+    rawPoints.push(rawPrice);
+    timestamps.push(timestamp);
   }
+
+  // Smooth adjacent points to prevent unnatural jagged steps
+  const smoothedPrices: number[] = [];
+  for (let i = 0; i < rawPoints.length; i++) {
+    const prev = rawPoints[Math.max(0, i - 1)];
+    const curr = rawPoints[i];
+    const next = rawPoints[Math.min(rawPoints.length - 1, i + 1)];
+    smoothedPrices.push(prev * 0.25 + curr * 0.5 + next * 0.25);
+  }
+
+  const points: PricePoint[] = smoothedPrices.map((price, idx) => ({
+    timestamp: timestamps[idx],
+    price: Math.round(price * 100) / 100
+  }));
 
   // Ensure last point is exactly the current price at the current timestamp
   points.push({

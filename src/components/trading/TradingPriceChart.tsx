@@ -10,6 +10,35 @@ interface TradingPriceChartProps {
   numberFormat?: 'standard' | 'scientific';
 }
 
+/**
+ * Convert discrete points into a silky-smooth Catmull-Rom cubic bezier SVG path
+ */
+function buildSmoothSplinePath(points: { x: number; y: number }[]): string {
+  if (points.length < 2) return '';
+  if (points.length === 2) {
+    return `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)} L ${points[1].x.toFixed(1)} ${points[1].y.toFixed(1)}`;
+  }
+
+  let path = `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`;
+
+  for (let i = 0; i < points.length - 1; i++) {
+    const p0 = points[Math.max(0, i - 1)];
+    const p1 = points[i];
+    const p2 = points[i + 1];
+    const p3 = points[Math.min(points.length - 1, i + 2)];
+
+    // Catmull-Rom to Cubic Bezier control points conversion
+    const cp1x = p1.x + (p2.x - p0.x) / 6;
+    const cp1y = p1.y + (p2.y - p0.y) / 6;
+    const cp2x = p2.x - (p3.x - p1.x) / 6;
+    const cp2y = p2.y - (p3.y - p1.y) / 6;
+
+    path += ` C ${cp1x.toFixed(1)} ${cp1y.toFixed(1)}, ${cp2x.toFixed(1)} ${cp2y.toFixed(1)}, ${p2.x.toFixed(1)} ${p2.y.toFixed(1)}`;
+  }
+
+  return path;
+}
+
 export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   history,
   currentPrice,
@@ -36,7 +65,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const rawMin = Math.min(...prices, currentPrice);
   const rawMax = Math.max(...prices, currentPrice);
 
-  // Add slight 5% padding so line never touches absolute edges
+  // Add 5% padding so line never touches absolute edges
   const pad = (rawMax - rawMin) * 0.05 || rawMin * 0.04 || 1;
   const minPrice = Math.max(0, rawMin - pad);
   const maxPrice = rawMax + pad;
@@ -65,7 +94,8 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
     return { x, y, point: p };
   });
 
-  const linePath = svgPoints.map((pt, i) => `${i === 0 ? 'M' : 'L'} ${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`).join(' ');
+  // Build ultra-smooth continuous curve
+  const linePath = buildSmoothSplinePath(svgPoints);
   
   // Closed area path for background gradient fill
   const lastX = paddingLeft + innerWidth;
@@ -76,8 +106,8 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const fillColor = isPositive ? 'rgba(16, 185, 129, 0.16)' : 'rgba(240, 24, 53, 0.16)';
   const glowColor = isPositive ? 'rgba(16, 185, 129, 0.45)' : 'rgba(240, 24, 53, 0.45)';
 
-  // Calculate 4 Y-axis horizontal grid lines spanning full height
-  const gridSteps = 4;
+  // Calculate 6 detailed Y-axis horizontal grid lines spanning full height
+  const gridSteps = 6;
   const yAxisTicks = Array.from({ length: gridSteps }, (_, i) => {
     const val = minPrice + (priceRange / (gridSteps - 1)) * i;
     const y = paddingTop + innerHeight - ((val - minPrice) / priceRange) * innerHeight;
@@ -172,7 +202,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             </filter>
           </defs>
 
-          {/* Horizontal Y-Axis Grid Lines & Price Labels */}
+          {/* Horizontal Y-Axis Grid Lines & Price Labels (6 Levels) */}
           {yAxisTicks.map((tick, idx) => (
             <g key={idx} className="chart-grid-tick">
               <line
@@ -198,7 +228,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
           {/* Area Fill */}
           <path d={areaPath} fill={`url(#chart-grad-${timeRange})`} />
 
-          {/* Main Price Trend Line */}
+          {/* Main Smooth Spline Price Trend Line */}
           <path
             d={linePath}
             fill="none"

@@ -163,7 +163,7 @@ function getPersonalityDynamics(
 
 /**
  * Generate historical price points tailored to the selected timeframe
- * Provides realistic, non-repeating financial market curves across 1H, 24H, 7D, 30D, 90D, and 1Y
+ * Provides realistic, multi-scale financial market curves across 1H, 6H, 24H, 7D, 30D, 90D, and 1Y
  */
 export function generateHistoryForTimeframe(
   asset: TradingAssetDefinition,
@@ -186,19 +186,7 @@ export function generateHistoryForTimeframe(
     '1Y': 220
   };
 
-  // Macro scale factor (how many organic regime shifts occur across the window)
-  const scaleMap: Record<TimeRange, number> = {
-    '1H': 1.8,
-    '6H': 2.8,
-    '24H': 3.8,
-    '7D': 5.5,
-    '30D': 8.5,
-    '90D': 12.5,
-    '1Y': 18.0
-  };
-
   const numPoints = numPointsMap[timeRange] || 100;
-  const timeScale = scaleMap[timeRange] || 4.0;
   const stepMs = durationMs / (numPoints - 1);
 
   const rawPrices: number[] = [];
@@ -206,20 +194,35 @@ export function generateHistoryForTimeframe(
 
   for (let i = 0; i < numPoints - 1; i++) {
     const timestamp = now - durationMs + i * stepMs;
-    const progress = i / (numPoints - 1); // 0 to 1
+    const timeDeltaMs = now - timestamp;
     
-    // Non-linear, fractal multi-octave coordinate
-    const t = (currentCycle * 2.0) + (progress * timeScale);
-    
-    // Generate organic fractal noise (5 octaves)
-    const rawNoise = fractalMarketNoise(t, assetSeed, 5);
+    // Unified continuous time coordinates:
+    // 1. Year macro coordinate (slow secular trends)
+    const tYear = (timeDeltaMs / (365 * 24 * 3600 * 1000)) * 6.0;
+    // 2. Month swing coordinate (medium swings)
+    const tMonth = (timeDeltaMs / (30 * 24 * 3600 * 1000)) * 8.0;
+    // 3. Day / Hour microstructure coordinate (fine detail)
+    const tDay = (timeDeltaMs / (24 * 3600 * 1000)) * 12.0;
+
+    // Multi-scale composite noise
+    const macroNoise = fractalMarketNoise(currentCycle - tYear, assetSeed, 4);
+    const swingNoise = fractalMarketNoise(currentCycle * 2.5 - tMonth, assetSeed + 17, 3);
+    const sessionNoise = fractalMarketNoise(currentCycle * 6.0 - tDay, assetSeed + 37, 2);
+
+    // Dynamic scale weighting based on timeframe
+    let compositeNoise = 0;
+    if (timeRange === '1H' || timeRange === '6H') {
+      compositeNoise = sessionNoise * 0.7 + swingNoise * 0.3;
+    } else if (timeRange === '24H' || timeRange === '7D') {
+      compositeNoise = swingNoise * 0.6 + macroNoise * 0.3 + sessionNoise * 0.1;
+    } else {
+      compositeNoise = macroNoise * 0.7 + swingNoise * 0.3;
+    }
     
     // Apply personality dynamics
-    const multiplier = getPersonalityDynamics(asset.personality, rawNoise, t, assetSeed);
+    const multiplier = getPersonalityDynamics(asset.personality, compositeNoise, currentCycle - tYear, assetSeed);
 
     let rawPrice = asset.startingPrice * multiplier;
-    
-    // Soft boundary compression ensures natural rounded turning points with zero clipping
     rawPrice = applySoftBounds(rawPrice, asset.minimumPrice, asset.maximumPrice);
 
     rawPrices.push(rawPrice);
@@ -238,7 +241,7 @@ export function generateHistoryForTimeframe(
   const finalPoints: PricePoint[] = adjustedPrices.map((price, idx) => {
     const prev = adjustedPrices[Math.max(0, idx - 1)];
     const next = adjustedPrices[Math.min(adjustedPrices.length - 1, idx + 1)];
-    const smoothed = prev * 0.20 + price * 0.60 + next * 0.20;
+    const smoothed = prev * 0.18 + price * 0.64 + next * 0.18;
     return {
       timestamp: timestamps[idx],
       price: Math.round(smoothed * 100) / 100

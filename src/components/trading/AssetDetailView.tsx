@@ -41,7 +41,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
   onSell,
   onBack
 }) => {
-  const [timeRange, setTimeRange] = useState<TimeRange>('7D');
+  const [timeRange, setTimeRange] = useState<TimeRange>('6H');
   const [activeMode, setActiveMode] = useState<'BUY' | 'SELL'>('BUY');
   const [quantity, setQuantity] = useState<number>(1);
   const [showMarketDetails, setShowMarketDetails] = useState<boolean>(false);

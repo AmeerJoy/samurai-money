@@ -3779,7 +3779,7 @@ html, body {
   background: rgba(10, 12, 18, 0.9);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  padding: 4px 6px;
+  padding: 4px 4px 2px 4px;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -3793,6 +3793,7 @@ html, body {
   align-items: center;
   justify-content: space-between;
   gap: 4px;
+  padding: 0 4px;
   flex-shrink: 0;
 }
 

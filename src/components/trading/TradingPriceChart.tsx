@@ -65,8 +65,8 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const rawMin = Math.min(...prices, currentPrice);
   const rawMax = Math.max(...prices, currentPrice);
 
-  // Add 5% padding so line never touches absolute edges
-  const pad = (rawMax - rawMin) * 0.05 || rawMin * 0.04 || 1;
+  // Add 4% padding so line never touches absolute vertical edges
+  const pad = (rawMax - rawMin) * 0.04 || rawMin * 0.03 || 1;
   const minPrice = Math.max(0, rawMin - pad);
   const maxPrice = rawMax + pad;
   const priceRange = maxPrice - minPrice || 1;
@@ -76,18 +76,18 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const priceChange = endPrice - startPrice;
   const isPositive = priceChange >= 0;
 
-  // Chart dimensions & scaling
+  // Chart dimensions & scaling (Maximized horizontal utilization)
   const width = 640;
   const height = 210;
-  const paddingLeft = 58;  // Left margin for Y-axis labels
-  const paddingRight = 68; // Right margin for current price badge
+  const paddingLeft = 14;   // Minimal margin so curve reaches the left edge
+  const paddingRight = 14;  // Minimal margin so curve reaches the right edge
   const paddingTop = 12;
   const paddingBottom = 16;
 
   const innerWidth = width - paddingLeft - paddingRight;
   const innerHeight = height - paddingTop - paddingBottom;
 
-  // Generate SVG path coordinates
+  // Generate SVG path coordinates spanning the entire available width
   const svgPoints = points.map((p, idx) => {
     const x = paddingLeft + (idx / (points.length - 1)) * innerWidth;
     const y = paddingTop + innerHeight - ((p.price - minPrice) / priceRange) * innerHeight;
@@ -183,7 +183,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
         </div>
       </div>
 
-      {/* Interactive Vector SVG Chart with Y-Axis and Current Price Line */}
+      {/* Interactive Vector SVG Chart with Edge-to-Edge Utilization */}
       <div className="chart-svg-wrapper">
         <svg
           viewBox={`0 0 ${width} ${height}`}
@@ -202,7 +202,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             </filter>
           </defs>
 
-          {/* Horizontal Y-Axis Grid Lines & Price Labels (6 Levels) */}
+          {/* Horizontal Y-Axis Grid Lines & Overlay Price Labels */}
           {yAxisTicks.map((tick, idx) => (
             <g key={idx} className="chart-grid-tick">
               <line
@@ -214,11 +214,13 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
                 strokeDasharray="3 4"
                 strokeWidth="1"
               />
+              {/* Overlay Y-Axis Price Badge positioned elegantly above the grid line */}
               <text
-                x={paddingLeft - 8}
-                y={tick.y + 3.5}
-                textAnchor="end"
+                x={paddingLeft + 4}
+                y={tick.y - 4}
+                textAnchor="start"
                 className="chart-yaxis-text"
+                style={{ fill: 'rgba(255, 255, 255, 0.4)', fontSize: '9.5px' }}
               >
                 {formatMoney(tick.val, numberFormat)}
               </text>
@@ -233,7 +235,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             d={linePath}
             fill="none"
             stroke={strokeColor}
-            strokeWidth="2.2"
+            strokeWidth="2.4"
             strokeLinecap="round"
             strokeLinejoin="round"
             filter="url(#chart-line-glow)"
@@ -254,27 +256,29 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             <circle
               cx={width - paddingRight}
               cy={currentY}
-              r="4"
+              r="4.5"
               fill="#F59E0B"
               stroke="#FFF"
               strokeWidth="1.5"
             />
-            {/* Current Price Label on Right Axis */}
+            {/* Current Price Pill Badge pinned cleanly on the right */}
             <rect
-              x={width - paddingRight + 4}
-              y={currentY - 9}
-              width="58"
-              height="18"
+              x={width - paddingRight - 62}
+              y={currentY - 10}
+              width="60"
+              height="19"
               rx="4"
-              fill="#181B24"
+              fill="#141720"
               stroke="#F59E0B"
-              strokeWidth="1"
+              strokeWidth="1.2"
+              fillOpacity="0.95"
             />
             <text
-              x={width - paddingRight + 33}
+              x={width - paddingRight - 32}
               y={currentY + 3.5}
               textAnchor="middle"
               className="chart-current-badge-text"
+              style={{ fontWeight: 800, fontSize: '9.5px', fill: '#FBBF24' }}
             >
               {formatMoney(currentPrice, numberFormat)}
             </text>
@@ -298,7 +302,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
               <circle
                 cx={hoverPoint.x}
                 cy={hoverPoint.y}
-                r="4.5"
+                r="5"
                 fill="#FFF"
                 stroke={strokeColor}
                 strokeWidth="2.5"

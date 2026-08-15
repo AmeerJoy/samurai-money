@@ -76,11 +76,13 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const priceChange = endPrice - startPrice;
   const isPositive = priceChange >= 0;
 
-  // Chart dimensions & scaling (Maximized horizontal utilization)
+  // Chart dimensions & scaling:
+  // - Dedicated left space (52px) for numbers aligned with dashed lines
+  // - Zero right padding (2px) so curve utilizes 100% of the right container
   const width = 640;
   const height = 210;
-  const paddingLeft = 14;   // Minimal margin so curve reaches the left edge
-  const paddingRight = 14;  // Minimal margin so curve reaches the right edge
+  const paddingLeft = 52;   // Space for Y-axis price labels
+  const paddingRight = 2;   // 100% full utilization of the right side
   const paddingTop = 12;
   const paddingBottom = 16;
 
@@ -202,9 +204,21 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             </filter>
           </defs>
 
-          {/* Horizontal Y-Axis Grid Lines & Overlay Price Labels */}
+          {/* Horizontal Y-Axis Grid Lines & Directly Aligned Price Labels */}
           {yAxisTicks.map((tick, idx) => (
             <g key={idx} className="chart-grid-tick">
+              {/* Y-Axis Price Label aligned directly to its dashed grid line */}
+              <text
+                x={paddingLeft - 6}
+                y={tick.y + 3.5}
+                textAnchor="end"
+                className="chart-yaxis-text"
+                style={{ fill: 'rgba(255, 255, 255, 0.45)', fontSize: '9px', fontWeight: 700 }}
+              >
+                {formatMoney(tick.val, numberFormat)}
+              </text>
+
+              {/* Dashed Grid Line spanning from left axis to the absolute right edge */}
               <line
                 x1={paddingLeft}
                 y1={tick.y}
@@ -214,16 +228,6 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
                 strokeDasharray="3 4"
                 strokeWidth="1"
               />
-              {/* Overlay Y-Axis Price Badge positioned elegantly above the grid line */}
-              <text
-                x={paddingLeft + 4}
-                y={tick.y - 4}
-                textAnchor="start"
-                className="chart-yaxis-text"
-                style={{ fill: 'rgba(255, 255, 255, 0.4)', fontSize: '9.5px' }}
-              >
-                {formatMoney(tick.val, numberFormat)}
-              </text>
             </g>
           ))}
 
@@ -254,18 +258,18 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             />
             {/* Dot at Current Price (Rightmost point) */}
             <circle
-              cx={width - paddingRight}
+              cx={width - paddingRight - 1}
               cy={currentY}
               r="4.5"
               fill="#F59E0B"
               stroke="#FFF"
               strokeWidth="1.5"
             />
-            {/* Current Price Pill Badge pinned cleanly on the right */}
+            {/* Current Price Pill Badge pinned cleanly to the right edge */}
             <rect
-              x={width - paddingRight - 62}
+              x={width - paddingRight - 60}
               y={currentY - 10}
-              width="60"
+              width="58"
               height="19"
               rx="4"
               fill="#141720"
@@ -274,7 +278,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
               fillOpacity="0.95"
             />
             <text
-              x={width - paddingRight - 32}
+              x={width - paddingRight - 31}
               y={currentY + 3.5}
               textAnchor="middle"
               className="chart-current-badge-text"

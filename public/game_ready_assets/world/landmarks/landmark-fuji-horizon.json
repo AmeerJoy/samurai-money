@@ -1,0 +1,22 @@
+{
+  "id": "landmark-fuji-sun",
+  "name": "Landmark: Mount Fuji Horizon",
+  "filename": "landmark-fuji-horizon.webp",
+  "type": "landmark",
+  "category": "World Landmarks",
+  "subfolder": "world/landmarks",
+  "rarity": "common",
+  "purpose": "World Map Region 1 Landmark Icon.",
+  "description": "The sacred peak of Mount Fuji rises in pure black silhouette before a giant flat crimson sun disc.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Pure solid pitch-black silhouette of Mount Fuji peak with snow-cap contours. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, no 3D rendering, no soft lighting, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

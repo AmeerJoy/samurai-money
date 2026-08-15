@@ -1,0 +1,23 @@
+{
+  "id": "icon-crimson-flame-katana",
+  "name": "App Icon: Crimson Flame Katana",
+  "filename": "icon-crimson-flame-katana.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary App Store Icon \u2014 Flaming Blade Emblem.",
+  "description": "Vertical pitch-black katana silhouette cleaving upward, wreathed in sharp clean crimson solar flames inside a circular gold and crimson seal.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon. A vertical Japanese samurai katana sword silhouette pointing upward in center, near-black hilt with a razor-sharp glowing crimson-red cutting edge radiating clean geometric crimson flame arcs. (Directly centered inside a perfectly smooth circular crimson-red solar seal with gold rim:1.4). Pitch-black background, pristine vector geometry, razor-sharp clean edges, flat 2D graphic emblem, no 3D, no text, no watermark, no pixelation, no noise.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 7.5,
+  "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+}

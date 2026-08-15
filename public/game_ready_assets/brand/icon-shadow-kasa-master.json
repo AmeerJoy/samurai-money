@@ -1,0 +1,23 @@
+{
+  "id": "icon-shadow-kasa-master",
+  "name": "App Icon: Shadow Kasa Master",
+  "filename": "icon-shadow-kasa-master.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary App Store Icon \u2014 Wandering Ronin Master.",
+  "description": "Cinematic side-profile silhouette of a wandering master samurai wearing a traditional conical straw kasa hat, resting a glowing crimson-edged katana on shoulders against a giant circular blood moon.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon. Dramatic profile silhouette of a wandering ronin samurai wearing a wide conical straw kasa hat, holding a sleek katana blade with glowing crimson-red accents resting over shoulders. (Framed entirely within a giant perfectly smooth solid circular crimson-red blood sun:1.4). Pure solid pitch-black background (#07080C), high contrast silhouette poster art, razor-sharp clean edges, pristine vector shapes, no face details, no 3D, no painting, no text, no pixelation, no aliasing.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 7.5,
+  "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+}

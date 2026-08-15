@@ -153,15 +153,16 @@ html, body {
 }
 
 .brand-logo-mark {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(210, 10, 46, 0.7));
-  transition: transform var(--transition-fast);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 4px rgba(210, 10, 46, 0.28));
+  transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 .brand-section:hover .brand-logo-mark {
-  transform: scale(1.08) rotate(4deg);
+  transform: scale(1.05);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 6px rgba(210, 10, 46, 0.45));
 }
 
 .brand-title {

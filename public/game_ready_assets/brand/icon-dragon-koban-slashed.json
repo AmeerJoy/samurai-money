@@ -1,0 +1,23 @@
+{
+  "id": "icon-dragon-koban-slashed",
+  "name": "App Icon: Slashed Dragon Koban",
+  "filename": "icon-dragon-koban-slashed.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary App Store Icon \u2014 Core Samurai + Money Theme.",
+  "description": "Traditional Japanese oval gold Koban coin cleanly cleaved diagonally by a glowing crimson katana blade silhouette, centered in a circular crimson eclipse ring.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon symbolizing samurai fortune. An antique Japanese oval gold Koban coin silhouette with crimson stamped engravings, cleanly sliced diagonally by a sleek pitch-black katana blade with a razor-sharp glowing crimson cutting edge. (Framed by a giant perfectly smooth solid circular crimson-red sun halo:1.4). Pure pitch-black background, pristine vector geometry, sharp clean edges, iconic game logo, no 3D rendering, no text, no pixelation, no noise.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 7.5,
+  "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+}

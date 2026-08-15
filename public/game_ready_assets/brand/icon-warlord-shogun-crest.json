@@ -1,0 +1,23 @@
+{
+  "id": "icon-warlord-shogun-crest",
+  "name": "App Icon: Shogun Kamon Shield",
+  "filename": "icon-warlord-shogun-crest.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary App Store Icon \u2014 Clan Crest Kamon.",
+  "description": "Minimalist Japanese Shogun warlord clan crest (Kamon) featuring twin crossed curved katanas and imperial dragon horns centered in a radiant crimson disc.",
+  "palette": [
+    "#07080C",
+    "#D20A2E",
+    "#F01835",
+    "#F59E0B"
+  ],
+  "prompt": "A masterwork minimalist 2D vector game app icon. Traditional Japanese samurai warlord clan crest (Kamon emblem) featuring two crossed curved katana silhouettes and stylized imperial dragon horns in circular symmetry. (Centered inside a giant perfectly smooth solid circular crimson-red sun emblem:1.4). Pure pitch-black background, sharp clean vector lines, high contrast graphic design, no 3D, no text, no watermark, no pixelation, no noise.",
+  "model": "DreamShaper 8 Pruned (SD 1.5)",
+  "sampler": "DPM++ 2M Karras",
+  "steps": 28,
+  "cfg_scale": 7.5,
+  "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+}

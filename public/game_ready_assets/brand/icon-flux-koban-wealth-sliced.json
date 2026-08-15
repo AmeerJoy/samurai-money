@@ -1,0 +1,22 @@
+{
+  "id": "icon-flux-koban-wealth-sliced",
+  "name": "App Icon: FLUX Slashed Koban Fortune",
+  "filename": "icon-flux-koban-wealth-sliced.webp",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Primary App Icon \u2014 FLUX.1 [schnell] Samurai Money Fusion.",
+  "description": "Pure solid black samurai blade cleaving a traditional Japanese Koban gold currency coin in half inside a solid flat red sun disc.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game app icon representing samurai wealth. Pure solid pitch-black silhouette of a samurai katana blade slicing a traditional oval Japanese Koban wealth coin in half. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only. Crisp clean vector geometry, no 3D rendering, no human face, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent) -> 512x512 (WebP)"
+}

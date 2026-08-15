@@ -1,0 +1,20 @@
+{
+  "id": "icon-duotone-reference-master",
+  "name": "App Icon: Reference Master Duotone Ronin",
+  "filename": "icon-duotone-reference-master.svg",
+  "type": "icon",
+  "category": "Brand",
+  "subfolder": "brand",
+  "rarity": "mythic",
+  "purpose": "Pixel-Perfect Vector Replication of User Reference Image.",
+  "description": "Standing straw-hat samurai silhouette with katana, pure solid red sun disc on pitch-black background with red negative space seams.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "model": "Pure Vector SVG (Lossless Resolution)",
+  "sampler": "Vector B\u00e9zier Rasterizer",
+  "steps": "Infinite Resolution",
+  "cfg_scale": "N/A",
+  "resolution": "Scalable Vector SVG"
+}

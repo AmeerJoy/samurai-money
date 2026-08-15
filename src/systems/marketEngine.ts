@@ -27,7 +27,7 @@ export const TIMEFRAME_MS: Record<TimeRange, number> = {
 };
 
 /**
- * Pseudo-random generator with deterministic seed
+ * Deterministic pseudo-random generator
  */
 function seededRandom(seed: number): number {
   const x = Math.sin(seed) * 10000;
@@ -35,63 +35,90 @@ function seededRandom(seed: number): number {
 }
 
 /**
- * Calculate mathematical price multiplier based on personality and cycle phase
+ * Generate unique integer hash from string ID
+ */
+function getAssetHash(id: string): number {
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) {
+    hash = ((hash << 5) - hash) + id.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash);
+}
+
+/**
+ * Apply soft-knee boundary compression so price smoothly decelerates near min/max
+ * and NEVER produces flat horizontal clipping lines
+ */
+function applySoftBounds(val: number, min: number, max: number): number {
+  const mid = (min + max) / 2;
+  const halfRange = (max - min) / 2;
+  if (halfRange <= 0) return min;
+
+  const normalized = (val - mid) / halfRange;
+  // Hyperbolic tangent compression ensures smooth curves with zero flat lines
+  const softNormalized = Math.tanh(normalized * 1.1) * 0.94;
+  return mid + softNormalized * halfRange;
+}
+
+/**
+ * Calculate personality curve multiplier with asset-specific harmonic nuances
  */
 function getPersonalityMultiplier(
   personality: TradingAssetDefinition['personality'],
-  phase: number
+  phase: number,
+  assetSeed: number
 ): number {
-  // Normalize phase to [0, 2*PI]
   const p = ((phase % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-  const normalized = p / (2 * Math.PI); // 0 to 1
+  const normalized = p / (2 * Math.PI);
+  const seedShift = (assetSeed % 100) / 100;
 
   switch (personality) {
     case 'stable':
-      // Gentle dual-frequency harmonic
-      return 1.0 + 0.07 * Math.sin(p) + 0.03 * Math.sin(2.7 * p);
+      // Gentle dual-frequency commodity oscillation
+      return 1.0 + 0.12 * Math.sin(p + seedShift) + 0.05 * Math.sin(2.3 * p + seedShift * 2);
 
     case 'slow_growth':
-      // Upward-biased wave
-      return 1.0 + 0.12 * Math.sin(p) + 0.06 * Math.sin(3 * p);
+      // Upward-biased steady channel
+      return 1.0 + 0.18 * Math.sin(p + seedShift) + 0.08 * Math.sin(3.1 * p) + 0.04 * (normalized - 0.5);
 
     case 'wave':
-      // Clean rhythmic sine wave
-      return 1.0 + 0.25 * Math.sin(p) + 0.08 * Math.cos(2 * p);
+      // Classic rhythmic market wave with harmonic overtone
+      return 1.0 + 0.32 * Math.sin(p + seedShift) + 0.10 * Math.cos(2.1 * p + seedShift);
 
     case 'cycle':
-      // Asymmetrical cycle with steady buildup and steeper descent
-      return 1.0 + 0.38 * Math.sin(p - 0.2) + 0.12 * Math.sin(0.5 * p);
+      // Asymmetric supply/demand cycle (smooth buildup, faster retrace)
+      return 1.0 + 0.42 * Math.sin(p - 0.3 + seedShift) + 0.14 * Math.sin(0.5 * p);
 
     case 'volatile':
-      // Multi-frequency sharp oscillation
-      return 1.0 + 0.45 * Math.sin(p) * Math.cos(1.8 * p) + 0.15 * Math.sin(4.2 * p);
+      // Multi-frequency dynamic trader volatility
+      return 1.0 + 0.50 * Math.sin(p + seedShift) * Math.cos(1.7 * p) + 0.18 * Math.sin(3.4 * p + seedShift);
 
     case 'boom_correction': {
-      // 70% slow steady ramp up, 30% steep correction drop
-      if (normalized < 0.7) {
-        const progress = normalized / 0.7; // 0 to 1
-        return 0.75 + 0.75 * Math.pow(progress, 1.4); // goes up to 1.50
+      // 65% accumulation expansion, 35% controlled correction
+      if (normalized < 0.65) {
+        const progress = normalized / 0.65;
+        return 0.78 + 0.70 * Math.pow(progress, 1.3);
       } else {
-        const dropProgress = (normalized - 0.7) / 0.3; // 0 to 1
-        return 1.50 - 0.75 * Math.pow(dropProgress, 0.6); // falls back to 0.75
+        const drop = (normalized - 0.65) / 0.35;
+        return 1.48 - 0.70 * (1 - Math.cos(drop * Math.PI * 0.5));
       }
     }
 
     case 'rare_spike': {
-      // 82% quiet baseline, 18% explosive parabolic peak
-      if (normalized < 0.82) {
-        return 0.85 + 0.12 * Math.sin(normalized * 12);
+      // 80% baseline consolidation, 20% momentum rally
+      if (normalized < 0.80) {
+        return 0.88 + 0.10 * Math.sin(normalized * 10 + seedShift);
       } else {
-        const spikeProgress = (normalized - 0.82) / 0.18; // 0 to 1
-        // Bell-curve shape
-        const spike = Math.exp(-Math.pow((spikeProgress - 0.5) * 4, 2));
-        return 0.90 + 1.25 * spike;
+        const spikeProgress = (normalized - 0.80) / 0.20;
+        const bell = Math.exp(-Math.pow((spikeProgress - 0.5) * 3.5, 2));
+        return 0.90 + 1.20 * bell;
       }
     }
 
     case 'extreme_cycle': {
-      // Grand planetary wave with deep valleys and monumental peaks
-      return 1.0 + 0.62 * Math.sin(p) + 0.22 * Math.cos(2.4 * p);
+      // Grand planetary multi-wave
+      return 1.0 + 0.65 * Math.sin(p + seedShift) + 0.25 * Math.cos(2.2 * p + seedShift * 3);
     }
 
     default:
@@ -100,7 +127,8 @@ function getPersonalityMultiplier(
 }
 
 /**
- * Generate historical price points for a given timeframe
+ * Generate historical price points tailored to the selected timeframe
+ * Ensures natural, proportional market waves without excessive repetition or flat starts
  */
 export function generateHistoryForTimeframe(
   asset: TradingAssetDefinition,
@@ -110,52 +138,66 @@ export function generateHistoryForTimeframe(
   now: number = Date.now()
 ): PricePoint[] {
   const durationMs = TIMEFRAME_MS[timeRange];
-  const numPoints = 80; // High resolution point density for silky smooth curves
+  const numPoints = 80; // High resolution point density
   const stepMs = durationMs / (numPoints - 1);
-  const cycleSpeed = (2 * Math.PI) / (asset.cycleLengthSeconds * 1000);
+  const assetSeed = getAssetHash(asset.id);
 
-  const rawPoints: number[] = [];
+  // Timeframe wave scaling: Ensures 1.5 to 3 organic waves across any timeframe
+  const wavesPerTimeframe = timeRange === '1H' ? 1.5 : timeRange === '6H' ? 2.0 : timeRange === '24H' ? 2.2 : timeRange === '7D' ? 2.5 : 2.8;
+  const timeScale = (wavesPerTimeframe * 2 * Math.PI) / durationMs;
+
+  const rawPrices: number[] = [];
   const timestamps: number[] = [];
 
   for (let i = 0; i < numPoints - 1; i++) {
     const timestamp = now - durationMs + i * stepMs;
     const timeDeltaMs = now - timestamp;
-    const pastPhase = currentCycle - timeDeltaMs * cycleSpeed;
     
-    // Smooth harmonic noise
-    const noise = Math.sin(pastPhase * 3.7 + i * 0.4) * (asset.volatility * 0.08)
-                + (seededRandom(asset.startingPrice + Math.floor(timestamp / 30000)) - 0.5) * (asset.volatility * 0.06);
+    // Smooth time-based phase tracking
+    const phase = currentCycle - timeDeltaMs * timeScale;
     
-    const multiplier = getPersonalityMultiplier(asset.personality, pastPhase);
+    // Macro harmonic wave multiplier
+    const multiplier = getPersonalityMultiplier(asset.personality, phase, assetSeed);
     
-    let rawPrice = asset.startingPrice * multiplier * (1 + noise);
-    rawPrice = Math.max(asset.minimumPrice, Math.min(asset.maximumPrice, rawPrice));
+    // Organic multi-octave secondary wave
+    const microWave = Math.sin(phase * 2.8 + (assetSeed % 7)) * (asset.volatility * 0.12)
+                    + Math.cos(phase * 5.1 + i * 0.15) * (asset.volatility * 0.05);
 
-    rawPoints.push(rawPrice);
+    let rawPrice = asset.startingPrice * multiplier * (1 + microWave);
+    
+    // Smooth soft boundary so it never creates flat lines at min or max
+    rawPrice = applySoftBounds(rawPrice, asset.minimumPrice, asset.maximumPrice);
+
+    rawPrices.push(rawPrice);
     timestamps.push(timestamp);
   }
 
-  // Smooth adjacent points to prevent unnatural jagged steps
-  const smoothedPrices: number[] = [];
-  for (let i = 0; i < rawPoints.length; i++) {
-    const prev = rawPoints[Math.max(0, i - 1)];
-    const curr = rawPoints[i];
-    const next = rawPoints[Math.min(rawPoints.length - 1, i + 1)];
-    smoothedPrices.push(prev * 0.25 + curr * 0.5 + next * 0.25);
-  }
+  // Smooth blending towards currentPrice at the right endpoint
+  const targetDiff = currentPrice - (rawPrices[rawPrices.length - 1] || currentPrice);
+  const adjustedPrices = rawPrices.map((price, idx) => {
+    const blendFactor = Math.pow((idx + 1) / numPoints, 2);
+    const blended = price + targetDiff * blendFactor;
+    return applySoftBounds(blended, asset.minimumPrice, asset.maximumPrice);
+  });
 
-  const points: PricePoint[] = smoothedPrices.map((price, idx) => ({
-    timestamp: timestamps[idx],
-    price: Math.round(price * 100) / 100
-  }));
+  // Low-pass filter for smooth continuous curvature
+  const finalPoints: PricePoint[] = adjustedPrices.map((price, idx) => {
+    const prev = adjustedPrices[Math.max(0, idx - 1)];
+    const next = adjustedPrices[Math.min(adjustedPrices.length - 1, idx + 1)];
+    const smoothed = prev * 0.2 + price * 0.6 + next * 0.2;
+    return {
+      timestamp: timestamps[idx],
+      price: Math.round(smoothed * 100) / 100
+    };
+  });
 
-  // Ensure last point is exactly the current price at the current timestamp
-  points.push({
+  // Final point is precisely currentPrice at now
+  finalPoints.push({
     timestamp: now,
     price: currentPrice
   });
 
-  return points;
+  return finalPoints;
 }
 
 /**
@@ -193,11 +235,13 @@ export function initializeAssetRuntime(
   persistedCycle?: number,
   now: number = Date.now()
 ): TradingAssetRuntime {
-  const cyclePosition = persistedCycle !== undefined ? persistedCycle : seededRandom(asset.startingPrice) * 2 * Math.PI;
-  const multiplier = getPersonalityMultiplier(asset.personality, cyclePosition);
+  const assetSeed = getAssetHash(asset.id);
+  const cyclePosition = persistedCycle !== undefined ? persistedCycle : (assetSeed % 628) / 100;
+  const multiplier = getPersonalityMultiplier(asset.personality, cyclePosition, assetSeed);
   
-  let currentPrice = persistedPrice !== undefined ? persistedPrice : Math.round(asset.startingPrice * multiplier * 100) / 100;
-  currentPrice = Math.max(asset.minimumPrice, Math.min(asset.maximumPrice, currentPrice));
+  let rawPrice = persistedPrice !== undefined ? persistedPrice : asset.startingPrice * multiplier;
+  let currentPrice = applySoftBounds(rawPrice, asset.minimumPrice, asset.maximumPrice);
+  currentPrice = Math.round(currentPrice * 100) / 100;
 
   // Generate 7 standard timeframes
   const history: Record<TimeRange, PricePoint[]> = {
@@ -237,7 +281,7 @@ export function initializeAssetRuntime(
 }
 
 /**
- * Step the market simulation forward by deltaSeconds
+ * Step the market simulation forward smoothly with momentum and natural market pacing
  */
 export function tickAssetRuntime(
   asset: TradingAssetDefinition,
@@ -246,11 +290,14 @@ export function tickAssetRuntime(
   activeEvents: MarketEvent[] = [],
   now: number = Date.now()
 ): TradingAssetRuntime {
-  const cycleAdvance = (2 * Math.PI * deltaSeconds) / asset.cycleLengthSeconds;
+  const assetSeed = getAssetHash(asset.id);
+  // Realistic pacing: 8 to 20 minutes for a complete natural cycle
+  const effectiveCycleSeconds = Math.max(480, asset.cycleLengthSeconds * 3);
+  const cycleAdvance = (2 * Math.PI * deltaSeconds) / effectiveCycleSeconds;
   const newCyclePosition = (runtime.cyclePosition + cycleAdvance) % (2 * Math.PI);
 
   // Calculate base personality value
-  const baseMultiplier = getPersonalityMultiplier(asset.personality, newCyclePosition);
+  const baseMultiplier = getPersonalityMultiplier(asset.personality, newCyclePosition, assetSeed);
   
   // Calculate active event multiplier
   let eventMultiplier = 1.0;
@@ -260,21 +307,21 @@ export function tickAssetRuntime(
     }
   }
 
-  // Micro noise (±0.8% scaled by volatility)
-  const noise = (Math.random() - 0.5) * asset.volatility * 0.08;
+  // Organic micro-volatility
+  const microNoise = Math.sin(now * 0.001 + assetSeed) * (asset.volatility * 0.03)
+                   + (seededRandom(assetSeed + Math.floor(now / 5000)) - 0.5) * (asset.volatility * 0.04);
   
-  // Target raw price
-  let targetPrice = asset.startingPrice * baseMultiplier * eventMultiplier * (1 + noise);
+  // Target price with soft bounds
+  let targetPrice = asset.startingPrice * baseMultiplier * eventMultiplier * (1 + microNoise);
+  targetPrice = applySoftBounds(targetPrice, asset.minimumPrice, asset.maximumPrice);
   
-  // Smooth price transition (momentum dampening)
-  const smoothingFactor = Math.min(1, deltaSeconds * 1.5);
+  // Smooth momentum dampening
+  const smoothingFactor = Math.min(1, deltaSeconds * 0.6);
   let newPrice = runtime.currentPrice + (targetPrice - runtime.currentPrice) * smoothingFactor;
-
-  // Strict floor and ceiling clamp
-  newPrice = Math.max(asset.minimumPrice, Math.min(asset.maximumPrice, newPrice));
+  newPrice = applySoftBounds(newPrice, asset.minimumPrice, asset.maximumPrice);
   newPrice = Math.round(newPrice * 100) / 100;
 
-  // Update history arrays
+  // Update history arrays smoothly
   const updatedHistory = { ...runtime.history };
   const timeRanges: TimeRange[] = ['1H', '6H', '24H', '7D', '30D', '90D', '1Y'];
 
@@ -282,7 +329,7 @@ export function tickAssetRuntime(
     const arr = [...(updatedHistory[tr] || [])];
     const duration = TIMEFRAME_MS[tr];
     
-    // Append new point
+    // Append current point
     arr.push({ timestamp: now, price: newPrice });
     
     // Prune points older than duration
@@ -308,8 +355,8 @@ export function tickAssetRuntime(
     previousPrice: runtime.currentPrice,
     currentPrice: newPrice,
     priceChange24h: Math.round(priceChange24h * 10) / 10,
-    high24h: Math.round(high24h * 100) / 100,
-    low24h: Math.round(low24h * 100) / 100,
+    high24h,
+    low24h,
     averagePrice: Math.round(averagePrice * 100) / 100,
     trend: calculateTrend(priceChange24h),
     marketPosition: calculateMarketPosition(newPrice, asset.minimumPrice, asset.maximumPrice),
@@ -319,69 +366,7 @@ export function tickAssetRuntime(
 }
 
 /**
- * Initialize the full market runtime state for all 18 assets
- */
-export function initializeMarketState(
-  persistedPrices: Record<string, number> = {},
-  persistedCycles: Record<string, number> = {},
-  now: number = Date.now()
-): Record<string, TradingAssetRuntime> {
-  const result: Record<string, TradingAssetRuntime> = {};
-  for (const asset of TRADING_ASSETS) {
-    result[asset.id] = initializeAssetRuntime(
-      asset,
-      persistedPrices[asset.id],
-      persistedCycles[asset.id],
-      now
-    );
-  }
-  return result;
-}
-
-/**
- * Initial Market News Items
- */
-export const INITIAL_MARKET_NEWS: MarketNewsItem[] = [
-  {
-    id: 'news-1',
-    title: 'Sword Production Surges in Mountain Province',
-    description: 'Blacksmith guilds report massive orders for tamahagane steel and iron ore.',
-    affectedAssetId: 'trade-samurai-steel',
-    priceImpactPercentage: 8.4,
-    timestamp: Date.now() - 3600000 * 4,
-    isPositive: true
-  },
-  {
-    id: 'news-2',
-    title: 'Bountiful Autumn Harvest in Coastal Plains',
-    description: 'Abundant grain yields have stabilized provincial rice and salt storage reserves.',
-    affectedAssetId: 'trade-rice',
-    priceImpactPercentage: -2.1,
-    timestamp: Date.now() - 3600000 * 8,
-    isPositive: false
-  },
-  {
-    id: 'news-3',
-    title: 'Imperial Court Announces Grand Autumn Ceremony',
-    description: 'Nobles and emissaries compete fiercely for rare gold-embroidered imperial silk.',
-    affectedAssetId: 'trade-imperial-silk',
-    priceImpactPercentage: 14.8,
-    timestamp: Date.now() - 3600000 * 14,
-    isPositive: true
-  },
-  {
-    id: 'news-4',
-    title: 'Rare Jade Vein Unearthed Near Sacred Peaks',
-    description: 'Gem collectors and shrine monks gather in Capital Province for ceremonial appraisal.',
-    affectedAssetId: 'trade-dragon-jade',
-    priceImpactPercentage: 19.5,
-    timestamp: Date.now() - 3600000 * 22,
-    isPositive: true
-  }
-];
-
-/**
- * Calculate total portfolio market value
+ * Calculate player's total portfolio value in market
  */
 export function calculatePortfolioValue(
   holdings: Record<string, PlayerHolding>,
@@ -389,16 +374,18 @@ export function calculatePortfolioValue(
 ): number {
   let total = 0;
   for (const [assetId, holding] of Object.entries(holdings)) {
-    if (holding.quantity > 0) {
-      const price = marketRuntimes[assetId]?.currentPrice || 0;
-      total += holding.quantity * price;
+    if (holding && holding.quantity > 0) {
+      const runtime = marketRuntimes[assetId];
+      const asset = TRADING_ASSETS.find(a => a.id === assetId);
+      const currentPrice = runtime ? runtime.currentPrice : (asset ? asset.startingPrice : 0);
+      total += holding.quantity * currentPrice;
     }
   }
-  return Math.round(total * 100) / 100;
+  return total;
 }
 
 /**
- * Calculate total unrealized profit
+ * Calculate player's total unrealized profit across all holdings
  */
 export function calculateUnrealizedProfit(
   holdings: Record<string, PlayerHolding>,
@@ -406,31 +393,98 @@ export function calculateUnrealizedProfit(
 ): number {
   let totalProfit = 0;
   for (const [assetId, holding] of Object.entries(holdings)) {
-    if (holding.quantity > 0) {
-      const currentPrice = marketRuntimes[assetId]?.currentPrice || holding.averageBuyPrice;
+    if (holding && holding.quantity > 0) {
+      const runtime = marketRuntimes[assetId];
+      const asset = TRADING_ASSETS.find(a => a.id === assetId);
+      const currentPrice = runtime ? runtime.currentPrice : (asset ? asset.startingPrice : 0);
+      const costBasis = holding.quantity * (holding.averageBuyPrice || currentPrice);
       const currentValue = holding.quantity * currentPrice;
-      const costBasis = holding.quantity * holding.averageBuyPrice;
       totalProfit += (currentValue - costBasis);
     }
   }
-  return Math.round(totalProfit * 100) / 100;
+  return totalProfit;
 }
 
 /**
- * Default clean initial TradingState for save files
+ * Initial market lore dispatches and provincial events
+ */
+export const INITIAL_MARKET_NEWS: MarketNewsItem[] = [
+  {
+    id: 'news-1',
+    timestamp: Date.now() - 1000 * 60 * 45,
+    title: 'Spring Harvest Exceeds Imperial Estimates',
+    description: 'Bumper crops across coastal prefectures create steady surplus reserves and heavy regional trade.',
+    affectedAssetId: 'trade-rice',
+    priceImpactPercentage: 4.5,
+    isPositive: true
+  },
+  {
+    id: 'news-2',
+    timestamp: Date.now() - 1000 * 60 * 120,
+    title: 'Northern Mountain Fortresses Expand Weapon Armories',
+    description: 'Daimyo battalions commission high-grade steel ingots and forged blades, bolstering blacksmith demand.',
+    affectedAssetId: 'trade-samurai-steel',
+    priceImpactPercentage: 8.2,
+    isPositive: true
+  },
+  {
+    id: 'news-3',
+    timestamp: Date.now() - 1000 * 60 * 240,
+    title: 'Silk Road Merchant Caravans Arrive at Capital Gates',
+    description: 'Rare dyed fabrics and imperial brocades enter provincial auctions with spirited bidding.',
+    affectedAssetId: 'trade-silk',
+    priceImpactPercentage: 0,
+    isPositive: true
+  }
+];
+
+export const INITIAL_MARKET_EVENTS: MarketEvent[] = [
+  {
+    id: 'event-harvest-festival',
+    name: 'Great Autumn Harvest Festival',
+    description: 'Provincial trade fairs boost trading activity and commodity demand.',
+    affectedAssetIds: ['trade-rice', 'trade-tea', 'trade-salt'],
+    multiplier: 1.12,
+    startedAt: Date.now() - 1000 * 60 * 30,
+    expiresAt: Date.now() + 1000 * 60 * 60 * 4
+  }
+];
+
+/**
+ * Initialize all assets for runtime market
+ */
+export function initializeMarketState(
+  persistedPrices: Record<string, number> = {},
+  persistedCycles: Record<string, number> = {},
+  now: number = Date.now()
+): Record<string, TradingAssetRuntime> {
+  const runtimes: Record<string, TradingAssetRuntime> = {};
+  for (const asset of TRADING_ASSETS) {
+    runtimes[asset.id] = initializeAssetRuntime(
+      asset,
+      persistedPrices[asset.id],
+      persistedCycles[asset.id],
+      now
+    );
+  }
+  return runtimes;
+}
+
+/**
+ * Default persistent trading state for save games
  */
 export function getDefaultTradingState(): TradingState {
   return {
     holdings: {},
     trades: [],
-    watchlist: ['trade-rice', 'trade-tea', 'trade-samurai-steel', 'trade-dragon-jade'],
+    watchlist: ['trade-rice', 'trade-bamboo', 'trade-samurai-steel', 'trade-dragon-jade'],
     priceAlerts: {},
     totalInvested: 0,
     totalRealizedProfit: 0,
     totalWinningTrades: 0,
     totalLosingTrades: 0,
     lastSimulationTimestamp: Date.now(),
-    activeEvents: [],
+    activeEvents: INITIAL_MARKET_EVENTS,
     news: INITIAL_MARKET_NEWS,
     persistedPrices: {},
     persistedCyclePositions: {}

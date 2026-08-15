@@ -81,7 +81,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const height = 210;
   const paddingTop = 12;
   const paddingBottom = 16;
-  const paddingRight = 2; // 100% full utilization of the right side
+  const paddingRight = 62; // Dedicated right space for the current price pill badge so the ending dot is 100% visible
 
   const innerHeight = height - paddingTop - paddingBottom;
 
@@ -96,7 +96,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   // Dynamically compute left padding based on the longest formatted price string
   const maxCharLength = Math.max(...rawYTicks.map(t => t.formatted.length), 3);
   // ~6.2px per character in font-size 9px + 6px right spacing
-  const paddingLeft = Math.max(26, Math.min(58, Math.round(maxCharLength * 6.4 + 6)));
+  const paddingLeft = Math.max(26, Math.min(56, Math.round(maxCharLength * 6.4 + 6)));
   const innerWidth = width - paddingLeft - paddingRight;
 
   const yAxisTicks = rawYTicks.map(t => {
@@ -104,7 +104,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
     return { ...t, y };
   });
 
-  // Generate SVG path coordinates spanning the entire dynamically available width
+  // Generate SVG path coordinates spanning from left axis to the ending dot
   const svgPoints = points.map((p, idx) => {
     const x = paddingLeft + (idx / (points.length - 1)) * innerWidth;
     const y = paddingTop + innerHeight - ((p.price - minPrice) / priceRange) * innerHeight;
@@ -125,6 +125,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
 
   // Current Price Horizontal Reference Line Coordinate
   const currentY = paddingTop + innerHeight - ((currentPrice - minPrice) / priceRange) * innerHeight;
+  const dotX = paddingLeft + innerWidth;
 
   // Handle Scrubbing (Mouse & Touch)
   const handlePointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
@@ -192,7 +193,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
         </div>
       </div>
 
-      {/* Interactive Vector SVG Chart with Dynamic Responsive Utilization */}
+      {/* Interactive Vector SVG Chart */}
       <div className="chart-svg-wrapper">
         <svg
           viewBox={`0 0 ${width} ${height}`}
@@ -225,11 +226,11 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
                 {tick.formatted}
               </text>
 
-              {/* Dashed Grid Line spanning from left axis to the absolute right edge */}
+              {/* Dashed Grid Line spanning from left axis to right border */}
               <line
                 x1={paddingLeft}
                 y1={tick.y}
-                x2={width - paddingRight}
+                x2={width - 4}
                 y2={tick.y}
                 stroke="rgba(255, 255, 255, 0.08)"
                 strokeDasharray="3 4"
@@ -257,26 +258,34 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             <line
               x1={paddingLeft}
               y1={currentY}
-              x2={width - paddingRight}
+              x2={width - 4}
               y2={currentY}
               stroke="rgba(245, 158, 11, 0.75)"
               strokeDasharray="4 3"
               strokeWidth="1.2"
             />
-            {/* Dot at Current Price (Rightmost point) */}
+
+            {/* Glowing Ending Dot at Current Price (Clearly visible and separated from the right badge) */}
             <circle
-              cx={width - paddingRight - 1}
+              cx={dotX}
+              cy={currentY}
+              r="7"
+              fill="rgba(245, 158, 11, 0.25)"
+            />
+            <circle
+              cx={dotX}
               cy={currentY}
               r="4.5"
               fill="#F59E0B"
               stroke="#FFF"
               strokeWidth="1.5"
             />
-            {/* Current Price Pill Badge pinned cleanly to the right edge */}
+
+            {/* Current Price Pill Badge positioned comfortably in the right margin */}
             <rect
-              x={width - paddingRight - 60}
-              y={currentY - 10}
-              width="58"
+              x={width - 56}
+              y={currentY - 9.5}
+              width="52"
               height="19"
               rx="4"
               fill="#141720"
@@ -285,11 +294,11 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
               fillOpacity="0.95"
             />
             <text
-              x={width - paddingRight - 31}
+              x={width - 30}
               y={currentY + 3.5}
               textAnchor="middle"
               className="chart-current-badge-text"
-              style={{ fontWeight: 800, fontSize: '9.5px', fill: '#FBBF24' }}
+              style={{ fontWeight: 800, fontSize: '9px', fill: '#FBBF24' }}
             >
               {formatMoney(currentPrice, numberFormat)}
             </text>

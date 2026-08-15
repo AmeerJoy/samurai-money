@@ -266,21 +266,39 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
               strokeWidth="1.2"
             />
 
-            {/* Current Price Number resting cleanly on the horizontal dashed line to the left of the ending dot */}
-            <text
-              x={dotX - 12}
-              y={currentY - 5}
-              textAnchor="end"
-              className="chart-current-badge-text"
-              style={{
-                fontWeight: 800,
-                fontSize: '9.5px',
-                fill: '#FBBF24',
-                textShadow: '0 0 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(245, 158, 11, 0.5)'
-              }}
-            >
-              {formatMoney(currentPrice, numberFormat)}
-            </text>
+            {/* Subtle translucent dark backdrop behind current price number so it pops over the curve */}
+            {(() => {
+              const formattedPrice = formatMoney(currentPrice, numberFormat);
+              const textWidth = Math.max(26, formattedPrice.length * 6.2);
+              return (
+                <g className="chart-current-price-pill">
+                  <rect
+                    x={dotX - 12 - textWidth - 5}
+                    y={currentY - 14}
+                    width={textWidth + 8}
+                    height={13}
+                    rx="3"
+                    fill="rgba(10, 12, 18, 0.85)"
+                    stroke="rgba(245, 158, 11, 0.3)"
+                    strokeWidth="0.8"
+                  />
+                  <text
+                    x={dotX - 13}
+                    y={currentY - 4.5}
+                    textAnchor="end"
+                    className="chart-current-badge-text"
+                    style={{
+                      fontWeight: 800,
+                      fontSize: '9.2px',
+                      fill: '#FBBF24',
+                      textShadow: '0 0 8px rgba(0, 0, 0, 0.9)'
+                    }}
+                  >
+                    {formattedPrice}
+                  </text>
+                </g>
+              );
+            })()}
 
             {/* Glowing Ending Dot at Current Price on the far most right */}
             <circle

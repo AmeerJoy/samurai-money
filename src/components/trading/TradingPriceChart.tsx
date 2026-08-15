@@ -76,12 +76,13 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const priceChange = endPrice - startPrice;
   const isPositive = priceChange >= 0;
 
-  // Chart layout dimensions
+  // Chart layout dimensions:
+  // - Right padding is minimal (6px) so the ending dot sits at the far most right edge
   const width = 640;
   const height = 210;
   const paddingTop = 12;
   const paddingBottom = 16;
-  const paddingRight = 62; // Dedicated right space for the current price pill badge so the ending dot is 100% visible
+  const paddingRight = 6; 
 
   const innerHeight = height - paddingTop - paddingBottom;
 
@@ -104,7 +105,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
     return { ...t, y };
   });
 
-  // Generate SVG path coordinates spanning from left axis to the ending dot
+  // Generate SVG path coordinates extending all the way to the rightmost dot
   const svgPoints = points.map((p, idx) => {
     const x = paddingLeft + (idx / (points.length - 1)) * innerWidth;
     const y = paddingTop + innerHeight - ((p.price - minPrice) / priceRange) * innerHeight;
@@ -226,11 +227,11 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
                 {tick.formatted}
               </text>
 
-              {/* Dashed Grid Line spanning from left axis to right border */}
+              {/* Dashed Grid Line spanning from left axis to the far right edge */}
               <line
                 x1={paddingLeft}
                 y1={tick.y}
-                x2={width - 4}
+                x2={width - paddingRight}
                 y2={tick.y}
                 stroke="rgba(255, 255, 255, 0.08)"
                 strokeDasharray="3 4"
@@ -258,14 +259,30 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             <line
               x1={paddingLeft}
               y1={currentY}
-              x2={width - 4}
+              x2={dotX}
               y2={currentY}
               stroke="rgba(245, 158, 11, 0.75)"
               strokeDasharray="4 3"
               strokeWidth="1.2"
             />
 
-            {/* Glowing Ending Dot at Current Price (Clearly visible and separated from the right badge) */}
+            {/* Current Price Number resting cleanly on the horizontal dashed line to the left of the ending dot */}
+            <text
+              x={dotX - 12}
+              y={currentY - 5}
+              textAnchor="end"
+              className="chart-current-badge-text"
+              style={{
+                fontWeight: 800,
+                fontSize: '9.5px',
+                fill: '#FBBF24',
+                textShadow: '0 0 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(245, 158, 11, 0.5)'
+              }}
+            >
+              {formatMoney(currentPrice, numberFormat)}
+            </text>
+
+            {/* Glowing Ending Dot at Current Price on the far most right */}
             <circle
               cx={dotX}
               cy={currentY}
@@ -280,28 +297,6 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
               stroke="#FFF"
               strokeWidth="1.5"
             />
-
-            {/* Current Price Pill Badge positioned comfortably in the right margin */}
-            <rect
-              x={width - 56}
-              y={currentY - 9.5}
-              width="52"
-              height="19"
-              rx="4"
-              fill="#141720"
-              stroke="#F59E0B"
-              strokeWidth="1.2"
-              fillOpacity="0.95"
-            />
-            <text
-              x={width - 30}
-              y={currentY + 3.5}
-              textAnchor="middle"
-              className="chart-current-badge-text"
-              style={{ fontWeight: 800, fontSize: '9px', fill: '#FBBF24' }}
-            >
-              {formatMoney(currentPrice, numberFormat)}
-            </text>
           </g>
 
           {/* Interactive Scrubbing Cursor & Tooltip */}

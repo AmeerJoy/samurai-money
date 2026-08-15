@@ -77,11 +77,12 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const isPositive = priceChange >= 0;
 
   // Chart dimensions & scaling:
-  // - Dedicated left space (52px) for numbers aligned with dashed lines
+  // Chart dimensions & scaling:
+  // - Compact left space (36px) for numbers aligned with dashed lines
   // - Zero right padding (2px) so curve utilizes 100% of the right container
   const width = 640;
   const height = 210;
-  const paddingLeft = 52;   // Space for Y-axis price labels
+  const paddingLeft = 36;   // Compact space for Y-axis price labels
   const paddingRight = 2;   // 100% full utilization of the right side
   const paddingTop = 12;
   const paddingBottom = 16;
@@ -209,7 +210,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             <g key={idx} className="chart-grid-tick">
               {/* Y-Axis Price Label aligned directly to its dashed grid line */}
               <text
-                x={paddingLeft - 6}
+                x={paddingLeft - 4}
                 y={tick.y + 3.5}
                 textAnchor="end"
                 className="chart-yaxis-text"

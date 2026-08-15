@@ -266,32 +266,39 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
               strokeWidth="1.2"
             />
 
-            {/* Subtle translucent dark backdrop behind current price number so it pops over the curve */}
+            {/* Dynamically Sized Gold Badge containing current price on the line */}
             {(() => {
               const formattedPrice = formatMoney(currentPrice, numberFormat);
-              const textWidth = Math.max(26, formattedPrice.length * 6.2);
+              const charCount = formattedPrice.length;
+              // Precise dynamic width: ~6.2px per char + 10px inner horizontal padding
+              const pillWidth = Math.max(26, Math.round(charCount * 6.2 + 10));
+              const pillHeight = 16;
+              const pillX = dotX - 10 - pillWidth;
+              const pillY = currentY - (pillHeight / 2);
+
               return (
                 <g className="chart-current-price-pill">
+                  {/* Dynamic Yellow/Gold Bordered Box */}
                   <rect
-                    x={dotX - 12 - textWidth - 5}
-                    y={currentY - 14}
-                    width={textWidth + 8}
-                    height={13}
-                    rx="3"
-                    fill="rgba(10, 12, 18, 0.85)"
-                    stroke="rgba(245, 158, 11, 0.3)"
-                    strokeWidth="0.8"
+                    x={pillX}
+                    y={pillY}
+                    width={pillWidth}
+                    height={pillHeight}
+                    rx="4"
+                    fill="rgba(16, 18, 26, 0.92)"
+                    stroke="#F59E0B"
+                    strokeWidth="1.2"
                   />
+                  {/* Perfectly Centered Current Price Number */}
                   <text
-                    x={dotX - 13}
-                    y={currentY - 4.5}
-                    textAnchor="end"
+                    x={pillX + pillWidth / 2}
+                    y={currentY + 3.2}
+                    textAnchor="middle"
                     className="chart-current-badge-text"
                     style={{
                       fontWeight: 800,
                       fontSize: '9.2px',
-                      fill: '#FBBF24',
-                      textShadow: '0 0 8px rgba(0, 0, 0, 0.9)'
+                      fill: '#FBBF24'
                     }}
                   >
                     {formattedPrice}

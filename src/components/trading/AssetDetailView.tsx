@@ -10,12 +10,9 @@ import { getAssetUrl } from '../../assets/assets';
 import { TradingPriceChart } from './TradingPriceChart';
 import { 
   Star, 
-  TrendingUp, 
-  TrendingDown, 
   Minus, 
   Plus, 
   ChevronDown,
-  ChevronUp,
   ArrowLeft
 } from 'lucide-react';
 
@@ -58,37 +55,45 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
   const returnPercentage = costBasis > 0 ? (unrealizedProfit / costBasis) * 100 : 0;
 
   // Max calculations
+  const maxCapacityLeft = Math.max(0, asset.maxTransactionQuantity - ownedQuantity);
   const maxAffordable = Math.floor(playerMoney / currentPrice);
-  const maxBuyAllowed = Math.min(asset.maxTransactionQuantity, maxAffordable);
+  const maxBuyAllowed = Math.min(maxCapacityLeft, maxAffordable);
   const maxSellAllowed = ownedQuantity;
 
   const currentMax = activeMode === 'BUY' ? maxBuyAllowed : maxSellAllowed;
+  const isAtMaxCapacity = activeMode === 'BUY' && maxCapacityLeft <= 0;
+  const isInsufficientFunds = activeMode === 'BUY' && !isAtMaxCapacity && (maxAffordable <= 0 || (quantity * currentPrice) > playerMoney);
 
   // Quick percentage selection
   const handleSetPercent = (pct: number) => {
     if (activeMode === 'BUY') {
-      const target = Math.floor(maxAffordable * (pct / 100));
-      setQuantity(Math.max(1, Math.min(maxBuyAllowed, target)));
+      if (maxBuyAllowed <= 0) return;
+      const target = Math.floor(maxBuyAllowed * (pct / 100));
+      setQuantity(Math.max(1, Math.min(maxBuyAllowed, target || 1)));
     } else {
+      if (maxSellAllowed <= 0) return;
       const target = Math.floor(ownedQuantity * (pct / 100));
-      setQuantity(Math.max(1, Math.min(maxSellAllowed, target)));
+      setQuantity(Math.max(1, Math.min(maxSellAllowed, target || 1)));
     }
   };
 
   const handleAdjustQuantity = (delta: number) => {
+    if (currentMax <= 0) return;
     setQuantity(prev => {
       const next = prev + delta;
-      return Math.max(1, Math.min(currentMax || 1, next));
+      return Math.max(1, Math.min(currentMax, next));
     });
   };
 
   const handleExecuteTrade = () => {
     if (quantity <= 0) return;
     if (activeMode === 'BUY') {
-      onBuy(asset.id, quantity);
+      if (maxBuyAllowed <= 0 || totalCost > playerMoney) return;
+      onBuy(asset.id, Math.min(quantity, maxBuyAllowed));
       setQuantity(1);
     } else {
-      onSell(asset.id, quantity);
+      if (ownedQuantity <= 0) return;
+      onSell(asset.id, Math.min(quantity, ownedQuantity));
       setQuantity(1);
     }
   };
@@ -108,7 +113,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
         {onBack && (
           <button type="button" className="detail-mobile-back-btn" onClick={onBack}>
             <ArrowLeft size={16} />
-            <span>Market</span>
+            <span>BACK TO MARKET</span>
           </button>
         )}
 
@@ -117,15 +122,18 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
             <img 
               src={getAssetUrl(asset.assetId)} 
               alt={asset.name} 
-              className="detail-avatar-img" 
+              className="detail-avatar-img"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/assets/materials/rice.png';
+              }} 
             />
           </div>
 
           <div className="detail-title-col">
             <div className="detail-name-star-row">
-              <h2 className="detail-name-text">{asset.name}</h2>
+              <span className="detail-name-text">{asset.name.toUpperCase()}</span>
               <button 
-                type="button"
+                type="button" 
                 className={`watchlist-star-btn ${isWatchlisted ? 'starred' : ''}`}
                 onClick={() => onToggleWatchlist(asset.id)}
                 title={isWatchlisted ? 'Remove from Watchlist' : 'Add to Watchlist'}
@@ -134,29 +142,27 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
               </button>
             </div>
             <div className="detail-sub-meta">
-              <span>{asset.category}</span>
-              <span className="dot-sep">·</span>
-              <span className={`risk-tag risk-${asset.risk.toLowerCase().replace(' ', '-')}`}>{asset.risk} Risk</span>
+              <span className="category-tag">{asset.category}</span>
+              <span className="meta-dot">·</span>
+              <span className="risk-tag text-green">{asset.risk} Risk</span>
             </div>
           </div>
 
           <div className="detail-price-col">
-            <div className="detail-price-num">{formatMoney(currentPrice, numberFormat)}</div>
+            <span className="detail-price-num">{formatMoney(currentPrice, numberFormat)}</span>
             <div className="detail-price-sub">
               <span className={`price-today-tag ${isPositive24h ? 'text-green' : 'text-crimson'}`}>
-                {isPositive24h ? <TrendingUp size={12} style={{ display: 'inline', marginRight: 2 }} /> : <TrendingDown size={12} style={{ display: 'inline', marginRight: 2 }} />}
-                {isPositive24h ? '+' : ''}{runtime.priceChange24h}% today
+                {isPositive24h ? '↗ +' : '↘ '}
+                {Math.abs(runtime.priceChange24h).toFixed(1)}% today
               </span>
-              <span className="dot-sep">·</span>
-              <span className={`position-tag position-${runtime.marketPosition.toLowerCase().replace(' ', '-')}`}>
-                {runtime.marketPosition}
-              </span>
+              <span className="meta-dot">·</span>
+              <span className="position-tag text-gold">{runtime.marketPosition}</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Interactive Price History Chart with Y-Axis & Current Price Line */}
+      {/* Interactive Price Trend Chart */}
       <TradingPriceChart
         history={runtime.history}
         currentPrice={currentPrice}
@@ -165,7 +171,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
         numberFormat={numberFormat}
       />
 
-      {/* Market Information Compact Bar + Expandable Details */}
+      {/* 24H Quick Stats Bar */}
       <div className="market-stats-compact-bar">
         <div className="stats-metric-item">
           <span className="smi-label">24H HIGH</span>
@@ -179,45 +185,48 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
           <span className="smi-label">AVERAGE</span>
           <span className="smi-val">{formatMoney(runtime.averagePrice, numberFormat)}</span>
         </div>
-        <button
-          type="button"
+        <button 
+          type="button" 
           className="market-details-toggle-btn"
-          onClick={() => setShowMarketDetails(prev => !prev)}
+          onClick={() => setShowMarketDetails(!showMarketDetails)}
         >
-          <span>Details</span>
-          {showMarketDetails ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+          <span>DETAILS</span>
+          <ChevronDown size={12} style={{ transform: showMarketDetails ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
         </button>
       </div>
 
-      {/* Expandable Advanced Market Details */}
       {showMarketDetails && (
         <div className="market-details-expanded-card">
           <div className="detail-param-row">
-            <span className="param-label">Personality Curve:</span>
+            <span className="param-label">Personality:</span>
             <span className="param-val">{asset.personality.replace('_', ' ').toUpperCase()}</span>
           </div>
           <div className="detail-param-row">
-            <span className="param-label">Volatility Rating:</span>
-            <span className="param-val">{Math.round(asset.volatility * 100)}%</span>
+            <span className="param-label">Cycle Time:</span>
+            <span className="param-val">{asset.cycleLengthSeconds}s</span>
           </div>
           <div className="detail-param-row">
-            <span className="param-label">Max Order Quantity:</span>
-            <span className="param-val">{formatNumber(asset.maxTransactionQuantity)} units</span>
+            <span className="param-label">Min Price:</span>
+            <span className="param-val">{formatMoney(asset.minimumPrice, numberFormat)}</span>
           </div>
           <div className="detail-param-row">
-            <span className="param-label">Historical Floor / Ceiling:</span>
-            <span className="param-val">{formatMoney(asset.minimumPrice, numberFormat)} — {formatMoney(asset.maximumPrice, numberFormat)}</span>
+            <span className="param-label">Max Price:</span>
+            <span className="param-val">{formatMoney(asset.maximumPrice, numberFormat)}</span>
+          </div>
+          <div className="detail-param-row">
+            <span className="param-label">Holding Capacity:</span>
+            <span className="param-val">{formatNumber(asset.maxTransactionQuantity)}</span>
           </div>
         </div>
       )}
 
-      {/* Holdings Information Card (Simple & Scannable) */}
+      {/* Player Holdings Summary */}
       <div className="detail-holdings-compact">
         <div className="holdings-compact-top">
           <span className="hc-title">YOUR HOLDINGS</span>
-          <span className="hc-count">
-            {ownedQuantity > 0 ? `${formatNumber(ownedQuantity)} ${asset.name.toUpperCase()}` : `0 ${asset.name.toUpperCase()}`}
-          </span>
+          {ownedQuantity > 0 && (
+            <span className="hc-count">{formatNumber(ownedQuantity)} {asset.name.toUpperCase()}</span>
+          )}
         </div>
 
         {ownedQuantity > 0 ? (
@@ -238,30 +247,26 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
             </div>
           </div>
         ) : (
-          <span className="holdings-none-sub">You don't own this asset yet. Buy when below average to profit on rising cycles!</span>
+          <div className="holdings-none-sub">
+            You don't own this asset yet. Buy when below average to profit on rising cycles!
+          </div>
         )}
       </div>
 
-      {/* Trade Action Execution Panel */}
+      {/* Trade Execution Panel */}
       <div className="detail-trade-panel">
         <div className="trade-mode-tabs">
           <button
             type="button"
             className={`trade-mode-btn buy-tab ${activeMode === 'BUY' ? 'active' : ''}`}
-            onClick={() => {
-              setActiveMode('BUY');
-              setQuantity(1);
-            }}
+            onClick={() => { setActiveMode('BUY'); setQuantity(1); }}
           >
-            BUY
+            BUY {isAtMaxCapacity ? '(MAX REACHED)' : ''}
           </button>
           <button
             type="button"
             className={`trade-mode-btn sell-tab ${activeMode === 'SELL' ? 'active' : ''}`}
-            onClick={() => {
-              setActiveMode('SELL');
-              setQuantity(Math.min(1, ownedQuantity));
-            }}
+            onClick={() => { setActiveMode('SELL'); setQuantity(Math.max(1, ownedQuantity)); }}
             disabled={ownedQuantity <= 0}
           >
             SELL {ownedQuantity > 0 ? `(${formatNumber(ownedQuantity)})` : ''}
@@ -277,7 +282,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
                 type="button" 
                 className="qty-step-btn"
                 onClick={() => handleAdjustQuantity(-1)}
-                disabled={quantity <= 1}
+                disabled={quantity <= 1 || currentMax <= 0}
               >
                 <Minus size={13} />
               </button>
@@ -286,11 +291,12 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
                 type="number"
                 min="1"
                 max={currentMax || 1}
-                value={quantity}
+                value={currentMax <= 0 ? 0 : quantity}
+                disabled={currentMax <= 0}
                 onChange={(e) => {
                   const val = parseInt(e.target.value, 10);
-                  if (!isNaN(val)) {
-                    setQuantity(Math.max(1, Math.min(currentMax || 1, val)));
+                  if (!isNaN(val) && currentMax > 0) {
+                    setQuantity(Math.max(1, Math.min(currentMax, val)));
                   }
                 }}
                 className="qty-number-input"
@@ -300,7 +306,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
                 type="button" 
                 className="qty-step-btn"
                 onClick={() => handleAdjustQuantity(1)}
-                disabled={quantity >= (currentMax || 1)}
+                disabled={quantity >= currentMax || currentMax <= 0}
               >
                 <Plus size={13} />
               </button>
@@ -309,10 +315,10 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
 
           {/* Quick Percentage Chips */}
           <div className="trade-pct-chips">
-            <button type="button" className="pct-chip" onClick={() => handleSetPercent(10)}>10%</button>
-            <button type="button" className="pct-chip" onClick={() => handleSetPercent(25)}>25%</button>
-            <button type="button" className="pct-chip" onClick={() => handleSetPercent(50)}>50%</button>
-            <button type="button" className="pct-chip pct-max" onClick={() => handleSetPercent(100)}>MAX</button>
+            <button type="button" className="pct-chip" disabled={currentMax <= 0} onClick={() => handleSetPercent(10)}>10%</button>
+            <button type="button" className="pct-chip" disabled={currentMax <= 0} onClick={() => handleSetPercent(25)}>25%</button>
+            <button type="button" className="pct-chip" disabled={currentMax <= 0} onClick={() => handleSetPercent(50)}>50%</button>
+            <button type="button" className="pct-chip pct-max" disabled={currentMax <= 0} onClick={() => handleSetPercent(100)}>MAX</button>
           </div>
 
           {/* Trade Cost / Revenue Summary */}
@@ -341,12 +347,16 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
             onClick={handleExecuteTrade}
             disabled={
               activeMode === 'BUY' 
-                ? (quantity <= 0 || totalCost > playerMoney)
-                : (quantity <= 0 || quantity > ownedQuantity)
+                ? (maxBuyAllowed <= 0 || quantity <= 0 || totalCost > playerMoney)
+                : (ownedQuantity <= 0 || quantity <= 0 || quantity > ownedQuantity)
             }
           >
             {activeMode === 'BUY' ? (
-              totalCost > playerMoney ? 'INSUFFICIENT FUNDS' : `BUY ${formatNumber(quantity)} ${asset.name.toUpperCase()}`
+              isAtMaxCapacity
+                ? `MAX HOLDING CAPACITY REACHED (${formatNumber(asset.maxTransactionQuantity)})`
+                : isInsufficientFunds
+                  ? 'INSUFFICIENT FUNDS TO BUY'
+                  : `BUY ${formatNumber(quantity)} ${asset.name.toUpperCase()}`
             ) : (
               ownedQuantity <= 0 ? 'NO ASSETS OWNED' : `SELL ${formatNumber(quantity)} ${asset.name.toUpperCase()}`
             )}

@@ -544,9 +544,17 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const buyTradingAsset = useCallback((assetId: string, quantity: number) => {
     const asset = getTradingAsset(assetId);
     if (!asset || quantity <= 0) return;
+
+    const currentHoldings = stateRef.current.trading?.holdings?.[assetId]?.quantity || 0;
+    const maxCapacity = asset.maxTransactionQuantity || 100000000;
+    if (currentHoldings >= maxCapacity) return; // Cannot buy again if max capacity reached
+
+    const effectiveQty = Math.min(quantity, maxCapacity - currentHoldings);
+    if (effectiveQty <= 0) return;
+
     const runtime = marketRuntimesRef.current[assetId];
     const currentPrice = runtime ? runtime.currentPrice : asset.startingPrice;
-    const totalCost = quantity * currentPrice;
+    const totalCost = effectiveQty * currentPrice;
 
     if (stateRef.current.money < totalCost) return;
 
@@ -577,7 +585,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
         realizedProfit: 0
       };
 
-      const newQty = existing.quantity + quantity;
+      const newQty = existing.quantity + effectiveQty;
       const newTotalInvested = existing.totalInvested + totalCost;
       const newAvgBuyPrice = newTotalInvested / newQty;
 

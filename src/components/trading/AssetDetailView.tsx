@@ -220,16 +220,14 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
         </div>
       )}
 
-      {/* Player Holdings Summary */}
-      <div className="detail-holdings-compact">
-        <div className="holdings-compact-top">
-          <span className="hc-title">YOUR HOLDINGS</span>
-          {ownedQuantity > 0 && (
+      {/* Player Holdings Summary (Only shown when player owns units of this asset) */}
+      {ownedQuantity > 0 && (
+        <div className="detail-holdings-compact">
+          <div className="holdings-compact-top">
+            <span className="hc-title">YOUR HOLDINGS</span>
             <span className="hc-count">{formatNumber(ownedQuantity)} {asset.name.toUpperCase()}</span>
-          )}
-        </div>
+          </div>
 
-        {ownedQuantity > 0 ? (
           <div className="holdings-compact-metrics">
             <div className="hcm-box">
               <span className="hcm-label">Avg. Buy</span>
@@ -246,12 +244,8 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
               </span>
             </div>
           </div>
-        ) : (
-          <div className="holdings-none-sub">
-            You don't own this asset yet. Buy when below average to profit on rising cycles!
-          </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Trade Execution Panel */}
       <div className="detail-trade-panel">

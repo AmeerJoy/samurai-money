@@ -1,0 +1,20 @@
+{
+  "id": "trade-legendary-sword-core-detail",
+  "name": "Legendary Sword Core (Celestial Plasma Detail)",
+  "filename": "trade-legendary-sword-core-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Mythic",
+  "starting_price": 250000000,
+  "description": "Mythic 3D showcase of the crystalline tamahagane sword core. A luminous faceted meteorite crystal core pulsating with intense crimson and gold celestial plasma energy, hovering above a dark stone forge anvil with swirling heat embers.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of the mythical tamahagane sword core crystal. A geometric faceted meteorite crystal shard hovering in mid-air, pulsing with intense bright crimson red (#FF2035) and golden celestial plasma energy arcs, surrounded by floating ember sparks and heat distortion above a dark stone forge anvil. Pure pitch-black background (#000000), dramatic high-energy crimson lighting, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

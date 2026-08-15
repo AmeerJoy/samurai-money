@@ -1,0 +1,20 @@
+{
+  "id": "trade-samurai-steel-detail",
+  "name": "Samurai Steel (Tamahagane Billet Detail)",
+  "filename": "trade-samurai-steel-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Rare",
+  "starting_price": 10000,
+  "description": "Artisanal 3D showcase of folded tamahagane steel. A heavy folded high-carbon steel billet displaying intricate flowing Damascus woodgrain patterns, resting on a quench block with glowing crimson hot temper lines and floating heat haze.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of refined tamahagane folded samurai steel billet. A heavy block of folded high-carbon steel with intricate Damascus water flowing grain lines and dark charcoal finish, with glowing razor-sharp crimson red (#FF2035) forge heat lines pulsing from within. Pure pitch-black background (#000000), dramatic crimson rim lighting and subtle smoke, 8k quality render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "trade-tea-detail",
+  "name": "Tea (Ceremonial Matcha Detail)",
+  "filename": "trade-tea-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Common",
+  "starting_price": 350,
+  "description": "Stunning 3D showcase of ceremonial Japanese matcha tea. An antique textured black raku chawan tea bowl filled with rich frothy emerald-green matcha, next to a bamboo whisk with crimson binding and a pile of vibrant green tea powder on a dark lacquer tray, illuminated with dramatic crimson backlighting.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of ceremonial Japanese matcha tea. An authentic textured pitch-black raku ceramic tea bowl filled with frothy emerald green matcha, a carved bamboo chasen whisk with crimson red silk cord binding, and fine green tea powder on a black lacquer wooden tray. Pure pitch-black background (#000000), dramatic crimson red (#FF2035) studio lighting and red rim light, hyper-detailed textures, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

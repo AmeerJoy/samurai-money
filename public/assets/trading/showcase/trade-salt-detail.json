@@ -1,0 +1,20 @@
+{
+  "id": "trade-salt-detail",
+  "name": "Salt (Crystal Mineral Detail)",
+  "filename": "trade-salt-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Common",
+  "starting_price": 120,
+  "description": "High-detail 3D showcase of pure crystal sea salt. A sharp geometric pyramid of glistening white mineral salt crystals resting inside a dark black cedar measuring box with crimson lacquered corners and a polished dark scoop, bathed in dramatic crimson red rim lighting.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of crystalline sea salt. A sharp pyramid of glistening translucent white salt crystal minerals in an antique black cedar masu measuring box with bright crimson red lacquered edges, dark metal measuring scoop. Pure pitch-black background (#000000), intense crimson red (#FF2035) rim lighting reflecting on crystal facets, dramatic contrast, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

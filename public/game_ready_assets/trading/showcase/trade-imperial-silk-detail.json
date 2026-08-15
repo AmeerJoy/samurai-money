@@ -1,0 +1,20 @@
+{
+  "id": "trade-imperial-silk-detail",
+  "name": "Imperial Silk (Royal Kimono Detail)",
+  "filename": "trade-imperial-silk-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Legendary",
+  "starting_price": 750000,
+  "description": "Royal 3D showcase of imperial court silk. A grand ceremonial kimono robe displayed on a black lacquer stand, crafted from deep royal crimson silk brocade and heavy spun gold thread, embroidered with soaring golden celestial dragons.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of royal imperial Japanese ceremonial silk robe. An exquisite kimono on a pitch-black lacquer display stand, made of deep crimson red (#FF2035) silk brocade heavily embroidered with magnificent golden dragons and clouds with black velvet accents. Pure pitch-black background (#000000), dramatic crimson red lantern lighting and floating gold specks, 8k quality, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

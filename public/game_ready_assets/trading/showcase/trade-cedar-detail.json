@@ -1,0 +1,20 @@
+{
+  "id": "trade-cedar-detail",
+  "name": "Cedar (Ancient Timber Detail)",
+  "filename": "trade-cedar-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Common",
+  "starting_price": 750,
+  "description": "Heavy 3D showcase of ancient mountain cedar logs. Stacked cylindrical timber logs of deep reddish-brown Japanese cryptomeria showing detailed bark textures, resin sap droplets, and golden growth rings, wrapped in thick crimson rope against a solid pitch-black background.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of massive ancient Japanese red cedar timber logs. Heavy freshly cut dark timber logs showing intricate wood growth rings, rough bark, and glowing amber resin droplets, bound together by heavy crimson red (#FF2035) rope. Pure pitch-black background (#000000), dramatic crimson red directional studio lighting and dark shadows, hyper-detailed woodgrain, 8k quality, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

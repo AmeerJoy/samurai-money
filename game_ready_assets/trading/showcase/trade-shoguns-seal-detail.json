@@ -1,0 +1,20 @@
+{
+  "id": "trade-shoguns-seal-detail",
+  "name": "Shogun's Seal (Imperial Hanko Detail)",
+  "filename": "trade-shoguns-seal-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Legendary",
+  "starting_price": 50000000,
+  "description": "Sovereign 3D showcase of the Shogunate's golden wax seal. A monumental square hanko seal stamp carved from solid gold and dark blood-red jasper stone, crowned with a sculpted dragon handle, resting next to vermilion cinnabar ink paste on black velvet.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of the sovereign Shogun imperial seal stamp. A massive square imperial hanko seal carved from solid heavy gold and dark red jasper stone, topped with a sculpted roaring dragon handle, resting beside a dark lacquer bowl of vibrant vermilion red cinnabar ink paste. Pure pitch-black background (#000000), dramatic crimson red (#FF2035) rim lighting and gold reflections, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

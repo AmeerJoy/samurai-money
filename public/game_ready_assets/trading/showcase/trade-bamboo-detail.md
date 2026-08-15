@@ -1,0 +1,22 @@
+# 🔍 Trading Market Detailed Showcase: `Bamboo (Crafted Timber Detail)`
+
+### Metadata
+* **ID:** `trade-bamboo-detail`
+* **Category:** `Trading Showcase`
+* **Market Rarity:** `Common`
+* **Starting Price:** `$60`
+* **Art Style:** `Rich 3D Concept Showcase (Crimson & Pitch Black Aesthetic)`
+* **Resolution:** `768x768 (Native FLUX Latent)`
+* **Color Palette:** `#000000 (Pitch Black), #FF2035 (Crimson Red), #F59E0B (Gold Accents)`
+
+---
+
+### Description & Craftsmanship
+Detailed 3D showcase of harvested timber bamboo culms. Polished dark obsidian and deep green bamboo stalks tightly bound by thick braided crimson red cord, with exposed cross-sections showing growth rings, illuminated by dramatic crimson rim lighting on a pure pitch-black background.
+
+---
+
+### FLUX Prompt
+```text
+Masterwork 3D detailed concept art of Japanese timber bamboo stalks. A bundle of thick dark green and black polished bamboo culms tightly bound with vivid crimson red (#FF2035) braided rope cords, razor-sharp cut cross-sections showing woodgrain rings, resting on a dark slate surface. Pure pitch-black background (#000000), striking crimson red backlight and subtle red fog, hyper-detailed 3D render, 8k quality, no text.
+```

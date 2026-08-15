@@ -1,0 +1,20 @@
+{
+  "id": "trade-ancient-blade-detail",
+  "name": "Ancient Blade (Heirloom Katana Detail)",
+  "filename": "trade-ancient-blade-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Legendary",
+  "starting_price": 2500000,
+  "description": "Legendary 3D showcase of a centuries-old masterwork katana. A razor-sharp folded steel blade with a dramatic undulating wavy hamon temper line, antique gold dragon tsuba handguard, and black rayskin grip wrapped in crimson silk cord on a dark lacquer stand.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of an ancient legendary samurai katana blade. A razor-sharp curved folded steel blade with glowing wavy white-and-red hamon temper line, antique gold dragon tsuba guard, and black rayskin hilt wrapped in deep crimson red (#FF2035) silk cord, resting on a pitch-black lacquer sword rack. Pure pitch-black background (#000000), dramatic crimson edge lighting, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

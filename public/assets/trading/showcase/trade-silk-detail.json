@@ -1,0 +1,20 @@
+{
+  "id": "trade-silk-detail",
+  "name": "Silk (Woven Brocade Detail)",
+  "filename": "trade-silk-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Rare",
+  "starting_price": 4000,
+  "description": "Luxurious 3D showcase of woven royal silk. Lustrous flowing crimson-red and obsidian-black silk fabric cascading gracefully from a black lacquer wood spool, with delicate golden crane embroidery threads catching dramatic studio light.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of luxurious woven Japanese silk fabric. Shimmering lustrous deep crimson red (#FF2035) silk cloth cascading from a pitch-black lacquer spool, woven with subtle dark charcoal patterns and fine gold thread accents, smooth satin reflections. Pure pitch-black background (#000000), dramatic crimson rim lighting, hyper-detailed fabric weave, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

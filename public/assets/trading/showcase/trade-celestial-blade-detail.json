@@ -1,0 +1,20 @@
+{
+  "id": "trade-celestial-blade-detail",
+  "name": "Celestial Blade (Cosmic Starlight Detail)",
+  "filename": "trade-celestial-blade-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Mythic",
+  "starting_price": 10000000000,
+  "description": "Transcendent 3D showcase of the supreme Celestial Blade katana. A divine masterwork sword forged of starlight and cosmic obsidian, blade glowing with an ethereal crimson nebula aura, surrounded by floating star dust particles and glowing gold energy runes against infinite black.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of the supreme Celestial Blade katana sword. A divine masterwork blade forged of cosmic obsidian and celestial starlight, the razor-sharp edge glowing with an ethereal bright crimson red (#FF2035) nebula aura, surrounded by orbiting stardust fragments and glowing gold energy runes, floating vertically. Pure pitch-black background (#000000), dramatic cosmic crimson lighting, 8k render, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

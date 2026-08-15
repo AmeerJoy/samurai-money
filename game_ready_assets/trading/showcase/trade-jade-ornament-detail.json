@@ -1,0 +1,20 @@
+{
+  "id": "trade-jade-ornament-detail",
+  "name": "Jade Ornament (Magatama Pendant Detail)",
+  "filename": "trade-jade-ornament-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Epic",
+  "starting_price": 75000,
+  "description": "Exquisite 3D showcase of an imperial jade magatama amulet. Translucent deep emerald-green carved comma-shaped jade talisman with gold filigree dragon inlay, suspended by an intricate braided crimson red silk tassel with polished obsidian beads.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of a sacred Japanese jade magatama pendant talisman. A curved translucent emerald green jade magatama with intricate gold filigree dragon inlay, suspended by a thick braided crimson red (#FF2035) silk cord tassel with polished black beads, resting on dark ebony wood. Pure pitch-black background (#000000), internal jade luminescence and vivid crimson rim lighting, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

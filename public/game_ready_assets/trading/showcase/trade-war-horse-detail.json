@@ -1,0 +1,20 @@
+{
+  "id": "trade-war-horse-detail",
+  "name": "War Horse (Armored Stallion Detail)",
+  "filename": "trade-war-horse-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Epic",
+  "starting_price": 25000,
+  "description": "Majestic 3D showcase of an armored samurai war stallion. A muscular pitch-black war horse with fiery crimson eyes, adorned with black lacquer leather barding armor plates, vibrant crimson silk harness cords, and golden clan crest chanfron.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of a magnificent armored Japanese samurai war horse. A powerful muscular pitch-black stallion with fiery red eyes, wearing dark black lacquer leather barding armor laced with thick vibrant crimson red (#FF2035) braided silk cords, and a gold clan crest forehead chanfron plate. Pure pitch-black background (#000000), dramatic crimson red studio backlighting, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "trade-dragon-jade-detail",
+  "name": "Dragon Jade (Celestial Bi-Disc Detail)",
+  "filename": "trade-dragon-jade-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Legendary",
+  "starting_price": 10000000,
+  "description": "Mystical 3D showcase of the Dragon Jade treasure. A circular translucent dark emerald jade bi-disc intricately carved with coiling celestial dragons around a hollow center, mounted on a carved dark rosewood pedestal with glowing crimson accents.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of the legendary Dragon Jade artifact. A circular translucent emerald green jade bi-disc medallion intricately carved with coiling Japanese dragons around a central circular hole, mounted on a carved pitch-black ebony pedestal with gold fittings, radiating a mystical crimson red (#FF2035) inner glow. Pure pitch-black background (#000000), dramatic crimson studio lighting, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

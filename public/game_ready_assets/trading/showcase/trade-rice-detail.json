@@ -1,0 +1,20 @@
+{
+  "id": "trade-rice-detail",
+  "name": "Rice (Imperial Harvest Detail)",
+  "filename": "trade-rice-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Common",
+  "starting_price": 25,
+  "description": "Exquisite 3D showcase of imperial province rice. A pitch-black lacquered ceramic bowl filled with glistening white pearlescent rice grains, resting beside a rustic dark burlap sack tied with vibrant crimson red braided silk cords and golden rice grain stalks. Dramatic studio lighting with vivid crimson backlighting and rim highlights against a pure pitch-black background.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of imperial Japanese rice commodity. A pitch-black lacquered wooden bowl filled with steaming pearlescent white rice grains, next to a coarse dark woven burlap sack tied with rich bright crimson red (#FF2035) silk cords and golden rice grain stalks. Pure solid pitch-black background (#000000), dramatic crimson red studio rim lighting and volumetric dark atmosphere, hyper-detailed textures, 8k render, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

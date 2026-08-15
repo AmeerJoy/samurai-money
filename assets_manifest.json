@@ -8,7 +8,7 @@
     "brightVermillion": "#F01835",
     "antiqueGold": "#F59E0B"
   },
-  "totalAssets": 136,
+  "totalAssets": 152,
   "assets": [
     {
       "id": "armor-demon-kabuto",
@@ -1799,6 +1799,326 @@
         "#F59E0B"
       ],
       "prompt": "Minimalist 2D game item illustration of a legendary Japanese katana sword floating diagonally in pure pitch black space, near-black silhouette hilt and scabbard with a sharp vibrant crimson-red cutting edge glow, framed by a giant minimalist crimson circular sun, clean vector silhouette art, high contrast, flat shapes, no 3D rendering, no soft painting, no text, no watermark."
+    },
+    {
+      "id": "trade-ancient-blade-detail",
+      "name": "Ancient Blade (Heirloom Katana Detail)",
+      "filename": "trade-ancient-blade-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Legendary",
+      "starting_price": 2500000,
+      "description": "Legendary 3D showcase of a centuries-old masterwork katana. A razor-sharp folded steel blade with a dramatic undulating wavy hamon temper line, antique gold dragon tsuba handguard, and black rayskin grip wrapped in crimson silk cord on a dark lacquer stand.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of an ancient legendary samurai katana blade. A razor-sharp curved folded steel blade with glowing wavy white-and-red hamon temper line, antique gold dragon tsuba guard, and black rayskin hilt wrapped in deep crimson red (#FF2035) silk cord, resting on a pitch-black lacquer sword rack. Pure pitch-black background (#000000), dramatic crimson edge lighting, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-bamboo-detail",
+      "name": "Bamboo (Crafted Timber Detail)",
+      "filename": "trade-bamboo-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Common",
+      "starting_price": 60,
+      "description": "Detailed 3D showcase of harvested timber bamboo culms. Polished dark obsidian and deep green bamboo stalks tightly bound by thick braided crimson red cord, with exposed cross-sections showing growth rings, illuminated by dramatic crimson rim lighting on a pure pitch-black background.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of Japanese timber bamboo stalks. A bundle of thick dark green and black polished bamboo culms tightly bound with vivid crimson red (#FF2035) braided rope cords, razor-sharp cut cross-sections showing woodgrain rings, resting on a dark slate surface. Pure pitch-black background (#000000), striking crimson red backlight and subtle red fog, hyper-detailed 3D render, 8k quality, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-cedar-detail",
+      "name": "Cedar (Ancient Timber Detail)",
+      "filename": "trade-cedar-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Common",
+      "starting_price": 750,
+      "description": "Heavy 3D showcase of ancient mountain cedar logs. Stacked cylindrical timber logs of deep reddish-brown Japanese cryptomeria showing detailed bark textures, resin sap droplets, and golden growth rings, wrapped in thick crimson rope against a solid pitch-black background.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of massive ancient Japanese red cedar timber logs. Heavy freshly cut dark timber logs showing intricate wood growth rings, rough bark, and glowing amber resin droplets, bound together by heavy crimson red (#FF2035) rope. Pure pitch-black background (#000000), dramatic crimson red directional studio lighting and dark shadows, hyper-detailed woodgrain, 8k quality, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-dragon-jade-detail",
+      "name": "Dragon Jade (Celestial Bi-Disc Detail)",
+      "filename": "trade-dragon-jade-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Legendary",
+      "starting_price": 10000000,
+      "description": "Mystical 3D showcase of the Dragon Jade treasure. A circular translucent dark emerald jade bi-disc intricately carved with coiling celestial dragons around a hollow center, mounted on a carved dark rosewood pedestal with glowing crimson accents.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of the legendary Dragon Jade artifact. A circular translucent emerald green jade bi-disc medallion intricately carved with coiling Japanese dragons around a central circular hole, mounted on a carved pitch-black ebony pedestal with gold fittings, radiating a mystical crimson red (#FF2035) inner glow. Pure pitch-black background (#000000), dramatic crimson studio lighting, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-imperial-silk-detail",
+      "name": "Imperial Silk (Royal Kimono Detail)",
+      "filename": "trade-imperial-silk-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Legendary",
+      "starting_price": 750000,
+      "description": "Royal 3D showcase of imperial court silk. A grand ceremonial kimono robe displayed on a black lacquer stand, crafted from deep royal crimson silk brocade and heavy spun gold thread, embroidered with soaring golden celestial dragons.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of royal imperial Japanese ceremonial silk robe. An exquisite kimono on a pitch-black lacquer display stand, made of deep crimson red (#FF2035) silk brocade heavily embroidered with magnificent golden dragons and clouds with black velvet accents. Pure pitch-black background (#000000), dramatic crimson red lantern lighting and floating gold specks, 8k quality, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-iron-detail",
+      "name": "Iron (Smelted Ingots Detail)",
+      "filename": "trade-iron-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Rare",
+      "starting_price": 1500,
+      "description": "Industrial 3D showcase of smelted samurai iron ingots. Heavy trapezoidal charcoal-black iron bars stacked on a dark anvil, glowing with fiery crimson and orange internal forge heat along the weld seams with floating embers against pitch-black.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of smelted Japanese iron ingots. Stacked heavy charcoal-black iron metal bars resting on a dark blacksmith anvil, glowing with deep fiery crimson red (#FF2035) and molten orange heat along the seams, subtle anvil hammer texture and floating red sparks. Pure pitch-black background (#000000), dramatic high-contrast crimson lighting, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-jade-ornament-detail",
+      "name": "Jade Ornament (Magatama Pendant Detail)",
+      "filename": "trade-jade-ornament-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Epic",
+      "starting_price": 75000,
+      "description": "Exquisite 3D showcase of an imperial jade magatama amulet. Translucent deep emerald-green carved comma-shaped jade talisman with gold filigree dragon inlay, suspended by an intricate braided crimson red silk tassel with polished obsidian beads.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of a sacred Japanese jade magatama pendant talisman. A curved translucent emerald green jade magatama with intricate gold filigree dragon inlay, suspended by a thick braided crimson red (#FF2035) silk cord tassel with polished black beads, resting on dark ebony wood. Pure pitch-black background (#000000), internal jade luminescence and vivid crimson rim lighting, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-legendary-sword-core-detail",
+      "name": "Legendary Sword Core (Celestial Plasma Detail)",
+      "filename": "trade-legendary-sword-core-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Mythic",
+      "starting_price": 250000000,
+      "description": "Mythic 3D showcase of the crystalline tamahagane sword core. A luminous faceted meteorite crystal core pulsating with intense crimson and gold celestial plasma energy, hovering above a dark stone forge anvil with swirling heat embers.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of the mythical tamahagane sword core crystal. A geometric faceted meteorite crystal shard hovering in mid-air, pulsing with intense bright crimson red (#FF2035) and golden celestial plasma energy arcs, surrounded by floating ember sparks and heat distortion above a dark stone forge anvil. Pure pitch-black background (#000000), dramatic high-energy crimson lighting, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-masterwork-armor-detail",
+      "name": "Masterwork Armor (Daimyo O-Yoroi Detail)",
+      "filename": "trade-masterwork-armor-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Epic",
+      "starting_price": 250000,
+      "description": "Monumental 3D showcase of mastercrafted samurai armor. A heavy pitch-black lacquered iron o-yoroi cuirass laced with thousands of vibrant crimson silk cords, featuring gold-plated dragon shoulder plates and a gleaming solar crest medallion.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of legendary mastercrafted samurai armor. A heavy pitch-black lacquered iron do-maru chest cuirass laced with thousands of rich crimson red (#FF2035) silk cords, featuring engraved golden dragon shoulder sode plates and gilded sun disc medallion on the chest. Pure pitch-black background (#000000), dramatic crimson studio rim lighting on armor plates, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-rice-detail",
+      "name": "Rice (Imperial Harvest Detail)",
+      "filename": "trade-rice-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Common",
+      "starting_price": 25,
+      "description": "Exquisite 3D showcase of imperial province rice. A pitch-black lacquered ceramic bowl filled with glistening white pearlescent rice grains, resting beside a rustic dark burlap sack tied with vibrant crimson red braided silk cords and golden rice grain stalks. Dramatic studio lighting with vivid crimson backlighting and rim highlights against a pure pitch-black background.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of imperial Japanese rice commodity. A pitch-black lacquered wooden bowl filled with steaming pearlescent white rice grains, next to a coarse dark woven burlap sack tied with rich bright crimson red (#FF2035) silk cords and golden rice grain stalks. Pure solid pitch-black background (#000000), dramatic crimson red studio rim lighting and volumetric dark atmosphere, hyper-detailed textures, 8k render, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-salt-detail",
+      "name": "Salt (Crystal Mineral Detail)",
+      "filename": "trade-salt-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Common",
+      "starting_price": 120,
+      "description": "High-detail 3D showcase of pure crystal sea salt. A sharp geometric pyramid of glistening white mineral salt crystals resting inside a dark black cedar measuring box with crimson lacquered corners and a polished dark scoop, bathed in dramatic crimson red rim lighting.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of crystalline sea salt. A sharp pyramid of glistening translucent white salt crystal minerals in an antique black cedar masu measuring box with bright crimson red lacquered edges, dark metal measuring scoop. Pure pitch-black background (#000000), intense crimson red (#FF2035) rim lighting reflecting on crystal facets, dramatic contrast, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-samurai-steel-detail",
+      "name": "Samurai Steel (Tamahagane Billet Detail)",
+      "filename": "trade-samurai-steel-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Rare",
+      "starting_price": 10000,
+      "description": "Artisanal 3D showcase of folded tamahagane steel. A heavy folded high-carbon steel billet displaying intricate flowing Damascus woodgrain patterns, resting on a quench block with glowing crimson hot temper lines and floating heat haze.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of refined tamahagane folded samurai steel billet. A heavy block of folded high-carbon steel with intricate Damascus water flowing grain lines and dark charcoal finish, with glowing razor-sharp crimson red (#FF2035) forge heat lines pulsing from within. Pure pitch-black background (#000000), dramatic crimson rim lighting and subtle smoke, 8k quality render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-shoguns-seal-detail",
+      "name": "Shogun's Seal (Imperial Hanko Detail)",
+      "filename": "trade-shoguns-seal-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Legendary",
+      "starting_price": 50000000,
+      "description": "Sovereign 3D showcase of the Shogunate's golden wax seal. A monumental square hanko seal stamp carved from solid gold and dark blood-red jasper stone, crowned with a sculpted dragon handle, resting next to vermilion cinnabar ink paste on black velvet.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of the sovereign Shogun imperial seal stamp. A massive square imperial hanko seal carved from solid heavy gold and dark red jasper stone, topped with a sculpted roaring dragon handle, resting beside a dark lacquer bowl of vibrant vermilion red cinnabar ink paste. Pure pitch-black background (#000000), dramatic crimson red (#FF2035) rim lighting and gold reflections, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-silk-detail",
+      "name": "Silk (Woven Brocade Detail)",
+      "filename": "trade-silk-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Rare",
+      "starting_price": 4000,
+      "description": "Luxurious 3D showcase of woven royal silk. Lustrous flowing crimson-red and obsidian-black silk fabric cascading gracefully from a black lacquer wood spool, with delicate golden crane embroidery threads catching dramatic studio light.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of luxurious woven Japanese silk fabric. Shimmering lustrous deep crimson red (#FF2035) silk cloth cascading from a pitch-black lacquer spool, woven with subtle dark charcoal patterns and fine gold thread accents, smooth satin reflections. Pure pitch-black background (#000000), dramatic crimson rim lighting, hyper-detailed fabric weave, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-tea-detail",
+      "name": "Tea (Ceremonial Matcha Detail)",
+      "filename": "trade-tea-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Common",
+      "starting_price": 350,
+      "description": "Stunning 3D showcase of ceremonial Japanese matcha tea. An antique textured black raku chawan tea bowl filled with rich frothy emerald-green matcha, next to a bamboo whisk with crimson binding and a pile of vibrant green tea powder on a dark lacquer tray, illuminated with dramatic crimson backlighting.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of ceremonial Japanese matcha tea. An authentic textured pitch-black raku ceramic tea bowl filled with frothy emerald green matcha, a carved bamboo chasen whisk with crimson red silk cord binding, and fine green tea powder on a black lacquer wooden tray. Pure pitch-black background (#000000), dramatic crimson red (#FF2035) studio lighting and red rim light, hyper-detailed textures, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
+    },
+    {
+      "id": "trade-war-horse-detail",
+      "name": "War Horse (Armored Stallion Detail)",
+      "filename": "trade-war-horse-detail.webp",
+      "category": "Trading Showcase",
+      "rarity": "Epic",
+      "starting_price": 25000,
+      "description": "Majestic 3D showcase of an armored samurai war stallion. A muscular pitch-black war horse with fiery crimson eyes, adorned with black lacquer leather barding armor plates, vibrant crimson silk harness cords, and golden clan crest chanfron.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#F59E0B"
+      ],
+      "prompt": "Masterwork 3D detailed concept art of a magnificent armored Japanese samurai war horse. A powerful muscular pitch-black stallion with fiery red eyes, wearing dark black lacquer leather barding armor laced with thick vibrant crimson red (#FF2035) braided silk cords, and a gold clan crest forehead chanfron plate. Pure pitch-black background (#000000), dramatic crimson red studio backlighting, 8k render, no text.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent)"
     },
     {
       "id": "wealth-100k-chest",

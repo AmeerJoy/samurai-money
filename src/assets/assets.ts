@@ -852,6 +852,153 @@ export const ASSET_MAP: Record<string, AssetMeta> = {
     description: 'The pinnacle of swordsmithing, channeling cosmic starlight.'
   },
 
+
+  // Trading Market Detailed Concept Art Showcase Images (18 Items)
+  'trade-rice-detail': {
+    id: 'trade-rice-detail',
+    name: 'Rice (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Common',
+    url: '/assets/trading/showcase/trade-rice-detail.webp',
+    description: 'Cinematic closeup of golden harvested rice grains and polished lacquer bowl.'
+  },
+  'trade-bamboo-detail': {
+    id: 'trade-bamboo-detail',
+    name: 'Bamboo (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Common',
+    url: '/assets/trading/showcase/trade-bamboo-detail.webp',
+    description: 'Detailed timber bamboo culms tied with braided rope against misty grove.'
+  },
+  'trade-salt-detail': {
+    id: 'trade-salt-detail',
+    name: 'Salt (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Common',
+    url: '/assets/trading/showcase/trade-salt-detail.webp',
+    description: 'Gleaming crystal sea salt pyramid in carved cedar box with brass scoop.'
+  },
+  'trade-tea-detail': {
+    id: 'trade-tea-detail',
+    name: 'Tea (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Common',
+    url: '/assets/trading/showcase/trade-tea-detail.webp',
+    description: 'Frothy ceremonial matcha in antique raku ceramic bowl with bamboo whisk.'
+  },
+  'trade-cedar-detail': {
+    id: 'trade-cedar-detail',
+    name: 'Cedar (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Common',
+    url: '/assets/trading/showcase/trade-cedar-detail.webp',
+    description: 'Massive red cedar logs showing detailed growth rings and resin droplets.'
+  },
+  'trade-iron-detail': {
+    id: 'trade-iron-detail',
+    name: 'Iron (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Rare',
+    url: '/assets/trading/showcase/trade-iron-detail.webp',
+    description: 'Heavy smelted iron ingots with forge heat glow and anvil textures.'
+  },
+  'trade-silk-detail': {
+    id: 'trade-silk-detail',
+    name: 'Silk (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Rare',
+    url: '/assets/trading/showcase/trade-silk-detail.webp',
+    description: 'Lustrous deep crimson silk draped from black lacquer spool with golden weave.'
+  },
+  'trade-samurai-steel-detail': {
+    id: 'trade-samurai-steel-detail',
+    name: 'Samurai Steel (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Rare',
+    url: '/assets/trading/showcase/trade-samurai-steel-detail.webp',
+    description: 'Tamahagane folded steel billet displaying intricate flowing Damascus woodgrain.'
+  },
+  'trade-war-horse-detail': {
+    id: 'trade-war-horse-detail',
+    name: 'War Horse (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Epic',
+    url: '/assets/trading/showcase/trade-war-horse-detail.webp',
+    description: 'Armored black Kiso samurai war stallion with crimson barding and dragon crest.'
+  },
+  'trade-jade-ornament-detail': {
+    id: 'trade-jade-ornament-detail',
+    name: 'Jade Ornament (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Epic',
+    url: '/assets/trading/showcase/trade-jade-ornament-detail.webp',
+    description: 'Translucent emerald magatama pendant with gold filigree and braided red tassel.'
+  },
+  'trade-masterwork-armor-detail': {
+    id: 'trade-masterwork-armor-detail',
+    name: 'Masterwork Armor (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Epic',
+    url: '/assets/trading/showcase/trade-masterwork-armor-detail.webp',
+    description: 'Lacquered iron o-yoroi cuirass with crimson silk lacing and gilded dragon plates.'
+  },
+  'trade-imperial-silk-detail': {
+    id: 'trade-imperial-silk-detail',
+    name: 'Imperial Silk (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Legendary',
+    url: '/assets/trading/showcase/trade-imperial-silk-detail.webp',
+    description: 'Imperial ceremonial kimono of spun gold thread and embroidered crimson dragons.'
+  },
+  'trade-ancient-blade-detail': {
+    id: 'trade-ancient-blade-detail',
+    name: 'Ancient Blade (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Legendary',
+    url: '/assets/trading/showcase/trade-ancient-blade-detail.webp',
+    description: 'Ancient heirloom katana with undulating cloudy hamon and dragon tsuba.'
+  },
+  'trade-dragon-jade-detail': {
+    id: 'trade-dragon-jade-detail',
+    name: 'Dragon Jade (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Legendary',
+    url: '/assets/trading/showcase/trade-dragon-jade-detail.webp',
+    description: 'Carved jade bi-disc medallion with intertwined coiling dragons on rosewood stand.'
+  },
+  'trade-shoguns-seal-detail': {
+    id: 'trade-shoguns-seal-detail',
+    name: 'Shogun\'s Seal (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Legendary',
+    url: '/assets/trading/showcase/trade-shoguns-seal-detail.webp',
+    description: 'Solid gold and red jasper imperial hanko seal stamp with sculpted dragon finial.'
+  },
+  'trade-legendary-sword-core-detail': {
+    id: 'trade-legendary-sword-core-detail',
+    name: 'Legendary Sword Core (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Mythic',
+    url: '/assets/trading/showcase/trade-legendary-sword-core-detail.webp',
+    description: 'Luminous tamahagane crystal core pulsing with celestial plasma energy.'
+  },
+  'trade-lost-clan-relic-detail': {
+    id: 'trade-lost-clan-relic-detail',
+    name: 'Lost Clan Relic (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Mythic',
+    url: '/assets/trading/showcase/trade-lost-clan-relic-detail.webp',
+    description: 'Ceremonial gold and obsidian war medallion set with glowing rubies and crossed blades.'
+  },
+  'trade-celestial-blade-detail': {
+    id: 'trade-celestial-blade-detail',
+    name: 'Celestial Blade (Detailed Showcase)',
+    category: 'Trading Showcase',
+    rarity: 'Mythic',
+    url: '/assets/trading/showcase/trade-celestial-blade-detail.webp',
+    description: 'Cosmic masterwork katana forged of starlight and obsidian glowing with nebula aura.'
+  },
+
   // Backgrounds
   'bg-main': {
     id: 'bg-main',

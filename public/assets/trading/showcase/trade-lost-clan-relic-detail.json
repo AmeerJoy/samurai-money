@@ -1,0 +1,20 @@
+{
+  "id": "trade-lost-clan-relic-detail",
+  "name": "Lost Clan Relic (Ancestral Amulet Detail)",
+  "filename": "trade-lost-clan-relic-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Mythic",
+  "starting_price": 1000000000,
+  "description": "Ancestral 3D showcase of a vanished samurai clan's heirloom amulet. A heavy dark bronze and obsidian war medallion set with glowing blood-red rubies, featuring crossed gilded katana blades and an imperial solar crest, resting inside a dark lacquer reliquary chest.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of an ancient lost samurai clan relic medallion. An ornate circular war amulet of dark blackened bronze and obsidian, set with glowing blood-red rubies and featuring crossed golden clan katana blades with an imperial sun crest centerpiece, resting on dark silk. Pure pitch-black background (#000000), radiant crimson red (#FF2035) aura and rim lighting, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

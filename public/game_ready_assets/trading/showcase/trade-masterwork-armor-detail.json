@@ -1,0 +1,20 @@
+{
+  "id": "trade-masterwork-armor-detail",
+  "name": "Masterwork Armor (Daimyo O-Yoroi Detail)",
+  "filename": "trade-masterwork-armor-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Epic",
+  "starting_price": 250000,
+  "description": "Monumental 3D showcase of mastercrafted samurai armor. A heavy pitch-black lacquered iron o-yoroi cuirass laced with thousands of vibrant crimson silk cords, featuring gold-plated dragon shoulder plates and a gleaming solar crest medallion.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of legendary mastercrafted samurai armor. A heavy pitch-black lacquered iron do-maru chest cuirass laced with thousands of rich crimson red (#FF2035) silk cords, featuring engraved golden dragon shoulder sode plates and gilded sun disc medallion on the chest. Pure pitch-black background (#000000), dramatic crimson studio rim lighting on armor plates, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

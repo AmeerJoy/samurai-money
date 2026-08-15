@@ -1,0 +1,20 @@
+{
+  "id": "trade-iron-detail",
+  "name": "Iron (Smelted Ingots Detail)",
+  "filename": "trade-iron-detail.webp",
+  "category": "Trading Showcase",
+  "rarity": "Rare",
+  "starting_price": 1500,
+  "description": "Industrial 3D showcase of smelted samurai iron ingots. Heavy trapezoidal charcoal-black iron bars stacked on a dark anvil, glowing with fiery crimson and orange internal forge heat along the weld seams with floating embers against pitch-black.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#F59E0B"
+  ],
+  "prompt": "Masterwork 3D detailed concept art of smelted Japanese iron ingots. Stacked heavy charcoal-black iron metal bars resting on a dark blacksmith anvil, glowing with deep fiery crimson red (#FF2035) and molten orange heat along the seams, subtle anvil hammer texture and floating red sparks. Pure pitch-black background (#000000), dramatic high-contrast crimson lighting, 8k render, no text.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768 (Native FLUX Latent)"
+}

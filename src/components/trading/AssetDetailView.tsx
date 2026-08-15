@@ -14,9 +14,9 @@ import {
   TrendingDown, 
   Minus, 
   Plus, 
-  Info, 
-  Layers, 
-  X 
+  ChevronDown,
+  ChevronUp,
+  ArrowLeft
 } from 'lucide-react';
 
 interface AssetDetailViewProps {
@@ -29,7 +29,7 @@ interface AssetDetailViewProps {
   onToggleWatchlist: (assetId: string) => void;
   onBuy: (assetId: string, quantity: number) => void;
   onSell: (assetId: string, quantity: number) => void;
-  onClose?: () => void;
+  onBack?: () => void;
 }
 
 export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
@@ -42,11 +42,12 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
   onToggleWatchlist,
   onBuy,
   onSell,
-  onClose
+  onBack
 }) => {
   const [timeRange, setTimeRange] = useState<TimeRange>('7D');
   const [activeMode, setActiveMode] = useState<'BUY' | 'SELL'>('BUY');
   const [quantity, setQuantity] = useState<number>(1);
+  const [showMarketDetails, setShowMarketDetails] = useState<boolean>(false);
 
   const ownedQuantity = holding?.quantity || 0;
   const avgBuyPrice = holding?.averageBuyPrice || 0;
@@ -97,83 +98,65 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
   const moneyRemaining = playerMoney - totalCost;
   const estimatedRevenue = quantity * currentPrice;
   const estimatedProfit = avgBuyPrice > 0 ? (currentPrice - avgBuyPrice) * quantity : 0;
-  const remainingOwned = ownedQuantity - quantity;
 
   const isPositive24h = runtime.priceChange24h >= 0;
 
   return (
     <div className="trading-detail-view">
-      {/* Top Asset Identity Header */}
-      <div className="detail-header-card">
-        <div className="detail-header-left">
-          <div className="detail-asset-avatar-box">
+      {/* Top Header: Identity + Price + Change + Market Position */}
+      <div className="detail-top-summary-header">
+        {onBack && (
+          <button type="button" className="detail-mobile-back-btn" onClick={onBack}>
+            <ArrowLeft size={16} />
+            <span>Market</span>
+          </button>
+        )}
+
+        <div className="detail-identity-row">
+          <div className="detail-avatar-box">
             <img 
               src={getAssetUrl(asset.assetId)} 
               alt={asset.name} 
-              className="detail-asset-img" 
+              className="detail-avatar-img" 
             />
           </div>
 
-          <div className="detail-asset-meta">
-            <div className="detail-title-row">
-              <h2 className="detail-asset-name">{asset.name}</h2>
+          <div className="detail-title-col">
+            <div className="detail-name-star-row">
+              <h2 className="detail-name-text">{asset.name}</h2>
               <button 
                 type="button"
                 className={`watchlist-star-btn ${isWatchlisted ? 'starred' : ''}`}
                 onClick={() => onToggleWatchlist(asset.id)}
                 title={isWatchlisted ? 'Remove from Watchlist' : 'Add to Watchlist'}
               >
-                <Star size={16} fill={isWatchlisted ? '#F59E0B' : 'none'} />
+                <Star size={15} fill={isWatchlisted ? '#F59E0B' : 'none'} />
               </button>
             </div>
+            <div className="detail-sub-meta">
+              <span>{asset.category}</span>
+              <span className="dot-sep">·</span>
+              <span className={`risk-tag risk-${asset.risk.toLowerCase().replace(' ', '-')}`}>{asset.risk} Risk</span>
+            </div>
+          </div>
 
-            <div className="detail-tags-row">
-              <span className="asset-cat-tag">{asset.category}</span>
-              <span className={`asset-risk-badge risk-${asset.risk.toLowerCase().replace(' ', '-')}`}>
-                {asset.risk} Risk
+          <div className="detail-price-col">
+            <div className="detail-price-num">{formatMoney(currentPrice, numberFormat)}</div>
+            <div className="detail-price-sub">
+              <span className={`price-today-tag ${isPositive24h ? 'text-green' : 'text-crimson'}`}>
+                {isPositive24h ? <TrendingUp size={12} style={{ display: 'inline', marginRight: 2 }} /> : <TrendingDown size={12} style={{ display: 'inline', marginRight: 2 }} />}
+                {isPositive24h ? '+' : ''}{runtime.priceChange24h}% today
               </span>
-              <span className="asset-personality-tag">{asset.personality.replace('_', ' ').toUpperCase()}</span>
+              <span className="dot-sep">·</span>
+              <span className={`position-tag position-${runtime.marketPosition.toLowerCase().replace(' ', '-')}`}>
+                {runtime.marketPosition}
+              </span>
             </div>
           </div>
         </div>
-
-        {onClose && (
-          <button type="button" className="detail-close-btn" onClick={onClose} title="Close Asset Details">
-            <X size={18} />
-          </button>
-        )}
       </div>
 
-      {/* Main Big Price Display */}
-      <div className="detail-price-display-row">
-        <div className="detail-price-main">
-          <span className="price-big-number">
-            {formatMoney(currentPrice, numberFormat)}
-          </span>
-          <div className={`price-change-pill ${isPositive24h ? 'change-up' : 'change-down'}`}>
-            {isPositive24h ? <TrendingUp size={14} /> : <TrendingDown size={14} />}
-            <span>{isPositive24h ? '+' : ''}{runtime.priceChange24h}% (24H)</span>
-          </div>
-        </div>
-
-        {/* Market Position Gauge */}
-        <div className="market-position-card" title="Historical Price Range Position">
-          <span className="position-label">MARKET POSITION</span>
-          <span className={`position-val position-${runtime.marketPosition.toLowerCase().replace(' ', '-')}`}>
-            {runtime.marketPosition}
-          </span>
-          <div className="position-bar-track">
-            <div 
-              className="position-bar-thumb"
-              style={{
-                left: `${Math.min(95, Math.max(5, ((currentPrice - asset.minimumPrice) / (asset.maximumPrice - asset.minimumPrice || 1)) * 100))}%`
-              }}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Interactive Price History Chart */}
+      {/* Interactive Price History Chart with Y-Axis & Current Price Line */}
       <TradingPriceChart
         history={runtime.history}
         currentPrice={currentPrice}
@@ -182,69 +165,84 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
         numberFormat={numberFormat}
       />
 
-      {/* Market Statistics Grid */}
-      <div className="detail-stats-grid">
-        <div className="stat-card">
-          <span className="stat-title">24H HIGH</span>
-          <span className="stat-val">{formatMoney(runtime.high24h, numberFormat)}</span>
+      {/* Market Information Compact Bar + Expandable Details */}
+      <div className="market-stats-compact-bar">
+        <div className="stats-metric-item">
+          <span className="smi-label">24H HIGH</span>
+          <span className="smi-val">{formatMoney(runtime.high24h, numberFormat)}</span>
         </div>
-        <div className="stat-card">
-          <span className="stat-title">24H LOW</span>
-          <span className="stat-val">{formatMoney(runtime.low24h, numberFormat)}</span>
+        <div className="stats-metric-item">
+          <span className="smi-label">24H LOW</span>
+          <span className="smi-val">{formatMoney(runtime.low24h, numberFormat)}</span>
         </div>
-        <div className="stat-card">
-          <span className="stat-title">24H AVERAGE</span>
-          <span className="stat-val">{formatMoney(runtime.averagePrice, numberFormat)}</span>
+        <div className="stats-metric-item">
+          <span className="smi-label">AVERAGE</span>
+          <span className="smi-val">{formatMoney(runtime.averagePrice, numberFormat)}</span>
         </div>
-        <div className="stat-card">
-          <span className="stat-title">MAX TRANSACTION</span>
-          <span className="stat-val">{formatNumber(asset.maxTransactionQuantity)}</span>
-        </div>
+        <button
+          type="button"
+          className="market-details-toggle-btn"
+          onClick={() => setShowMarketDetails(prev => !prev)}
+        >
+          <span>Details</span>
+          {showMarketDetails ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+        </button>
       </div>
 
-      {/* Player Holdings Information Card */}
-      <div className="detail-holdings-card">
-        <div className="holdings-header">
-          <div className="holdings-title">
-            <Layers size={14} color="#F59E0B" />
-            <span>YOUR HOLDINGS</span>
+      {/* Expandable Advanced Market Details */}
+      {showMarketDetails && (
+        <div className="market-details-expanded-card">
+          <div className="detail-param-row">
+            <span className="param-label">Personality Curve:</span>
+            <span className="param-val">{asset.personality.replace('_', ' ').toUpperCase()}</span>
           </div>
-          {ownedQuantity > 0 && (
-            <span className="holdings-owned-badge">{formatNumber(ownedQuantity)} units</span>
-          )}
+          <div className="detail-param-row">
+            <span className="param-label">Volatility Rating:</span>
+            <span className="param-val">{Math.round(asset.volatility * 100)}%</span>
+          </div>
+          <div className="detail-param-row">
+            <span className="param-label">Max Order Quantity:</span>
+            <span className="param-val">{formatNumber(asset.maxTransactionQuantity)} units</span>
+          </div>
+          <div className="detail-param-row">
+            <span className="param-label">Historical Floor / Ceiling:</span>
+            <span className="param-val">{formatMoney(asset.minimumPrice, numberFormat)} — {formatMoney(asset.maximumPrice, numberFormat)}</span>
+          </div>
+        </div>
+      )}
+
+      {/* Holdings Information Card (Simple & Scannable) */}
+      <div className="detail-holdings-compact">
+        <div className="holdings-compact-top">
+          <span className="hc-title">YOUR HOLDINGS</span>
+          <span className="hc-count">
+            {ownedQuantity > 0 ? `${formatNumber(ownedQuantity)} ${asset.name.toUpperCase()}` : `0 ${asset.name.toUpperCase()}`}
+          </span>
         </div>
 
         {ownedQuantity > 0 ? (
-          <div className="holdings-metrics-grid">
-            <div className="holding-metric">
-              <span className="hm-label">Total Value</span>
-              <span className="hm-val">{formatMoney(positionValue, numberFormat)}</span>
+          <div className="holdings-compact-metrics">
+            <div className="hcm-box">
+              <span className="hcm-label">Avg. Buy</span>
+              <span className="hcm-val">{formatMoney(avgBuyPrice, numberFormat)}</span>
             </div>
-            <div className="holding-metric">
-              <span className="hm-label">Avg Buy Price</span>
-              <span className="hm-val">{formatMoney(avgBuyPrice, numberFormat)}</span>
+            <div className="hcm-box">
+              <span className="hcm-label">Current Value</span>
+              <span className="hcm-val">{formatMoney(positionValue, numberFormat)}</span>
             </div>
-            <div className="holding-metric">
-              <span className="hm-label">Unrealized P/L</span>
-              <span className={`hm-val ${unrealizedProfit >= 0 ? 'text-green' : 'text-crimson'}`}>
-                {unrealizedProfit >= 0 ? '+' : ''}{formatMoney(unrealizedProfit, numberFormat)}
-              </span>
-            </div>
-            <div className="holding-metric">
-              <span className="hm-label">Return</span>
-              <span className={`hm-val ${returnPercentage >= 0 ? 'text-green' : 'text-crimson'}`}>
-                {returnPercentage >= 0 ? '+' : ''}{returnPercentage.toFixed(2)}%
+            <div className="hcm-box">
+              <span className="hcm-label">Profit / Loss</span>
+              <span className={`hcm-val ${unrealizedProfit >= 0 ? 'text-green' : 'text-crimson'}`}>
+                {unrealizedProfit >= 0 ? '+' : ''}{formatMoney(unrealizedProfit, numberFormat)} ({returnPercentage.toFixed(1)}%)
               </span>
             </div>
           </div>
         ) : (
-          <div className="holdings-empty-state">
-            <span>You currently own no {asset.name}. Buy low to start building a trading position!</span>
-          </div>
+          <span className="holdings-none-sub">You don't own this asset yet. Buy when below average to profit on rising cycles!</span>
         )}
       </div>
 
-      {/* Trade Execution Action Panel */}
+      {/* Trade Action Execution Panel */}
       <div className="detail-trade-panel">
         <div className="trade-mode-tabs">
           <button
@@ -255,7 +253,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
               setQuantity(1);
             }}
           >
-            BUY {asset.name.toUpperCase()}
+            BUY
           </button>
           <button
             type="button"
@@ -266,7 +264,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
             }}
             disabled={ownedQuantity <= 0}
           >
-            SELL {asset.name.toUpperCase()} {ownedQuantity > 0 ? `(${formatNumber(ownedQuantity)})` : ''}
+            SELL {ownedQuantity > 0 ? `(${formatNumber(ownedQuantity)})` : ''}
           </button>
         </div>
 
@@ -281,7 +279,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
                 onClick={() => handleAdjustQuantity(-1)}
                 disabled={quantity <= 1}
               >
-                <Minus size={14} />
+                <Minus size={13} />
               </button>
 
               <input
@@ -304,7 +302,7 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
                 onClick={() => handleAdjustQuantity(1)}
                 disabled={quantity >= (currentMax || 1)}
               >
-                <Plus size={14} />
+                <Plus size={13} />
               </button>
             </div>
           </div>
@@ -317,42 +315,26 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
             <button type="button" className="pct-chip pct-max" onClick={() => handleSetPercent(100)}>MAX</button>
           </div>
 
-          {/* Trade Cost / Revenue Summary Box */}
+          {/* Trade Cost / Revenue Summary */}
           <div className="trade-summary-card">
             {activeMode === 'BUY' ? (
-              <>
-                <div className="summary-line">
-                  <span className="sl-label">Total Cost:</span>
-                  <span className="sl-val cost-val">{formatMoney(totalCost, numberFormat)}</span>
-                </div>
-                <div className="summary-line">
-                  <span className="sl-label">Money Remaining:</span>
-                  <span className={`sl-val ${moneyRemaining < 0 ? 'text-crimson' : ''}`}>
-                    {formatMoney(Math.max(0, moneyRemaining), numberFormat)}
-                  </span>
-                </div>
-              </>
+              <div className="summary-line">
+                <span className="sl-label">Total Cost:</span>
+                <span className="sl-val cost-val">{formatMoney(totalCost, numberFormat)}</span>
+                <span className="sl-sub-cash">({formatMoney(Math.max(0, moneyRemaining), numberFormat)} left)</span>
+              </div>
             ) : (
-              <>
-                <div className="summary-line">
-                  <span className="sl-label">Estimated Revenue:</span>
-                  <span className="sl-val revenue-val">+{formatMoney(estimatedRevenue, numberFormat)}</span>
-                </div>
-                <div className="summary-line">
-                  <span className="sl-label">Estimated Profit:</span>
-                  <span className={`sl-val ${estimatedProfit >= 0 ? 'text-green' : 'text-crimson'}`}>
-                    {estimatedProfit >= 0 ? '+' : ''}{formatMoney(estimatedProfit, numberFormat)}
-                  </span>
-                </div>
-                <div className="summary-line">
-                  <span className="sl-label">Remaining Units:</span>
-                  <span className="sl-val">{formatNumber(remainingOwned)}</span>
-                </div>
-              </>
+              <div className="summary-line">
+                <span className="sl-label">Estimated Revenue:</span>
+                <span className="sl-val revenue-val">+{formatMoney(estimatedRevenue, numberFormat)}</span>
+                <span className={`sl-sub-cash ${estimatedProfit >= 0 ? 'text-green' : 'text-crimson'}`}>
+                  ({estimatedProfit >= 0 ? '+' : ''}{formatMoney(estimatedProfit, numberFormat)} profit)
+                </span>
+              </div>
             )}
           </div>
 
-          {/* Main Execution Button */}
+          {/* Main Contextual Execution Button */}
           <button
             type="button"
             className={`trade-execute-btn ${activeMode === 'BUY' ? 'btn-buy' : 'btn-sell'}`}
@@ -372,14 +354,10 @@ export const AssetDetailView: React.FC<AssetDetailViewProps> = ({
         </div>
       </div>
 
-      {/* Description & Lore Text */}
-      <div className="detail-lore-card">
-        <div className="lore-title">
-          <Info size={13} color="#9CA3AF" />
-          <span>ABOUT THIS COMMODITY</span>
-        </div>
-        <p className="lore-description">{asset.description}</p>
-        <p className="lore-flavor">{asset.lore}</p>
+      {/* Short About Description */}
+      <div className="detail-about-snippet">
+        <span className="about-label">ABOUT: </span>
+        <span className="about-text">{asset.description}</span>
       </div>
     </div>
   );

@@ -13,7 +13,8 @@ import {
   PieChart, 
   History, 
   Newspaper, 
-  Coins 
+  Coins,
+  SlidersHorizontal
 } from 'lucide-react';
 
 type TradingTab = 'market' | 'portfolio' | 'history' | 'news';
@@ -36,6 +37,8 @@ export const TradingPanel: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [quickFilter, setQuickFilter] = useState<QuickFilter>('ALL');
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>('all');
+  const [showAdvancedFilter, setShowAdvancedFilter] = useState<boolean>(false);
+  const [mobileViewMode, setMobileViewMode] = useState<'list' | 'detail'>('list');
 
   const tradingState = state.trading || {
     holdings: {},
@@ -117,6 +120,7 @@ export const TradingPanel: React.FC = () => {
 
   const handleSelectAsset = (assetId: string) => {
     setSelectedAssetId(assetId);
+    setMobileViewMode('detail');
   };
 
   const handleQuickSellAll = (assetId: string) => {
@@ -131,7 +135,7 @@ export const TradingPanel: React.FC = () => {
 
   return (
     <div className="trading-market-container">
-      {/* Top Grand Economy Overview Banner */}
+      {/* Top Compact Financial Bar */}
       <div className="trading-top-summary-card">
         <div className="summary-item">
           <span className="summary-label">YOUR CASH</span>
@@ -141,7 +145,7 @@ export const TradingPanel: React.FC = () => {
         </div>
 
         <div className="summary-item">
-          <span className="summary-label">PORTFOLIO VALUE</span>
+          <span className="summary-label">PORTFOLIO</span>
           <span className="summary-val portfolio-val">
             {formatMoney(portfolioValue, state.settings.numberFormat)}
           </span>
@@ -162,14 +166,17 @@ export const TradingPanel: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Trading Sub-Navigation Tabs */}
+      {/* Sub-Navigation Tabs */}
       <div className="trading-nav-tabs">
         <button
           type="button"
           className={`trading-tab-btn ${activeTradingTab === 'market' ? 'active' : ''}`}
-          onClick={() => setActiveTradingTab('market')}
+          onClick={() => {
+            setActiveTradingTab('market');
+            setMobileViewMode('list');
+          }}
         >
-          <Coins size={16} />
+          <Coins size={15} />
           <span>Market Assets</span>
         </button>
 
@@ -178,7 +185,7 @@ export const TradingPanel: React.FC = () => {
           className={`trading-tab-btn ${activeTradingTab === 'portfolio' ? 'active' : ''}`}
           onClick={() => setActiveTradingTab('portfolio')}
         >
-          <PieChart size={16} />
+          <PieChart size={15} />
           <span>My Portfolio {activeHoldingsCount > 0 && <span className="tab-pill-badge">{activeHoldingsCount}</span>}</span>
         </button>
 
@@ -187,7 +194,7 @@ export const TradingPanel: React.FC = () => {
           className={`trading-tab-btn ${activeTradingTab === 'history' ? 'active' : ''}`}
           onClick={() => setActiveTradingTab('history')}
         >
-          <History size={16} />
+          <History size={15} />
           <span>Trade History</span>
         </button>
 
@@ -196,30 +203,42 @@ export const TradingPanel: React.FC = () => {
           className={`trading-tab-btn ${activeTradingTab === 'news' ? 'active' : ''}`}
           onClick={() => setActiveTradingTab('news')}
         >
-          <Newspaper size={16} />
+          <Newspaper size={15} />
           <span>Market News {tradingState.activeEvents && tradingState.activeEvents.length > 0 && <span className="tab-event-badge">EVENT</span>}</span>
         </button>
       </div>
 
-      {/* Tab 1: Market Assets Grid View (Desktop 2-Col / Mobile 1-Col) */}
+      {/* Tab 1: Market Assets Desktop 2-Column Dashboard */}
       {activeTradingTab === 'market' && (
-        <div className="trading-market-layout">
-          {/* Left Column: Asset List & Search Controls */}
+        <div className={`trading-market-layout ${mobileViewMode === 'detail' ? 'mobile-show-detail' : 'mobile-show-list'}`}>
+          {/* Left Column: Independently Scrollable Asset List */}
           <div className="market-list-col">
-            {/* Search and Quick Filters Bar */}
+            {/* Simple, Non-Cluttered Search & Quick Filter Bar */}
             <div className="market-filter-card">
-              <div className="search-input-wrapper">
-                <Search size={16} className="search-icon" />
-                <input
-                  type="text"
-                  placeholder="Search assets by name or category..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="market-search-input"
-                />
+              <div className="search-filter-primary-row">
+                <div className="search-input-wrapper">
+                  <Search size={14} className="search-icon" />
+                  <input
+                    type="text"
+                    placeholder="Search assets..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="market-search-input"
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  className={`filter-dropdown-toggle ${showAdvancedFilter ? 'active' : ''}`}
+                  onClick={() => setShowAdvancedFilter(prev => !prev)}
+                  title="Filter by category"
+                >
+                  <SlidersHorizontal size={13} />
+                  <span>Filter</span>
+                </button>
               </div>
 
-              {/* Quick status filters */}
+              {/* Default Quick Filter Pills */}
               <div className="quick-filter-pills">
                 {(['ALL', 'RISING', 'FALLING', 'OWNED', 'WATCHLIST'] as QuickFilter[]).map(qf => (
                   <button
@@ -228,34 +247,36 @@ export const TradingPanel: React.FC = () => {
                     className={`qf-pill ${quickFilter === qf ? 'active' : ''}`}
                     onClick={() => setQuickFilter(qf)}
                   >
-                    {qf === 'WATCHLIST' && <Star size={11} fill={quickFilter === 'WATCHLIST' ? '#F59E0B' : 'none'} style={{ marginRight: 3 }} />}
+                    {qf === 'WATCHLIST' && <Star size={10} fill={quickFilter === 'WATCHLIST' ? '#F59E0B' : 'none'} style={{ marginRight: 2 }} />}
                     {qf}
                   </button>
                 ))}
               </div>
 
-              {/* Category selector chips */}
-              <div className="category-filter-chips">
-                {categories.map(cat => (
-                  <button
-                    key={cat}
-                    type="button"
-                    className={`cat-chip ${categoryFilter === cat ? 'active' : ''}`}
-                    onClick={() => setCategoryFilter(cat)}
-                  >
-                    {cat === 'all' ? 'All Categories' : cat}
-                  </button>
-                ))}
-              </div>
+              {/* Optional Advanced Category Selector Drawer */}
+              {showAdvancedFilter && (
+                <div className="category-filter-chips">
+                  {categories.map(cat => (
+                    <button
+                      key={cat}
+                      type="button"
+                      className={`cat-chip ${categoryFilter === cat ? 'active' : ''}`}
+                      onClick={() => setCategoryFilter(cat)}
+                    >
+                      {cat === 'all' ? 'All' : cat}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Assets Grid List */}
+            {/* Densely Packed, Scrollable Asset Cards */}
             <div className="assets-card-grid">
               {filteredAssets.length === 0 ? (
                 <div className="assets-empty-grid">
-                  <Coins size={36} color="#9CA3AF" />
+                  <Coins size={32} color="#9CA3AF" />
                   <h4>No Matching Assets</h4>
-                  <p>Try clearing your search query or switching active category filters.</p>
+                  <p>Try clearing search or filter selections.</p>
                 </div>
               ) : (
                 filteredAssets.map(asset => {
@@ -276,11 +297,11 @@ export const TradingPanel: React.FC = () => {
                   const range = max - min || 1;
                   const sparklinePath = points.length > 1
                     ? points.map((pt, idx) => {
-                        const x = (idx / (points.length - 1)) * 90;
-                        const y = 32 - ((pt.price - min) / range) * 26 - 3;
+                        const x = (idx / (points.length - 1)) * 80;
+                        const y = 26 - ((pt.price - min) / range) * 20 - 3;
                         return `${idx === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`;
                       }).join(' ')
-                    : 'M 0 16 L 90 16';
+                    : 'M 0 13 L 80 13';
 
                   return (
                     <div
@@ -288,7 +309,7 @@ export const TradingPanel: React.FC = () => {
                       className={`market-asset-card ${isSelected ? 'selected-card' : ''}`}
                       onClick={() => handleSelectAsset(asset.id)}
                     >
-                      <div className="asset-card-top">
+                      <div className="card-left-group">
                         <div className="asset-avatar-wrap">
                           <img 
                             src={getAssetUrl(asset.assetId)} 
@@ -300,45 +321,39 @@ export const TradingPanel: React.FC = () => {
                         <div className="asset-info-wrap">
                           <div className="asset-name-row">
                             <span className="asset-name-text">{asset.name}</span>
-                            {isStarred && <Star size={13} fill="#F59E0B" color="#F59E0B" />}
+                            {isStarred && <Star size={11} fill="#F59E0B" color="#F59E0B" />}
+                            {owned > 0 && <span className="card-owned-tag">{formatNumber(owned)}</span>}
                           </div>
                           <div className="asset-sub-meta">
                             <span className="asset-cat-text">{asset.category}</span>
-                            <span className={`asset-risk-pill risk-${asset.risk.toLowerCase().replace(' ', '-')}`}>
-                              {asset.risk}
-                            </span>
+                            <span className="dot-sep">·</span>
+                            <span className={`risk-micro-tag risk-${asset.risk.toLowerCase().replace(' ', '-')}`}>{asset.risk}</span>
                           </div>
-                        </div>
-
-                        {/* Mini Sparkline Chart */}
-                        <div className="asset-sparkline-wrap">
-                          <svg viewBox="0 0 90 32" className="sparkline-svg">
-                            <path
-                              d={sparklinePath}
-                              fill="none"
-                              stroke={isPositive ? '#10B981' : '#F01835'}
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                            />
-                          </svg>
                         </div>
                       </div>
 
-                      <div className="asset-card-bottom">
+                      <div className="card-right-group">
                         <div className="asset-price-col">
                           <span className="card-price-number">
                             {formatMoney(currentPrice, state.settings.numberFormat)}
                           </span>
                           <span className={`card-change-pill ${isPositive ? 'pill-up' : 'pill-down'}`}>
-                            {isPositive ? '▲ +' : '▼ '}{priceChange24h}%
+                            {isPositive ? '+' : ''}{priceChange24h}%
                           </span>
                         </div>
 
-                        {owned > 0 && (
-                          <div className="card-owned-badge">
-                            <span>Owned: {formatNumber(owned)}</span>
-                          </div>
-                        )}
+                        {/* Mini Sparkline Chart */}
+                        <div className="asset-sparkline-wrap">
+                          <svg viewBox="0 0 80 26" className="sparkline-svg">
+                            <path
+                              d={sparklinePath}
+                              fill="none"
+                              stroke={isPositive ? '#10B981' : '#F01835'}
+                              strokeWidth="1.8"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   );
@@ -347,7 +362,7 @@ export const TradingPanel: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Detailed Asset View / Side Panel */}
+          {/* Right Column: Compact, Non-Scrolling Selected Asset Panel */}
           <div className="market-detail-col">
             <AssetDetailView
               asset={selectedAsset}
@@ -359,6 +374,7 @@ export const TradingPanel: React.FC = () => {
               onToggleWatchlist={toggleTradingWatchlist}
               onBuy={buyTradingAsset}
               onSell={sellTradingAsset}
+              onBack={() => setMobileViewMode('list')}
             />
           </div>
         </div>
@@ -375,6 +391,7 @@ export const TradingPanel: React.FC = () => {
           onSelectAsset={(id) => {
             setSelectedAssetId(id);
             setActiveTradingTab('market');
+            setMobileViewMode('detail');
           }}
           onQuickSellAll={handleQuickSellAll}
         />
@@ -396,6 +413,7 @@ export const TradingPanel: React.FC = () => {
           onSelectAsset={(id) => {
             setSelectedAssetId(id);
             setActiveTradingTab('market');
+            setMobileViewMode('detail');
           }}
         />
       )}

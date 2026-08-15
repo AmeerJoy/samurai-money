@@ -4,7 +4,7 @@ import { formatMoney } from '../../systems/formatting';
 
 interface TradingPriceChartProps {
   history: Record<TimeRange, PricePoint[]>;
-  currentPrice?: number;
+  currentPrice: number;
   timeRange: TimeRange;
   onTimeRangeChange: (range: TimeRange) => void;
   numberFormat?: 'standard' | 'scientific';
@@ -12,6 +12,7 @@ interface TradingPriceChartProps {
 
 export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   history,
+  currentPrice,
   timeRange,
   onTimeRangeChange,
   numberFormat = 'standard'
@@ -32,27 +33,34 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
 
   // Calculate high, low, and change for selected range
   const prices = points.map(p => p.price);
-  const minPrice = Math.min(...prices);
-  const maxPrice = Math.max(...prices);
+  const rawMin = Math.min(...prices, currentPrice);
+  const rawMax = Math.max(...prices, currentPrice);
+
+  // Add 4% padding to bounds so line never hits absolute edges
+  const pad = (rawMax - rawMin) * 0.06 || rawMin * 0.05 || 1;
+  const minPrice = Math.max(0, rawMin - pad);
+  const maxPrice = rawMax + pad;
+  const priceRange = maxPrice - minPrice || 1;
+
   const startPrice = points[0].price;
   const endPrice = points[points.length - 1].price;
   const priceChange = endPrice - startPrice;
   const isPositive = priceChange >= 0;
 
   // Chart dimensions & scaling
-  const width = 600;
-  const height = 220;
-  const paddingX = 20;
-  const paddingTop = 25;
-  const paddingBottom = 30;
+  const width = 640;
+  const height = 190;
+  const paddingLeft = 58;  // Left margin for Y-axis labels
+  const paddingRight = 68; // Right margin for current price badge
+  const paddingTop = 14;
+  const paddingBottom = 20;
 
-  const innerWidth = width - paddingX * 2;
+  const innerWidth = width - paddingLeft - paddingRight;
   const innerHeight = height - paddingTop - paddingBottom;
-  const priceRange = maxPrice - minPrice || 1;
 
   // Generate SVG path coordinates
   const svgPoints = points.map((p, idx) => {
-    const x = paddingX + (idx / (points.length - 1)) * innerWidth;
+    const x = paddingLeft + (idx / (points.length - 1)) * innerWidth;
     const y = paddingTop + innerHeight - ((p.price - minPrice) / priceRange) * innerHeight;
     return { x, y, point: p };
   });
@@ -60,12 +68,24 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const linePath = svgPoints.map((pt, i) => `${i === 0 ? 'M' : 'L'} ${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`).join(' ');
   
   // Closed area path for background gradient fill
-  const areaPath = `${linePath} L ${width - paddingX} ${height - paddingBottom} L ${paddingX} ${height - paddingBottom} Z`;
+  const lastX = paddingLeft + innerWidth;
+  const areaPath = `${linePath} L ${lastX.toFixed(1)} ${height - paddingBottom} L ${paddingLeft} ${height - paddingBottom} Z`;
 
   // Color constants
   const strokeColor = isPositive ? '#10B981' : '#F01835';
-  const fillColor = isPositive ? 'rgba(16, 185, 129, 0.18)' : 'rgba(240, 24, 53, 0.18)';
-  const glowColor = isPositive ? 'rgba(16, 185, 129, 0.4)' : 'rgba(240, 24, 53, 0.4)';
+  const fillColor = isPositive ? 'rgba(16, 185, 129, 0.16)' : 'rgba(240, 24, 53, 0.16)';
+  const glowColor = isPositive ? 'rgba(16, 185, 129, 0.45)' : 'rgba(240, 24, 53, 0.45)';
+
+  // Calculate 4 Y-axis horizontal grid lines
+  const gridSteps = 4;
+  const yAxisTicks = Array.from({ length: gridSteps }, (_, i) => {
+    const val = minPrice + (priceRange / (gridSteps - 1)) * i;
+    const y = paddingTop + innerHeight - ((val - minPrice) / priceRange) * innerHeight;
+    return { val, y };
+  });
+
+  // Current Price Horizontal Reference Line Coordinate
+  const currentY = paddingTop + innerHeight - ((currentPrice - minPrice) / priceRange) * innerHeight;
 
   // Handle Scrubbing (Mouse & Touch)
   const handlePointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
@@ -106,7 +126,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
 
   return (
     <div className="trading-chart-container" ref={containerRef}>
-      {/* Timeframe Selector Header */}
+      {/* Timeframe Selector & Range Summary Header */}
       <div className="chart-header-row">
         <div className="chart-range-change">
           <span className={`range-diff-tag ${isPositive ? 'diff-positive' : 'diff-negative'}`}>
@@ -133,7 +153,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
         </div>
       </div>
 
-      {/* Interactive Vector SVG Chart */}
+      {/* Interactive Vector SVG Chart with Y-Axis and Current Price Line */}
       <div className="chart-svg-wrapper">
         <svg
           viewBox={`0 0 ${width} ${height}`}
@@ -148,66 +168,87 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
               <stop offset="100%" stopColor="transparent" />
             </linearGradient>
             <filter id="chart-line-glow" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="0" stdDeviation="4" floodColor={glowColor} />
+              <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor={glowColor} />
             </filter>
           </defs>
 
-          {/* Grid lines */}
-          <line
-            x1={paddingX}
-            y1={paddingTop}
-            x2={width - paddingX}
-            y2={paddingTop}
-            stroke="rgba(255, 255, 255, 0.08)"
-            strokeDasharray="4 4"
-          />
-          <line
-            x1={paddingX}
-            y1={paddingTop + innerHeight / 2}
-            x2={width - paddingX}
-            y2={paddingTop + innerHeight / 2}
-            stroke="rgba(255, 255, 255, 0.05)"
-            strokeDasharray="4 4"
-          />
-          <line
-            x1={paddingX}
-            y1={height - paddingBottom}
-            x2={width - paddingX}
-            y2={height - paddingBottom}
-            stroke="rgba(255, 255, 255, 0.08)"
-          />
+          {/* Horizontal Y-Axis Grid Lines & Price Labels */}
+          {yAxisTicks.map((tick, idx) => (
+            <g key={idx} className="chart-grid-tick">
+              <line
+                x1={paddingLeft}
+                y1={tick.y}
+                x2={width - paddingRight}
+                y2={tick.y}
+                stroke="rgba(255, 255, 255, 0.07)"
+                strokeDasharray="3 4"
+                strokeWidth="1"
+              />
+              <text
+                x={paddingLeft - 8}
+                y={tick.y + 3.5}
+                textAnchor="end"
+                className="chart-yaxis-text"
+              >
+                {formatMoney(tick.val, numberFormat)}
+              </text>
+            </g>
+          ))}
 
           {/* Area Fill */}
           <path d={areaPath} fill={`url(#chart-grad-${timeRange})`} />
 
-          {/* Main Price Line */}
+          {/* Main Price Trend Line */}
           <path
             d={linePath}
             fill="none"
             stroke={strokeColor}
-            strokeWidth="2.5"
+            strokeWidth="2.2"
             strokeLinecap="round"
             strokeLinejoin="round"
             filter="url(#chart-line-glow)"
           />
 
-          {/* High / Low Static Labels */}
-          <text
-            x={width - paddingX}
-            y={paddingTop - 6}
-            textAnchor="end"
-            className="chart-bound-text max-label"
-          >
-            H: {formatMoney(maxPrice, numberFormat)}
-          </text>
-          <text
-            x={width - paddingX}
-            y={height - paddingBottom + 16}
-            textAnchor="end"
-            className="chart-bound-text min-label"
-          >
-            L: {formatMoney(minPrice, numberFormat)}
-          </text>
+          {/* Horizontal Reference Line at CURRENT PRICE */}
+          <g className="chart-current-line-group">
+            <line
+              x1={paddingLeft}
+              y1={currentY}
+              x2={width - paddingRight}
+              y2={currentY}
+              stroke="rgba(245, 158, 11, 0.75)"
+              strokeDasharray="4 3"
+              strokeWidth="1.2"
+            />
+            {/* Dot at Current Price (Rightmost point) */}
+            <circle
+              cx={width - paddingRight}
+              cy={currentY}
+              r="4"
+              fill="#F59E0B"
+              stroke="#FFF"
+              strokeWidth="1.5"
+            />
+            {/* Current Price Label on Right Axis */}
+            <rect
+              x={width - paddingRight + 4}
+              y={currentY - 9}
+              width="58"
+              height="18"
+              rx="4"
+              fill="#181B24"
+              stroke="#F59E0B"
+              strokeWidth="1"
+            />
+            <text
+              x={width - paddingRight + 33}
+              y={currentY + 3.5}
+              textAnchor="middle"
+              className="chart-current-badge-text"
+            >
+              {formatMoney(currentPrice, numberFormat)}
+            </text>
+          </g>
 
           {/* Interactive Scrubbing Cursor & Tooltip */}
           {hoverPoint && (
@@ -218,7 +259,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
                 y1={paddingTop}
                 x2={hoverPoint.x}
                 y2={height - paddingBottom}
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="rgba(255, 255, 255, 0.45)"
                 strokeDasharray="3 3"
                 strokeWidth="1.5"
               />
@@ -227,7 +268,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
               <circle
                 cx={hoverPoint.x}
                 cy={hoverPoint.y}
-                r="5"
+                r="4.5"
                 fill="#FFF"
                 stroke={strokeColor}
                 strokeWidth="2.5"

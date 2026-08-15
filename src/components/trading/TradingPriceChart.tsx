@@ -76,21 +76,35 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const priceChange = endPrice - startPrice;
   const isPositive = priceChange >= 0;
 
-  // Chart dimensions & scaling:
-  // Chart dimensions & scaling:
-  // - Compact left space (36px) for numbers aligned with dashed lines
-  // - Zero right padding (2px) so curve utilizes 100% of the right container
+  // Chart layout dimensions
   const width = 640;
   const height = 210;
-  const paddingLeft = 36;   // Compact space for Y-axis price labels
-  const paddingRight = 2;   // 100% full utilization of the right side
   const paddingTop = 12;
   const paddingBottom = 16;
+  const paddingRight = 2; // 100% full utilization of the right side
 
-  const innerWidth = width - paddingLeft - paddingRight;
   const innerHeight = height - paddingTop - paddingBottom;
 
-  // Generate SVG path coordinates spanning the entire available width
+  // Calculate 6 Y-axis price levels
+  const gridSteps = 6;
+  const rawYTicks = Array.from({ length: gridSteps }, (_, i) => {
+    const val = minPrice + (priceRange / (gridSteps - 1)) * i;
+    const formatted = formatMoney(val, numberFormat);
+    return { val, formatted };
+  });
+
+  // Dynamically compute left padding based on the longest formatted price string
+  const maxCharLength = Math.max(...rawYTicks.map(t => t.formatted.length), 3);
+  // ~6.2px per character in font-size 9px + 6px right spacing
+  const paddingLeft = Math.max(26, Math.min(58, Math.round(maxCharLength * 6.4 + 6)));
+  const innerWidth = width - paddingLeft - paddingRight;
+
+  const yAxisTicks = rawYTicks.map(t => {
+    const y = paddingTop + innerHeight - ((t.val - minPrice) / priceRange) * innerHeight;
+    return { ...t, y };
+  });
+
+  // Generate SVG path coordinates spanning the entire dynamically available width
   const svgPoints = points.map((p, idx) => {
     const x = paddingLeft + (idx / (points.length - 1)) * innerWidth;
     const y = paddingTop + innerHeight - ((p.price - minPrice) / priceRange) * innerHeight;
@@ -108,14 +122,6 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const strokeColor = isPositive ? '#10B981' : '#F01835';
   const fillColor = isPositive ? 'rgba(16, 185, 129, 0.16)' : 'rgba(240, 24, 53, 0.16)';
   const glowColor = isPositive ? 'rgba(16, 185, 129, 0.45)' : 'rgba(240, 24, 53, 0.45)';
-
-  // Calculate 6 detailed Y-axis horizontal grid lines spanning full height
-  const gridSteps = 6;
-  const yAxisTicks = Array.from({ length: gridSteps }, (_, i) => {
-    const val = minPrice + (priceRange / (gridSteps - 1)) * i;
-    const y = paddingTop + innerHeight - ((val - minPrice) / priceRange) * innerHeight;
-    return { val, y };
-  });
 
   // Current Price Horizontal Reference Line Coordinate
   const currentY = paddingTop + innerHeight - ((currentPrice - minPrice) / priceRange) * innerHeight;
@@ -186,7 +192,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
         </div>
       </div>
 
-      {/* Interactive Vector SVG Chart with Edge-to-Edge Utilization */}
+      {/* Interactive Vector SVG Chart with Dynamic Responsive Utilization */}
       <div className="chart-svg-wrapper">
         <svg
           viewBox={`0 0 ${width} ${height}`}
@@ -205,7 +211,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
             </filter>
           </defs>
 
-          {/* Horizontal Y-Axis Grid Lines & Directly Aligned Price Labels */}
+          {/* Horizontal Y-Axis Grid Lines & Dynamically Aligned Price Labels */}
           {yAxisTicks.map((tick, idx) => (
             <g key={idx} className="chart-grid-tick">
               {/* Y-Axis Price Label aligned directly to its dashed grid line */}
@@ -216,7 +222,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
                 className="chart-yaxis-text"
                 style={{ fill: 'rgba(255, 255, 255, 0.45)', fontSize: '9px', fontWeight: 700 }}
               >
-                {formatMoney(tick.val, numberFormat)}
+                {tick.formatted}
               </text>
 
               {/* Dashed Grid Line spanning from left axis to the absolute right edge */}

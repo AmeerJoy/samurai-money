@@ -128,7 +128,7 @@ function getPersonalityMultiplier(
 
 /**
  * Generate historical price points tailored to the selected timeframe
- * Ensures natural, proportional market waves without excessive repetition or flat starts
+ * Provides realistic, multi-scale financial market curves across 1H, 24H, 7D, 30D, 90D, and 1Y
  */
 export function generateHistoryForTimeframe(
   asset: TradingAssetDefinition,
@@ -138,13 +138,33 @@ export function generateHistoryForTimeframe(
   now: number = Date.now()
 ): PricePoint[] {
   const durationMs = TIMEFRAME_MS[timeRange];
-  const numPoints = 80; // High resolution point density
-  const stepMs = durationMs / (numPoints - 1);
   const assetSeed = getAssetHash(asset.id);
 
-  // Timeframe wave scaling: Ensures 1.5 to 3 organic waves across any timeframe
-  const wavesPerTimeframe = timeRange === '1H' ? 1.5 : timeRange === '6H' ? 2.0 : timeRange === '24H' ? 2.2 : timeRange === '7D' ? 2.5 : 2.8;
-  const timeScale = (wavesPerTimeframe * 2 * Math.PI) / durationMs;
+  // Scaled resolution & realistic swing frequency per timeframe
+  const numPointsMap: Record<TimeRange, number> = {
+    '1H': 60,
+    '6H': 80,
+    '24H': 100,
+    '7D': 120,
+    '30D': 150,
+    '90D': 180,
+    '1Y': 220
+  };
+
+  const macroWavesMap: Record<TimeRange, number> = {
+    '1H': 1.4,
+    '6H': 2.2,
+    '24H': 3.0,
+    '7D': 4.8,
+    '30D': 7.5,
+    '90D': 11.0,
+    '1Y': 16.0
+  };
+
+  const numPoints = numPointsMap[timeRange] || 100;
+  const macroWaves = macroWavesMap[timeRange] || 3.0;
+  const stepMs = durationMs / (numPoints - 1);
+  const macroFrequency = (macroWaves * 2 * Math.PI) / durationMs;
 
   const rawPrices: number[] = [];
   const timestamps: number[] = [];
@@ -153,19 +173,24 @@ export function generateHistoryForTimeframe(
     const timestamp = now - durationMs + i * stepMs;
     const timeDeltaMs = now - timestamp;
     
-    // Smooth time-based phase tracking
-    const phase = currentCycle - timeDeltaMs * timeScale;
+    // Multi-octave continuous phase tracking
+    const phase = currentCycle - timeDeltaMs * macroFrequency;
     
-    // Macro harmonic wave multiplier
-    const multiplier = getPersonalityMultiplier(asset.personality, phase, assetSeed);
+    // 1. Primary macro trend wave
+    const macroMult = getPersonalityMultiplier(asset.personality, phase, assetSeed);
     
-    // Organic multi-octave secondary wave
-    const microWave = Math.sin(phase * 2.8 + (assetSeed % 7)) * (asset.volatility * 0.12)
-                    + Math.cos(phase * 5.1 + i * 0.15) * (asset.volatility * 0.05);
+    // 2. Intermediate market swing harmonic
+    const intermediateWave = Math.sin(phase * 2.3 + (assetSeed % 5)) * (asset.volatility * 0.18)
+                           + Math.cos(phase * 3.7 + (assetSeed % 3)) * (asset.volatility * 0.10);
 
-    let rawPrice = asset.startingPrice * multiplier * (1 + microWave);
+    // 3. Organic micro-session fluctuation
+    const microWave = Math.sin(phase * 7.1 + i * 0.3) * (asset.volatility * 0.05)
+                    + Math.cos(phase * 11.3 + (assetSeed % 11)) * (asset.volatility * 0.03);
+
+    // Composite raw price with multi-scale market dynamics
+    let rawPrice = asset.startingPrice * macroMult * (1 + intermediateWave + microWave);
     
-    // Smooth soft boundary so it never creates flat lines at min or max
+    // Soft boundary compression ensures natural rounded turning points with zero clipping
     rawPrice = applySoftBounds(rawPrice, asset.minimumPrice, asset.maximumPrice);
 
     rawPrices.push(rawPrice);
@@ -175,7 +200,7 @@ export function generateHistoryForTimeframe(
   // Smooth blending towards currentPrice at the right endpoint
   const targetDiff = currentPrice - (rawPrices[rawPrices.length - 1] || currentPrice);
   const adjustedPrices = rawPrices.map((price, idx) => {
-    const blendFactor = Math.pow((idx + 1) / numPoints, 2);
+    const blendFactor = Math.pow((idx + 1) / numPoints, 2.2);
     const blended = price + targetDiff * blendFactor;
     return applySoftBounds(blended, asset.minimumPrice, asset.maximumPrice);
   });
@@ -184,7 +209,7 @@ export function generateHistoryForTimeframe(
   const finalPoints: PricePoint[] = adjustedPrices.map((price, idx) => {
     const prev = adjustedPrices[Math.max(0, idx - 1)];
     const next = adjustedPrices[Math.min(adjustedPrices.length - 1, idx + 1)];
-    const smoothed = prev * 0.2 + price * 0.6 + next * 0.2;
+    const smoothed = prev * 0.22 + price * 0.56 + next * 0.22;
     return {
       timestamp: timestamps[idx],
       price: Math.round(smoothed * 100) / 100

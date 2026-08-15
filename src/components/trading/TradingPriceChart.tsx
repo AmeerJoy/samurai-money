@@ -36,8 +36,8 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const rawMin = Math.min(...prices, currentPrice);
   const rawMax = Math.max(...prices, currentPrice);
 
-  // Add 4% padding to bounds so line never hits absolute edges
-  const pad = (rawMax - rawMin) * 0.06 || rawMin * 0.05 || 1;
+  // Add slight 5% padding so line never touches absolute edges
+  const pad = (rawMax - rawMin) * 0.05 || rawMin * 0.04 || 1;
   const minPrice = Math.max(0, rawMin - pad);
   const maxPrice = rawMax + pad;
   const priceRange = maxPrice - minPrice || 1;
@@ -49,11 +49,11 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
 
   // Chart dimensions & scaling
   const width = 640;
-  const height = 190;
+  const height = 210;
   const paddingLeft = 58;  // Left margin for Y-axis labels
   const paddingRight = 68; // Right margin for current price badge
-  const paddingTop = 14;
-  const paddingBottom = 20;
+  const paddingTop = 12;
+  const paddingBottom = 16;
 
   const innerWidth = width - paddingLeft - paddingRight;
   const innerHeight = height - paddingTop - paddingBottom;
@@ -76,7 +76,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
   const fillColor = isPositive ? 'rgba(16, 185, 129, 0.16)' : 'rgba(240, 24, 53, 0.16)';
   const glowColor = isPositive ? 'rgba(16, 185, 129, 0.45)' : 'rgba(240, 24, 53, 0.45)';
 
-  // Calculate 4 Y-axis horizontal grid lines
+  // Calculate 4 Y-axis horizontal grid lines spanning full height
   const gridSteps = 4;
   const yAxisTicks = Array.from({ length: gridSteps }, (_, i) => {
     const val = minPrice + (priceRange / (gridSteps - 1)) * i;
@@ -180,7 +180,7 @@ export const TradingPriceChart: React.FC<TradingPriceChartProps> = ({
                 y1={tick.y}
                 x2={width - paddingRight}
                 y2={tick.y}
-                stroke="rgba(255, 255, 255, 0.07)"
+                stroke="rgba(255, 255, 255, 0.08)"
                 strokeDasharray="3 4"
                 strokeWidth="1"
               />

@@ -2,7 +2,7 @@
 
 > **Design Language:** 2D Minimalist Graphic / Silhouette Poster Art  
 > **Core Palette:** Near-Black (`#07080C`) • Deep Crimson Red (`#D20A2E`) • Bright Vermillion (`#F01835`) • Antique Gold (`#F59E0B`)  
-> **Total Cataloged Assets:** `112` modular game-ready graphics.
+> **Total Cataloged Assets:** `118` modular game-ready graphics.
 
 ---
 
@@ -10,6 +10,9 @@
 
 | ID | Asset Name | Filename | Category | Rarity | Purpose |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| `armor-demon-kabuto` | **Demon Kabuto** | `armor-demon-kabuto.webp` | Armor | `EPIC` | Shop Armor Item — Demon Kabuto |
+| `armor-samurai-helmet` | **Kabuto War Helmet** | `armor-samurai-helmet.webp` | Armor | `COMMON` | Shop Armor Item — Kabuto War Helmet |
+| `armor-sovereign-crown` | **Sovereign Shogun Crown** | `armor-sovereign-crown.webp` | Armor | `LEGENDARY` | Shop Armor Item — Sovereign Shogun Crown |
 | `item-demon-slayer-kabuto` | **Demon Slayer Kabuto Helmet** | `demon-slayer-kabuto.webp` | Armor & Items | `EPIC` | Legendary armor upgrade item inspect modal. |
 | `bg-achievements` | **Achievement World Map Canvas** | `bg-achievements.webp` | Backgrounds | `COMMON` | High-contrast dark canvas for the Achievement Graph nodes and connections. |
 | `bg-main` | **Main Dashboard Background** | `bg-main.webp` | Backgrounds | `COMMON` | Full-screen subtle background behind main incremental dashboard. |
@@ -67,13 +70,6 @@
 | `emblem-mask` | **Mempo War Mask Emblem** | `emblem-mask.webp` | Emblems | `COMMON` | Node badge for combat intimidation and battle milestones. |
 | `emblem-sword` | **Single Katana Emblem** | `emblem-sword.webp` | Emblems | `COMMON` | Node badge for swordsmanship and single-target click power. |
 | `emblem-twin-swords` | **Twin Swords Emblem** | `emblem-twin-swords.webp` | Emblems | `RARE` | Node badge for dual-wielding and click multiplier milestones. |
-| `sword-cursed-muramasa` | **Cursed Muramasa Katana** | `sword-cursed-muramasa.webp` | Items & Equipment | `LEGENDARY` | Endgame crit blade in weapons inventory. |
-| `armor-demon-kabuto` | **Demon Horned Kabuto** | `armor-demon-kabuto.webp` | Items & Equipment | `EPIC` | Defense armor card in equipment inventory. |
-| `treasure-dragon-vault` | **Dragon Lacquer Vault** | `treasure-dragon-vault.webp` | Items & Equipment | `EPIC` | Loot box container reward illustration. |
-| `sword-dragon-naginata` | **Dragon Naginata Spear** | `sword-dragon-naginata.webp` | Items & Equipment | `EPIC` | Reach/area weapon card in weapons inventory. |
-| `sword-steel-katana` | **Forged Steel Katana** | `sword-steel-katana.webp` | Items & Equipment | `COMMON` | Primary weapon card in weapons inventory. |
-| `sword-shadow-shuriken` | **Shadow Ninja Shuriken** | `sword-shadow-shuriken.webp` | Items & Equipment | `RARE` | Speed weapon card in weapons inventory. |
-| `sword-twin-tanto` | **Twin Tanto Daggers** | `sword-twin-tanto.webp` | Items & Equipment | `RARE` | Dual-strike weapon card in weapons inventory. |
 | `legendary-beyond-fortune` | **Beyond Fortune** | `legendary-beyond-fortune.webp` | Legendary Art | `MYTHIC` | Endgame 100% completion artwork for discovering all secrets. |
 | `legendary-conqueror` | **Legendary Conqueror** | `legendary-conqueror.webp` | Legendary Art | `LEGENDARY` | Full-size achievement artwork for conquering all map territories. |
 | `legendary-empire` | **Legendary Empire** | `legendary-empire.webp` | Legendary Art | `MYTHIC` | Full-size achievement artwork for owning all game buildings and businesses. |
@@ -87,6 +83,11 @@
 | `secret-dark-temple` | **Hidden Shadow Monastery** | `secret-dark-temple.webp` | Secret Achievements | `SECRET` | Hidden achievement art unlocked by clearing the secret fog of war node. |
 | `secret-mask` | **Secret Mask in the Mist** | `secret-mask.webp` | Secret Achievements | `SECRET` | Hidden achievement art unlocked by clicking the hero's mask 50 times. |
 | `item-mythic-blood-katana` | **Mythic Blood Katana** | `mythic-blood-katana.webp` | Swords & Weapons | `LEGENDARY` | Supreme weapon upgrade item icon & inspect card. |
+| `wealth-100k-chest` | **Cedar Merchant Chest** | `treasure-cedar-chest.webp` | Treasures | `RARE` | Shop Treasure Item — Cedar Merchant Chest |
+| `wealth-1sx-fortune-throne` | **Cosmic Fortune Throne** | `treasure-fortune-throne.webp` | Treasures | `MYTHIC` | Shop Treasure Item — Cosmic Fortune Throne |
+| `treasure-dragon-vault` | **Dragon Vault** | `treasure-dragon-vault.webp` | Treasures | `LEGENDARY` | Shop Treasure Item — Dragon Vault |
+| `wealth-10k-bag` | **Silk Koban Pouch** | `treasure-koban-pouch.webp` | Treasures | `COMMON` | Shop Treasure Item — Silk Koban Pouch |
+| `wealth-1m-golden-chest` | **Solid Gold Coffer** | `treasure-gold-coffer.webp` | Treasures | `EPIC` | Shop Treasure Item — Solid Gold Coffer |
 | `wealth-1b-vault` | **Billionaire Obsidian Vault** | `wealth-1b-vault.webp` | Wealth Achievements | `EPIC` | Represents the $1,000,000,000 wealth milestone on achievement graph. |
 | `wealth-100-coin` | **First Dollar Coin** | `wealth-100-coin.webp` | Wealth Achievements | `COMMON` | Represents the $100 wealth milestone on achievement graph. |
 | `wealth-100k-chest` | **Ironbound Treasure Chest** | `wealth-100k-chest.webp` | Wealth Achievements | `RARE` | Represents the $100,000 wealth milestone on achievement graph. |
@@ -99,6 +100,11 @@
 | `wealth-1t-giant-vault` | **Trillionaire Clan Vault** | `wealth-1t-giant-vault.webp` | Wealth Achievements | `LEGENDARY` | Represents the $1,000,000,000,000 wealth milestone on achievement graph. |
 | `wealth-celestial-koban-stack` | **Celestial Koban Wealth Pile** | `celestial-koban-stack.webp` | Wealth Milestones | `EPIC` | $100 Million Wealth Milestone Node. |
 | `wealth-imperial-dragon-vault` | **Imperial Dragon Lacquer Vault** | `imperial-dragon-vault.webp` | Wealth Milestones | `LEGENDARY` | $1 Billion Wealth Milestone Vault. |
+| `sword-cursed-muramasa` | **Cursed Muramasa** | `sword-cursed-muramasa.webp` | Weapons | `LEGENDARY` | Shop Weapon Item — Cursed Muramasa |
+| `sword-dragon-naginata` | **Dragon Naginata** | `sword-dragon-naginata.webp` | Weapons | `EPIC` | Shop Weapon Item — Dragon Naginata |
+| `sword-shadow-shuriken` | **Shadow Shuriken** | `sword-shadow-shuriken.webp` | Weapons | `RARE` | Shop Weapon Item — Shadow Shuriken |
+| `sword-steel-katana` | **Steel Katana** | `sword-steel-katana.webp` | Weapons | `COMMON` | Shop Weapon Item — Steel Katana |
+| `sword-twin-tanto` | **Twin Tanto Daggers** | `sword-twin-tanto.webp` | Weapons | `RARE` | Shop Weapon Item — Twin Tanto Daggers |
 | `landmark-sword-mountain` | **Colossal Blade of the Gods** | `landmark-sword-mountain.webp` | World Landmarks | `LEGENDARY` | Major landmark marking the peak of the Swordsmanship upgrade branch. |
 | `landmark-floating-torii-archipelago` | **Floating Torii Sanctuary** | `floating-torii-archipelago.webp` | World Landmarks | `EPIC` | World Map Region 3 Gateway. |
 | `landmark-sword-mountain` | **Landmark: Blade of the Ancients** | `landmark-blade-ancients.webp` | World Landmarks | `RARE` | World Map Region 3 Landmark Icon. |

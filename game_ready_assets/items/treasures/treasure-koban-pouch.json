@@ -1,0 +1,20 @@
+{
+  "id": "wealth-10k-bag",
+  "name": "Silk Koban Pouch",
+  "filename": "treasure-koban-pouch.webp",
+  "category": "Treasures",
+  "subfolder": "items/treasures",
+  "rarity": "Common",
+  "purpose": "Shop Treasure Item \u2014 Silk Koban Pouch",
+  "description": "Handcrafted silk purse filled with shiny golden oval koban coins.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional feudal Japanese money pouch purse tied with cord, with golden oval koban coins resting beside it. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Crisp vector contours, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

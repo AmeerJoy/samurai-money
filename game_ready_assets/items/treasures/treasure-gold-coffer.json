@@ -1,0 +1,20 @@
+{
+  "id": "wealth-1m-golden-chest",
+  "name": "Solid Gold Coffer",
+  "filename": "treasure-gold-coffer.webp",
+  "category": "Treasures",
+  "subfolder": "items/treasures",
+  "rarity": "Epic",
+  "purpose": "Shop Treasure Item \u2014 Solid Gold Coffer",
+  "description": "Gilded treasure chest overflowing with antique coins and ruby amulets.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an open ornate feudal treasure chest overflowing with stacked coins and jewels. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, crisp clean vector lines, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

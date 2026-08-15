@@ -1,21 +1,20 @@
-# Asset: treasure-dragon-vault.webp
+# 🛡️ Relic: `treasure-dragon-vault.webp`
 
-- **Name**: Dragon Lacquer Vault
-- **Type**: Treasure Box
-- **Category**: Items & Equipment
-- **Rarity / Tier**: Epic
-- **Purpose**: Loot box container reward illustration.
-- **Visual Description**: Black lacquer chest with red dragon crests overflowing with gold kobans.
-- **Recommended Placement**: Centered inside `items/treasures` UI components.
-- **Style**: 2D minimalist Samurai Money crimson/black silhouette art direction.
-- **Color Tokens**:
-  - Near-Black: `#07080C`
-  - Crimson Red: `#D20A2E`
-  - Bright Vermillion: `#F01835`
-  - Antique Gold: `#F59E0B`
-- **Do Not Use**: As a page background or generic standard button unless explicitly requested.
+### Metadata
+* **Name:** `Dragon Vault`
+* **Category:** `Treasures`
+* **Rarity:** `Legendary`
+* **Style:** `Minimalist 2D Vector Silhouette & Crimson Sun`
+* **Resolution:** `768x768 (Native FLUX Latent)`
 
-## AI Generation Prompt
+---
+
+### Description
+Ancient ceremonial dragon vault holding the legendary wealth of royal dynasties.
+
+---
+
+### Generation Prompt
 ```text
-Minimalist 2D game reward asset of a heavy black lacquer treasure chest adorned with crimson dragon crests, overflowing with glowing golden koban coins and ruby gems, solid crimson sun aura behind, flat black background, high contrast graphic artwork, no 3D, no text.
+A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a colossal feudal dragon treasury vault strongbox with sculpted dragon head lock and heavy rivets. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, no 3D rendering, no text, no watermark.
 ```

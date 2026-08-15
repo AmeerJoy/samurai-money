@@ -1,20 +1,20 @@
 {
   "id": "treasure-dragon-vault",
-  "name": "Dragon Lacquer Vault",
-  "category": "Items & Equipment",
-  "type": "Treasure Box",
-  "rarity": "Epic",
-  "rel_dir": "items/treasures",
-  "purpose": "Loot box container reward illustration.",
-  "visual": "Black lacquer chest with red dragon crests overflowing with gold kobans.",
-  "prompt": "Minimalist 2D game reward asset of a heavy black lacquer treasure chest adorned with crimson dragon crests, overflowing with glowing golden koban coins and ruby gems, solid crimson sun aura behind, flat black background, high contrast graphic artwork, no 3D, no text.",
+  "name": "Dragon Vault",
+  "filename": "treasure-dragon-vault.webp",
+  "category": "Treasures",
+  "subfolder": "items/treasures",
+  "rarity": "Legendary",
+  "purpose": "Shop Treasure Item \u2014 Dragon Vault",
+  "description": "Ancient ceremonial dragon vault holding the legendary wealth of royal dynasties.",
   "palette": [
-    "#07080C",
-    "#D20A2E",
-    "#F01835",
-    "#F59E0B"
+    "#000000",
+    "#FF2035"
   ],
-  "file_webp": "assets/items/treasures/treasure-dragon-vault.webp",
-  "public_path": "/assets/items/treasures/treasure-dragon-vault.webp",
-  "generated_at": "2026-08-15 00:25:33"
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a colossal feudal dragon treasury vault strongbox with sculpted dragon head lock and heavy rivets. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
 }

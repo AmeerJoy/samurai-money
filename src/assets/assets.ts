@@ -586,21 +586,23 @@ export const ASSET_MAP: Record<string, AssetMeta> = {
   },
 
   // Items & Equipment
+
+  // Shop Weapons
   'sword-steel-katana': {
     id: 'sword-steel-katana',
     name: 'Steel Katana',
     category: 'Weapons',
     rarity: 'Common',
     url: '/assets/items/swords/sword-steel-katana.webp',
-    description: 'Curved katana blade with razor crimson cutting edge over red sun.'
+    description: 'A finely balanced hand-forged steel katana with a razor crimson edge.'
   },
   'sword-twin-tanto': {
     id: 'sword-twin-tanto',
-    name: 'Twin Tanto',
+    name: 'Twin Tanto Daggers',
     category: 'Weapons',
     rarity: 'Rare',
     url: '/assets/items/swords/sword-twin-tanto.webp',
-    description: 'Crossed tanto daggers silhouette with crimson cord wrap.'
+    description: 'Paired daggers for rapid dual-strikes during aggressive click sequences.'
   },
   'sword-dragon-naginata': {
     id: 'sword-dragon-naginata',
@@ -608,7 +610,7 @@ export const ASSET_MAP: Record<string, AssetMeta> = {
     category: 'Weapons',
     rarity: 'Epic',
     url: '/assets/items/swords/sword-dragon-naginata.webp',
-    description: 'Graceful naginata spear silhouette with flowing red silk tassel.'
+    description: 'Sweeping polearm weapon adorned with royal crimson silk cords.'
   },
   'sword-shadow-shuriken': {
     id: 'sword-shadow-shuriken',
@@ -616,7 +618,7 @@ export const ASSET_MAP: Record<string, AssetMeta> = {
     category: 'Weapons',
     rarity: 'Rare',
     url: '/assets/items/swords/sword-shadow-shuriken.webp',
-    description: 'Sharp 4-point black ninja throwing star with razor crimson beveled edges.'
+    description: 'Aerodynamic obsidian throwing blades utilized by high-ranking shinobi.'
   },
   'sword-cursed-muramasa': {
     id: 'sword-cursed-muramasa',
@@ -624,7 +626,17 @@ export const ASSET_MAP: Record<string, AssetMeta> = {
     category: 'Weapons',
     rarity: 'Legendary',
     url: '/assets/items/swords/sword-cursed-muramasa.webp',
-    description: 'Cursed black katana blade surrounded by crimson soul energy aura.'
+    description: 'A blood-tempered demonic katana radiating an unearthly crimson aura of supreme fortune.'
+  },
+
+  // Shop Armor
+  'armor-samurai-helmet': {
+    id: 'armor-samurai-helmet',
+    name: 'Kabuto War Helmet',
+    category: 'Armor',
+    rarity: 'Common',
+    url: '/assets/items/armor/armor-samurai-helmet.webp',
+    description: 'Riveted iron helmet bearing the crest of a rising sun.'
   },
   'armor-demon-kabuto': {
     id: 'armor-demon-kabuto',
@@ -632,15 +644,57 @@ export const ASSET_MAP: Record<string, AssetMeta> = {
     category: 'Armor',
     rarity: 'Epic',
     url: '/assets/items/armor/armor-demon-kabuto.webp',
-    description: 'Menacing horned kabuto helmet silhouette with red eye visor.'
+    description: 'Terrifying horned warlord helmet with crimson visor that strikes awe into all traders.'
+  },
+  'armor-sovereign-crown': {
+    id: 'armor-sovereign-crown',
+    name: 'Sovereign Shogun Crown',
+    category: 'Armor',
+    rarity: 'Legendary',
+    url: '/assets/items/armor/armor-sovereign-crown.webp',
+    description: 'Imperial obsidian and ruby crown worn only by the supreme ruler of all provinces.'
+  },
+
+  // Shop Treasures
+  'treasure-koban-pouch': {
+    id: 'treasure-koban-pouch',
+    name: 'Silk Koban Pouch',
+    category: 'Treasures',
+    rarity: 'Common',
+    url: '/assets/items/treasures/treasure-koban-pouch.webp',
+    description: 'Handcrafted silk purse filled with shiny golden oval koban coins.'
+  },
+  'treasure-cedar-chest': {
+    id: 'treasure-cedar-chest',
+    name: 'Cedar Merchant Chest',
+    category: 'Treasures',
+    rarity: 'Rare',
+    url: '/assets/items/treasures/treasure-cedar-chest.webp',
+    description: 'Solid brass-reinforced cedar coffer safeguarding valuable trade contracts.'
+  },
+  'treasure-gold-coffer': {
+    id: 'treasure-gold-coffer',
+    name: 'Solid Gold Coffer',
+    category: 'Treasures',
+    rarity: 'Epic',
+    url: '/assets/items/treasures/treasure-gold-coffer.webp',
+    description: 'Gilded treasure chest overflowing with antique coins and ruby amulets.'
   },
   'treasure-dragon-vault': {
     id: 'treasure-dragon-vault',
     name: 'Dragon Vault',
     category: 'Treasures',
-    rarity: 'Epic',
+    rarity: 'Legendary',
     url: '/assets/items/treasures/treasure-dragon-vault.webp',
-    description: 'Black lacquer chest with red dragon crests overflowing with gold kobans.'
+    description: 'Ancient ceremonial dragon vault holding the legendary wealth of royal dynasties.'
+  },
+  'treasure-fortune-throne': {
+    id: 'treasure-fortune-throne',
+    name: 'Cosmic Fortune Throne',
+    category: 'Treasures',
+    rarity: 'Mythic',
+    url: '/assets/items/treasures/treasure-fortune-throne.webp',
+    description: 'The supreme celestial throne of fortune, channeling boundless wealth from across the cosmos.'
   },
 
   // Backgrounds

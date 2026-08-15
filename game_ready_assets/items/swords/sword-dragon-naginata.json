@@ -1,20 +1,20 @@
 {
   "id": "sword-dragon-naginata",
-  "name": "Dragon Naginata Spear",
-  "category": "Items & Equipment",
-  "type": "Weapon Upgrade",
+  "name": "Dragon Naginata",
+  "filename": "sword-dragon-naginata.webp",
+  "category": "Weapons",
+  "subfolder": "items/swords",
   "rarity": "Epic",
-  "rel_dir": "items/swords",
-  "purpose": "Reach/area weapon card in weapons inventory.",
-  "visual": "Graceful naginata spear silhouette with flowing red silk tassel.",
-  "prompt": "Minimalist 2D game weapon icon of a traditional Japanese naginata spear with flowing crimson silk tassel, diagonal dynamic composition, pitch black silhouette with gold blade collar, solid crimson circular badge background, clean graphic art, no 3D, no text.",
+  "purpose": "Shop Weapon Item \u2014 Dragon Naginata",
+  "description": "Sweeping polearm weapon adorned with royal crimson silk cords.",
   "palette": [
-    "#07080C",
-    "#D20A2E",
-    "#F01835",
-    "#F59E0B"
+    "#000000",
+    "#FF2035"
   ],
-  "file_webp": "assets/items/swords/sword-dragon-naginata.webp",
-  "public_path": "/assets/items/swords/sword-dragon-naginata.webp",
-  "generated_at": "2026-08-15 00:25:20"
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an elegant Japanese naginata spear blade on long shaft with flowing crimson ribbon tassel. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Crisp vector contours, no 3D rendering, no soft painting, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
 }

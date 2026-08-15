@@ -1,20 +1,20 @@
 {
   "id": "sword-steel-katana",
-  "name": "Forged Steel Katana",
-  "category": "Items & Equipment",
-  "type": "Weapon Upgrade",
+  "name": "Steel Katana",
+  "filename": "sword-steel-katana.webp",
+  "category": "Weapons",
+  "subfolder": "items/swords",
   "rarity": "Common",
-  "rel_dir": "items/swords",
-  "purpose": "Primary weapon card in weapons inventory.",
-  "visual": "Curved katana blade with razor crimson cutting edge over red sun.",
-  "prompt": "Minimalist 2D game weapon icon of a curved Japanese katana sword, pitch-black blade silhouette with an intense glowing crimson cutting edge. Huge solid crimson-red moon in background, black canvas, bold geometric graphic art, clean vector edges, no 3D, no text.",
+  "purpose": "Shop Weapon Item \u2014 Steel Katana",
+  "description": "A finely balanced hand-forged steel katana with a razor crimson edge.",
   "palette": [
-    "#07080C",
-    "#D20A2E",
-    "#F01835",
-    "#F59E0B"
+    "#000000",
+    "#FF2035"
   ],
-  "file_webp": "assets/items/swords/sword-steel-katana.webp",
-  "public_path": "/assets/items/swords/sword-steel-katana.webp",
-  "generated_at": "2026-08-15 00:25:14"
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a curved Japanese samurai katana sword blade tilted diagonally with razor sharp crimson cutting edge. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, ultra-clean silhouettes, high contrast, duotone black and crimson, no 3D rendering, no soft lighting, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
 }

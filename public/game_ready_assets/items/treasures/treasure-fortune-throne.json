@@ -1,0 +1,20 @@
+{
+  "id": "wealth-1sx-fortune-throne",
+  "name": "Cosmic Fortune Throne",
+  "filename": "treasure-fortune-throne.webp",
+  "category": "Treasures",
+  "subfolder": "items/treasures",
+  "rarity": "Mythic",
+  "purpose": "Shop Treasure Item \u2014 Cosmic Fortune Throne",
+  "description": "The supreme celestial throne of fortune, channeling boundless wealth from across the cosmos.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an imperial celestial dragon throne with radiant floating coin halos and cosmic solar ribbons. Centered inside a giant solid flat bright crimson red circular solar eclipse ring (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

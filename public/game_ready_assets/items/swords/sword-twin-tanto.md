@@ -1,21 +1,20 @@
-# Asset: sword-twin-tanto.webp
+# 🛡️ Relic: `sword-twin-tanto.webp`
 
-- **Name**: Twin Tanto Daggers
-- **Type**: Weapon Upgrade
-- **Category**: Items & Equipment
-- **Rarity / Tier**: Rare
-- **Purpose**: Dual-strike weapon card in weapons inventory.
-- **Visual Description**: Crossed tanto daggers silhouette with crimson cord wrap.
-- **Recommended Placement**: Centered inside `items/swords` UI components.
-- **Style**: 2D minimalist Samurai Money crimson/black silhouette art direction.
-- **Color Tokens**:
-  - Near-Black: `#07080C`
-  - Crimson Red: `#D20A2E`
-  - Bright Vermillion: `#F01835`
-  - Antique Gold: `#F59E0B`
-- **Do Not Use**: As a page background or generic standard button unless explicitly requested.
+### Metadata
+* **Name:** `Twin Tanto Daggers`
+* **Category:** `Weapons`
+* **Rarity:** `Rare`
+* **Style:** `Minimalist 2D Vector Silhouette & Crimson Sun`
+* **Resolution:** `768x768 (Native FLUX Latent)`
 
-## AI Generation Prompt
+---
+
+### Description
+Paired daggers for rapid dual-strikes during aggressive click sequences.
+
+---
+
+### Generation Prompt
 ```text
-Minimalist 2D game weapon icon of twin Japanese tanto daggers crossed diagonally, pure black blade silhouettes with razor crimson-red edge highlights and red cord wrap. Solid crimson circular badge background, pitch black canvas, sharp vector lines, game UI asset, no 3D, no text.
+A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of two crossed Japanese tanto daggers with subtle crimson cord wrapping. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp clean vector lines, high contrast, no 3D rendering, no soft shading, no text, no watermark.
 ```

@@ -1,0 +1,20 @@
+{
+  "id": "armor-samurai-helmet",
+  "name": "Kabuto War Helmet",
+  "filename": "armor-samurai-helmet.webp",
+  "category": "Armor",
+  "subfolder": "items/armor",
+  "rarity": "Common",
+  "purpose": "Shop Armor Item \u2014 Kabuto War Helmet",
+  "description": "Riveted iron helmet bearing the crest of a rising sun.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional samurai kabuto war helmet with crescent moon horn crest. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Clean vector lines, no 3D rendering, no soft lighting, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

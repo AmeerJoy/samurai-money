@@ -8,8 +8,68 @@
     "brightVermillion": "#F01835",
     "antiqueGold": "#F59E0B"
   },
-  "totalAssets": 112,
+  "totalAssets": 118,
   "assets": [
+    {
+      "id": "armor-demon-kabuto",
+      "name": "Demon Kabuto",
+      "filename": "armor-demon-kabuto.webp",
+      "category": "Armor",
+      "subfolder": "items/armor",
+      "rarity": "Epic",
+      "purpose": "Shop Armor Item \u2014 Demon Kabuto",
+      "description": "Terrifying horned warlord helmet with crimson visor that strikes awe into all traders.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a terrifying horned demon samurai kabuto helmet with sharp curled horns and menacing mempo mask visor. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, sharp geometric contours, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "armor-samurai-helmet",
+      "name": "Kabuto War Helmet",
+      "filename": "armor-samurai-helmet.webp",
+      "category": "Armor",
+      "subfolder": "items/armor",
+      "rarity": "Common",
+      "purpose": "Shop Armor Item \u2014 Kabuto War Helmet",
+      "description": "Riveted iron helmet bearing the crest of a rising sun.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional samurai kabuto war helmet with crescent moon horn crest. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Clean vector lines, no 3D rendering, no soft lighting, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "armor-sovereign-crown",
+      "name": "Sovereign Shogun Crown",
+      "filename": "armor-sovereign-crown.webp",
+      "category": "Armor",
+      "subfolder": "items/armor",
+      "rarity": "Legendary",
+      "purpose": "Shop Armor Item \u2014 Sovereign Shogun Crown",
+      "description": "Imperial obsidian and ruby crown worn only by the supreme ruler of all provinces.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an imperial feudal Japanese Shogun royal crown with ornate dragon crest peaks. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp clean vector design, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
     {
       "id": "item-demon-slayer-kabuto",
       "name": "Demon Slayer Kabuto Helmet",
@@ -1189,146 +1249,6 @@
       "generated_at": "2026-08-15 00:23:44"
     },
     {
-      "id": "sword-cursed-muramasa",
-      "name": "Cursed Muramasa Katana",
-      "category": "Items & Equipment",
-      "type": "Weapon Upgrade",
-      "rarity": "Legendary",
-      "rel_dir": "items/swords",
-      "purpose": "Endgame crit blade in weapons inventory.",
-      "visual": "Cursed black katana blade surrounded by crimson soul energy aura.",
-      "prompt": "Minimalist 2D game weapon icon of a legendary cursed katana sword with black blade radiating intense crimson soul flames, solid crimson circular badge background, black background, clean vector game art, no 3D, no text.",
-      "palette": [
-        "#07080C",
-        "#D20A2E",
-        "#F01835",
-        "#F59E0B"
-      ],
-      "file_webp": "assets/items/swords/sword-cursed-muramasa.webp",
-      "public_path": "/assets/items/swords/sword-cursed-muramasa.webp",
-      "generated_at": "2026-08-15 00:25:26"
-    },
-    {
-      "id": "armor-demon-kabuto",
-      "name": "Demon Horned Kabuto",
-      "category": "Items & Equipment",
-      "type": "Armor Upgrade",
-      "rarity": "Epic",
-      "rel_dir": "items/armor",
-      "purpose": "Defense armor card in equipment inventory.",
-      "visual": "Menacing horned kabuto helmet silhouette with red eye visor.",
-      "prompt": "Minimalist 2D game equipment icon of a legendary horned samurai kabuto helmet with menacing mempo face mask, pure pitch-black silhouette with glowing crimson eyes and red crest accent. Solid crimson-red circular sun backdrop, flat graphic shapes, no 3D render, no text.",
-      "palette": [
-        "#07080C",
-        "#D20A2E",
-        "#F01835",
-        "#F59E0B"
-      ],
-      "file_webp": "assets/items/armor/armor-demon-kabuto.webp",
-      "public_path": "/assets/items/armor/armor-demon-kabuto.webp",
-      "generated_at": "2026-08-15 00:25:30"
-    },
-    {
-      "id": "treasure-dragon-vault",
-      "name": "Dragon Lacquer Vault",
-      "category": "Items & Equipment",
-      "type": "Treasure Box",
-      "rarity": "Epic",
-      "rel_dir": "items/treasures",
-      "purpose": "Loot box container reward illustration.",
-      "visual": "Black lacquer chest with red dragon crests overflowing with gold kobans.",
-      "prompt": "Minimalist 2D game reward asset of a heavy black lacquer treasure chest adorned with crimson dragon crests, overflowing with glowing golden koban coins and ruby gems, solid crimson sun aura behind, flat black background, high contrast graphic artwork, no 3D, no text.",
-      "palette": [
-        "#07080C",
-        "#D20A2E",
-        "#F01835",
-        "#F59E0B"
-      ],
-      "file_webp": "assets/items/treasures/treasure-dragon-vault.webp",
-      "public_path": "/assets/items/treasures/treasure-dragon-vault.webp",
-      "generated_at": "2026-08-15 00:25:33"
-    },
-    {
-      "id": "sword-dragon-naginata",
-      "name": "Dragon Naginata Spear",
-      "category": "Items & Equipment",
-      "type": "Weapon Upgrade",
-      "rarity": "Epic",
-      "rel_dir": "items/swords",
-      "purpose": "Reach/area weapon card in weapons inventory.",
-      "visual": "Graceful naginata spear silhouette with flowing red silk tassel.",
-      "prompt": "Minimalist 2D game weapon icon of a traditional Japanese naginata spear with flowing crimson silk tassel, diagonal dynamic composition, pitch black silhouette with gold blade collar, solid crimson circular badge background, clean graphic art, no 3D, no text.",
-      "palette": [
-        "#07080C",
-        "#D20A2E",
-        "#F01835",
-        "#F59E0B"
-      ],
-      "file_webp": "assets/items/swords/sword-dragon-naginata.webp",
-      "public_path": "/assets/items/swords/sword-dragon-naginata.webp",
-      "generated_at": "2026-08-15 00:25:20"
-    },
-    {
-      "id": "sword-steel-katana",
-      "name": "Forged Steel Katana",
-      "category": "Items & Equipment",
-      "type": "Weapon Upgrade",
-      "rarity": "Common",
-      "rel_dir": "items/swords",
-      "purpose": "Primary weapon card in weapons inventory.",
-      "visual": "Curved katana blade with razor crimson cutting edge over red sun.",
-      "prompt": "Minimalist 2D game weapon icon of a curved Japanese katana sword, pitch-black blade silhouette with an intense glowing crimson cutting edge. Huge solid crimson-red moon in background, black canvas, bold geometric graphic art, clean vector edges, no 3D, no text.",
-      "palette": [
-        "#07080C",
-        "#D20A2E",
-        "#F01835",
-        "#F59E0B"
-      ],
-      "file_webp": "assets/items/swords/sword-steel-katana.webp",
-      "public_path": "/assets/items/swords/sword-steel-katana.webp",
-      "generated_at": "2026-08-15 00:25:14"
-    },
-    {
-      "id": "sword-shadow-shuriken",
-      "name": "Shadow Ninja Shuriken",
-      "category": "Items & Equipment",
-      "type": "Weapon Upgrade",
-      "rarity": "Rare",
-      "rel_dir": "items/swords",
-      "purpose": "Speed weapon card in weapons inventory.",
-      "visual": "Sharp 4-point black ninja throwing star with razor crimson beveled edges.",
-      "prompt": "Minimalist 2D game icon of a sharp black ninja shuriken throwing star with razor crimson-red beveled edges, glowing red core, pure flat black background, high contrast, clean vector game badge, no 3D render, no text.",
-      "palette": [
-        "#07080C",
-        "#D20A2E",
-        "#F01835",
-        "#F59E0B"
-      ],
-      "file_webp": "assets/items/swords/sword-shadow-shuriken.webp",
-      "public_path": "/assets/items/swords/sword-shadow-shuriken.webp",
-      "generated_at": "2026-08-15 00:25:23"
-    },
-    {
-      "id": "sword-twin-tanto",
-      "name": "Twin Tanto Daggers",
-      "category": "Items & Equipment",
-      "type": "Weapon Upgrade",
-      "rarity": "Rare",
-      "rel_dir": "items/swords",
-      "purpose": "Dual-strike weapon card in weapons inventory.",
-      "visual": "Crossed tanto daggers silhouette with crimson cord wrap.",
-      "prompt": "Minimalist 2D game weapon icon of twin Japanese tanto daggers crossed diagonally, pure black blade silhouettes with razor crimson-red edge highlights and red cord wrap. Solid crimson circular badge background, pitch black canvas, sharp vector lines, game UI asset, no 3D, no text.",
-      "palette": [
-        "#07080C",
-        "#D20A2E",
-        "#F01835",
-        "#F59E0B"
-      ],
-      "file_webp": "assets/items/swords/sword-twin-tanto.webp",
-      "public_path": "/assets/items/swords/sword-twin-tanto.webp",
-      "generated_at": "2026-08-15 00:25:17"
-    },
-    {
       "id": "legendary-beyond-fortune",
       "name": "Beyond Fortune",
       "category": "Legendary Art",
@@ -1587,6 +1507,106 @@
       "prompt": "Minimalist 2D game item illustration of a legendary Japanese katana sword floating diagonally in pure pitch black space, near-black silhouette hilt and scabbard with a sharp vibrant crimson-red cutting edge glow, framed by a giant minimalist crimson circular sun, clean vector silhouette art, high contrast, flat shapes, no 3D rendering, no soft painting, no text, no watermark."
     },
     {
+      "id": "wealth-100k-chest",
+      "name": "Cedar Merchant Chest",
+      "filename": "treasure-cedar-chest.webp",
+      "category": "Treasures",
+      "subfolder": "items/treasures",
+      "rarity": "Rare",
+      "purpose": "Shop Treasure Item \u2014 Cedar Merchant Chest",
+      "description": "Solid brass-reinforced cedar coffer safeguarding valuable trade contracts.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a sturdy wooden feudal merchant strongbox coffer chest with iron corner brackets and lock plate. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp vector geometry, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "wealth-1sx-fortune-throne",
+      "name": "Cosmic Fortune Throne",
+      "filename": "treasure-fortune-throne.webp",
+      "category": "Treasures",
+      "subfolder": "items/treasures",
+      "rarity": "Mythic",
+      "purpose": "Shop Treasure Item \u2014 Cosmic Fortune Throne",
+      "description": "The supreme celestial throne of fortune, channeling boundless wealth from across the cosmos.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an imperial celestial dragon throne with radiant floating coin halos and cosmic solar ribbons. Centered inside a giant solid flat bright crimson red circular solar eclipse ring (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "treasure-dragon-vault",
+      "name": "Dragon Vault",
+      "filename": "treasure-dragon-vault.webp",
+      "category": "Treasures",
+      "subfolder": "items/treasures",
+      "rarity": "Legendary",
+      "purpose": "Shop Treasure Item \u2014 Dragon Vault",
+      "description": "Ancient ceremonial dragon vault holding the legendary wealth of royal dynasties.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a colossal feudal dragon treasury vault strongbox with sculpted dragon head lock and heavy rivets. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "wealth-10k-bag",
+      "name": "Silk Koban Pouch",
+      "filename": "treasure-koban-pouch.webp",
+      "category": "Treasures",
+      "subfolder": "items/treasures",
+      "rarity": "Common",
+      "purpose": "Shop Treasure Item \u2014 Silk Koban Pouch",
+      "description": "Handcrafted silk purse filled with shiny golden oval koban coins.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional feudal Japanese money pouch purse tied with cord, with golden oval koban coins resting beside it. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Crisp vector contours, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "wealth-1m-golden-chest",
+      "name": "Solid Gold Coffer",
+      "filename": "treasure-gold-coffer.webp",
+      "category": "Treasures",
+      "subfolder": "items/treasures",
+      "rarity": "Epic",
+      "purpose": "Shop Treasure Item \u2014 Solid Gold Coffer",
+      "description": "Gilded treasure chest overflowing with antique coins and ruby amulets.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an open ornate feudal treasure chest overflowing with stacked coins and jewels. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, crisp clean vector lines, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
       "id": "wealth-1b-vault",
       "name": "Billionaire Obsidian Vault",
       "category": "Wealth Achievements",
@@ -1821,6 +1841,106 @@
         "#F59E0B"
       ],
       "prompt": "Minimalist 2D game achievement icon of a massive reinforced Japanese imperial treasure vault chest, black lacquer body with bold crimson-red dragon relief emblem, glowing gold and crimson sen coins overflowing from seam, pure black background, clean geometric silhouette art, no 3D, no text."
+    },
+    {
+      "id": "sword-cursed-muramasa",
+      "name": "Cursed Muramasa",
+      "filename": "sword-cursed-muramasa.webp",
+      "category": "Weapons",
+      "subfolder": "items/swords",
+      "rarity": "Legendary",
+      "purpose": "Shop Weapon Item \u2014 Cursed Muramasa",
+      "description": "A blood-tempered demonic katana radiating an unearthly crimson aura of supreme fortune.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a menacing demonic samurai katana surrounded by sharp crimson flame aura wisps. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, razor-sharp vector shapes, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "sword-dragon-naginata",
+      "name": "Dragon Naginata",
+      "filename": "sword-dragon-naginata.webp",
+      "category": "Weapons",
+      "subfolder": "items/swords",
+      "rarity": "Epic",
+      "purpose": "Shop Weapon Item \u2014 Dragon Naginata",
+      "description": "Sweeping polearm weapon adorned with royal crimson silk cords.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an elegant Japanese naginata spear blade on long shaft with flowing crimson ribbon tassel. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Crisp vector contours, no 3D rendering, no soft painting, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "sword-shadow-shuriken",
+      "name": "Shadow Shuriken",
+      "filename": "sword-shadow-shuriken.webp",
+      "category": "Weapons",
+      "subfolder": "items/swords",
+      "rarity": "Rare",
+      "purpose": "Shop Weapon Item \u2014 Shadow Shuriken",
+      "description": "Aerodynamic obsidian throwing blades utilized by high-ranking shinobi.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a 4-point aerodynamic ninja throwing star shuriken with geometric beveled edges. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "sword-steel-katana",
+      "name": "Steel Katana",
+      "filename": "sword-steel-katana.webp",
+      "category": "Weapons",
+      "subfolder": "items/swords",
+      "rarity": "Common",
+      "purpose": "Shop Weapon Item \u2014 Steel Katana",
+      "description": "A finely balanced hand-forged steel katana with a razor crimson edge.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a curved Japanese samurai katana sword blade tilted diagonally with razor sharp crimson cutting edge. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, ultra-clean silhouettes, high contrast, duotone black and crimson, no 3D rendering, no soft lighting, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "sword-twin-tanto",
+      "name": "Twin Tanto Daggers",
+      "filename": "sword-twin-tanto.webp",
+      "category": "Weapons",
+      "subfolder": "items/swords",
+      "rarity": "Rare",
+      "purpose": "Shop Weapon Item \u2014 Twin Tanto Daggers",
+      "description": "Paired daggers for rapid dual-strikes during aggressive click sequences.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of two crossed Japanese tanto daggers with subtle crimson cord wrapping. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp clean vector lines, high contrast, no 3D rendering, no soft shading, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
     },
     {
       "id": "landmark-sword-mountain",

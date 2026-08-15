@@ -1,20 +1,20 @@
 {
   "id": "sword-cursed-muramasa",
-  "name": "Cursed Muramasa Katana",
-  "category": "Items & Equipment",
-  "type": "Weapon Upgrade",
+  "name": "Cursed Muramasa",
+  "filename": "sword-cursed-muramasa.webp",
+  "category": "Weapons",
+  "subfolder": "items/swords",
   "rarity": "Legendary",
-  "rel_dir": "items/swords",
-  "purpose": "Endgame crit blade in weapons inventory.",
-  "visual": "Cursed black katana blade surrounded by crimson soul energy aura.",
-  "prompt": "Minimalist 2D game weapon icon of a legendary cursed katana sword with black blade radiating intense crimson soul flames, solid crimson circular badge background, black background, clean vector game art, no 3D, no text.",
+  "purpose": "Shop Weapon Item \u2014 Cursed Muramasa",
+  "description": "A blood-tempered demonic katana radiating an unearthly crimson aura of supreme fortune.",
   "palette": [
-    "#07080C",
-    "#D20A2E",
-    "#F01835",
-    "#F59E0B"
+    "#000000",
+    "#FF2035"
   ],
-  "file_webp": "assets/items/swords/sword-cursed-muramasa.webp",
-  "public_path": "/assets/items/swords/sword-cursed-muramasa.webp",
-  "generated_at": "2026-08-15 00:25:26"
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a menacing demonic samurai katana surrounded by sharp crimson flame aura wisps. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, razor-sharp vector shapes, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
 }

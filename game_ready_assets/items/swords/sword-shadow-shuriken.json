@@ -1,20 +1,20 @@
 {
   "id": "sword-shadow-shuriken",
-  "name": "Shadow Ninja Shuriken",
-  "category": "Items & Equipment",
-  "type": "Weapon Upgrade",
+  "name": "Shadow Shuriken",
+  "filename": "sword-shadow-shuriken.webp",
+  "category": "Weapons",
+  "subfolder": "items/swords",
   "rarity": "Rare",
-  "rel_dir": "items/swords",
-  "purpose": "Speed weapon card in weapons inventory.",
-  "visual": "Sharp 4-point black ninja throwing star with razor crimson beveled edges.",
-  "prompt": "Minimalist 2D game icon of a sharp black ninja shuriken throwing star with razor crimson-red beveled edges, glowing red core, pure flat black background, high contrast, clean vector game badge, no 3D render, no text.",
+  "purpose": "Shop Weapon Item \u2014 Shadow Shuriken",
+  "description": "Aerodynamic obsidian throwing blades utilized by high-ranking shinobi.",
   "palette": [
-    "#07080C",
-    "#D20A2E",
-    "#F01835",
-    "#F59E0B"
+    "#000000",
+    "#FF2035"
   ],
-  "file_webp": "assets/items/swords/sword-shadow-shuriken.webp",
-  "public_path": "/assets/items/swords/sword-shadow-shuriken.webp",
-  "generated_at": "2026-08-15 00:25:23"
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a 4-point aerodynamic ninja throwing star shuriken with geometric beveled edges. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
 }

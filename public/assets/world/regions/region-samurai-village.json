@@ -1,0 +1,22 @@
+{
+  "id": "region-village",
+  "name": "World Region: Samurai Village",
+  "filename": "region-samurai-village.webp",
+  "type": "region",
+  "category": "World Landmarks",
+  "subfolder": "world/regions",
+  "rarity": "common",
+  "purpose": "World Map Region 1 Banner \u2014 Samurai Village.",
+  "description": "Rustic wooden huts, bamboo groves, and dirt training courtyards under a gentle crimson morning sun.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector panoramic game environment banner. Pure solid pitch-black silhouettes of rustic feudal Japanese village huts, bamboo training dojo courtyard, and Mount Fuji in distance. Centered glowing flat crimson sun in twilight sky. Pure solid pitch-black silhouette foreground (#000000), deep crimson accents (#FF2035). Clean razor-sharp vector shapes, high contrast, no 3D rendering, no soft painting, no realism, no human face, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x512"
+}

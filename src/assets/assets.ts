@@ -442,6 +442,107 @@ export const ASSET_MAP: Record<string, AssetMeta> = {
     description: 'Giant ancient katana driven into mountain peak cutting across a crimson moon.'
   },
 
+
+  // World Regions (Panoramic Banners)
+  'region-samurai-village': {
+    id: 'region-samurai-village',
+    name: 'Samurai Village Banner',
+    category: 'World Landmarks',
+    rarity: 'Common',
+    url: '/assets/world/regions/region-samurai-village.webp',
+    description: 'Rustic wooden huts, bamboo groves, and training courtyard beneath Mount Fuji.'
+  },
+  'region-bamboo-valley': {
+    id: 'region-bamboo-valley',
+    name: 'Bamboo Valley & Dojo Banner',
+    category: 'World Landmarks',
+    rarity: 'Rare',
+    url: '/assets/world/regions/region-bamboo-valley.webp',
+    description: 'Dense bamboo forest framing martial pavilion with glowing red lanterns.'
+  },
+  'region-mountain-province': {
+    id: 'region-mountain-province',
+    name: 'Mountain Province Banner',
+    category: 'World Landmarks',
+    rarity: 'Rare',
+    url: '/assets/world/regions/region-mountain-province.webp',
+    description: 'Snow-dusted mountain peaks with iron forges, gold mines, and crimson sun.'
+  },
+  'region-golden-capital': {
+    id: 'region-golden-capital',
+    name: 'Golden Capital Banner',
+    category: 'World Landmarks',
+    rarity: 'Epic',
+    url: '/assets/world/regions/region-golden-capital.webp',
+    description: 'Feudal Japanese imperial city skyline with multi-tier pagoda palaces.'
+  },
+  'region-imperial-fortress': {
+    id: 'region-imperial-fortress',
+    name: 'Imperial Fortress Banner',
+    category: 'World Landmarks',
+    rarity: 'Legendary',
+    url: '/assets/world/regions/region-imperial-fortress.webp',
+    description: 'Colossal Shogun fortress castle with waving battle flags and dragon towers.'
+  },
+  'region-legendary-realm': {
+    id: 'region-legendary-realm',
+    name: 'Legendary Realm Banner',
+    category: 'World Landmarks',
+    rarity: 'Mythic',
+    url: '/assets/world/regions/region-legendary-realm.webp',
+    description: 'Floating celestial stone islands and shrines under an eternal solar eclipse.'
+  },
+
+  // World Landmarks (Icons)
+  'landmark-fuji-horizon': {
+    id: 'landmark-fuji-horizon',
+    name: 'Mount Fuji Horizon',
+    category: 'World Landmarks',
+    rarity: 'Common',
+    url: '/assets/world/landmarks/landmark-fuji-horizon.webp',
+    description: 'Sacred Mount Fuji peak silhouette centered inside a giant flat red sun disc.'
+  },
+  'landmark-grand-torii': {
+    id: 'landmark-grand-torii',
+    name: 'Grand Torii Portal',
+    category: 'World Landmarks',
+    rarity: 'Rare',
+    url: '/assets/world/landmarks/landmark-grand-torii.webp',
+    description: 'Colossal Torii gate gateway silhouette centered inside a bright red circular sun.'
+  },
+  'landmark-blade-ancients': {
+    id: 'landmark-blade-ancients',
+    name: 'Blade of the Ancients',
+    category: 'World Landmarks',
+    rarity: 'Rare',
+    url: '/assets/world/landmarks/landmark-blade-ancients.webp',
+    description: 'Giant ancient katana driven into mountain summit beneath a crimson solar disc.'
+  },
+  'landmark-imperial-sun-crest': {
+    id: 'landmark-imperial-sun-crest',
+    name: 'Imperial Sun Crest',
+    category: 'World Landmarks',
+    rarity: 'Epic',
+    url: '/assets/world/landmarks/landmark-imperial-sun-crest.webp',
+    description: 'Symmetrical imperial clan sun crest medallion inside a flat red circular sun.'
+  },
+  'landmark-dynasty-gate': {
+    id: 'landmark-dynasty-gate',
+    name: 'Dynasty Gate of Honor',
+    category: 'World Landmarks',
+    rarity: 'Legendary',
+    url: '/assets/world/landmarks/landmark-dynasty-gate.webp',
+    description: 'Fortified castle gate archway with curved eaves inside a bright red sun disc.'
+  },
+  'landmark-eclipse-monolith': {
+    id: 'landmark-eclipse-monolith',
+    name: 'Celestial Eclipse Monolith',
+    category: 'World Landmarks',
+    rarity: 'Mythic',
+    url: '/assets/world/landmarks/landmark-eclipse-monolith.webp',
+    description: 'Celestial obelisk monolith stone floating in space inside a solar eclipse ring.'
+  },
+
   // Buildings
   'building-small-shop': {
     id: 'building-small-shop',

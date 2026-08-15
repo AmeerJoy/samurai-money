@@ -2,7 +2,7 @@
 
 > **Design Language:** 2D Minimalist Graphic / Silhouette Poster Art  
 > **Core Palette:** Near-Black (`#07080C`) • Deep Crimson Red (`#D20A2E`) • Bright Vermillion (`#F01835`) • Antique Gold (`#F59E0B`)  
-> **Total Cataloged Assets:** `90` modular game-ready graphics.
+> **Total Cataloged Assets:** `112` modular game-ready graphics.
 
 ---
 
@@ -20,7 +20,17 @@
 | `icon-2d-slashed-koban-coin` | **App Icon: 2D Slashed Koban Wealth** | `icon-2d-slashed-koban-coin.webp` | Brand | `MYTHIC` | Primary 2D App Store Icon — Direct Samurai + Money Theme. |
 | `icon-2d-straw-hat-ronin-stance` | **App Icon: 2D Straw Hat Ronin Stance** | `icon-2d-straw-hat-ronin-stance.webp` | Brand | `MYTHIC` | Primary 2D App Store Icon — Wandering Straw-Hat Ronin. |
 | `icon-crimson-flame-katana` | **App Icon: Crimson Flame Katana** | `icon-crimson-flame-katana.webp` | Brand | `MYTHIC` | Primary App Store Icon — Flaming Blade Emblem. |
+| `icon-duotone-crossed-blades-kamon` | **App Icon: Duotone Crossed Blades Kamon** | `icon-duotone-crossed-blades-kamon.webp` | Brand | `MYTHIC` | Primary App Store Icon — Symmetrical Blade Kamon Emblem. |
+| `icon-duotone-shadow-strike` | **App Icon: Duotone Shadow Katana Draw** | `icon-duotone-shadow-strike.webp` | Brand | `MYTHIC` | Primary App Store Icon — Dynamic Combat Silhouette. |
+| `icon-duotone-koban-slashed-wealth` | **App Icon: Duotone Slashed Koban Fortune** | `icon-duotone-koban-slashed-wealth.webp` | Brand | `MYTHIC` | Primary App Store Icon — Samurai + Money Fusion. |
+| `icon-duotone-standing-ronin` | **App Icon: Duotone Standing Straw-Hat Ronin** | `icon-duotone-standing-ronin.webp` | Brand | `MYTHIC` | Primary App Store Icon — Reference Style Standing Ronin. |
+| `icon-duotone-straw-hat-master` | **App Icon: Duotone Straw-Hat Master Profile** | `icon-duotone-straw-hat-master.webp` | Brand | `MYTHIC` | Primary App Store Icon — Cinematic Master Profile. |
+| `icon-flux-katana-draw-strike` | **App Icon: FLUX Crimson Katana Strike** | `icon-flux-katana-draw-strike.webp` | Brand | `MYTHIC` | Primary App Icon — FLUX.1 [schnell] Dynamic Combat Pose. |
+| `icon-flux-demon-kabuto-crest` | **App Icon: FLUX Horned Kabuto Crest** | `icon-flux-demon-kabuto-crest.webp` | Brand | `MYTHIC` | Primary App Icon — FLUX.1 [schnell] Warlord Helmet Crest. |
+| `icon-flux-straw-hat-ronin` | **App Icon: FLUX Lone Straw-Hat Ronin** | `icon-flux-straw-hat-ronin.webp` | Brand | `MYTHIC` | Primary App Icon — FLUX.1 [schnell] Reference Stance. |
+| `icon-flux-koban-wealth-sliced` | **App Icon: FLUX Slashed Koban Fortune** | `icon-flux-koban-wealth-sliced.webp` | Brand | `MYTHIC` | Primary App Icon — FLUX.1 [schnell] Samurai Money Fusion. |
 | `icon-horned-mempo-warlord` | **App Icon: Horned Mempo Warlord** | `icon-horned-mempo-warlord.webp` | Brand | `MYTHIC` | Primary App Store Icon — Warlord Clan Identity. |
+| `icon-duotone-reference-master` | **App Icon: Reference Master Duotone Ronin** | `icon-duotone-reference-master.svg` | Brand | `MYTHIC` | Pixel-Perfect Vector Replication of User Reference Image. |
 | `icon-shadow-kasa-master` | **App Icon: Shadow Kasa Master** | `icon-shadow-kasa-master.webp` | Brand | `MYTHIC` | Primary App Store Icon — Wandering Ronin Master. |
 | `icon-shadow-katana-strike` | **App Icon: Shadow Katana Strike** | `icon-shadow-katana-strike.webp` | Brand | `MYTHIC` | Primary App Store Icon — Shadow Fight Aesthetic. |
 | `icon-warlord-shogun-crest` | **App Icon: Shogun Kamon Shield** | `icon-warlord-shogun-crest.webp` | Brand | `MYTHIC` | Primary App Store Icon — Clan Crest Kamon. |
@@ -91,9 +101,21 @@
 | `wealth-imperial-dragon-vault` | **Imperial Dragon Lacquer Vault** | `imperial-dragon-vault.webp` | Wealth Milestones | `LEGENDARY` | $1 Billion Wealth Milestone Vault. |
 | `landmark-sword-mountain` | **Colossal Blade of the Gods** | `landmark-sword-mountain.webp` | World Landmarks | `LEGENDARY` | Major landmark marking the peak of the Swordsmanship upgrade branch. |
 | `landmark-floating-torii-archipelago` | **Floating Torii Sanctuary** | `floating-torii-archipelago.webp` | World Landmarks | `EPIC` | World Map Region 3 Gateway. |
+| `landmark-sword-mountain` | **Landmark: Blade of the Ancients** | `landmark-blade-ancients.webp` | World Landmarks | `RARE` | World Map Region 3 Landmark Icon. |
+| `landmark-eclipse-monolith` | **Landmark: Celestial Eclipse Monolith** | `landmark-eclipse-monolith.webp` | World Landmarks | `MYTHIC` | World Map Region 6 Landmark Icon. |
+| `landmark-dynasty-gate` | **Landmark: Dynasty Gate of Honor** | `landmark-dynasty-gate.webp` | World Landmarks | `LEGENDARY` | World Map Region 5 Landmark Icon. |
+| `landmark-torii-portal` | **Landmark: Grand Torii Portal** | `landmark-grand-torii.webp` | World Landmarks | `RARE` | World Map Region 2 Landmark Icon. |
+| `landmark-imperial-crest` | **Landmark: Imperial Sun Crest** | `landmark-imperial-crest.webp` | World Landmarks | `EPIC` | World Map Region 4 Landmark Icon. |
+| `landmark-fuji-sun` | **Landmark: Mount Fuji Horizon** | `landmark-fuji-horizon.webp` | World Landmarks | `COMMON` | World Map Region 1 Landmark Icon. |
 | `landmark-monastery-iron-peaks` | **Monastery of the Iron Peaks** | `monastery-iron-peaks.webp` | World Landmarks | `LEGENDARY` | World Map Region 5 Dojo Landmark. |
 | `landmark-fuji-sun` | **Mount Fuji Blood Sun** | `landmark-fuji-sun.webp` | World Landmarks | `EPIC` | Major landmark on Achievement World Map visible from distant zoom levels. |
 | `landmark-torii-portal` | **Sacred Torii Gate Portal** | `landmark-torii-portal.webp` | World Landmarks | `RARE` | Major landmark gateway connecting World Map regions. |
+| `region-bamboo-valley` | **World Region: Bamboo Valley & Dojo** | `region-bamboo-valley.webp` | World Landmarks | `RARE` | World Map Region 2 Banner — Bamboo Valley & Dojo. |
+| `region-golden-capital` | **World Region: Golden Capital** | `region-golden-capital.webp` | World Landmarks | `EPIC` | World Map Region 4 Banner — Golden Capital. |
+| `region-imperial-fortress` | **World Region: Imperial Fortress** | `region-imperial-fortress.webp` | World Landmarks | `LEGENDARY` | World Map Region 5 Banner — Imperial Fortress. |
+| `region-legendary-realm` | **World Region: Legendary Realm** | `region-legendary-realm.webp` | World Landmarks | `MYTHIC` | World Map Region 6 Banner — Legendary Realm. |
+| `region-mountain-province` | **World Region: Mountain Province** | `region-mountain-province.webp` | World Landmarks | `RARE` | World Map Region 3 Banner — Mountain Province. |
+| `region-village` | **World Region: Samurai Village** | `region-samurai-village.webp` | World Landmarks | `COMMON` | World Map Region 1 Banner — Samurai Village. |
 | `region-beginning` | **Region 1: The Mountain Path** | `region-beginning.webp` | World Regions | `COMMON` | Background artwork for Region 1 of the Achievement World Map. |
 | `region-dojo` | **Region 2: Sacred Sword Dojo** | `region-dojo.webp` | World Regions | `COMMON` | Background artwork for Region 2 of the Achievement World Map. |
 | `region-village` | **Region 3: Merchant Village** | `region-village.webp` | World Regions | `RARE` | Background artwork for Region 3 of the Achievement World Map. |

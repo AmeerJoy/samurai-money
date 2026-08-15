@@ -1,0 +1,22 @@
+{
+  "id": "landmark-torii-portal",
+  "name": "Landmark: Grand Torii Portal",
+  "filename": "landmark-grand-torii.webp",
+  "type": "landmark",
+  "category": "World Landmarks",
+  "subfolder": "world/landmarks",
+  "rarity": "rare",
+  "purpose": "World Map Region 2 Landmark Icon.",
+  "description": "Monumental crimson Torii gate silhouette standing in still reflecting mountain water.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Pure solid pitch-black silhouette of a colossal Japanese Torii gate archway with subtle red beam accents. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp clean vector lines, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

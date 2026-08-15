@@ -1,0 +1,22 @@
+{
+  "id": "region-golden-capital",
+  "name": "World Region: Golden Capital",
+  "filename": "region-golden-capital.webp",
+  "type": "region",
+  "category": "World Landmarks",
+  "subfolder": "world/regions",
+  "rarity": "epic",
+  "purpose": "World Map Region 4 Banner \u2014 Golden Capital.",
+  "description": "Sprawling megalopolis with lacquered merchant halls, gilded arches, and towering financial guilds.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector panoramic game banner. Sprawling solid pitch-black feudal Japanese imperial city skyline with multi-tier pagoda palaces, golden coin arches, and radiant crimson solar halo above palace rooftops. Vector graphic poster art, high contrast, clean negative space, no 3D rendering, no soft painting, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x512"
+}

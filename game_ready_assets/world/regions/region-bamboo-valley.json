@@ -1,0 +1,22 @@
+{
+  "id": "region-bamboo-valley",
+  "name": "World Region: Bamboo Valley & Dojo",
+  "filename": "region-bamboo-valley.webp",
+  "type": "region",
+  "category": "World Landmarks",
+  "subfolder": "world/regions",
+  "rarity": "rare",
+  "purpose": "World Map Region 2 Banner \u2014 Bamboo Valley & Dojo.",
+  "description": "Dense black bamboo forest stalks framing a martial pavilion and crimson lantern pathway.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector panoramic game environment banner. Dense solid pitch-black silhouette bamboo forest stalks framing a traditional Japanese martial dojo pagoda. Glowing crimson paper lanterns hanging from eaves, vibrant red circular moon in background. Razor-sharp clean geometric edges, duotone black and crimson red, no 3D rendering, no human face, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x512"
+}

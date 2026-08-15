@@ -8,7 +8,7 @@
     "brightVermillion": "#F01835",
     "antiqueGold": "#F59E0B"
   },
-  "totalAssets": 90,
+  "totalAssets": 112,
   "assets": [
     {
       "id": "item-demon-slayer-kabuto",
@@ -230,6 +230,204 @@
       "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
     },
     {
+      "id": "icon-duotone-crossed-blades-kamon",
+      "name": "App Icon: Duotone Crossed Blades Kamon",
+      "filename": "icon-duotone-crossed-blades-kamon.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Symmetrical Blade Kamon Emblem.",
+      "description": "Two sleek crossed pure solid black katana swords forming a bold X crest inside a single solid flat bright red circular sun on pitch black canvas.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector logo icon. Symmetrical crossed pure solid black Japanese samurai katana swords forming a bold X emblem with thin red blade highlights. (Centered inside a single solid flat bright red circular sun disc:1.4). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only (#FF2035). Flat 2D vector logo mark, razor-sharp clean geometric edges, no gradients, no 3D rendering, no textures, no text, no watermark.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.5,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-duotone-shadow-strike",
+      "name": "App Icon: Duotone Shadow Katana Draw",
+      "filename": "icon-duotone-shadow-strike.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Dynamic Combat Silhouette.",
+      "description": "Solid pitch-black silhouette of a samurai in ready-strike posture drawing a katana blade, framed inside a single solid flat bright red circular sun.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector logo icon. (Solid pitch-black silhouette of a samurai ninja warrior in low combat stance drawing a katana sword:1.3). (Directly centered inside a single solid flat bright red circular sun disc:1.4). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only (#FF2035). Flat 2D vector stencil logo design, razor-sharp clean geometric edges, no white color, no human face, no skin, no 3D rendering, no soft lighting, no shading, no gradients, no textures, no noise, no rays, no text, no watermark.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.5,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-duotone-koban-slashed-wealth",
+      "name": "App Icon: Duotone Slashed Koban Fortune",
+      "filename": "icon-duotone-koban-slashed-wealth.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Samurai + Money Fusion.",
+      "description": "Solid pitch-black samurai silhouette slicing an oval Japanese gold/red Koban wealth coin in half, framed inside a flat bright red circular sun.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector logo icon representing samurai wealth. Solid pitch-black silhouette of a samurai warrior slicing a traditional oval Japanese Koban wealth coin in half with a katana blade. (Directly centered inside a single solid flat bright red circular sun disc:1.4). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only (#FF2035). Flat 2D graphic logo, razor-sharp clean geometric edges, no 3D shading, no gradients, no textures, no noise, no text, no watermark.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.5,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-duotone-standing-ronin",
+      "name": "App Icon: Duotone Standing Straw-Hat Ronin",
+      "filename": "icon-duotone-standing-ronin.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Reference Style Standing Ronin.",
+      "description": "Pure solid black standing silhouette of a samurai warrior in conical straw hat with katana in hand, centered inside a solid flat bright red circular sun on a pitch-black background with thin red interior accent lines.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector logo icon. (Full-body solid pitch-black silhouette of a samurai warrior standing firmly:1.3) wearing a traditional conical straw hat (kasa) and holding a sleek katana sword at his side with thin red accent line on belt. (Directly centered inside a single solid flat bright red circular sun disc:1.4). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only (#FF2035). Flat 2D vector stencil logo design, razor-sharp clean geometric edges, no white color, no human face, no skin, no 3D rendering, no soft lighting, no shading, no gradients, no textures, no noise, no rays, no text, no watermark.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.5,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-duotone-straw-hat-master",
+      "name": "App Icon: Duotone Straw-Hat Master Profile",
+      "filename": "icon-duotone-straw-hat-master.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Store Icon \u2014 Cinematic Master Profile.",
+      "description": "Side profile solid black silhouette of a wandering master samurai wearing a conical straw hat with katana over shoulder, inside a single solid flat bright red circular disc.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "Masterwork minimalist 2D flat vector logo icon. (Dramatic side-view solid pitch-black silhouette of a master ronin samurai with conical straw kasa hat carrying a katana over shoulder:1.3). (Directly centered inside a single solid flat bright red circular sun disc:1.4). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only (#FF2035). Flat 2D vector stencil logo design, razor-sharp clean geometric edges, no white color, no human face, no skin, no 3D rendering, no soft lighting, no shading, no gradients, no textures, no noise, no rays, no text, no watermark.",
+      "model": "DreamShaper 8 Pruned (SD 1.5)",
+      "sampler": "DPM++ 2M Karras",
+      "steps": 28,
+      "cfg_scale": 8.5,
+      "resolution": "768x768 (Native Vector) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-flux-katana-draw-strike",
+      "name": "App Icon: FLUX Crimson Katana Strike",
+      "filename": "icon-flux-katana-draw-strike.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Icon \u2014 FLUX.1 [schnell] Dynamic Combat Pose.",
+      "description": "Dynamic solid black samurai silhouette mid-draw with drawn razor-sharp katana cutting across a solid bright red sun circle.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game logo icon. Pure solid pitch-black silhouette of a samurai ninja drawing a long curved katana sword in dynamic low combat stance. Centered inside a solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only. Razor-sharp clean vector edges, high contrast silhouette, no 3D rendering, no human face, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-flux-demon-kabuto-crest",
+      "name": "App Icon: FLUX Horned Kabuto Crest",
+      "filename": "icon-flux-demon-kabuto-crest.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Icon \u2014 FLUX.1 [schnell] Warlord Helmet Crest.",
+      "description": "Symmetrical solid black samurai warlord kabuto helmet with curved horns and demon mempo faceplate inside a flat red circular disc.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game logo icon. Symmetrical pure solid pitch-black silhouette of a samurai warlord kabuto helmet with curved horns and demon mempo face mask with sharp red eye cutouts. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only. Razor-sharp vector edges, no 3D rendering, no human face, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-flux-straw-hat-ronin",
+      "name": "App Icon: FLUX Lone Straw-Hat Ronin",
+      "filename": "icon-flux-straw-hat-ronin.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Icon \u2014 FLUX.1 [schnell] Reference Stance.",
+      "description": "Standing solid pitch-black silhouette of a master samurai in conical straw hat with dual katanas, framed inside a glowing pure solid crimson-red solar circle on deep black canvas.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game app icon. Pure solid pitch-black silhouette of a samurai warrior standing firmly, wearing a traditional wide conical straw hat, carrying sleek katana swords. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only. Crisp clean vector edges, stencil silhouette, no 3D rendering, no soft painting, no human face, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent) -> 512x512 (WebP)"
+    },
+    {
+      "id": "icon-flux-koban-wealth-sliced",
+      "name": "App Icon: FLUX Slashed Koban Fortune",
+      "filename": "icon-flux-koban-wealth-sliced.webp",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Primary App Icon \u2014 FLUX.1 [schnell] Samurai Money Fusion.",
+      "description": "Pure solid black samurai blade cleaving a traditional Japanese Koban gold currency coin in half inside a solid flat red sun disc.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game app icon representing samurai wealth. Pure solid pitch-black silhouette of a samurai katana blade slicing a traditional oval Japanese Koban wealth coin in half. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Duotone color palette of pure black and vibrant bright red only. Crisp clean vector geometry, no 3D rendering, no human face, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768 (Native FLUX Latent) -> 512x512 (WebP)"
+    },
+    {
       "id": "icon-horned-mempo-warlord",
       "name": "App Icon: Horned Mempo Warlord",
       "filename": "icon-horned-mempo-warlord.webp",
@@ -251,6 +449,26 @@
       "steps": 28,
       "cfg_scale": 7.5,
       "resolution": "768x768 (Master) -> 512x512 (Optimized WebP)"
+    },
+    {
+      "id": "icon-duotone-reference-master",
+      "name": "App Icon: Reference Master Duotone Ronin",
+      "filename": "icon-duotone-reference-master.svg",
+      "type": "icon",
+      "category": "Brand",
+      "subfolder": "brand",
+      "rarity": "mythic",
+      "purpose": "Pixel-Perfect Vector Replication of User Reference Image.",
+      "description": "Standing straw-hat samurai silhouette with katana, pure solid red sun disc on pitch-black background with red negative space seams.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "model": "Pure Vector SVG (Lossless Resolution)",
+      "sampler": "Vector B\u00e9zier Rasterizer",
+      "steps": "Infinite Resolution",
+      "cfg_scale": "N/A",
+      "resolution": "Scalable Vector SVG"
     },
     {
       "id": "icon-shadow-kasa-master",
@@ -1643,6 +1861,138 @@
       "prompt": "A minimalist 2D graphic illustration for a landmark achievement poster. A colossal traditional Japanese Torii gate standing serenely in calm reflective black water, centered perfectly in front of a giant solid circular crimson-red sun, clean silhouette silhouettes of dark distant islands, high contrast, dramatic negative space, vector game poster style, no anime, no 3D, no text."
     },
     {
+      "id": "landmark-sword-mountain",
+      "name": "Landmark: Blade of the Ancients",
+      "filename": "landmark-blade-ancients.webp",
+      "type": "landmark",
+      "category": "World Landmarks",
+      "subfolder": "world/landmarks",
+      "rarity": "rare",
+      "purpose": "World Map Region 3 Landmark Icon.",
+      "description": "Colossal ancient katana blade driven into a jagged mountain summit beneath a crimson moon.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Pure solid pitch-black silhouette of a giant ancient samurai katana sword embedded vertically into a jagged mountain peak. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black canvas (#000000). Razor-sharp vector edges, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "landmark-eclipse-monolith",
+      "name": "Landmark: Celestial Eclipse Monolith",
+      "filename": "landmark-eclipse-monolith.webp",
+      "type": "landmark",
+      "category": "World Landmarks",
+      "subfolder": "world/landmarks",
+      "rarity": "mythic",
+      "purpose": "World Map Region 6 Landmark Icon.",
+      "description": "An ethereal blade piercing the cosmic fabric under a perpetual blood moon eclipse.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Pure solid pitch-black silhouette of a soaring celestial obelisk monolith rune stone floating in space. Centered inside a giant solid flat bright red circular solar eclipse halo ring (#FF2035). Pure solid pitch-black background (#000000). High contrast, razor-sharp clean geometric contours, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "landmark-dynasty-gate",
+      "name": "Landmark: Dynasty Gate of Honor",
+      "filename": "landmark-dynasty-gate.webp",
+      "type": "landmark",
+      "category": "World Landmarks",
+      "subfolder": "world/landmarks",
+      "rarity": "legendary",
+      "purpose": "World Map Region 5 Landmark Icon.",
+      "description": "The fortified dragon gateway through which untold billions in tributary gold flow daily.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Pure solid pitch-black silhouette of a multi-tiered fortified Japanese castle gate archway with curved eaves. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp clean vector design, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "landmark-torii-portal",
+      "name": "Landmark: Grand Torii Portal",
+      "filename": "landmark-grand-torii.webp",
+      "type": "landmark",
+      "category": "World Landmarks",
+      "subfolder": "world/landmarks",
+      "rarity": "rare",
+      "purpose": "World Map Region 2 Landmark Icon.",
+      "description": "Monumental crimson Torii gate silhouette standing in still reflecting mountain water.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Pure solid pitch-black silhouette of a colossal Japanese Torii gate archway with subtle red beam accents. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp clean vector lines, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "landmark-imperial-crest",
+      "name": "Landmark: Imperial Sun Crest",
+      "filename": "landmark-imperial-crest.webp",
+      "type": "landmark",
+      "category": "World Landmarks",
+      "subfolder": "world/landmarks",
+      "rarity": "epic",
+      "purpose": "World Map Region 4 Landmark Icon.",
+      "description": "Majestic golden and crimson imperial sun crest medallion rising over golden palace roofs.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Symmetrical pure solid pitch-black imperial Japanese clan kamon sun crest emblem with sharp geometric ray petals. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure pitch-black background (#000000). Pristine vector geometry, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "landmark-fuji-sun",
+      "name": "Landmark: Mount Fuji Horizon",
+      "filename": "landmark-fuji-horizon.webp",
+      "type": "landmark",
+      "category": "World Landmarks",
+      "subfolder": "world/landmarks",
+      "rarity": "common",
+      "purpose": "World Map Region 1 Landmark Icon.",
+      "description": "The sacred peak of Mount Fuji rises in pure black silhouette before a giant flat crimson sun disc.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Pure solid pitch-black silhouette of Mount Fuji peak with snow-cap contours. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, no 3D rendering, no soft lighting, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
       "id": "landmark-monastery-iron-peaks",
       "name": "Monastery of the Iron Peaks",
       "filename": "monastery-iron-peaks.webp",
@@ -1699,6 +2049,138 @@
       "file_webp": "assets/world/landmarks/landmark-torii-portal.webp",
       "public_path": "/assets/world/landmarks/landmark-torii-portal.webp",
       "generated_at": "2026-08-15 00:24:52"
+    },
+    {
+      "id": "region-bamboo-valley",
+      "name": "World Region: Bamboo Valley & Dojo",
+      "filename": "region-bamboo-valley.webp",
+      "type": "region",
+      "category": "World Landmarks",
+      "subfolder": "world/regions",
+      "rarity": "rare",
+      "purpose": "World Map Region 2 Banner \u2014 Bamboo Valley & Dojo.",
+      "description": "Dense black bamboo forest stalks framing a martial pavilion and crimson lantern pathway.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector panoramic game environment banner. Dense solid pitch-black silhouette bamboo forest stalks framing a traditional Japanese martial dojo pagoda. Glowing crimson paper lanterns hanging from eaves, vibrant red circular moon in background. Razor-sharp clean geometric edges, duotone black and crimson red, no 3D rendering, no human face, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x512"
+    },
+    {
+      "id": "region-golden-capital",
+      "name": "World Region: Golden Capital",
+      "filename": "region-golden-capital.webp",
+      "type": "region",
+      "category": "World Landmarks",
+      "subfolder": "world/regions",
+      "rarity": "epic",
+      "purpose": "World Map Region 4 Banner \u2014 Golden Capital.",
+      "description": "Sprawling megalopolis with lacquered merchant halls, gilded arches, and towering financial guilds.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector panoramic game banner. Sprawling solid pitch-black feudal Japanese imperial city skyline with multi-tier pagoda palaces, golden coin arches, and radiant crimson solar halo above palace rooftops. Vector graphic poster art, high contrast, clean negative space, no 3D rendering, no soft painting, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x512"
+    },
+    {
+      "id": "region-imperial-fortress",
+      "name": "World Region: Imperial Fortress",
+      "filename": "region-imperial-fortress.webp",
+      "type": "region",
+      "category": "World Landmarks",
+      "subfolder": "world/regions",
+      "rarity": "legendary",
+      "purpose": "World Map Region 5 Banner \u2014 Imperial Fortress.",
+      "description": "Massive multi-tiered imperial citadel bristling with banners, elite guards, and diamond-locked treasuries.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector panoramic game banner. Colossal multi-tiered solid pitch-black Shogun fortress castle on massive stone ramparts with waving samurai clan battle flags. Giant deep blood-red sun rising behind fortress towers. Pure solid pitch-black silhouettes (#000000), vibrant crimson red (#FF2035). High contrast, razor-sharp vector lines, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x512"
+    },
+    {
+      "id": "region-legendary-realm",
+      "name": "World Region: Legendary Realm",
+      "filename": "region-legendary-realm.webp",
+      "type": "region",
+      "category": "World Landmarks",
+      "subfolder": "world/regions",
+      "rarity": "mythic",
+      "purpose": "World Map Region 6 Banner \u2014 Legendary Realm.",
+      "description": "Floating celestial landmasses where gold flows like rivers beneath an eternal crimson eclipse.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector panoramic game environment banner. Mystical floating celestial island silhouettes suspended in the cosmos, floating torii gates and pagoda shrines in the void, beneath a colossal eternal crimson solar eclipse ring. Duotone pitch-black (#000000) and bright crimson-red (#FF2035). Crisp vector edges, no 3D rendering, no realism, no human face, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x512"
+    },
+    {
+      "id": "region-mountain-province",
+      "name": "World Region: Mountain Province",
+      "filename": "region-mountain-province.webp",
+      "type": "region",
+      "category": "World Landmarks",
+      "subfolder": "world/regions",
+      "rarity": "rare",
+      "purpose": "World Map Region 3 Banner \u2014 Mountain Province.",
+      "description": "Snow-dusted mountain peaks dotted with iron forges, gold mines, and bustling merchant boroughs.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector panoramic game environment banner. Majestic solid pitch-black mountain crags and forge smoke silhouettes, glowing red forge fire embers, massive crimson sun setting behind alpine peaks. Crisp vector contours, duotone black and vibrant crimson red, no 3D rendering, no soft painting, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x512"
+    },
+    {
+      "id": "region-village",
+      "name": "World Region: Samurai Village",
+      "filename": "region-samurai-village.webp",
+      "type": "region",
+      "category": "World Landmarks",
+      "subfolder": "world/regions",
+      "rarity": "common",
+      "purpose": "World Map Region 1 Banner \u2014 Samurai Village.",
+      "description": "Rustic wooden huts, bamboo groves, and dirt training courtyards under a gentle crimson morning sun.",
+      "palette": [
+        "#000000",
+        "#FF2035",
+        "#D20A2E"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector panoramic game environment banner. Pure solid pitch-black silhouettes of rustic feudal Japanese village huts, bamboo training dojo courtyard, and Mount Fuji in distance. Centered glowing flat crimson sun in twilight sky. Pure solid pitch-black silhouette foreground (#000000), deep crimson accents (#FF2035). Clean razor-sharp vector shapes, high contrast, no 3D rendering, no soft painting, no realism, no human face, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x512"
     },
     {
       "id": "region-beginning",

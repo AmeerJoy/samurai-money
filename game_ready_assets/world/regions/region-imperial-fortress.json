@@ -1,0 +1,22 @@
+{
+  "id": "region-imperial-fortress",
+  "name": "World Region: Imperial Fortress",
+  "filename": "region-imperial-fortress.webp",
+  "type": "region",
+  "category": "World Landmarks",
+  "subfolder": "world/regions",
+  "rarity": "legendary",
+  "purpose": "World Map Region 5 Banner \u2014 Imperial Fortress.",
+  "description": "Massive multi-tiered imperial citadel bristling with banners, elite guards, and diamond-locked treasuries.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector panoramic game banner. Colossal multi-tiered solid pitch-black Shogun fortress castle on massive stone ramparts with waving samurai clan battle flags. Giant deep blood-red sun rising behind fortress towers. Pure solid pitch-black silhouettes (#000000), vibrant crimson red (#FF2035). High contrast, razor-sharp vector lines, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x512"
+}

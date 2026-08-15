@@ -1,0 +1,22 @@
+{
+  "id": "landmark-imperial-crest",
+  "name": "Landmark: Imperial Sun Crest",
+  "filename": "landmark-imperial-crest.webp",
+  "type": "landmark",
+  "category": "World Landmarks",
+  "subfolder": "world/landmarks",
+  "rarity": "epic",
+  "purpose": "World Map Region 4 Landmark Icon.",
+  "description": "Majestic golden and crimson imperial sun crest medallion rising over golden palace roofs.",
+  "palette": [
+    "#000000",
+    "#FF2035",
+    "#D20A2E"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game landmark icon. Symmetrical pure solid pitch-black imperial Japanese clan kamon sun crest emblem with sharp geometric ray petals. Centered inside a giant solid flat bright red circular sun disc (#FF2035). Pure pitch-black background (#000000). Pristine vector geometry, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

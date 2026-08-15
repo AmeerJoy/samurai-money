@@ -64,11 +64,23 @@ export const WorldMapView: React.FC = () => {
                   <img 
                     src={getAssetUrl(region.landmarkAssetId)} 
                     alt={region.landmarkName} 
-                    style={{ width: 28, height: 28, borderRadius: 6, objectFit: 'contain' }}
+                    style={{ 
+                      width: 36, 
+                      height: 36, 
+                      borderRadius: 8, 
+                      objectFit: 'contain', 
+                      background: '#000000',
+                      border: '1px solid rgba(255, 32, 53, 0.25)',
+                      flexShrink: 0 
+                    }}
                   />
-                  <div>
-                    <div style={{ fontWeight: 700, color: '#FFF' }}>{region.landmarkName}</div>
-                    <div style={{ fontSize: '0.7rem' }}>{region.theme}</div>
+                  <div style={{ minWidth: 0, flex: 1 }}>
+                    <div style={{ fontWeight: 700, color: '#FFF', fontSize: '0.82rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      {region.landmarkName}
+                    </div>
+                    <div style={{ fontSize: '0.7rem', color: '#9CA3AF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      {region.theme}
+                    </div>
                   </div>
                 </div>
 
@@ -83,27 +95,32 @@ export const WorldMapView: React.FC = () => {
                     {isActive ? 'CURRENT DOMAIN' : 'TRAVEL TO REGION'}
                   </button>
                 ) : (
-                  <button
-                    id={`unlock-btn-${region.id}`}
-                    className={`region-action-btn unlock ${canUnlock ? 'affordable' : ''}`}
-                    disabled={!canUnlock}
-                    onClick={() => unlockRegion(region.id)}
-                  >
-                    <Lock size={14} style={{ display: 'inline', marginRight: 4 }} />
-                    {canUnlock ? `UNLOCK FOR ${formatMoney(region.requirement, state.settings.numberFormat)}` : `REQUIRES ${formatMoney(region.requirement, state.settings.numberFormat)}`}
-                  </button>
+                  <div className="region-unlock-area">
+                    {canUnlock ? (
+                      <button
+                        id={`unlock-btn-${region.id}`}
+                        className="region-action-btn unlock"
+                        onClick={() => unlockRegion(region.id)}
+                      >
+                        UNLOCK FOR {formatMoney(region.requirement, state.settings.numberFormat)}
+                      </button>
+                    ) : (
+                      <div className="region-locked-req">
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+                          <Lock size={14} />
+                          <span>REQUIRES {formatMoney(region.requirement, state.settings.numberFormat)}</span>
+                        </div>
+                        <div className="region-req-bar">
+                          <div 
+                            className="region-req-fill" 
+                            style={{ width: `${progressPct}%` }}
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
-
-              {/* Stylish Visual Unlock Progress Track */}
-              {!isUnlocked && !canUnlock && (
-                <div className="card-afford-progress-track">
-                  <div 
-                    className="card-afford-progress-fill" 
-                    style={{ width: `${progressPct}%` }} 
-                  />
-                </div>
-              )}
             </div>
           );
         })}

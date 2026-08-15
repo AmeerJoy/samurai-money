@@ -47,6 +47,55 @@ function getAssetHash(id: string): number {
 }
 
 /**
+ * Smooth Hermite cubic interpolation
+ */
+function smoothstep(t: number): number {
+  return t * t * (3 - 2 * t);
+}
+
+/**
+ * 1D Gradient Noise generator for organic, natural price dynamics
+ */
+function gradientNoise1D(x: number, seed: number): number {
+  const i0 = Math.floor(x);
+  const i1 = i0 + 1;
+  const t = x - i0;
+  const st = smoothstep(t);
+
+  const g0 = (seededRandom(i0 * 157.31 + seed * 349.77) * 2) - 1;
+  const g1 = (seededRandom(i1 * 157.31 + seed * 349.77) * 2) - 1;
+
+  const n0 = g0 * t;
+  const n1 = g1 * (t - 1);
+
+  return n0 + st * (n1 - n0);
+}
+
+/**
+ * Multi-octave fractal noise with non-uniform harmonic frequencies
+ * Recreates genuine financial asset dynamics (like Gold, USD, or commodities) with varying peaks,
+ * consolidation ranges, and non-repetitive organic price discovery
+ */
+function fractalMarketNoise(t: number, seed: number, octaves = 5): number {
+  let value = 0;
+  let amplitude = 1.0;
+  let frequency = 1.0;
+  let totalAmp = 0;
+
+  // Non-integer prime-based octave ratios to break all artificial periodic symmetry
+  const lacunarity = [2.13, 2.27, 2.05, 2.39, 2.19];
+
+  for (let i = 0; i < octaves; i++) {
+    value += gradientNoise1D(t * frequency, seed + i * 47.19) * amplitude;
+    totalAmp += amplitude;
+    amplitude *= 0.53;
+    frequency *= (lacunarity[i % lacunarity.length] || 2.15);
+  }
+
+  return value / totalAmp;
+}
+
+/**
  * Apply soft-knee boundary compression so price smoothly decelerates near min/max
  * and NEVER produces flat horizontal clipping lines
  */
@@ -62,73 +111,59 @@ function applySoftBounds(val: number, min: number, max: number): number {
 }
 
 /**
- * Calculate personality curve multiplier with asset-specific harmonic nuances
+ * Personality-specific macro shape modifier
  */
-function getPersonalityMultiplier(
+function getPersonalityDynamics(
   personality: TradingAssetDefinition['personality'],
-  phase: number,
+  rawNoise: number,
+  t: number,
   assetSeed: number
 ): number {
-  const p = ((phase % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-  const normalized = p / (2 * Math.PI);
-  const seedShift = (assetSeed % 100) / 100;
-
   switch (personality) {
     case 'stable':
-      // Gentle dual-frequency commodity oscillation
-      return 1.0 + 0.12 * Math.sin(p + seedShift) + 0.05 * Math.sin(2.3 * p + seedShift * 2);
+      // Gentle, mean-reverting commodity channel (like Gold or Salt)
+      return 1.0 + rawNoise * 0.18;
 
     case 'slow_growth':
-      // Upward-biased steady channel
-      return 1.0 + 0.18 * Math.sin(p + seedShift) + 0.08 * Math.sin(3.1 * p) + 0.04 * (normalized - 0.5);
+      // Secular upward drift with organic pullbacks
+      return 1.0 + rawNoise * 0.24 + Math.sin(t * 0.4 + (assetSeed % 5)) * 0.08;
 
     case 'wave':
-      // Classic rhythmic market wave with harmonic overtone
-      return 1.0 + 0.32 * Math.sin(p + seedShift) + 0.10 * Math.cos(2.1 * p + seedShift);
+      // Multi-phase market wave with varied cycle lengths
+      return 1.0 + rawNoise * 0.38 + Math.sin(t * 0.7 + (assetSeed % 7)) * 0.15;
 
     case 'cycle':
-      // Asymmetric supply/demand cycle (smooth buildup, faster retrace)
-      return 1.0 + 0.42 * Math.sin(p - 0.3 + seedShift) + 0.14 * Math.sin(0.5 * p);
+      // Extended accumulation followed by sharp expansion
+      return 1.0 + rawNoise * 0.46 + Math.cos(t * 0.5 + (assetSeed % 3)) * 0.20;
 
     case 'volatile':
-      // Multi-frequency dynamic trader volatility
-      return 1.0 + 0.50 * Math.sin(p + seedShift) * Math.cos(1.7 * p) + 0.18 * Math.sin(3.4 * p + seedShift);
+      // High volatility trader swings with breakout momentum
+      return 1.0 + rawNoise * 0.65;
 
     case 'boom_correction': {
-      // 65% accumulation expansion, 35% controlled correction
-      if (normalized < 0.65) {
-        const progress = normalized / 0.65;
-        return 0.78 + 0.70 * Math.pow(progress, 1.3);
-      } else {
-        const drop = (normalized - 0.65) / 0.35;
-        return 1.48 - 0.70 * (1 - Math.cos(drop * Math.PI * 0.5));
-      }
+      // Skewed regime: gradual build up with periodic sharp corrections
+      const skewed = rawNoise > 0 ? Math.pow(rawNoise, 1.25) : -Math.pow(Math.abs(rawNoise), 0.85);
+      return 1.0 + skewed * 0.55;
     }
 
     case 'rare_spike': {
-      // 80% baseline consolidation, 20% momentum rally
-      if (normalized < 0.80) {
-        return 0.88 + 0.10 * Math.sin(normalized * 10 + seedShift);
-      } else {
-        const spikeProgress = (normalized - 0.80) / 0.20;
-        const bell = Math.exp(-Math.pow((spikeProgress - 0.5) * 3.5, 2));
-        return 0.90 + 1.20 * bell;
-      }
+      // Long low-volatility baseline with rare parabolic impulse
+      const spike = Math.max(0, rawNoise - 0.25) * 2.2;
+      return 1.0 + (rawNoise * 0.15) + spike * 0.85;
     }
 
     case 'extreme_cycle': {
-      // Grand planetary multi-wave
-      return 1.0 + 0.65 * Math.sin(p + seedShift) + 0.25 * Math.cos(2.2 * p + seedShift * 3);
+      return 1.0 + rawNoise * 0.75;
     }
 
     default:
-      return 1.0;
+      return 1.0 + rawNoise * 0.3;
   }
 }
 
 /**
  * Generate historical price points tailored to the selected timeframe
- * Provides realistic, multi-scale financial market curves across 1H, 24H, 7D, 30D, 90D, and 1Y
+ * Provides realistic, non-repeating financial market curves across 1H, 24H, 7D, 30D, 90D, and 1Y
  */
 export function generateHistoryForTimeframe(
   asset: TradingAssetDefinition,
@@ -140,7 +175,7 @@ export function generateHistoryForTimeframe(
   const durationMs = TIMEFRAME_MS[timeRange];
   const assetSeed = getAssetHash(asset.id);
 
-  // Scaled resolution & realistic swing frequency per timeframe
+  // Scaled resolution per timeframe
   const numPointsMap: Record<TimeRange, number> = {
     '1H': 60,
     '6H': 80,
@@ -151,44 +186,38 @@ export function generateHistoryForTimeframe(
     '1Y': 220
   };
 
-  const macroWavesMap: Record<TimeRange, number> = {
-    '1H': 1.4,
-    '6H': 2.2,
-    '24H': 3.0,
-    '7D': 4.8,
-    '30D': 7.5,
-    '90D': 11.0,
-    '1Y': 16.0
+  // Macro scale factor (how many organic regime shifts occur across the window)
+  const scaleMap: Record<TimeRange, number> = {
+    '1H': 1.8,
+    '6H': 2.8,
+    '24H': 3.8,
+    '7D': 5.5,
+    '30D': 8.5,
+    '90D': 12.5,
+    '1Y': 18.0
   };
 
   const numPoints = numPointsMap[timeRange] || 100;
-  const macroWaves = macroWavesMap[timeRange] || 3.0;
+  const timeScale = scaleMap[timeRange] || 4.0;
   const stepMs = durationMs / (numPoints - 1);
-  const macroFrequency = (macroWaves * 2 * Math.PI) / durationMs;
 
   const rawPrices: number[] = [];
   const timestamps: number[] = [];
 
   for (let i = 0; i < numPoints - 1; i++) {
     const timestamp = now - durationMs + i * stepMs;
-    const timeDeltaMs = now - timestamp;
+    const progress = i / (numPoints - 1); // 0 to 1
     
-    // Multi-octave continuous phase tracking
-    const phase = currentCycle - timeDeltaMs * macroFrequency;
+    // Non-linear, fractal multi-octave coordinate
+    const t = (currentCycle * 2.0) + (progress * timeScale);
     
-    // 1. Primary macro trend wave
-    const macroMult = getPersonalityMultiplier(asset.personality, phase, assetSeed);
+    // Generate organic fractal noise (5 octaves)
+    const rawNoise = fractalMarketNoise(t, assetSeed, 5);
     
-    // 2. Intermediate market swing harmonic
-    const intermediateWave = Math.sin(phase * 2.3 + (assetSeed % 5)) * (asset.volatility * 0.18)
-                           + Math.cos(phase * 3.7 + (assetSeed % 3)) * (asset.volatility * 0.10);
+    // Apply personality dynamics
+    const multiplier = getPersonalityDynamics(asset.personality, rawNoise, t, assetSeed);
 
-    // 3. Organic micro-session fluctuation
-    const microWave = Math.sin(phase * 7.1 + i * 0.3) * (asset.volatility * 0.05)
-                    + Math.cos(phase * 11.3 + (assetSeed % 11)) * (asset.volatility * 0.03);
-
-    // Composite raw price with multi-scale market dynamics
-    let rawPrice = asset.startingPrice * macroMult * (1 + intermediateWave + microWave);
+    let rawPrice = asset.startingPrice * multiplier;
     
     // Soft boundary compression ensures natural rounded turning points with zero clipping
     rawPrice = applySoftBounds(rawPrice, asset.minimumPrice, asset.maximumPrice);
@@ -209,7 +238,7 @@ export function generateHistoryForTimeframe(
   const finalPoints: PricePoint[] = adjustedPrices.map((price, idx) => {
     const prev = adjustedPrices[Math.max(0, idx - 1)];
     const next = adjustedPrices[Math.min(adjustedPrices.length - 1, idx + 1)];
-    const smoothed = prev * 0.22 + price * 0.56 + next * 0.22;
+    const smoothed = prev * 0.20 + price * 0.60 + next * 0.20;
     return {
       timestamp: timestamps[idx],
       price: Math.round(smoothed * 100) / 100
@@ -262,7 +291,9 @@ export function initializeAssetRuntime(
 ): TradingAssetRuntime {
   const assetSeed = getAssetHash(asset.id);
   const cyclePosition = persistedCycle !== undefined ? persistedCycle : (assetSeed % 628) / 100;
-  const multiplier = getPersonalityMultiplier(asset.personality, cyclePosition, assetSeed);
+  
+  const initialNoise = fractalMarketNoise(cyclePosition * 2.0, assetSeed, 5);
+  const multiplier = getPersonalityDynamics(asset.personality, initialNoise, cyclePosition * 2.0, assetSeed);
   
   let rawPrice = persistedPrice !== undefined ? persistedPrice : asset.startingPrice * multiplier;
   let currentPrice = applySoftBounds(rawPrice, asset.minimumPrice, asset.maximumPrice);
@@ -321,8 +352,9 @@ export function tickAssetRuntime(
   const cycleAdvance = (2 * Math.PI * deltaSeconds) / effectiveCycleSeconds;
   const newCyclePosition = (runtime.cyclePosition + cycleAdvance) % (2 * Math.PI);
 
-  // Calculate base personality value
-  const baseMultiplier = getPersonalityMultiplier(asset.personality, newCyclePosition, assetSeed);
+  // Calculate base personality value using continuous fractal noise
+  const liveNoise = fractalMarketNoise(newCyclePosition * 2.0, assetSeed, 5);
+  const baseMultiplier = getPersonalityDynamics(asset.personality, liveNoise, newCyclePosition * 2.0, assetSeed);
   
   // Calculate active event multiplier
   let eventMultiplier = 1.0;

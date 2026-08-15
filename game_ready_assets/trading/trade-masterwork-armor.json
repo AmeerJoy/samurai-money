@@ -1,0 +1,21 @@
+{
+  "id": "trade-masterwork-armor",
+  "name": "Masterwork Armor",
+  "filename": "trade-masterwork-armor.webp",
+  "category": "Equipment",
+  "tier": "Expensive",
+  "starting_price": 250000,
+  "personality": "Cycle",
+  "risk": "High",
+  "description": "Intricately laced samurai cuirass armor crafted by legendary armorsmiths for daimyo warlords.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional samurai do-maru chest cuirass armor with shoulder sode plates and crimson lacing cord seams. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, razor-sharp vector shapes, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

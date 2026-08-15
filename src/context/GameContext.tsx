@@ -4,20 +4,30 @@ import {
   GameSettings, 
   FloatingNumberItem, 
   NotificationToast, 
-  ShopItemDefinition 
+  ShopItemDefinition,
+  TradingAssetRuntime,
+  PlayerHolding,
+  TradeRecord
 } from '../types';
 import { loadGameState, saveGameState, resetGameState } from '../systems/save';
 import { getClickIncome, getPassiveIncome, calculateUpgradeCost, calculateMaxAffordableUpgrades } from '../systems/economy';
 import { calculateOfflineEarnings, OfflineEarningsResult } from '../systems/offline';
+import { 
+  initializeMarketState, 
+  tickAssetRuntime, 
+  calculatePortfolioValue, 
+  calculateUnrealizedProfit 
+} from '../systems/marketEngine';
 import { soundEngine } from '../systems/audio';
 import { UPGRADES } from '../data/upgrades';
 import { REGIONS } from '../data/regions';
 import { SHOP_ITEMS } from '../data/items';
 import { ACHIEVEMENTS } from '../data/achievements';
+import { TRADING_ASSETS, getTradingAsset } from '../data/tradingAssets';
 import { getAssetUrl } from '../assets/assets';
 import confetti from 'canvas-confetti';
 
-export type ActiveTab = 'dashboard' | 'upgrades' | 'map' | 'shop' | 'achievements';
+export type ActiveTab = 'dashboard' | 'upgrades' | 'map' | 'trading' | 'shop' | 'achievements';
 export type ModalType = 'stats' | 'settings' | 'debug' | 'none';
 
 interface GameContextType {
@@ -37,7 +47,15 @@ interface GameContextType {
   clickIncome: number;
   passiveIncome: number;
   
-  // Actions
+  // Trading Market State & Actions
+  marketRuntimes: Record<string, TradingAssetRuntime>;
+  portfolioValue: number;
+  unrealizedProfit: number;
+  buyTradingAsset: (assetId: string, quantity: number) => void;
+  sellTradingAsset: (assetId: string, quantity: number) => void;
+  toggleTradingWatchlist: (assetId: string) => void;
+  
+  // Game Actions
   manualClick: (x?: number, y?: number) => void;
   buyUpgrade: (upgradeId: string, countMode: 1 | 10 | 'max') => void;
   buyShopItem: (itemId: string) => void;
@@ -65,6 +83,43 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [toasts, setToasts] = useState<NotificationToast[]>([]);
   const [samuraiPose, setSamuraiPose] = useState<'idle' | 'sword' | 'battle' | 'victory' | 'meditation' | 'rich' | 'legendary'>('idle');
   const [clickCombo, setClickCombo] = useState<number>(0);
+
+  // Trading Market Runtime State (Initialized from 18 assets)
+  const [marketRuntimes, setMarketRuntimes] = useState<Record<string, TradingAssetRuntime>>(() => {
+    return initializeMarketState(
+      state.trading?.persistedPrices || {},
+      state.trading?.persistedCyclePositions || {}
+    );
+  });
+  const marketRuntimesRef = useRef<Record<string, TradingAssetRuntime>>(marketRuntimes);
+  marketRuntimesRef.current = marketRuntimes;
+
+  // Real-time Market Simulation Ticker (Ticks every 2.5s)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = Date.now();
+      setMarketRuntimes(prev => {
+        const next: Record<string, TradingAssetRuntime> = {};
+        const activeEvents = stateRef.current.trading?.activeEvents || [];
+        for (const asset of TRADING_ASSETS) {
+          const current = prev[asset.id];
+          if (current) {
+            next[asset.id] = tickAssetRuntime(asset, current, 2.5, activeEvents, now);
+          } else {
+            next[asset.id] = initializeMarketState({}, {}, now)[asset.id];
+          }
+        }
+        return next;
+      });
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Compute live portfolio valuations
+  const tradingHoldings = state.trading?.holdings || {};
+  const portfolioValue = calculatePortfolioValue(tradingHoldings, marketRuntimes);
+  const unrealizedProfit = calculateUnrealizedProfit(tradingHoldings, marketRuntimes);
 
   // References for mutable game loop
   const stateRef = useRef<GameState>(state);
@@ -485,6 +540,197 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setActiveTab('dashboard');
   }, []);
 
+  // Buy Trading Asset Action
+  const buyTradingAsset = useCallback((assetId: string, quantity: number) => {
+    const asset = getTradingAsset(assetId);
+    if (!asset || quantity <= 0) return;
+    const runtime = marketRuntimesRef.current[assetId];
+    const currentPrice = runtime ? runtime.currentPrice : asset.startingPrice;
+    const totalCost = quantity * currentPrice;
+
+    if (stateRef.current.money < totalCost) return;
+
+    soundEngine.playTradeBuy();
+
+    setState(prev => {
+      const prevTrading = prev.trading || {
+        holdings: {},
+        trades: [],
+        watchlist: [],
+        priceAlerts: {},
+        totalInvested: 0,
+        totalRealizedProfit: 0,
+        totalWinningTrades: 0,
+        totalLosingTrades: 0,
+        lastSimulationTimestamp: Date.now(),
+        activeEvents: [],
+        news: [],
+        persistedPrices: {},
+        persistedCyclePositions: {}
+      };
+      const prevHoldings = prevTrading.holdings || {};
+      const existing = prevHoldings[assetId] || {
+        assetId,
+        quantity: 0,
+        averageBuyPrice: 0,
+        totalInvested: 0,
+        realizedProfit: 0
+      };
+
+      const newQty = existing.quantity + quantity;
+      const newTotalInvested = existing.totalInvested + totalCost;
+      const newAvgBuyPrice = newTotalInvested / newQty;
+
+      const newHolding: PlayerHolding = {
+        ...existing,
+        quantity: newQty,
+        averageBuyPrice: Math.round(newAvgBuyPrice * 100) / 100,
+        totalInvested: Math.round(newTotalInvested * 100) / 100
+      };
+
+      const tradeRecord: TradeRecord = {
+        id: `trade-buy-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+        assetId,
+        assetName: asset.name,
+        type: 'BUY',
+        quantity,
+        pricePerUnit: currentPrice,
+        totalAmount: totalCost,
+        timestamp: Date.now()
+      };
+
+      const nextState: GameState = {
+        ...prev,
+        money: prev.money - totalCost,
+        trading: {
+          ...prevTrading,
+          holdings: {
+            ...prevHoldings,
+            [assetId]: newHolding
+          },
+          trades: [...(prevTrading.trades || []).slice(-99), tradeRecord],
+          totalInvested: (prevTrading.totalInvested || 0) + totalCost
+        },
+        statistics: {
+          ...prev.statistics,
+          totalTradesExecuted: (prev.statistics.totalTradesExecuted || 0) + 1
+        }
+      };
+
+      saveGameState(nextState);
+      return nextState;
+    });
+
+    triggerToast('Purchase Executed', `${quantity}x ${asset.name} for $${totalCost >= 1000 ? totalCost.toLocaleString() : totalCost}`, getAssetUrl(asset.assetId));
+  }, [triggerToast]);
+
+  // Sell Trading Asset Action
+  const sellTradingAsset = useCallback((assetId: string, quantity: number) => {
+    const asset = getTradingAsset(assetId);
+    if (!asset || quantity <= 0) return;
+    const runtime = marketRuntimesRef.current[assetId];
+    const currentPrice = runtime ? runtime.currentPrice : asset.startingPrice;
+    
+    const prevTrading = stateRef.current.trading;
+    if (!prevTrading || !prevTrading.holdings) return;
+    const existing = prevTrading.holdings[assetId];
+    if (!existing || existing.quantity < quantity) return;
+
+    const totalRevenue = quantity * currentPrice;
+    const costBasisForSold = quantity * existing.averageBuyPrice;
+    const tradeProfit = totalRevenue - costBasisForSold;
+    const isProfit = tradeProfit >= 0;
+
+    soundEngine.playTradeSell(isProfit);
+
+    setState(prev => {
+      const pTrading = prev.trading;
+      const pHoldings = pTrading.holdings || {};
+      const holding = pHoldings[assetId];
+      if (!holding || holding.quantity < quantity) return prev;
+
+      const remainingQty = holding.quantity - quantity;
+      const remainingInvested = remainingQty > 0 ? remainingQty * holding.averageBuyPrice : 0;
+
+      const updatedHoldings = { ...pHoldings };
+      if (remainingQty > 0) {
+        updatedHoldings[assetId] = {
+          ...holding,
+          quantity: remainingQty,
+          totalInvested: Math.round(remainingInvested * 100) / 100,
+          realizedProfit: holding.realizedProfit + tradeProfit
+        };
+      } else {
+        delete updatedHoldings[assetId];
+      }
+
+      const tradeRecord: TradeRecord = {
+        id: `trade-sell-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+        assetId,
+        assetName: asset.name,
+        type: 'SELL',
+        quantity,
+        pricePerUnit: currentPrice,
+        totalAmount: totalRevenue,
+        profit: tradeProfit,
+        returnPercentage: costBasisForSold > 0 ? (tradeProfit / costBasisForSold) * 100 : 0,
+        timestamp: Date.now()
+      };
+
+      const nextState: GameState = {
+        ...prev,
+        money: prev.money + totalRevenue,
+        lifetimeMoney: prev.lifetimeMoney + Math.max(0, tradeProfit),
+        trading: {
+          ...pTrading,
+          holdings: updatedHoldings,
+          trades: [...(pTrading.trades || []).slice(-99), tradeRecord],
+          totalRealizedProfit: (pTrading.totalRealizedProfit || 0) + tradeProfit,
+          totalWinningTrades: (pTrading.totalWinningTrades || 0) + (isProfit ? 1 : 0),
+          totalLosingTrades: (pTrading.totalLosingTrades || 0) + (!isProfit ? 1 : 0)
+        },
+        statistics: {
+          ...prev.statistics,
+          totalTradesExecuted: (prev.statistics.totalTradesExecuted || 0) + 1,
+          totalTradingProfit: (prev.statistics.totalTradingProfit || 0) + tradeProfit
+        }
+      };
+
+      saveGameState(nextState);
+      return nextState;
+    });
+
+    triggerToast(
+      isProfit ? 'Profitable Sale!' : 'Asset Sold',
+      `Sold ${quantity}x ${asset.name} (${tradeProfit >= 0 ? '+' : ''}$${Math.round(tradeProfit).toLocaleString()})`,
+      getAssetUrl(asset.assetId)
+    );
+  }, [triggerToast]);
+
+  // Toggle Trading Watchlist Action
+  const toggleTradingWatchlist = useCallback((assetId: string) => {
+    soundEngine.playClick();
+    setState(prev => {
+      const pTrading = prev.trading;
+      const currentList = pTrading.watchlist || [];
+      const exists = currentList.includes(assetId);
+      const nextWatchlist = exists 
+        ? currentList.filter(id => id !== assetId)
+        : [...currentList, assetId];
+
+      const nextState: GameState = {
+        ...prev,
+        trading: {
+          ...pTrading,
+          watchlist: nextWatchlist
+        }
+      };
+
+      saveGameState(nextState);
+      return nextState;
+    });
+  }, []);
+
   // QA Developer Cheats
   const cheatAddMoney = useCallback((amount: number) => {
     soundEngine.playPurchase();
@@ -532,6 +778,12 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
         clickCombo,
         clickIncome,
         passiveIncome,
+        marketRuntimes,
+        portfolioValue,
+        unrealizedProfit,
+        buyTradingAsset,
+        sellTradingAsset,
+        toggleTradingWatchlist,
         manualClick,
         buyUpgrade,
         buyShopItem,

@@ -1,0 +1,21 @@
+{
+  "id": "trade-war-horse",
+  "name": "War Horse",
+  "filename": "trade-war-horse.webp",
+  "category": "Equipment",
+  "tier": "Mid-Range",
+  "starting_price": 25000,
+  "personality": "Volatile",
+  "risk": "High",
+  "description": "Mighty war stallions bred for samurai cavalry, capable of turning the tide in feudal territorial wars.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a proud rearing feudal Japanese samurai war horse stallion with flowing mane and subtle crimson harness cords. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Dynamic action silhouette, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

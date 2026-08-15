@@ -1,0 +1,21 @@
+{
+  "id": "trade-shoguns-seal",
+  "name": "Shogun's Seal",
+  "filename": "trade-shoguns-seal.webp",
+  "category": "Treasures",
+  "tier": "Endgame",
+  "starting_price": 50000000,
+  "personality": "Rare Spike",
+  "risk": "Very High",
+  "description": "The golden hanko imperial wax seal of the Shogunate, granting sovereign authority over province trade.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a monumental square imperial Shogun wax seal stamp handle topped with a dragon carving and vermilion red ink base. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp clean vector design, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

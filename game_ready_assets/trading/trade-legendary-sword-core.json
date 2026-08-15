@@ -1,0 +1,21 @@
+{
+  "id": "trade-legendary-sword-core",
+  "name": "Legendary Sword Core",
+  "filename": "trade-legendary-sword-core.webp",
+  "category": "Materials",
+  "tier": "Endgame",
+  "starting_price": 250000000,
+  "personality": "Extreme Cycle",
+  "risk": "Extreme",
+  "description": "A glowing celestial tamahagane crystal core pulsing with raw forging energy, required to create mythic blades.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a glowing crystalline sword core shard surrounded by sharp radiating crimson solar energy arcs. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, razor-sharp geometric facets, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

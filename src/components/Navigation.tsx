@@ -1,20 +1,29 @@
 import React from 'react';
 import { useGame, ActiveTab } from '../context/GameContext';
-import { Home, Zap, Map, ShoppingBag, Trophy } from 'lucide-react';
+import { Home, Zap, Map, Coins, ShoppingBag, Trophy } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
   const { activeTab, setActiveTab, state } = useGame();
+
+  const activeHoldingsCount = Object.values(state.trading?.holdings || {}).filter(h => h.quantity > 0).length;
 
   const tabs: { id: ActiveTab; label: string; icon: React.ReactNode; hotkey: string; badge?: number }[] = [
     { id: 'dashboard', label: 'Dashboard', icon: <Home size={17} />, hotkey: '1' },
     { id: 'upgrades', label: 'Upgrades', icon: <Zap size={17} />, hotkey: '2' },
     { id: 'map', label: 'World Map', icon: <Map size={17} />, hotkey: '3' },
-    { id: 'shop', label: 'Shop', icon: <ShoppingBag size={17} />, hotkey: '4' },
+    { 
+      id: 'trading', 
+      label: 'Market', 
+      icon: <Coins size={17} />, 
+      hotkey: '4',
+      badge: activeHoldingsCount > 0 ? activeHoldingsCount : undefined
+    },
+    { id: 'shop', label: 'Shop', icon: <ShoppingBag size={17} />, hotkey: '5' },
     { 
       id: 'achievements', 
       label: 'Achievements', 
       icon: <Trophy size={17} />, 
-      hotkey: '5',
+      hotkey: '6',
       badge: state.unlockedAchievementIds.length 
     }
   ];

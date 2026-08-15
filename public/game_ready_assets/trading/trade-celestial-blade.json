@@ -1,0 +1,21 @@
+{
+  "id": "trade-celestial-blade",
+  "name": "Celestial Blade",
+  "filename": "trade-celestial-blade.webp",
+  "category": "Equipment",
+  "tier": "Endgame",
+  "starting_price": 10000000000,
+  "personality": "Extreme Cycle",
+  "risk": "Extreme",
+  "description": "An extraordinarily rare masterwork said to represent the pinnacle of swordsmithing. Only the wealthiest collectors can afford one.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a soaring cosmic celestial katana blade floating vertically with a ring of orbiting star fragments and solar ribbons. Centered completely inside a giant solid flat bright crimson red circular solar eclipse ring (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

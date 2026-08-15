@@ -1,0 +1,21 @@
+{
+  "id": "trade-dragon-jade",
+  "name": "Dragon Jade",
+  "filename": "trade-dragon-jade.webp",
+  "category": "Treasures",
+  "tier": "Expensive",
+  "starting_price": 10000000,
+  "personality": "Rare Spike",
+  "risk": "Very High",
+  "description": "A rare jade treasure associated with an ancient mountain legend. Collectors compete fiercely whenever a new piece enters the market.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a circular Chinese dragon bi-disc carved medallion with an opening in the center and coiling dragon horns. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

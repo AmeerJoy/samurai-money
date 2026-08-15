@@ -1,0 +1,21 @@
+{
+  "id": "trade-salt",
+  "name": "Salt",
+  "filename": "trade-salt.webp",
+  "category": "Commodities",
+  "tier": "Affordable",
+  "starting_price": 120,
+  "personality": "Stable",
+  "risk": "Very Low",
+  "description": "Essential mineral harvested from coastal flats, crucial for food preservation across samurai armies.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an ancient Japanese wooden salt merchant scoop bowl with a small neat pyramid mound of pure sea salt crystals. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Crisp vector contours, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

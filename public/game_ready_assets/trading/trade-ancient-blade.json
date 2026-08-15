@@ -1,0 +1,21 @@
+{
+  "id": "trade-ancient-blade",
+  "name": "Ancient Blade",
+  "filename": "trade-ancient-blade.webp",
+  "category": "Equipment",
+  "tier": "Expensive",
+  "starting_price": 2500000,
+  "personality": "Cycle",
+  "risk": "Very High",
+  "description": "A centuries-old forged katana of unmatched balance, said to carry the ancestral fortune of vanished clans.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an ancient heirloom samurai katana sword blade with curved scabbard and engraved golden dragon habaki hilt collar. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

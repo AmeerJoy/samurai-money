@@ -1,0 +1,21 @@
+{
+  "id": "trade-tea",
+  "name": "Tea",
+  "filename": "trade-tea.webp",
+  "category": "Goods",
+  "tier": "Affordable",
+  "starting_price": 350,
+  "personality": "Wave",
+  "risk": "Low",
+  "description": "A highly valued trade good enjoyed by merchants, nobles, and samurai. Its price tends to move in recognizable cycles.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional Japanese ceremonial ceramic matcha tea bowl with a bamboo chasen tea whisk and fresh tea leaves. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}

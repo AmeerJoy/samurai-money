@@ -697,6 +697,161 @@ export const ASSET_MAP: Record<string, AssetMeta> = {
     description: 'The supreme celestial throne of fortune, channeling boundless wealth from across the cosmos.'
   },
 
+
+  // Unified Trading Market Assets (18 Commodities & Relics)
+  'trade-rice': {
+    id: 'trade-rice',
+    name: 'Rice',
+    category: 'Trading Market',
+    rarity: 'Common',
+    url: '/assets/trading/trade-rice.webp',
+    description: 'A staple commodity traded throughout the provinces. Stable demand and safe beginner asset.'
+  },
+  'trade-bamboo': {
+    id: 'trade-bamboo',
+    name: 'Bamboo',
+    category: 'Trading Market',
+    rarity: 'Common',
+    url: '/assets/trading/trade-bamboo.webp',
+    description: 'Versatile material for construction and tools with steady slow growth demand.'
+  },
+  'trade-salt': {
+    id: 'trade-salt',
+    name: 'Salt',
+    category: 'Trading Market',
+    rarity: 'Common',
+    url: '/assets/trading/trade-salt.webp',
+    description: 'Essential mineral harvested from coastal flats for preserving rations.'
+  },
+  'trade-tea': {
+    id: 'trade-tea',
+    name: 'Tea',
+    category: 'Trading Market',
+    rarity: 'Common',
+    url: '/assets/trading/trade-tea.webp',
+    description: 'Ceremonial matcha tea moving in rhythmic supply waves across provinces.'
+  },
+  'trade-cedar': {
+    id: 'trade-cedar',
+    name: 'Cedar',
+    category: 'Trading Market',
+    rarity: 'Common',
+    url: '/assets/trading/trade-cedar.webp',
+    description: 'Fragrant mountain cedar logs prized for castle and shrine construction.'
+  },
+  'trade-iron': {
+    id: 'trade-iron',
+    name: 'Iron',
+    category: 'Trading Market',
+    rarity: 'Rare',
+    url: '/assets/trading/trade-iron.webp',
+    description: 'Smelted iron ingot bars with cyclical demand tied to province blacksmithing.'
+  },
+  'trade-silk': {
+    id: 'trade-silk',
+    name: 'Silk',
+    category: 'Trading Market',
+    rarity: 'Rare',
+    url: '/assets/trading/trade-silk.webp',
+    description: 'Luxurious woven silk fabric traded between merchant guilds in wave cycles.'
+  },
+  'trade-samurai-steel': {
+    id: 'trade-samurai-steel',
+    name: 'Samurai Steel',
+    category: 'Trading Market',
+    rarity: 'Rare',
+    url: '/assets/trading/trade-samurai-steel.webp',
+    description: 'Folded tamahagane high-carbon steel essential for samurai weaponcraft.'
+  },
+  'trade-war-horse': {
+    id: 'trade-war-horse',
+    name: 'War Horse',
+    category: 'Trading Market',
+    rarity: 'Epic',
+    url: '/assets/trading/trade-war-horse.webp',
+    description: 'Mighty cavalry war stallions with volatile high-risk market swings.'
+  },
+  'trade-jade-ornament': {
+    id: 'trade-jade-ornament',
+    name: 'Jade Ornament',
+    category: 'Trading Market',
+    rarity: 'Epic',
+    url: '/assets/trading/trade-jade-ornament.webp',
+    description: 'Carved jade magatama amulet exhibiting boom and correction market runs.'
+  },
+  'trade-masterwork-armor': {
+    id: 'trade-masterwork-armor',
+    name: 'Masterwork Armor',
+    category: 'Trading Market',
+    rarity: 'Epic',
+    url: '/assets/trading/trade-masterwork-armor.webp',
+    description: 'Intricately laced samurai cuirass armor crafted for daimyo warlords.'
+  },
+  'trade-imperial-silk': {
+    id: 'trade-imperial-silk',
+    name: 'Imperial Silk',
+    category: 'Trading Market',
+    rarity: 'Legendary',
+    url: '/assets/trading/trade-imperial-silk.webp',
+    description: 'Royal dragon-embroidered golden silk reserved for the imperial court.'
+  },
+  'trade-ancient-blade': {
+    id: 'trade-ancient-blade',
+    name: 'Ancient Blade',
+    category: 'Trading Market',
+    rarity: 'Legendary',
+    url: '/assets/trading/trade-ancient-blade.webp',
+    description: 'Centuries-old katana of unmatched balance carrying clan fortunes.'
+  },
+  'trade-dragon-jade': {
+    id: 'trade-dragon-jade',
+    name: 'Dragon Jade',
+    category: 'Trading Market',
+    rarity: 'Legendary',
+    url: '/assets/trading/trade-dragon-jade.webp',
+    description: 'Rare carved dragon jade medallion with explosive rare spike cycles.'
+  },
+  'trade-shoguns-seal': {
+    id: 'trade-shoguns-seal',
+    name: 'Shogun\'s Seal',
+    category: 'Trading Market',
+    rarity: 'Legendary',
+    url: '/assets/trading/trade-shoguns-seal.webp',
+    description: 'Imperial wax seal stamp granting sovereign authority over province trade.'
+  },
+  'trade-shogun-seal': {
+    id: 'trade-shogun-seal',
+    name: 'Shogun\'s Seal',
+    category: 'Trading Market',
+    rarity: 'Legendary',
+    url: '/assets/trading/trade-shoguns-seal.webp',
+    description: 'Imperial wax seal stamp granting sovereign authority over province trade.'
+  },
+  'trade-legendary-sword-core': {
+    id: 'trade-legendary-sword-core',
+    name: 'Legendary Sword Core',
+    category: 'Trading Market',
+    rarity: 'Mythic',
+    url: '/assets/trading/trade-legendary-sword-core.webp',
+    description: 'Pulsing tamahagane crystal core pulsing with mythic forging power.'
+  },
+  'trade-lost-clan-relic': {
+    id: 'trade-lost-clan-relic',
+    name: 'Lost Clan Relic',
+    category: 'Trading Market',
+    rarity: 'Mythic',
+    url: '/assets/trading/trade-lost-clan-relic.webp',
+    description: 'Ancient ancestral amulet from a vanished warrior dynasty.'
+  },
+  'trade-celestial-blade': {
+    id: 'trade-celestial-blade',
+    name: 'Celestial Blade',
+    category: 'Trading Market',
+    rarity: 'Mythic',
+    url: '/assets/trading/trade-celestial-blade.webp',
+    description: 'The pinnacle of swordsmithing, channeling cosmic starlight.'
+  },
+
   // Backgrounds
   'bg-main': {
     id: 'bg-main',

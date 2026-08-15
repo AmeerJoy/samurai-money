@@ -7,6 +7,7 @@ import { SamuraiHero } from './components/SamuraiHero';
 import { NextGoalIndicator } from './components/NextGoalIndicator';
 import { UpgradesPanel } from './components/UpgradesPanel';
 import { WorldMapView } from './components/WorldMapView';
+import { TradingPanel } from './components/trading/TradingPanel';
 import { ShopPanel } from './components/ShopPanel';
 import { AchievementsPanel } from './components/AchievementsPanel';
 import { StatsModal } from './components/StatsModal';
@@ -38,8 +39,9 @@ const GameMain: React.FC = () => {
       if (e.key === '1') setActiveTab('dashboard');
       if (e.key === '2') setActiveTab('upgrades');
       if (e.key === '3') setActiveTab('map');
-      if (e.key === '4') setActiveTab('shop');
-      if (e.key === '5') setActiveTab('achievements');
+      if (e.key === '4') setActiveTab('trading');
+      if (e.key === '5') setActiveTab('shop');
+      if (e.key === '6') setActiveTab('achievements');
 
       // QA Debug Modal hotkey Ctrl+Shift+D
       if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) {
@@ -76,6 +78,8 @@ const GameMain: React.FC = () => {
         {activeTab === 'upgrades' && <UpgradesPanel isDashboard={false} />}
 
         {activeTab === 'map' && <WorldMapView />}
+
+        {activeTab === 'trading' && <TradingPanel />}
 
         {activeTab === 'shop' && <ShopPanel />}
 

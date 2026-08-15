@@ -2,7 +2,7 @@
 
 > **Design Language:** 2D Minimalist Graphic / Silhouette Poster Art  
 > **Core Palette:** Near-Black (`#07080C`) • Deep Crimson Red (`#D20A2E`) • Bright Vermillion (`#F01835`) • Antique Gold (`#F59E0B`)  
-> **Total Cataloged Assets:** `118` modular game-ready graphics.
+> **Total Cataloged Assets:** `136` modular game-ready graphics.
 
 ---
 
@@ -62,6 +62,10 @@
 | `samurai-powerful` | **Samurai Warlord Supreme** | `samurai-powerful.webp` | Characters | `LEGENDARY` | Display on Warlord rank progression and heavy weapon upgrades. |
 | `char-shadow-shinobi-poised` | **Shadow Shinobi Assassin** | `shadow-shinobi-poised.webp` | Characters | `EPIC` | Stealth assassin character progression node. |
 | `samurai-shadow` | **Shinobi Shadow Stalker** | `samurai-shadow.webp` | Characters | `RARE` | Display on auto-clicker ninja upgrades and secret map paths. |
+| `trade-bamboo` | **Bamboo** | `trade-bamboo.webp` | Commodities | `COMMON` | A versatile material used for construction, tools, and everyday goods. Demand grows steadily as settlements expand. |
+| `trade-cedar` | **Cedar** | `trade-cedar.webp` | Commodities | `COMMON` | Fragrant timber felled from ancient mountain forests, prized for temple architecture and treasury vaults. |
+| `trade-rice` | **Rice** | `trade-rice.webp` | Commodities | `COMMON` | A staple commodity traded throughout the provinces. Its steady demand makes it one of the safest assets in the market. |
+| `trade-salt` | **Salt** | `trade-salt.webp` | Commodities | `COMMON` | Essential mineral harvested from coastal flats, crucial for food preservation across samurai armies. |
 | `emblem-dragon` | **Celestial Dragon Emblem** | `emblem-dragon.webp` | Emblems | `LEGENDARY` | Node badge for dragon conquests and mythical achievements. |
 | `emblem-battle-flag` | **Clan Battle Flag Emblem** | `emblem-battle-flag.webp` | Emblems | `RARE` | Node badge for clan prestige, territory, and passive income. |
 | `emblem-flaming-sword` | **Flaming Spirit Blade Emblem** | `emblem-flaming-sword.webp` | Emblems | `EPIC` | Node badge for frenzy click power and critical multiplier milestones. |
@@ -70,6 +74,13 @@
 | `emblem-mask` | **Mempo War Mask Emblem** | `emblem-mask.webp` | Emblems | `COMMON` | Node badge for combat intimidation and battle milestones. |
 | `emblem-sword` | **Single Katana Emblem** | `emblem-sword.webp` | Emblems | `COMMON` | Node badge for swordsmanship and single-target click power. |
 | `emblem-twin-swords` | **Twin Swords Emblem** | `emblem-twin-swords.webp` | Emblems | `RARE` | Node badge for dual-wielding and click multiplier milestones. |
+| `trade-ancient-blade` | **Ancient Blade** | `trade-ancient-blade.webp` | Equipment | `COMMON` | A centuries-old forged katana of unmatched balance, said to carry the ancestral fortune of vanished clans. |
+| `trade-celestial-blade` | **Celestial Blade** | `trade-celestial-blade.webp` | Equipment | `COMMON` | An extraordinarily rare masterwork said to represent the pinnacle of swordsmithing. Only the wealthiest collectors can afford one. |
+| `trade-masterwork-armor` | **Masterwork Armor** | `trade-masterwork-armor.webp` | Equipment | `COMMON` | Intricately laced samurai cuirass armor crafted by legendary armorsmiths for daimyo warlords. |
+| `trade-war-horse` | **War Horse** | `trade-war-horse.webp` | Equipment | `COMMON` | Mighty war stallions bred for samurai cavalry, capable of turning the tide in feudal territorial wars. |
+| `trade-imperial-silk` | **Imperial Silk** | `trade-imperial-silk.webp` | Goods | `COMMON` | Royal golden-threaded silk dyed in sacred imperial crimson, reserved exclusively for the royal court. |
+| `trade-silk` | **Silk** | `trade-silk.webp` | Goods | `COMMON` | Luxurious woven silk fabric produced by master weavers, traded by elite merchant guilds. |
+| `trade-tea` | **Tea** | `trade-tea.webp` | Goods | `COMMON` | A highly valued trade good enjoyed by merchants, nobles, and samurai. Its price tends to move in recognizable cycles. |
 | `legendary-beyond-fortune` | **Beyond Fortune** | `legendary-beyond-fortune.webp` | Legendary Art | `MYTHIC` | Endgame 100% completion artwork for discovering all secrets. |
 | `legendary-conqueror` | **Legendary Conqueror** | `legendary-conqueror.webp` | Legendary Art | `LEGENDARY` | Full-size achievement artwork for conquering all map territories. |
 | `legendary-empire` | **Legendary Empire** | `legendary-empire.webp` | Legendary Art | `MYTHIC` | Full-size achievement artwork for owning all game buildings and businesses. |
@@ -77,6 +88,9 @@
 | `legendary-immortal` | **Legendary Immortal** | `legendary-immortal.webp` | Legendary Art | `MYTHIC` | Full-size achievement artwork for prestige rebirth and immortality. |
 | `legendary-shogun` | **Legendary Shogun** | `legendary-shogun.webp` | Legendary Art | `LEGENDARY` | Full-size achievement artwork for completing the Shogun ascension. |
 | `loading-samurai` | **Loading Screen Samurai** | `loading-samurai.webp` | Loading Screen | `COMMON` | Central silhouette on initial game loading screen. |
+| `trade-iron` | **Iron** | `trade-iron.webp` | Materials | `COMMON` | Raw smelted iron ore bars sourced from province mines, the foundational metal for weapons and armor. |
+| `trade-legendary-sword-core` | **Legendary Sword Core** | `trade-legendary-sword-core.webp` | Materials | `COMMON` | A glowing celestial tamahagane crystal core pulsing with raw forging energy, required to create mythic blades. |
+| `trade-samurai-steel` | **Samurai Steel** | `trade-samurai-steel.webp` | Materials | `COMMON` | Refined by master swordsmiths, Samurai Steel is essential for producing blades and armor throughout the provinces. |
 | `notification-achievement-unlocked` | **Achievement Unlock Badge** | `notification-achievement-unlocked.webp` | Notifications | `COMMON` | Emblem displayed on top-center achievement unlock toast notifications. |
 | `secret-forbidden-gate` | **Forbidden Sealed Torii Gate** | `secret-forbidden-gate.webp` | Secret Achievements | `SECRET` | Hidden achievement art unlocked by discovering the hidden map path. |
 | `secret-mysterious-scroll` | **Forbidden Technique Scroll** | `secret-mysterious-scroll.webp` | Secret Achievements | `SECRET` | Hidden achievement art unlocked by maxing all ancient scroll upgrades. |
@@ -85,7 +99,11 @@
 | `item-mythic-blood-katana` | **Mythic Blood Katana** | `mythic-blood-katana.webp` | Swords & Weapons | `LEGENDARY` | Supreme weapon upgrade item icon & inspect card. |
 | `wealth-100k-chest` | **Cedar Merchant Chest** | `treasure-cedar-chest.webp` | Treasures | `RARE` | Shop Treasure Item — Cedar Merchant Chest |
 | `wealth-1sx-fortune-throne` | **Cosmic Fortune Throne** | `treasure-fortune-throne.webp` | Treasures | `MYTHIC` | Shop Treasure Item — Cosmic Fortune Throne |
+| `trade-dragon-jade` | **Dragon Jade** | `trade-dragon-jade.webp` | Treasures | `COMMON` | A rare jade treasure associated with an ancient mountain legend. Collectors compete fiercely whenever a new piece enters the market. |
 | `treasure-dragon-vault` | **Dragon Vault** | `treasure-dragon-vault.webp` | Treasures | `LEGENDARY` | Shop Treasure Item — Dragon Vault |
+| `trade-jade-ornament` | **Jade Ornament** | `trade-jade-ornament.webp` | Treasures | `COMMON` | Exquisite carved jade magatama amulet and ornamental beads, coveted by courtiers and wealthy merchants. |
+| `trade-lost-clan-relic` | **Lost Clan Relic** | `trade-lost-clan-relic.webp` | Treasures | `COMMON` | An ancient ceremonial relic from a forgotten warrior dynasty, radiating unbounded ancestral prestige. |
+| `trade-shoguns-seal` | **Shogun's Seal** | `trade-shoguns-seal.webp` | Treasures | `COMMON` | The golden hanko imperial wax seal of the Shogunate, granting sovereign authority over province trade. |
 | `wealth-10k-bag` | **Silk Koban Pouch** | `treasure-koban-pouch.webp` | Treasures | `COMMON` | Shop Treasure Item — Silk Koban Pouch |
 | `wealth-1m-golden-chest` | **Solid Gold Coffer** | `treasure-gold-coffer.webp` | Treasures | `EPIC` | Shop Treasure Item — Solid Gold Coffer |
 | `wealth-1b-vault` | **Billionaire Obsidian Vault** | `wealth-1b-vault.webp` | Wealth Achievements | `EPIC` | Represents the $1,000,000,000 wealth milestone on achievement graph. |

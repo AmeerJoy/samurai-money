@@ -187,6 +187,59 @@ class SoundEngine {
   }
 
   /**
+   * Trade Purchase Sound Effect (Gold coins transfer)
+   */
+  public playTradeBuy() {
+    if (this.isMuted) return;
+    this.initContext();
+    if (!this.ctx) return;
+
+    const now = this.ctx.currentTime;
+    [520, 680, 880].forEach((freq, idx) => {
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, now + idx * 0.04);
+
+      gain.gain.setValueAtTime(this.sfxVolume * 0.25, now + idx * 0.04);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.04 + 0.12);
+
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(now + idx * 0.04);
+      osc.stop(now + idx * 0.04 + 0.12);
+    });
+  }
+
+  /**
+   * Trade Sale Sound Effect (Cash in / coin waterfall)
+   */
+  public playTradeSell(isProfit: boolean = true) {
+    if (this.isMuted) return;
+    this.initContext();
+    if (!this.ctx) return;
+
+    const now = this.ctx.currentTime;
+    const freqs = isProfit ? [587, 740, 880, 1174] : [440, 392, 330];
+    freqs.forEach((freq, idx) => {
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, now + idx * 0.05);
+
+      gain.gain.setValueAtTime(this.sfxVolume * (isProfit ? 0.3 : 0.2), now + idx * 0.05);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.05 + 0.18);
+
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(now + idx * 0.05);
+      osc.stop(now + idx * 0.05 + 0.18);
+    });
+  }
+
+  /**
    * Optional Meditative Ambient Zen Tone
    */
   public startAmbientDrone() {

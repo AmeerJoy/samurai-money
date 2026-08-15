@@ -1,4 +1,5 @@
 import { GameState } from '../types';
+import { getDefaultTradingState } from './marketEngine';
 
 const SAVE_KEY = 'samurai_money_save_v1';
 const CURRENT_SAVE_VERSION = 1;
@@ -25,7 +26,9 @@ export function getDefaultGameState(): GameState {
       achievementsUnlocked: 0,
       highestClickIncome: 1,
       highestPassiveIncome: 0,
-      maskClickCount: 0
+      maskClickCount: 0,
+      totalTradesExecuted: 0,
+      totalTradingProfit: 0
     },
     settings: {
       soundEnabled: true,
@@ -36,6 +39,7 @@ export function getDefaultGameState(): GameState {
       numberFormat: 'standard',
       showFloatingNumbers: true
     },
+    trading: getDefaultTradingState(),
     lastSaveTimestamp: Date.now(),
     tutorialStep: 0
   };
@@ -87,6 +91,13 @@ export function loadGameState(): GameState {
         ...defaultState.settings,
         ...(parsed.settings || {})
       },
+      trading: parsed.trading && typeof parsed.trading === 'object' ? {
+        ...defaultState.trading,
+        ...parsed.trading,
+        holdings: parsed.trading.holdings || {},
+        trades: Array.isArray(parsed.trading.trades) ? parsed.trading.trades : [],
+        watchlist: Array.isArray(parsed.trading.watchlist) ? parsed.trading.watchlist : defaultState.trading.watchlist
+      } : defaultState.trading,
       lastSaveTimestamp: typeof parsed.lastSaveTimestamp === 'number' ? parsed.lastSaveTimestamp : Date.now(),
       tutorialStep: typeof parsed.tutorialStep === 'number' ? parsed.tutorialStep : 0
     };

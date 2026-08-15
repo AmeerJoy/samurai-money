@@ -8,7 +8,7 @@
     "brightVermillion": "#F01835",
     "antiqueGold": "#F59E0B"
   },
-  "totalAssets": 118,
+  "totalAssets": 136,
   "assets": [
     {
       "id": "armor-demon-kabuto",
@@ -1089,6 +1089,90 @@
       "generated_at": "2026-08-15 00:23:00"
     },
     {
+      "id": "trade-bamboo",
+      "name": "Bamboo",
+      "filename": "trade-bamboo.webp",
+      "category": "Commodities",
+      "tier": "Affordable",
+      "starting_price": 60,
+      "personality": "Slow Growth",
+      "risk": "Low",
+      "description": "A versatile material used for construction, tools, and everyday goods. Demand grows steadily as settlements expand.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a bundle of cut bamboo stalks tied together with traditional rope cord, with bamboo leaves. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, ultra-clean silhouettes, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-cedar",
+      "name": "Cedar",
+      "filename": "trade-cedar.webp",
+      "category": "Commodities",
+      "tier": "Affordable",
+      "starting_price": 750,
+      "personality": "Cycle",
+      "risk": "Low",
+      "description": "Fragrant timber felled from ancient mountain forests, prized for temple architecture and treasury vaults.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of stacked cylindrical Japanese cedar timber logs with prominent tree bark contours. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Clean geometric vector shapes, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-rice",
+      "name": "Rice",
+      "filename": "trade-rice.webp",
+      "category": "Commodities",
+      "tier": "Affordable",
+      "starting_price": 25,
+      "personality": "Stable",
+      "risk": "Very Low",
+      "description": "A staple commodity traded throughout the provinces. Its steady demand makes it one of the safest assets in the market.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional woven straw burlap sack of harvested rice with stalks of golden rice grains resting beside it. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, ultra-clean silhouettes, duotone black and crimson, no 3D rendering, no soft lighting, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-salt",
+      "name": "Salt",
+      "filename": "trade-salt.webp",
+      "category": "Commodities",
+      "tier": "Affordable",
+      "starting_price": 120,
+      "personality": "Stable",
+      "risk": "Very Low",
+      "description": "Essential mineral harvested from coastal flats, crucial for food preservation across samurai armies.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an ancient Japanese wooden salt merchant scoop bowl with a small neat pyramid mound of pure sea salt crystals. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Crisp vector contours, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
       "id": "emblem-dragon",
       "name": "Celestial Dragon Emblem",
       "category": "Emblems",
@@ -1249,6 +1333,153 @@
       "generated_at": "2026-08-15 00:23:44"
     },
     {
+      "id": "trade-ancient-blade",
+      "name": "Ancient Blade",
+      "filename": "trade-ancient-blade.webp",
+      "category": "Equipment",
+      "tier": "Expensive",
+      "starting_price": 2500000,
+      "personality": "Cycle",
+      "risk": "Very High",
+      "description": "A centuries-old forged katana of unmatched balance, said to carry the ancestral fortune of vanished clans.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an ancient heirloom samurai katana sword blade with curved scabbard and engraved golden dragon habaki hilt collar. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-celestial-blade",
+      "name": "Celestial Blade",
+      "filename": "trade-celestial-blade.webp",
+      "category": "Equipment",
+      "tier": "Endgame",
+      "starting_price": 10000000000,
+      "personality": "Extreme Cycle",
+      "risk": "Extreme",
+      "description": "An extraordinarily rare masterwork said to represent the pinnacle of swordsmithing. Only the wealthiest collectors can afford one.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a soaring cosmic celestial katana blade floating vertically with a ring of orbiting star fragments and solar ribbons. Centered completely inside a giant solid flat bright crimson red circular solar eclipse ring (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-masterwork-armor",
+      "name": "Masterwork Armor",
+      "filename": "trade-masterwork-armor.webp",
+      "category": "Equipment",
+      "tier": "Expensive",
+      "starting_price": 250000,
+      "personality": "Cycle",
+      "risk": "High",
+      "description": "Intricately laced samurai cuirass armor crafted by legendary armorsmiths for daimyo warlords.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional samurai do-maru chest cuirass armor with shoulder sode plates and crimson lacing cord seams. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, razor-sharp vector shapes, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-war-horse",
+      "name": "War Horse",
+      "filename": "trade-war-horse.webp",
+      "category": "Equipment",
+      "tier": "Mid-Range",
+      "starting_price": 25000,
+      "personality": "Volatile",
+      "risk": "High",
+      "description": "Mighty war stallions bred for samurai cavalry, capable of turning the tide in feudal territorial wars.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a proud rearing feudal Japanese samurai war horse stallion with flowing mane and subtle crimson harness cords. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Dynamic action silhouette, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-imperial-silk",
+      "name": "Imperial Silk",
+      "filename": "trade-imperial-silk.webp",
+      "category": "Goods",
+      "tier": "Expensive",
+      "starting_price": 750000,
+      "personality": "Boom & Correction",
+      "risk": "High",
+      "description": "Royal golden-threaded silk dyed in sacred imperial crimson, reserved exclusively for the royal court.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an imperial royal silk ceremonial kimono robe display on a wooden lacquer t-stand with golden dragon crest embroidery silhouette. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Crisp vector contours, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-silk",
+      "name": "Silk",
+      "filename": "trade-silk.webp",
+      "category": "Goods",
+      "tier": "Mid-Range",
+      "starting_price": 4000,
+      "personality": "Wave",
+      "risk": "Medium",
+      "description": "Luxurious woven silk fabric produced by master weavers, traded by elite merchant guilds.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an elegant rolled bolt of fine Japanese woven silk fabric with a flowing draped silk ribbon. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-tea",
+      "name": "Tea",
+      "filename": "trade-tea.webp",
+      "category": "Goods",
+      "tier": "Affordable",
+      "starting_price": 350,
+      "personality": "Wave",
+      "risk": "Low",
+      "description": "A highly valued trade good enjoyed by merchants, nobles, and samurai. Its price tends to move in recognizable cycles.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a traditional Japanese ceremonial ceramic matcha tea bowl with a bamboo chasen tea whisk and fresh tea leaves. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
       "id": "legendary-beyond-fortune",
       "name": "Beyond Fortune",
       "category": "Legendary Art",
@@ -1387,6 +1618,69 @@
       "file_webp": "assets/loading/loading-samurai.webp",
       "public_path": "/assets/loading/loading-samurai.webp",
       "generated_at": "2026-08-15 00:25:42"
+    },
+    {
+      "id": "trade-iron",
+      "name": "Iron",
+      "filename": "trade-iron.webp",
+      "category": "Materials",
+      "tier": "Affordable",
+      "starting_price": 1500,
+      "personality": "Cycle",
+      "risk": "Medium",
+      "description": "Raw smelted iron ore bars sourced from province mines, the foundational metal for weapons and armor.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of heavy stacked trapezoidal iron ingot metal bars with crisp beveled edges. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, razor-sharp vector geometry, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-legendary-sword-core",
+      "name": "Legendary Sword Core",
+      "filename": "trade-legendary-sword-core.webp",
+      "category": "Materials",
+      "tier": "Endgame",
+      "starting_price": 250000000,
+      "personality": "Extreme Cycle",
+      "risk": "Extreme",
+      "description": "A glowing celestial tamahagane crystal core pulsing with raw forging energy, required to create mythic blades.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a glowing crystalline sword core shard surrounded by sharp radiating crimson solar energy arcs. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). High contrast, razor-sharp geometric facets, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-samurai-steel",
+      "name": "Samurai Steel",
+      "filename": "trade-samurai-steel.webp",
+      "category": "Materials",
+      "tier": "Mid-Range",
+      "starting_price": 10000,
+      "personality": "Cycle",
+      "risk": "Medium",
+      "description": "Refined by master swordsmiths, Samurai Steel is essential for producing blades and armor throughout the provinces.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a folded tamahagane high-carbon samurai steel ingot bar with glowing razor-sharp crimson forge temper lines. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
     },
     {
       "id": "notification-achievement-unlocked",
@@ -1547,6 +1841,27 @@
       "resolution": "768x768"
     },
     {
+      "id": "trade-dragon-jade",
+      "name": "Dragon Jade",
+      "filename": "trade-dragon-jade.webp",
+      "category": "Treasures",
+      "tier": "Expensive",
+      "starting_price": 10000000,
+      "personality": "Rare Spike",
+      "risk": "Very High",
+      "description": "A rare jade treasure associated with an ancient mountain legend. Collectors compete fiercely whenever a new piece enters the market.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a circular Chinese dragon bi-disc carved medallion with an opening in the center and coiling dragon horns. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
       "id": "treasure-dragon-vault",
       "name": "Dragon Vault",
       "filename": "treasure-dragon-vault.webp",
@@ -1560,6 +1875,69 @@
         "#FF2035"
       ],
       "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a colossal feudal dragon treasury vault strongbox with sculpted dragon head lock and heavy rivets. Centered inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-jade-ornament",
+      "name": "Jade Ornament",
+      "filename": "trade-jade-ornament.webp",
+      "category": "Treasures",
+      "tier": "Mid-Range",
+      "starting_price": 75000,
+      "personality": "Boom & Correction",
+      "risk": "High",
+      "description": "Exquisite carved jade magatama amulet and ornamental beads, coveted by courtiers and wealthy merchants.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a curved comma-shaped Japanese jade magatama pendant talisman with ornamental beaded cord. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Razor-sharp vector edges, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-lost-clan-relic",
+      "name": "Lost Clan Relic",
+      "filename": "trade-lost-clan-relic.webp",
+      "category": "Treasures",
+      "tier": "Endgame",
+      "starting_price": 1000000000,
+      "personality": "Extreme Cycle",
+      "risk": "Extreme",
+      "description": "An ancient ceremonial relic from a forgotten warrior dynasty, radiating unbounded ancestral prestige.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of an ancient ornamental samurai clan heirloom amulet emblem with crossed sacred blades and imperial sun disc centerpiece. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, duotone black and crimson, no 3D rendering, no text, no watermark.",
+      "model": "FLUX.1 [schnell]",
+      "sampler": "Euler Simple",
+      "steps": 4,
+      "cfg_scale": 1.0,
+      "resolution": "768x768"
+    },
+    {
+      "id": "trade-shoguns-seal",
+      "name": "Shogun's Seal",
+      "filename": "trade-shoguns-seal.webp",
+      "category": "Treasures",
+      "tier": "Endgame",
+      "starting_price": 50000000,
+      "personality": "Rare Spike",
+      "risk": "Very High",
+      "description": "The golden hanko imperial wax seal of the Shogunate, granting sovereign authority over province trade.",
+      "palette": [
+        "#000000",
+        "#FF2035"
+      ],
+      "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a monumental square imperial Shogun wax seal stamp handle topped with a dragon carving and vermilion red ink base. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Sharp clean vector design, duotone black and crimson, no 3D rendering, no text, no watermark.",
       "model": "FLUX.1 [schnell]",
       "sampler": "Euler Simple",
       "steps": 4,

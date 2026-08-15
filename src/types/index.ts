@@ -69,6 +69,9 @@ export interface AchievementDefinition {
   requirementValue: number | string;
 }
 
+export * from './trading';
+import { TradingState } from './trading';
+
 export interface GameStatistics {
   startTime: number;
   totalPlayTimeSeconds: number;
@@ -82,6 +85,8 @@ export interface GameStatistics {
   highestClickIncome: number;
   highestPassiveIncome: number;
   maskClickCount: number; // secret achievement tracker
+  totalTradesExecuted: number;
+  totalTradingProfit: number;
 }
 
 export interface GameSettings {
@@ -105,6 +110,7 @@ export interface GameState {
   unlockedAchievementIds: string[];
   statistics: GameStatistics;
   settings: GameSettings;
+  trading: TradingState;
   lastSaveTimestamp: number;
   tutorialStep: number; // 0 = welcome, 1 = first click done, 2 = first upgrade done, 3 = completed
 }

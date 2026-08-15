@@ -1,0 +1,21 @@
+{
+  "id": "trade-samurai-steel",
+  "name": "Samurai Steel",
+  "filename": "trade-samurai-steel.webp",
+  "category": "Materials",
+  "tier": "Mid-Range",
+  "starting_price": 10000,
+  "personality": "Cycle",
+  "risk": "Medium",
+  "description": "Refined by master swordsmiths, Samurai Steel is essential for producing blades and armor throughout the provinces.",
+  "palette": [
+    "#000000",
+    "#FF2035"
+  ],
+  "prompt": "A masterwork minimalist 2D flat vector game icon. Pure solid pitch-black silhouette of a folded tamahagane high-carbon samurai steel ingot bar with glowing razor-sharp crimson forge temper lines. Centered completely inside a giant solid flat bright crimson red circular sun disc (#FF2035). Pure solid pitch-black background (#000000). Pristine vector geometry, duotone black and crimson, no 3D rendering, no text, no watermark.",
+  "model": "FLUX.1 [schnell]",
+  "sampler": "Euler Simple",
+  "steps": 4,
+  "cfg_scale": 1.0,
+  "resolution": "768x768"
+}
